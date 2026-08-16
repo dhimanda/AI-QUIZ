@@ -1,0 +1,451 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:07.359
+And we have now arrived at the part of
+today that I'm affectionately calling
+
+00:00:04.960 --> 00:00:12.480
+the spicy part. And we're going to go
+through a few demos of other related
+
+00:00:09.920 --> 00:00:17.039
+things that we're not fully covering on
+this course, but it's nice for you to
+
+00:00:14.160 --> 00:00:20.560
+know about. So you can be you don't need
+to to take all of this in. You don't
+
+00:00:18.560 --> 00:00:26.720
+need to remember anything. This is just
+to give you a quick tour of related
+
+00:00:23.279 --> 00:00:30.560
+stuff. Starting with the Claude agents
+SDK that you might heard of that and you
+
+00:00:29.279 --> 00:00:34.559
+might have been wondering how that fits
+in and how it fits into other agent
+
+00:00:33.040 --> 00:00:38.160
+frameworks that I cover in my other
+courses. And the answer is of course
+
+00:00:36.239 --> 00:00:42.079
+that it's not really an agent framework
+at all even though it's called the
+
+00:00:39.600 --> 00:00:45.440
+Claude agents SDK which which can
+certainly give you the impression that
+
+00:00:43.440 --> 00:00:51.200
+it's an agent framework. Uh, but what it
+is is a way to programmatically drive
+
+00:00:48.640 --> 00:00:57.840
+Claude code, have access to all of the
+power of the agents in Claude Code, but
+
+00:00:54.239 --> 00:01:02.239
+do it by writing code. Okay, let me show
+you exactly what that means. I've got
+
+00:00:59.680 --> 00:01:07.119
+here in VS Code a project I've just
+created called space. And true to the
+
+00:01:05.199 --> 00:01:12.560
+name space, we're looking at a
+completely empty, totally empty uh
+
+00:01:10.400 --> 00:01:16.400
+directory with nothing in it whatsoever.
+And we're going to fill up this space
+
+00:01:14.159 --> 00:01:21.200
+with something. Let me show you. And I'm
+going to use a UV project, which you
+
+00:01:18.960 --> 00:01:27.439
+know I like UV. If you don't know what
+it is, then then Google it. Uh I'm going
+
+00:01:23.840 --> 00:01:31.920
+to do a UV in it dash bear. That sets me
+up with a nice empty project. Let's do
+
+00:01:29.759 --> 00:01:38.000
+UV python
+pin 3.13. Let's go with And now it's
+
+00:01:35.920 --> 00:01:44.799
+time to UV add, which is equivalent to
+pip install. A few things. We will have
+
+00:01:40.320 --> 00:01:51.200
+python. EMV to handle keys. We will have
+um requests cuz you always want
+
+00:01:47.119 --> 00:01:57.040
+requests. And then let's go with Claude
+agent SDK. Uh it used to be called
+
+00:01:54.880 --> 00:02:00.560
+Claude Code SDK and they called it they
+changed the name to Claude agent SDK.
+
+00:01:59.200 --> 00:02:03.840
+And it's worth knowing that agent is
+singular. I I think I might have even
+
+00:02:02.159 --> 00:02:08.720
+said agents earlier because I'm used to
+opening our agents SDK, but it's
+
+00:02:06.159 --> 00:02:13.599
+singular. Claude agent SDK. We've just
+done it. We've built everything. We have
+
+00:02:10.319 --> 00:02:19.360
+ourselves av.
+And so we are ready to build something.
+
+00:02:16.640 --> 00:02:23.920
+All right. And I just copied in myv file
+from somewhere else which has a few keys
+
+00:02:20.879 --> 00:02:27.760
+in it like my anthropic key. And I've
+also written a.getit ignore file to to
+
+00:02:26.319 --> 00:02:32.000
+get ignore that even though we don't
+have a git repo. This is just an empty
+
+00:02:29.680 --> 00:02:36.640
+folder but still it's a good practice.
+Okay. Now new file. Let's have a
+
+00:02:34.800 --> 00:02:41.120
+main.py.
+This is where we're going to write some
+
+00:02:38.239 --> 00:02:45.599
+code. And what's our code going to do?
+We're effectively going to like drive
+
+00:02:42.879 --> 00:02:49.599
+clawed code using code. All right. So,
+I'm going to have some imports here. I'm
+
+00:02:47.680 --> 00:02:55.120
+going to u first of all do the whole
+like load. EMV
+
+00:02:53.040 --> 00:03:00.080
+uh to bring in my environment variables.
+And I like to say override equals true.
+
+00:02:57.440 --> 00:03:03.599
+So that the MV overrides anything that's
+set up as like a system environment
+
+00:03:01.599 --> 00:03:07.760
+variable. Otherwise, trouble trouble.
+Okay. And yeah, we're going to want an a
+
+00:03:05.120 --> 00:03:11.440
+asynchro. It's filling it all in. That's
+not what I want. I don't want that. I'm
+
+00:03:09.280 --> 00:03:15.840
+I'm going to type myself. I I want to
+have like a prompt. Uh what is the
+
+00:03:14.319 --> 00:03:24.480
+meaning of life is not going to be my
+prompt. Uh and uh stop stop filling in.
+
+00:03:21.040 --> 00:03:29.200
+Uh and we're also going to want to have
+um we're we're going to want to have the
+
+00:03:26.480 --> 00:03:34.000
+the the tools that it can use. So I'm
+going to have tools equals and that is
+
+00:03:31.840 --> 00:03:37.840
+indeed going to be some kind of a list.
+Okay. So what's the prompt and what are
+
+00:03:35.680 --> 00:03:48.319
+the tools? Okay, the prompt is going to
+be make a vanilla
+
+00:03:40.480 --> 00:03:54.159
+HTML plus JS plus CSS website for a game
+of Space Invaders. Not pace of it is
+
+00:03:51.920 --> 00:03:58.959
+Space Invaders. That's why the re this
+folder is called Space. Uh, full stop.
+
+00:03:57.680 --> 00:04:02.080
+We won't give it any more than that.
+We'll just give it that to work with.
+
+00:04:00.560 --> 00:04:05.760
+Now, I know what you're thinking. You're
+thinking, I said on week one, day one,
+
+00:04:04.239 --> 00:04:09.120
+that that was going to be the only
+frivolous thing that that uh that we
+
+00:04:07.920 --> 00:04:13.920
+were going to build and everything else
+is going to be commercial. Well, sue me.
+
+00:04:11.680 --> 00:04:17.840
+All right. And now tools. For tools,
+we're going to have all of these tools.
+
+00:04:16.000 --> 00:04:22.639
+We'll let it have all of those. Those
+are the tools we're going to let our
+
+00:04:19.440 --> 00:04:26.000
+clawed code through code have access to.
+All right, let's let's write the main
+
+00:04:24.639 --> 00:04:32.320
+function. All right, I'm going to start
+by saying options equals clawed agent
+
+00:04:30.240 --> 00:04:36.720
+options. This is where we specify what
+we want done. You can see all those
+
+00:04:34.000 --> 00:04:42.479
+parameters that we can have including
+permission mode, a whole lot of stuff,
+
+00:04:39.600 --> 00:04:45.040
+MCP servers. We can pass in all these
+different things and we can describe the
+
+00:04:44.080 --> 00:04:50.560
+model. We're just going to go with
+defaults for everything except we're
+
+00:04:47.840 --> 00:04:57.440
+going to say allowed tools
+equals tools. That's what we're doing.
+
+00:04:53.840 --> 00:05:03.520
+And with that, we now say async for
+message in query. This is going to loop
+
+00:05:01.759 --> 00:05:08.560
+through the query where we're going to
+pass in the prompt equals the prompt and
+
+00:05:06.800 --> 00:05:13.039
+just as it's saying the options equals
+the options and then we're going to
+
+00:05:10.240 --> 00:05:18.320
+print the message. That really is it.
+That is our main function right there.
+
+00:05:15.520 --> 00:05:23.840
+Okay, let's do some final tidy up. Uh
+oh, look, this looks wrong, doesn't it?
+
+00:05:19.919 --> 00:05:27.360
+That should just be like so. Um, let's
+let's just say make a vanilla HTML for a
+
+00:05:25.680 --> 00:05:36.880
+game of space. And let's just tell it
+write the um uh write the code to files
+
+00:05:33.199 --> 00:05:41.720
+in the current directory
+including
+
+00:05:38.720 --> 00:05:41.720
+index.html.
+
+00:05:42.000 --> 00:05:49.759
+Uh, so it's very clear what it has to
+do. Let's say in here, do I remember
+
+00:05:47.600 --> 00:05:56.400
+that we could say model equals? Is that
+one of the options here? I think so.
+
+00:05:52.400 --> 00:06:02.720
+Model equals. And let's not use Claude
+2. Let's go with Claude Opus 4.6 as our
+
+00:06:00.320 --> 00:06:06.479
+model. That seems like a good bet to me.
+You should not do this, by the way. You
+
+00:06:04.319 --> 00:06:09.600
+should use a cheap model. I'm splashing
+out for your entertainment. It doesn't
+
+00:06:07.919 --> 00:06:13.440
+mean that you should. Please don't do
+this, especially if you have a tight
+
+00:06:10.960 --> 00:06:21.199
+loop like this. Not a good idea, unless
+you are crazy. Okay. And then finally,
+
+00:06:17.120 --> 00:06:26.560
+um, a sync.io. Oops, spell it right. a
+synio run main. There we go. That should
+
+00:06:25.360 --> 00:06:29.520
+be everything. Does that look right to
+you? Have I missed anything? I think
+
+00:06:28.080 --> 00:06:35.759
+that's probably good. All right, let's
+give it a whirl. Here we go. uv run UV
+
+00:06:32.560 --> 00:06:40.560
+what? UV run main.py.
+Okay. And so again, it's like we're
+
+00:06:38.319 --> 00:06:43.759
+calling claude code, but instead of
+asking Claude code the question, we've
+
+00:06:42.240 --> 00:06:50.479
+got it here and these are the tools it
+can do. We are driving Claude code using
+
+00:06:47.759 --> 00:06:54.639
+code. That's the idea. We've equipped it
+with the tools that it may use like
+
+00:06:52.240 --> 00:06:58.880
+read, write, edit, and we're letting it
+do its thing. And you can see here that
+
+00:06:56.800 --> 00:07:04.479
+it's it's sending back messages. Oh,
+that file just got created. It's doing
+
+00:07:01.280 --> 00:07:08.639
+stuff. And that was our plan. So, uh,
+this this is how you can write code so
+
+00:07:07.280 --> 00:07:13.840
+that you're not interacting in a
+terminal, but rather you're structuring
+
+00:07:10.720 --> 00:07:17.039
+things as code. Um, and it's obviously
+it's not something you you necessarily
+
+00:07:15.280 --> 00:07:21.759
+need to do day-to-day, but if you were
+building something that you wanted to
+
+00:07:18.639 --> 00:07:26.800
+take advantage of this whole ecosystem
+with skills with with the ability to
+
+00:07:24.479 --> 00:07:30.880
+have plugins and you wanted to to have
+that functionality and build an app
+
+00:07:28.479 --> 00:07:36.319
+built on top of that, then you could use
+the Claude agent SDK to achieve that.
+
+00:07:34.639 --> 00:07:40.000
+And also, should you want a Space
+Invaders game and you don't want to have
+
+00:07:37.759 --> 00:07:45.440
+to type it into a terminal and interact
+with claw code, then then take this code
+
+00:07:42.960 --> 00:07:49.199
+as it is right here. I think we'll soon
+find out. Uh, let it do its thing. I
+
+00:07:47.919 --> 00:07:54.879
+will see you back here in a second.
+Okay. And that has now completed. Took a
+
+00:07:51.919 --> 00:07:59.199
+couple of minutes. And, uh, I will, uh,
+I I do indeed see that there is, as you
+
+00:07:56.879 --> 00:08:04.000
+can see, an index.html. I've got that up
+here in this little window here. Here's
+
+00:08:01.039 --> 00:08:09.840
+a browser window for your viewing
+pleasure. I will double click here and
+
+00:08:06.160 --> 00:08:14.960
+up comes Space Invaders. Enter or click
+to start. Uh it is a bit reminiscent of
+
+00:08:12.879 --> 00:08:21.520
+that first uh thing we had at the very
+beginning. All right, let's see. Let me
+
+00:08:17.120 --> 00:08:27.120
+press enter. Okay. Oh, it's got sound.
+How about that? And the arrow keys work.
+
+00:08:23.199 --> 00:08:31.440
+I didn't tell anything about keys. Oh,
+look at the score as well. A score. And
+
+00:08:29.440 --> 00:08:35.680
+look, there's the alien at the top. That
+is absolutely brilliant. Absolutely
+
+00:08:34.000 --> 00:08:39.200
+brilliant. And the colors as well.
+Everything here is great. The asute
+
+00:08:37.680 --> 00:08:43.760
+amongst you will probably note that this
+is probably in some form in its training
+
+00:08:41.599 --> 00:08:47.920
+data. Uh, nonetheless, I should stop
+playing. Getting distracted.
+
+00:08:45.519 --> 00:08:53.760
+Nonetheless, very cool. Very cool
+result. Nice outcome. That of course is
+
+00:08:51.200 --> 00:08:57.440
+generated. Oh, whoops. Uh, generated.
+Look at that. Look at that flick
+
+00:08:54.959 --> 00:09:04.480
+flickering. Uh, generated by Claude code
+wonderfully. A fully working game in
+
+00:09:00.240 --> 00:09:09.680
+vanilla HTML and JS and CSS built by
+Claude Code using Claude agent SDK.
+

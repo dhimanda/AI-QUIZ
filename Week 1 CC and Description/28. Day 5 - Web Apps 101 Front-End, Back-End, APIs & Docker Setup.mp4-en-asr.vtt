@@ -1,0 +1,636 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.080 --> 00:00:06.160
+Now, I'm aware that I have this
+interesting problem that the audience of
+
+00:00:03.760 --> 00:00:10.320
+this course is a very mixed audience.
+Some of you are engineers that are
+
+00:00:08.559 --> 00:00:14.080
+looking to come into the world of vibe
+coding and agentic engineering and get
+
+00:00:12.080 --> 00:00:17.119
+pretty hardcore with it. And some of you
+are are not so technical, might be
+
+00:00:15.759 --> 00:00:20.640
+coming in new to this and want to use
+vibe coding as a way to generate code.
+
+00:00:19.199 --> 00:00:25.119
+So, I'm just going to take a minute to
+talk mostly to the people that that are
+
+00:00:22.640 --> 00:00:28.960
+coming new into this to level set. So,
+for people that are already pros, please
+
+00:00:26.960 --> 00:00:34.399
+put me on 2x. Just zip through this
+part. I'm also I've taken a few slides
+
+00:00:31.039 --> 00:00:38.480
+from my ML ops track just just as a
+quick briefing for people new to this.
+
+00:00:36.800 --> 00:00:43.280
+We've been doing stuff this week that's
+been using front-end code and I realized
+
+00:00:41.120 --> 00:00:47.440
+you might not even have the sort of con
+context of okay so I you know I'm sure
+
+00:00:45.840 --> 00:00:51.120
+you've heard terms like front end and
+backend a lot but how does that actually
+
+00:00:49.440 --> 00:00:54.480
+fit together? We're about to make a
+project with both a front end and a back
+
+00:00:52.640 --> 00:00:58.480
+end. What does that mean? How does it
+work? Let me quickly explain. So, put
+
+00:00:56.640 --> 00:01:01.680
+simply, the projects we'll be working on
+in this course are what they call web
+
+00:01:00.000 --> 00:01:05.680
+applications, meaning that you use a
+browser to access them. And it's very
+
+00:01:04.320 --> 00:01:10.000
+common for web applications to have
+what's called a front end and a backend
+
+00:01:08.000 --> 00:01:15.040
+as two parts of the technology. And
+obviously, the front end is the stuff
+
+00:01:12.000 --> 00:01:19.280
+that runs in the users's web browser. It
+runs within Chrome or Safari or
+
+00:01:17.280 --> 00:01:24.400
+Microsoft Edge or whatever. And it's
+typically got some combination of HTML
+
+00:01:22.000 --> 00:01:28.560
+which is the web page, CSS, the
+stylesheets which controls the
+
+00:01:25.759 --> 00:01:32.240
+appearance and then JavaScript code
+running in the browser that controls the
+
+00:01:30.880 --> 00:01:37.439
+kind of interactivity and the
+functionality that runs in the browser
+
+00:01:34.560 --> 00:01:42.720
+in the client on the front end. And then
+obviously the back end as you probably
+
+00:01:40.079 --> 00:01:46.640
+know is something which is running on a
+server. It's perhaps the thing that
+
+00:01:44.560 --> 00:01:50.560
+served up the the web page in the first
+place. the HTML and CSS and JavaScript
+
+00:01:48.640 --> 00:01:55.680
+that your browser connected to it to get
+it, but also your browser can can reach
+
+00:01:53.119 --> 00:02:00.159
+and and send messages to the server in
+order to run some business logic that
+
+00:01:58.000 --> 00:02:05.439
+could be accessing a database. It might
+be calling an LLM and it might be uh
+
+00:02:03.360 --> 00:02:10.319
+other other APIs you might be calling
+out to and you might also have your
+
+00:02:07.280 --> 00:02:14.480
+secrets, your passwords perhaps in a MV
+file on your back end on your server.
+
+00:02:12.959 --> 00:02:18.239
+That's the back end. And in terms of the
+projects we've done this week, the day
+
+00:02:16.239 --> 00:02:24.879
+one kind of teaser was just all front
+end. The the uh then the camb board we
+
+00:02:21.360 --> 00:02:29.040
+did on day three that was also all front
+end. Uh all JavaScript served up to the
+
+00:02:27.360 --> 00:02:32.879
+front end. And then what we did
+yesterday, it did actually have a back
+
+00:02:31.120 --> 00:02:36.319
+end, but it was also in JavaScript. It
+was that that was the part that was
+
+00:02:34.080 --> 00:02:40.239
+calling open router. So you can have
+frontends and backends in JavaScript.
+
+00:02:38.480 --> 00:02:44.560
+What we're going to do today is going to
+have a front end in JavaScript and a
+
+00:02:42.080 --> 00:02:48.560
+backend in Python which is the most
+common backend programming language for
+
+00:02:46.319 --> 00:02:52.239
+people working with LLMs because we're
+again going to build an application
+
+00:02:50.480 --> 00:02:57.040
+using agents that itself is going to
+call an LLM. All right, so that's that's
+
+00:02:54.959 --> 00:03:01.280
+front end versus backend. And to state
+the obvious, the way that they are
+
+00:02:58.640 --> 00:03:06.560
+connected is through these things called
+APIs. I'm sure you know this, but the
+
+00:03:04.239 --> 00:03:10.480
+front end makes an API call to the back
+end and that's how it retrieves
+
+00:03:08.319 --> 00:03:13.519
+information it needs to to populate the
+front end or because the user has
+
+00:03:11.840 --> 00:03:18.800
+pressed a button that is like a submit
+button and that is calling an API back
+
+00:03:15.840 --> 00:03:23.200
+is coming results. Uh and so that that
+is the the the way that front end and
+
+00:03:20.800 --> 00:03:27.120
+backend collaborate to to solve a
+business problem. And all of you you
+
+00:03:25.200 --> 00:03:30.720
+pros there are like uh thinking of all
+the ways I'm oversimplifying. So feel
+
+00:03:28.640 --> 00:03:36.319
+free to explain it better than me in the
+Udemy Q&amp;A if you wish. And just very
+
+00:03:33.200 --> 00:03:40.000
+quickly to dig into the front end, it's
+not particularly a big part of this
+
+00:03:38.080 --> 00:03:43.680
+course and it's something which which I
+imagine most of you are probably more
+
+00:03:41.360 --> 00:03:46.239
+backend ccentric. Uh and some of you
+might be front- end devs in which case
+
+00:03:45.040 --> 00:03:49.840
+you're going to hate me for
+oversimplifying. But just to give you
+
+00:03:48.000 --> 00:03:55.360
+the lay of the land so you know roughly
+what's going on, you can have websites
+
+00:03:52.080 --> 00:04:00.080
+that are built with basic vanilla HTML,
+which is what we did in day one. HTML,
+
+00:03:57.760 --> 00:04:03.680
+JavaScript, CSS, maybe the JavaScript
+uses some of the libraries like jQuery
+
+00:04:01.840 --> 00:04:08.319
+that are really simple, low-level
+libraries. Not much to it. But over
+
+00:04:06.319 --> 00:04:12.400
+time, frameworks came along which sort
+of allowed you to build user interfaces
+
+00:04:10.480 --> 00:04:16.639
+out of components that could update
+themselves. And React is one of the the
+
+00:04:14.720 --> 00:04:21.040
+really big ones. Vue, Angular, Velt,
+these are all these are all popular
+
+00:04:18.400 --> 00:04:26.160
+front-end frameworks that you see a lot.
+And typically the whole of the front end
+
+00:04:23.440 --> 00:04:29.120
+will load as as like one request and
+then different components will make
+
+00:04:27.520 --> 00:04:33.840
+different API calls to repopulate
+themselves. And when it works that way
+
+00:04:30.720 --> 00:04:37.680
+it's known as a single page app and spa
+and that's very very common and they're
+
+00:04:36.240 --> 00:04:41.840
+sometimes written in JavaScript they're
+sometimes written in the typed version
+
+00:04:39.360 --> 00:04:46.960
+TypeScript and uh both both both
+variants exist and then there are
+
+00:04:44.479 --> 00:04:50.479
+frameworks like Nex.js JS that's
+actually created by by the company
+
+00:04:48.800 --> 00:04:55.440
+Versel that that is great for
+deployments. Uh Nex.js is something
+
+00:04:53.120 --> 00:04:59.840
+which sort of packages together a bunch
+of related concerns like how to route
+
+00:04:57.440 --> 00:05:03.759
+through web pages, how to fetch data,
+how to render things on either the the
+
+00:05:01.840 --> 00:05:08.240
+client or to render them on the server.
+All of that is packaged together into
+
+00:05:05.759 --> 00:05:11.840
+Nex.js. So it's a sort of higher level
+application framework. That is what
+
+00:05:10.160 --> 00:05:15.600
+we've been using for the last few days
+and we'll use it again today uh for the
+
+00:05:13.919 --> 00:05:20.560
+front end and it's it's it's something
+that's great and easy. Now I'm a bit of
+
+00:05:17.919 --> 00:05:26.560
+a horror with with React and Nex.js. I
+can do it. I find it really really
+
+00:05:22.400 --> 00:05:30.479
+difficult and so for me using LLMs using
+coding agents has been a lifesaver
+
+00:05:28.560 --> 00:05:34.800
+because they are really really strong at
+this. Actually having said that I will
+
+00:05:32.160 --> 00:05:40.240
+just give a caveat to that. I do also
+see that whilst LMS are very strong at
+
+00:05:37.199 --> 00:05:44.880
+this, they often create websites that
+look very similar, web apps that they
+
+00:05:42.560 --> 00:05:48.960
+look a bit a bit like slop, they they
+have the same kind of look, sometimes
+
+00:05:46.639 --> 00:05:54.479
+with that purple hue, but you get very
+familiar with seeing the kind of three
+
+00:05:51.120 --> 00:05:59.680
+icons and that that very standard LM
+generated look. And one of the ways that
+
+00:05:56.639 --> 00:06:04.240
+that great UX people, you UXUI people
+really stand out is is knowing how best
+
+00:06:02.080 --> 00:06:09.120
+to organize and communicate information
+to make an impact on your user for best
+
+00:06:06.720 --> 00:06:13.120
+outcomes. And that's that's where you
+can still play a role. So even though
+
+00:06:11.199 --> 00:06:17.199
+when the LLM generates the front end, it
+can look it can look really great to
+
+00:06:14.960 --> 00:06:21.120
+start with, you need to go back and push
+on it to make sure you get something
+
+00:06:18.639 --> 00:06:25.280
+that is unique and interesting and good
+for your users and so on. That's where
+
+00:06:23.120 --> 00:06:28.479
+you can add the value. Okay. Hopefully
+the front end people aren't furious with
+
+00:06:26.720 --> 00:06:32.000
+me for oversimplifying. Remember you can
+always you can always add to the
+
+00:06:29.680 --> 00:06:37.120
+conversation. I am now going to do one
+more bit of foundational explanation
+
+00:06:34.720 --> 00:06:41.919
+again taken from my MLOps course which
+is to introduce Docker that we're going
+
+00:06:39.199 --> 00:06:47.440
+to be using which is also a great part
+of the toolkit for someone who is vibe
+
+00:06:44.800 --> 00:06:52.720
+coding. So Docker is something again I
+imagine 60 to 70% of you know it back to
+
+00:06:50.639 --> 00:06:57.120
+front. Just a few of you I'm sure
+everyone's heard of it. Not sure what it
+
+00:06:54.720 --> 00:07:01.360
+is. Let me quickly demystify then we'll
+install it and then we will get going
+
+00:06:59.280 --> 00:07:06.800
+with today's project. So the easiest way
+to describe Docker is that Docker gives
+
+00:07:03.360 --> 00:07:12.319
+you a computer within your computer. It
+gives you this kind of ring fenced set
+
+00:07:09.120 --> 00:07:16.240
+of resources that's running on your box
+in a way that is isolated from the
+
+00:07:14.160 --> 00:07:19.759
+outside world. If you if you know about
+virtual machines, it's a sort of
+
+00:07:17.840 --> 00:07:25.039
+lightweight alternative to virtual
+machines which are very similar. That in
+
+00:07:22.400 --> 00:07:30.560
+a nutshell is what Docker is. And so the
+the sort of the so what the reason that
+
+00:07:27.680 --> 00:07:34.880
+people love Docker is first of all that
+it isolates everything inside this
+
+00:07:32.880 --> 00:07:38.400
+little world so that you can't damage
+the outside world. And obviously that's
+
+00:07:36.960 --> 00:07:43.680
+something that's that's important for
+for agentic coding. It's also super
+
+00:07:41.680 --> 00:07:47.680
+portable that you could build it once
+and have it working in one place and
+
+00:07:45.919 --> 00:07:52.319
+then just deploy it somewhere and have
+it working over there and and so on.
+
+00:07:50.479 --> 00:07:56.400
+There are some footnotes there. It's,
+you know, if only life were that easy,
+
+00:07:54.560 --> 00:08:01.680
+but still it's better than many of the
+alternatives. It's pretty good for just
+
+00:07:58.800 --> 00:08:06.160
+taking a one it built once and move it
+somewhere else and it usually just
+
+00:08:03.759 --> 00:08:09.680
+works. And there are three concepts to
+be aware of with Docker with some
+
+00:08:07.759 --> 00:08:13.199
+vocabulary that you get used to in the
+Docker world. First of all, there's
+
+00:08:11.440 --> 00:08:17.599
+something called a Docker file. The
+Docker file, it's a file and it's like a
+
+00:08:15.520 --> 00:08:23.039
+recipe. It's like a set of instructions
+that describes how you will install
+
+00:08:20.319 --> 00:08:28.000
+stuff and configure stuff on this box
+within the box. That's what the Docker
+
+00:08:25.199 --> 00:08:34.080
+file is. And the Docker file is used to
+build an image. A Docker image. A Docker
+
+00:08:31.440 --> 00:08:39.519
+image is like a snapshot of the world.
+It's like a it's like a particular kind
+
+00:08:36.000 --> 00:08:44.080
+of blueprint for your uh for for your
+box within a box that you'll be able to
+
+00:08:41.200 --> 00:08:49.680
+then use to create lots of these boxes.
+That is what the image is, the snapshot.
+
+00:08:47.120 --> 00:08:54.160
+It's it's created from a Docker file and
+it's ready ready for prime time. And so
+
+00:08:52.160 --> 00:08:59.120
+what is prime time? Prime time is what's
+called a Docker container. A Docker
+
+00:08:56.399 --> 00:09:05.279
+container is made from a Docker image.
+And the container is an actual live
+
+00:09:02.560 --> 00:09:08.399
+environment, a live box within your box.
+And it's created from an image. And of
+
+00:09:07.200 --> 00:09:11.920
+course, you probably get the idea. You
+could have one image that could create
+
+00:09:09.760 --> 00:09:15.680
+many of these containers. Each container
+is a little box within your box. And you
+
+00:09:13.760 --> 00:09:20.640
+can have many of them and they all run
+in this very isolated way. And that's
+
+00:09:18.800 --> 00:09:24.880
+that's the basics on Docker. And of
+course there's it's a there's so much we
+
+00:09:22.800 --> 00:09:28.880
+could say about Docker. I just wanted to
+sort of lay lay the foundations there.
+
+00:09:27.360 --> 00:09:32.640
+And for the pros, you know this stuff
+already. And never fear, we'll be using
+
+00:09:30.880 --> 00:09:36.160
+these a lot more in the next few weeks
+and we're going to get much more
+
+00:09:33.600 --> 00:09:39.040
+advanced on this stuff. Okay. And we're
+now for those that don't already have
+
+00:09:37.600 --> 00:09:43.440
+Docker on your system, we're going to go
+and install Docker so that you've got
+
+00:09:41.120 --> 00:09:48.160
+it. And so you go to a website, first of
+all, a hard to find website. It's
+
+00:09:44.959 --> 00:09:51.360
+docker.com. Go to docker.com
+and this should come up for you. And you
+
+00:09:50.160 --> 00:09:55.680
+can see there's there's lots of stuff
+here. And the thing that you want is
+
+00:09:53.200 --> 00:09:59.360
+called Docker Desktop. That's what
+you're going to install. And check this
+
+00:09:57.360 --> 00:10:02.240
+out. This is a download Docker Desktop
+button. And it's got the different
+
+00:10:01.040 --> 00:10:05.760
+versions that you might want to
+download. And you should download it and
+
+00:10:04.240 --> 00:10:08.720
+run it and check out the course
+resources because I'm going to add in if
+
+00:10:07.279 --> 00:10:12.480
+there's anything that people come across
+that they're not expecting. But
+
+00:10:10.080 --> 00:10:17.040
+basically, you accept all the defaults.
+Don't do anything special. On a PC, it's
+
+00:10:15.120 --> 00:10:22.240
+probably going to prompt you to do it in
+a way that involves WSL. And I advise
+
+00:10:20.000 --> 00:10:26.480
+you to do that. Yes, just stick with the
+defaults. Do it its way. There'll be a
+
+00:10:24.240 --> 00:10:30.160
+bunch of stuff to install. Do what it
+says. Go through all of that. Everything
+
+00:10:28.560 --> 00:10:33.760
+should get installed. It's possible you
+need to restart your computer to get
+
+00:10:31.600 --> 00:10:37.440
+your path variable updated, but at the
+end of it, you should have Docker
+
+00:10:35.680 --> 00:10:41.680
+Desktop running. And when you have
+Docker Desktop running installed, you
+
+00:10:40.240 --> 00:10:45.600
+should be able to open up see something
+like this Docker Desktop screen that
+
+00:10:43.680 --> 00:10:49.600
+I've got here. It's like an app. And on
+the left here, you'll see containers and
+
+00:10:47.600 --> 00:10:54.079
+images. And this shows you, it should be
+blank for you. You won't have any. I
+
+00:10:51.120 --> 00:10:57.200
+have a bunch again, the blueprints, the
+things that have been created from a
+
+00:10:55.279 --> 00:11:00.720
+Docker file and are ready for prime
+time. Containers is when they've
+
+00:10:59.279 --> 00:11:04.399
+actually been created. They are being
+run. They are alive. They are little
+
+00:11:02.880 --> 00:11:08.880
+worlds. And of course, there's lots of
+other stuff. You can have volumes which
+
+00:11:06.240 --> 00:11:13.040
+is like sort of ring fenced uh space
+storage that could be used by your
+
+00:11:10.720 --> 00:11:17.360
+containers. So there's lots of detail of
+course but that's the basics. That's all
+
+00:11:15.519 --> 00:11:21.680
+you need to know for now because now
+we're going to go and build a project.
+

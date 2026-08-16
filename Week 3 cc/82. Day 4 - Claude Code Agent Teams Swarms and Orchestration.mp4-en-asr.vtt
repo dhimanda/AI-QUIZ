@@ -1,0 +1,639 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:07.120
+At the start of our three weeks
+together, I told you to expect a roller
+
+00:00:04.640 --> 00:00:10.719
+coaster. And here's the thing. We on
+this roller coaster journey, we have
+
+00:00:08.800 --> 00:00:15.519
+just reached that point when the roller
+coaster has got to the very, very top
+
+00:00:13.679 --> 00:00:20.720
+and you're up there at the top and
+you're looking down and we're about to
+
+00:00:18.080 --> 00:00:26.480
+take the plunge. Prepare for the plunge.
+Prepare for week three, day four. This
+
+00:00:23.920 --> 00:00:30.800
+is a big day. It's another purple day.
+It's a day of core skills. It's the day
+
+00:00:28.640 --> 00:00:37.440
+when we move into the world of swarms
+and orchestrators, the time when we go
+
+00:00:33.760 --> 00:00:42.879
+crazy and it's all about the stages
+seven and eight of the Steve chart that
+
+00:00:40.879 --> 00:00:47.120
+we went through a couple of weeks ago.
+Now, we've already got quite comfortable
+
+00:00:45.200 --> 00:00:50.000
+with the idea that you can run multiple
+Clawude instances. We've done that a
+
+00:00:48.640 --> 00:00:53.360
+bit. We haven't done that in a massive
+way because it's all sort of leading up
+
+00:00:51.440 --> 00:00:56.480
+to this, but for sure you've probably
+experimented with running Claude a few
+
+00:00:54.960 --> 00:01:00.960
+times and we had things like that
+experiment when we had Claude running
+
+00:00:58.719 --> 00:01:04.239
+and we had Codeex doing the code review
+and so we've seen all of this happening
+
+00:01:02.559 --> 00:01:09.600
+and of course we work with sub agents a
+fair bit too. Well, this is the moment
+
+00:01:07.040 --> 00:01:13.840
+when we hit stages seven and eight. This
+is the moment when we start to have tons
+
+00:01:11.920 --> 00:01:18.720
+of agents running, which is what you
+think of as a swarm. When you have like
+
+00:01:15.920 --> 00:01:24.720
+a a huge number of them all doing stuff,
+everything's going on. It seems mad.
+
+00:01:21.759 --> 00:01:29.520
+It's chaos. And then stage eight is when
+you're like, "Okay, maybe we can we can
+
+00:01:27.600 --> 00:01:33.439
+reel this in. We can control the chaos
+by giving the different agents some
+
+00:01:31.360 --> 00:01:38.240
+structure, by having some in charge of
+others, by trying to coordinate the
+
+00:01:35.520 --> 00:01:42.000
+work, but having the LLMs manage the
+process. That's what orchestration is
+
+00:01:40.560 --> 00:01:45.200
+about. And that's what we're going to be
+doing today. And as we look between
+
+00:01:43.280 --> 00:01:48.640
+stages seven and eight, swarms versus
+orchestration. I don't know that there's
+
+00:01:46.560 --> 00:01:51.439
+necessarily a binary we are at this
+point and we're at that point. The
+
+00:01:50.159 --> 00:01:56.479
+different solutions we'll be looking at
+are somewhere on that continuum, but
+
+00:01:53.680 --> 00:02:01.680
+between being sort of wild swarm with no
+structure and extremely organized
+
+00:01:59.439 --> 00:02:05.759
+structured orchestration. And where you
+are on that continuum depends a bit on
+
+00:02:03.840 --> 00:02:10.560
+your the choices that you make, how you
+set it up, and how crazy you want to go,
+
+00:02:08.399 --> 00:02:15.120
+as we will see. All right, we're going
+to be doing a few different approaches.
+
+00:02:13.120 --> 00:02:20.400
+And I'm going to start right away by
+looking at Claude's agent teams, which
+
+00:02:18.080 --> 00:02:24.080
+is the one thing from I guess the day
+one of this week that we said we'd come
+
+00:02:22.239 --> 00:02:29.599
+back to. Now's the time. We're coming
+back to it right here. So Claude agent
+
+00:02:26.720 --> 00:02:34.160
+teams, first of all, is an experimental
+feature as of right now. By the time you
+
+00:02:32.480 --> 00:02:38.319
+watch this, maybe it's matured, maybe
+it's no longer just an experimental
+
+00:02:36.160 --> 00:02:42.560
+feature. But for me, it is. This is
+brand new. And I'll be going through the
+
+00:02:40.400 --> 00:02:46.560
+experimental side of it. And maybe
+you'll look at the docs and see that
+
+00:02:44.160 --> 00:02:52.080
+some of this has become a bit more firm.
+But but first of all, what are agent
+
+00:02:49.680 --> 00:02:57.360
+teams? They are there are ways that you
+can have multiple claude code instances,
+
+00:02:54.480 --> 00:03:02.159
+multiple different claodes that are
+being coordinated in some way. One of
+
+00:03:00.000 --> 00:03:07.040
+them is acting as the team lead. It is
+in charge of the whole process and its
+
+00:03:04.319 --> 00:03:11.680
+job is to assign out tasks and manage
+the collaboration between them in order
+
+00:03:09.040 --> 00:03:15.599
+to achieve a goal. And then the others,
+the teammates, they're able to work in
+
+00:03:13.920 --> 00:03:20.400
+independently and they're able to
+interact with each other. So they can
+
+00:03:17.280 --> 00:03:24.480
+send each other messages and you as as
+the human in the loop, you can interact
+
+00:03:22.640 --> 00:03:29.519
+with them directly as well. You don't
+need to go through the lead. And this is
+
+00:03:26.800 --> 00:03:34.400
+a massive distinction from sub agents.
+With sub agents, you can't send a
+
+00:03:31.599 --> 00:03:37.760
+message to a sub aent. It just exists in
+order to to serve the main claude code.
+
+00:03:36.720 --> 00:03:42.159
+And it doesn't really work
+independently. it only it only persists
+
+00:03:40.159 --> 00:03:46.720
+for the duration of its task and then
+it's history. Whereas in this case these
+
+00:03:44.319 --> 00:03:51.200
+things called teammates the teammate
+they they are all separate claude codes
+
+00:03:49.120 --> 00:03:57.200
+that are running. Okay. So under what
+circumstances would you make use of
+
+00:03:53.599 --> 00:04:01.360
+clawude agent teams instead of say sub
+agents. We'll we'll have a direct
+
+00:03:59.280 --> 00:04:06.480
+comparison in a moment but here are some
+examples of use cases that work well for
+
+00:04:03.599 --> 00:04:10.239
+claw teams. So one of them is if and
+this is a sort of simple one that that
+
+00:04:08.080 --> 00:04:13.599
+you can imagine. If you want to research
+a ton of different things like you want
+
+00:04:11.760 --> 00:04:17.280
+to head off and look you want to look at
+Wikipedia and you also want to look at
+
+00:04:15.519 --> 00:04:22.160
+Stack Overflow and you also want to look
+at three other places then you could
+
+00:04:19.600 --> 00:04:26.720
+just have a multiple of these team
+members go off do their research
+
+00:04:24.320 --> 00:04:30.720
+independently working on it maybe
+exchanging information between them and
+
+00:04:28.639 --> 00:04:33.600
+then come back with all of the results.
+And that's something that you can also
+
+00:04:31.759 --> 00:04:39.120
+use sub agents for. But but this is a
+nice kind of use case. But perhaps a
+
+00:04:36.320 --> 00:04:43.919
+better one, if I may, is a case where
+you have independent modules of your
+
+00:04:41.919 --> 00:04:47.840
+system and you've got an objective and
+you can see a way that different Claude
+
+00:04:45.759 --> 00:04:51.840
+codes could work independently. And
+indeed, you could just spawn multiple
+
+00:04:50.000 --> 00:04:55.520
+terminals and run Claude and have them
+run independently, but you would prefer
+
+00:04:53.680 --> 00:05:00.320
+them to be able to communicate and have
+some shared structure. Now, they can
+
+00:04:57.759 --> 00:05:04.800
+communicate anyway through MD files if
+you did have them as separate terminals,
+
+00:05:02.000 --> 00:05:08.160
+but it would be a little bit flaky. It
+would depend a lot on who's writing what
+
+00:05:06.800 --> 00:05:11.759
+to which file and whether they're then
+reading them again. So, this way you
+
+00:05:10.320 --> 00:05:16.479
+could have different clawed code
+instances working on different modules,
+
+00:05:14.000 --> 00:05:20.320
+but still still working in lock step,
+still having a channel of communication.
+
+00:05:18.560 --> 00:05:23.680
+And then the other way is kind of
+similar but is saying rather than
+
+00:05:21.840 --> 00:05:30.160
+dividing them vertically into different
+areas of responsibility you could divide
+
+00:05:26.240 --> 00:05:34.960
+them horizontally by uh layer by coding
+layer like you could have a front-end
+
+00:05:31.600 --> 00:05:40.320
+engineer backend engineer LLM engineer
+responsible for different areas of your
+
+00:05:37.520 --> 00:05:42.800
+system and that it does translate quite
+nicely to the way that you sometimes
+
+00:05:41.440 --> 00:05:47.680
+organize humans in a software
+engineering team that you can do it by
+
+00:05:44.880 --> 00:05:51.440
+by area by feature by feature area of
+your system or you can do it into a
+
+00:05:49.759 --> 00:05:55.919
+front-end team and a backend team and so
+on. And you know, I I always hesitate
+
+00:05:54.000 --> 00:06:00.160
+before ascribing too much human-like
+responsibility to agents. But you can
+
+00:05:58.000 --> 00:06:04.400
+see how this works quite well in terms
+of having separate responsibilities that
+
+00:06:02.880 --> 00:06:07.919
+claude code instances can work on
+independently without too much overlap.
+
+00:06:06.800 --> 00:06:11.919
+And you're probably getting the idea
+that there's a lot of experimentation
+
+00:06:10.000 --> 00:06:16.000
+involved in getting agent teams to work
+well. There's not necessarily one right
+
+00:06:13.840 --> 00:06:19.120
+answer. It needs it needs some some
+balance. you you're ideally looking to
+
+00:06:17.759 --> 00:06:23.199
+be able to give separate
+responsibilities to Claude agents so
+
+00:06:21.120 --> 00:06:27.360
+that they can work independently and
+still have some benefit to communication
+
+00:06:25.520 --> 00:06:31.199
+between the agents so they can
+collaborate but not so much
+
+00:06:29.360 --> 00:06:34.960
+communication that they start to grind
+down and they're churning with lots of
+
+00:06:33.440 --> 00:06:39.199
+backwards and forwards. So you're
+looking to strike that balance and
+
+00:06:37.039 --> 00:06:42.960
+Anthropic's website is really good on
+this. It's got some very clear
+
+00:06:41.039 --> 00:06:46.880
+instructions and they may have changed
+since since I'm doing this. It's
+
+00:06:44.960 --> 00:06:51.919
+probably worth a look. It's got this
+nice table in there that compares sub
+
+00:06:49.120 --> 00:06:56.479
+agents to agent teams. These two
+techniques and it's pretty clear that
+
+00:06:54.080 --> 00:07:01.039
+that they they are very different and
+they each have their place. Sub agents
+
+00:06:58.720 --> 00:07:05.440
+where they have their their own context.
+They return it to the caller. The
+
+00:07:03.039 --> 00:07:10.639
+communication is only back to their
+their their main agent. The main agent
+
+00:07:08.400 --> 00:07:15.759
+manages all the work. They have focused
+tasks and they basically summarize the
+
+00:07:13.520 --> 00:07:19.280
+results back. So they're quite efficient
+from a token point of view. They can
+
+00:07:17.680 --> 00:07:24.720
+cause more tokens to be to be spent
+themselves, but they're relatively
+
+00:07:21.039 --> 00:07:29.360
+efficient. Agent teams, they have their
+own full context window that is
+
+00:07:27.199 --> 00:07:33.599
+completely independent. They don't
+return it to the caller. They they can
+
+00:07:32.319 --> 00:07:39.440
+message the other teammates
+independently. They have a shared task
+
+00:07:36.639 --> 00:07:45.039
+list. There is one task list that that
+is managed by the the uh overall by the
+
+00:07:42.479 --> 00:07:49.520
+main claude code but and they coordinate
+their their items on the task list.
+
+00:07:47.440 --> 00:07:54.319
+They're best for when there is complex
+work that does require a level of
+
+00:07:51.759 --> 00:07:58.160
+collaboration but not too much and they
+can be expensive. They can cause a lot
+
+00:07:56.080 --> 00:08:02.879
+of tokens to be spent. So you need to be
+aware of that. And look at that last
+
+00:08:00.160 --> 00:08:07.840
+bullet there. Use sub agents when you
+need quick focused workers that report
+
+00:08:04.960 --> 00:08:12.879
+back. Use agent teams when teammates
+need to share findings, challenge each
+
+00:08:10.240 --> 00:08:17.039
+other, and coordinate on their own.
+Okay, there are five instructions that
+
+00:08:15.520 --> 00:08:21.840
+we will go through now. It's it's time
+for us to do this. Five steps to making
+
+00:08:19.440 --> 00:08:26.960
+the Claude agent teams work. First of
+all, we need to change settings.json for
+
+00:08:24.400 --> 00:08:31.120
+the project. We need to to tell it that
+we are going to enable Claude code
+
+00:08:28.879 --> 00:08:34.479
+experimental agent teams. You might not
+need to do this because it might then be
+
+00:08:32.880 --> 00:08:38.719
+fully live without needing this flag,
+but we do. There's another field as well
+
+00:08:36.479 --> 00:08:44.159
+called teammate mode and there are two
+modes and one of them in process works
+
+00:08:41.360 --> 00:08:47.920
+on all computers on Mac and PC and it
+just means that that all of the agents
+
+00:08:45.920 --> 00:08:51.360
+report back in the same screen and you
+can flip between them by pressing shift
+
+00:08:49.440 --> 00:08:57.680
+up and down and that's what we'll use.
+There is a cooler approach called T-max,
+
+00:08:55.040 --> 00:09:02.399
+but that only works on Macs and Linux
+when you have extra stuff installed. And
+
+00:09:00.080 --> 00:09:05.519
+so I'm not going to do it, but if you if
+you wish, you can try that. And when you
+
+00:09:03.760 --> 00:09:08.720
+do that, your screen splits into
+different sections. And you can you can
+
+00:09:07.440 --> 00:09:11.680
+see each of the different agents a
+different section. And that's pretty
+
+00:09:09.920 --> 00:09:15.040
+cool. Uh so you might want to do that if
+you if you want to see that yourself.
+
+00:09:12.880 --> 00:09:19.040
+You have to change in process to T-Max.
+And you have to have the T-max installed
+
+00:09:17.200 --> 00:09:21.279
+or be using something called it term 2
+if you know what that is. So, this is
+
+00:09:20.480 --> 00:09:24.880
+what we're going to put in
+settings.json. And this should work on
+
+00:09:23.279 --> 00:09:30.560
+all platforms. And then it's just as
+simple as prompting Claude to say create
+
+00:09:27.120 --> 00:09:34.000
+an agent team to blah blah blah. And you
+can give it a lot of detail and tell it
+
+00:09:32.320 --> 00:09:37.600
+what how the agent should be made up or
+the team should be made up or or you can
+
+00:09:35.519 --> 00:09:41.279
+just give it the instruction. You can
+then press shift tab to turn it into
+
+00:09:39.760 --> 00:09:47.360
+delegate mode. That's something worth
+doing to make sure that the main agent
+
+00:09:43.600 --> 00:09:51.920
+doesn't doesn't just uh start handling
+the tasks itself. And you can also, if
+
+00:09:49.920 --> 00:09:55.760
+necessary, prompt it. Wait for your
+teammates to complete their task before
+
+00:09:53.600 --> 00:10:00.240
+proceeding to stop it diving in and
+doing work itself. And Thropic mentions
+
+00:09:57.760 --> 00:10:04.080
+that that's a common problem. And then
+shift up and down is how you flip
+
+00:10:01.760 --> 00:10:10.880
+between the different teammates. And
+when you're done, you send a command ask
+
+00:10:07.440 --> 00:10:15.360
+the blah teammate to shut down as a way
+to tell the main agent that it should
+
+00:10:13.360 --> 00:10:19.920
+shut down one of the team members. And
+then clean up the team is a general
+
+00:10:17.360 --> 00:10:24.079
+command to stop everything. So we need
+to know these commands. This these are
+
+00:10:22.480 --> 00:10:28.079
+the instructions for successfully
+running an agent team in claude code.
+
+00:10:26.320 --> 00:10:32.160
+And as three final bits of advice before
+we go and do this. We should invest in
+
+00:10:30.160 --> 00:10:36.880
+claude.md that gets loaded into the
+context for everything. And so it's our
+
+00:10:34.880 --> 00:10:41.920
+opportunity to make sure that all the
+agents start with the right information.
+
+00:10:39.839 --> 00:10:45.839
+And we need to expect this to be pricey.
+Uh if you try and use free models for
+
+00:10:44.399 --> 00:10:49.839
+this, you could give it a shot, but I
+imagine it's just not going to be
+
+00:10:47.839 --> 00:10:52.959
+reliable. Uh so if you're not
+comfortable with the cost, just watch
+
+00:10:50.880 --> 00:10:57.440
+me. Use this as a learning experience
+from seeing someone else doing it. If
+
+00:10:54.720 --> 00:11:01.839
+you're okay to go for this, then then do
+expect a cost. Watch your costs. Stop it
+
+00:10:59.680 --> 00:11:07.839
+if you ever become uncomfortable. And
+also to add add salt to the wound, uh
+
+00:11:05.440 --> 00:11:12.240
+you do need to be willing to rerun the
+whole thing. It might go off the rails.
+
+00:11:09.440 --> 00:11:17.200
+you might need to stop it, go back in
+Git and then just run it another time,
+
+00:11:14.720 --> 00:11:21.680
+maybe tweaking the instructions. This is
+highly experimental. It's something that
+
+00:11:19.360 --> 00:11:27.279
+is incredibly powerful. It's also
+unpredictable and a bit chaotic and it
+
+00:11:24.720 --> 00:11:32.399
+can take several attempts. Okay, with
+that, I hope you're excited and maybe a
+
+00:11:29.440 --> 00:11:39.120
+little tiny bit nervous. Let's let's go
+to VS Code. Let's try Claude agent Teams
+
+00:11:36.480 --> 00:11:39.120
+for real.
+

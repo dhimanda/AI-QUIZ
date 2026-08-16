@@ -1,0 +1,781 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.240 --> 00:00:08.320
+Okay, I have gone back to the instant
+project in cursor. So you can go to
+
+00:00:05.839 --> 00:00:12.880
+file, new window, find your way to
+instant. I'm back over here in instant
+
+00:00:10.240 --> 00:00:17.440
+and I've closed down cambban. That's
+gone. I've exited from the cambban
+
+00:00:15.360 --> 00:00:21.279
+project. For me, I press the red button.
+You can press the the X on Windows. And
+
+00:00:19.680 --> 00:00:26.560
+here I am in instant. And I'm currently
+in the instant directory. If I pwd, you
+
+00:00:24.560 --> 00:00:32.320
+can see that I'm in user z projects
+instant. I'm going to go up one cd dot
+
+00:00:29.599 --> 00:00:38.559
+dot cdsp space dot and I'm now in just
+my projects directory users ed projects.
+
+00:00:36.320 --> 00:00:43.840
+And now I'm going to do something a bit
+sad. I'm going to change I'm going to
+
+00:00:41.040 --> 00:00:49.280
+rename our cambban directory. The way
+you rename is you type mv which is short
+
+00:00:46.399 --> 00:00:54.079
+for move. I'm going to change canban.
+You do the the name the the previous
+
+00:00:51.360 --> 00:00:57.800
+name canban. And I'm going to call that
+instead cursor_anban.
+
+00:00:59.440 --> 00:01:05.519
+Which means that that whole directory
+has been renamed to something else.
+
+00:01:03.199 --> 00:01:11.360
+Canban no longer exists. If I try and do
+cdanban, I'll get an error. Look, no
+
+00:01:08.560 --> 00:01:15.840
+such file directory can. Okay, it's
+gone. And now and now, of course, I'm
+
+00:01:13.840 --> 00:01:21.759
+going to to within the projects
+directory, I'm going to do a get clone
+
+00:01:18.720 --> 00:01:25.840
+and paste in the same old URL again. And
+I've just brought in a new camb
+
+00:01:23.920 --> 00:01:29.840
+directory with that single file
+agents.mmd. So now we have a cursor
+
+00:01:28.320 --> 00:01:35.600
+cambban which has that that whole thing
+we just built. And now we have a fresh
+
+00:01:32.159 --> 00:01:42.159
+camb directory which is uh just got the
+one file in it. It's time now for us to
+
+00:01:38.799 --> 00:01:48.960
+look at GitHub Copilot. So we are now
+going to use GitHub Copilot which is a
+
+00:01:45.520 --> 00:01:53.119
+fishly popular AI agent for coding. And
+I'm looking here at GitHub's main
+
+00:01:50.640 --> 00:01:57.680
+landing page and GitHub copilot is right
+up there under platform. And you can see
+
+00:01:55.439 --> 00:02:02.399
+if you go to plans and pricing that
+there is a free tier which gets you a
+
+00:02:00.719 --> 00:02:07.040
+certain number of requests a month
+before you have to start paying. And so
+
+00:02:04.880 --> 00:02:12.319
+for sure you can you can do this without
+paying a scent. Uh and so there there
+
+00:02:10.319 --> 00:02:16.720
+are various different ways that you can
+use Copilot. You can use it in a command
+
+00:02:14.879 --> 00:02:21.440
+line interface which we're not doing
+this week. um you can use it through
+
+00:02:18.879 --> 00:02:26.080
+through a sort of web front end as well.
+But the most popular way and the way
+
+00:02:23.120 --> 00:02:32.640
+that we will be doing it is using VS
+Code, the open-source uh uh code editor
+
+00:02:30.160 --> 00:02:38.160
+IDE that is so very popular and it's
+going to look very familiar because as
+
+00:02:34.480 --> 00:02:45.040
+it happens, Cursor is itself a a fork of
+of this same editor, the same IDE. It's
+
+00:02:41.200 --> 00:02:48.319
+also a VS uh VS code clone. Uh and so
+it's going to look very very similar.
+
+00:02:46.800 --> 00:02:52.400
+And that's what we're going to do. And
+that means that the first thing we need
+
+00:02:49.760 --> 00:02:56.080
+to do is install VS Code. So you may
+already have VS Code, but if not,
+
+00:02:54.239 --> 00:03:00.959
+there's right here conveniently there is
+a link. Get it now. Uh over here, this
+
+00:02:58.879 --> 00:03:04.239
+is where you can download it. This, of
+course, is defaulting to Mac OS cuz it
+
+00:03:02.640 --> 00:03:08.239
+knows I'm on that. There's also a
+download button where you can download
+
+00:03:05.680 --> 00:03:12.319
+it for your platform of choice, whatever
+you are on. And you would then download
+
+00:03:10.480 --> 00:03:16.000
+VS Code. If you already have VS Code,
+you could do the check for updates to
+
+00:03:13.920 --> 00:03:19.760
+make sure you got the latest version of
+it. And once you've installed it and
+
+00:03:17.920 --> 00:03:24.400
+opened it and probably answered a few
+questions, but they should be very
+
+00:03:21.440 --> 00:03:29.519
+standard stuff. I will see you over in
+VS Code. Okay. And when you finally got
+
+00:03:27.120 --> 00:03:32.000
+VS Code running, you may see a welcome
+screen like this. You may see a
+
+00:03:30.879 --> 00:03:35.440
+different screen. It doesn't really
+matter, but it looks a bit different to
+
+00:03:34.000 --> 00:03:39.040
+Cursor, but there's some some
+familiarity over here. And the first
+
+00:03:37.280 --> 00:03:44.560
+thing we're going to do is install an
+extension. And you do that by going to
+
+00:03:41.280 --> 00:03:51.200
+the view menu and selecting extensions.
+It's also commandshiftx on a Mac or
+
+00:03:48.080 --> 00:03:56.400
+control shiftx on a PC. I'll press that
+now. Up comes the extensions marketplace
+
+00:03:54.799 --> 00:04:01.200
+here. And you're going to type out
+GitHub Copilot in there. You shouldn't
+
+00:03:59.360 --> 00:04:04.319
+need to type it all out. Up will come
+something and there should be a blue
+
+00:04:02.480 --> 00:04:07.920
+install button. I don't have a blue
+install button. Why is that? Because of
+
+00:04:05.840 --> 00:04:10.560
+course I've already installed it. If I
+click on it to make sure I've got the
+
+00:04:09.120 --> 00:04:16.400
+right one, you can check that it's from
+the verified github.com and I have 69
+
+00:04:14.480 --> 00:04:20.880
+million downloads and you probably have
+more. Uh, and and here we have it. This
+
+00:04:19.120 --> 00:04:25.759
+is what it looks like. You should press
+the blue install button in either place
+
+00:04:23.040 --> 00:04:32.080
+and that will then put GitHub Copilot
+into your VS Code. Okay. Next up, you go
+
+00:04:29.040 --> 00:04:37.919
+to file, new window. Up comes this
+screen. It looks a little bit different.
+
+00:04:34.720 --> 00:04:43.919
+uh you go to open dot dot dot go and
+find your projects folder find canban
+
+00:04:40.720 --> 00:04:47.840
+again there it is go into canban press
+open and now I'm going to make this a
+
+00:04:45.919 --> 00:04:53.759
+bit bigger with command plus and I'm
+going to resize this to fit the whole
+
+00:04:49.520 --> 00:04:57.919
+screen so we are looking here at our
+canban you can see the word canban is in
+
+00:04:55.759 --> 00:05:03.120
+block capitals here it's at the title
+here we know we're looking at the
+
+00:04:59.040 --> 00:05:08.000
+cananban project in vs code so far so
+good okay Next up, it's important to
+
+00:05:05.360 --> 00:05:11.600
+sign in to GitHub if you're not already.
+And the way that you do that is down
+
+00:05:09.520 --> 00:05:15.280
+here on the bottom left. Click on the
+avatar. And you can see that I'm signed
+
+00:05:13.360 --> 00:05:19.280
+in to my GitHub account. And there
+should be like a sign in right here. And
+
+00:05:17.680 --> 00:05:22.880
+if there's not, then please check out
+the course resources. If you have any
+
+00:05:20.800 --> 00:05:26.720
+problems with this as people figure this
+out, I will add in instructions to make
+
+00:05:24.800 --> 00:05:32.240
+sure that everyone is clear on how you
+connect to your GitHub account to use
+
+00:05:29.440 --> 00:05:38.639
+GitHub Copilot. And when you are ready
+and you've done that, you need to press
+
+00:05:34.639 --> 00:05:44.160
+on a Mac it's commandshift I and on a PC
+it's control shift I. I'm going to press
+
+00:05:41.360 --> 00:05:47.280
+that now. And bam, a build with agent
+appears over there on the right. And you
+
+00:05:46.000 --> 00:05:52.479
+can also bring this up by going to the
+view menu and selecting chat. That's the
+
+00:05:49.840 --> 00:05:56.479
+same as control shift I or command shift
+I. Okay. And so it's brought up this
+
+00:05:54.479 --> 00:06:00.160
+sidebar that looks very familiar cuz
+it's quite similar to cursor. And down
+
+00:05:58.720 --> 00:06:03.919
+here you can see this is where we can
+put an instruction to the agent. There's
+
+00:06:02.160 --> 00:06:09.039
+a drop down here where we can choose to
+put the agent in plan mode. Sounds
+
+00:06:06.639 --> 00:06:13.199
+familiar. There is also this here where
+we can choose what model we are
+
+00:06:10.880 --> 00:06:17.280
+connecting to. I have it on auto where
+it will pick one for us. But you can see
+
+00:06:15.520 --> 00:06:21.759
+that there are also a bunch of models
+that are provided for free in the in the
+
+00:06:20.080 --> 00:06:26.720
+lowest tier plan. Depending on the
+details of what plan you have, you may
+
+00:06:24.240 --> 00:06:31.759
+have access to different models. And on
+the the that topic, if you hover down
+
+00:06:29.199 --> 00:06:36.479
+here, you'll see it pops up something
+about how much you have been using
+
+00:06:33.840 --> 00:06:41.360
+C-Pilot, which shows you a sort of bar
+of what's been going on and shows you
+
+00:06:38.479 --> 00:06:45.440
+what kinds of uh how how your usage is
+against your allowance. And you can see
+
+00:06:43.680 --> 00:06:49.520
+more details of that in the on the
+GitHub Copilot website with the
+
+00:06:47.680 --> 00:06:54.479
+different plans, the free and paid
+plans, and how much you get. Okay, so
+
+00:06:52.400 --> 00:06:58.319
+with that, that's the the just the quick
+tour of the user interface. It's time
+
+00:06:55.919 --> 00:07:02.639
+that we put our agent to work. Okay,
+here we go. So, I'm putting the agent
+
+00:06:59.599 --> 00:07:09.280
+onto plan mode and I'm going to say, uh,
+no, please plan the task at hand.
+
+00:07:06.960 --> 00:07:14.000
+Uh, it's got the agents.mmd and I'm
+expecting it will pick that up. And it
+
+00:07:11.360 --> 00:07:18.720
+has picked that up and it's off. And
+it's off. It's gathered the context for
+
+00:07:15.919 --> 00:07:23.440
+the canan project plan. So, I will let
+it do some planning. Hopefully, yours is
+
+00:07:20.800 --> 00:07:26.960
+as well. And I will see you in a second.
+All right, the plan completed. As
+
+00:07:25.280 --> 00:07:30.000
+before, there's some stuff here. It
+seems like it might be interesting, but
+
+00:07:28.400 --> 00:07:33.759
+I'm not going to read it. I'm going to
+go ahead and press the start
+
+00:07:31.280 --> 00:07:37.280
+implementation button. Uh you can you
+can see here that there's a uh we could
+
+00:07:35.840 --> 00:07:41.599
+continue it in the background, but we're
+just going to have it run right here. Uh
+
+00:07:39.680 --> 00:07:45.840
+I think we'll talk more about the cloud
+services another time. And off it goes.
+
+00:07:44.160 --> 00:07:50.880
+I sorry, sorry. Select that and then
+start implementation appears in the
+
+00:07:47.120 --> 00:07:57.199
+chat. And I press enter and off it goes.
+So, I will let it do its thing, and I
+
+00:07:54.160 --> 00:08:00.960
+will see you back here shortly. Uh, once
+it's uh once it's it's made some
+
+00:07:58.960 --> 00:08:05.680
+progress. Uh, but it is it is now going
+to be prompting me to see if I want to
+
+00:08:03.360 --> 00:08:10.639
+uh to allow. And you can see that we can
+we can say always allow. We can just say
+
+00:08:07.840 --> 00:08:13.680
+for now, I'm going to uh to allow this
+one. So, I'm just going to press allow
+
+00:08:12.000 --> 00:08:16.720
+right here. I'm going to let it go on
+and do the next thing. And almost
+
+00:08:15.120 --> 00:08:21.840
+immediately it's asking me if I it can
+have permission to send no followed by
+
+00:08:19.120 --> 00:08:26.400
+enter to the uh to the terminal. So
+we'll let it do what it wants to do. Uh
+
+00:08:24.400 --> 00:08:30.879
+and I'm going to keep uh approving what
+it wishes while it does its thing. Uh
+
+00:08:28.800 --> 00:08:34.560
+now what I might do is I might yeah I'm
+just going to I'm just going to allow it
+
+00:08:32.080 --> 00:08:38.399
+as as it goes and then uh at the right
+time I will give it more permissions.
+
+00:08:36.399 --> 00:08:43.519
+All right. Uh let's have a look at this.
+It wants to run a command. Now what we
+
+00:08:40.640 --> 00:08:48.880
+can say is we can say always allow. Um
+and I'm going to say allow all commands
+
+00:08:46.000 --> 00:08:52.560
+in this session. So this is this is like
+a a yolo mode that we're going on to.
+
+00:08:51.279 --> 00:08:55.600
+Let it do its thing. I'm going to be
+watching carefully. You should choose
+
+00:08:54.160 --> 00:08:59.600
+the level of risk you're comfortable
+with. You can have it be approving step
+
+00:08:57.920 --> 00:09:02.480
+by step as you want so that you could
+watch what happens. But I will let it do
+
+00:09:01.200 --> 00:09:05.839
+its thing and I will see you back in a
+second. Okay. Okay. Well, in the spirit
+
+00:09:03.760 --> 00:09:10.880
+of not only showing you when things go
+well, this time it seems to be
+
+00:09:07.920 --> 00:09:14.399
+struggling a bit in a way, it just tried
+to bring up it did a lot of coding. I
+
+00:09:12.880 --> 00:09:17.920
+needed to approve another thing that it
+that it still needed me to approve. Um,
+
+00:09:16.320 --> 00:09:22.080
+and then it had a few bugs that it
+fixed. Uh, and then and then it tried to
+
+00:09:20.320 --> 00:09:26.399
+start the server and first of all it
+started it in the wrong directory and
+
+00:09:24.080 --> 00:09:30.160
+got a bunch of of errors and then it
+figured that out and it changed to the
+
+00:09:27.920 --> 00:09:34.480
+right directory, started the server
+again and then it it ran a command to
+
+00:09:32.880 --> 00:09:38.880
+bring the server up and it's just been
+sitting there waiting not realizing that
+
+00:09:37.120 --> 00:09:44.080
+the server has come up. It's kind of
+jammed and I guess it wants me to to uh
+
+00:09:41.519 --> 00:09:48.560
+I going to have to interrupt it by by by
+cancelling right here and stop it from
+
+00:09:46.640 --> 00:09:52.800
+thinking. But there is something of a
+surprise here which which I will reveal
+
+00:09:50.720 --> 00:09:58.720
+after stopping it. Okay. So here we go.
+I I will indeed stop it. Done. It has
+
+00:09:55.839 --> 00:10:02.959
+stopped. Uh and now uh and now to show
+you the uh the surprise. So here's the
+
+00:10:00.720 --> 00:10:09.279
+surprise. I'm I'm going I'm here in the
+terminal. I'm in the front end directory
+
+00:10:06.080 --> 00:10:14.399
+and I can do mpm rundev which is the
+command to start the server. And if I do
+
+00:10:11.680 --> 00:10:18.880
+that it brings up a server. And if I now
+go to that web address, uh you can see
+
+00:10:17.040 --> 00:10:22.480
+that it's actually it's done a really
+good job. It's finished. Uh even though
+
+00:10:20.800 --> 00:10:26.160
+it sort of it floundered at the very
+last minute, it seemed to get stuck. Um
+
+00:10:24.399 --> 00:10:30.240
+but what we have here, of course, is a
+canban. It's got quite a nice layout.
+
+00:10:28.800 --> 00:10:34.720
+And the way that you can move things
+around, I actually rather prefer this to
+
+00:10:32.959 --> 00:10:38.560
+the one that we got from cursor. I
+happen to I believe that that we've been
+
+00:10:36.160 --> 00:10:43.839
+using through through the GitHub
+copilot. been using uh Claude Haiku a
+
+00:10:41.839 --> 00:10:47.279
+very small model but I think it's done a
+fabulous job you can see we can move
+
+00:10:45.519 --> 00:10:51.279
+things around the drag and drop seems to
+work great and uh I think this is this
+
+00:10:49.519 --> 00:10:54.959
+is a pretty good implementation unlike
+the one that we got from cursor we don't
+
+00:10:52.720 --> 00:10:58.560
+have any errors showing here let's try
+deleting to see if it will delete oh no
+
+00:10:57.120 --> 00:11:04.480
+look at that delete is not working
+that's one that's one bug can we rename
+
+00:11:01.200 --> 00:11:09.600
+this to okay yes we can rename the
+columns all right so uh you know it's
+
+00:11:07.040 --> 00:11:13.519
+most of the way there not bad at all.
+Not bad for for its first pass, even
+
+00:11:11.920 --> 00:11:16.720
+with the hanging at the end. And we'll
+give it a chance to try and fix that
+
+00:11:15.200 --> 00:11:20.720
+problem that it's made. Let's come back
+over here. Just here where it says files
+
+00:11:19.200 --> 00:11:25.440
+changed, we press keep to make sure that
+we keep anything that is uh that has
+
+00:11:22.720 --> 00:11:31.120
+been uh affected. Um and let's stop the
+server. And let me just say in here um
+
+00:11:29.200 --> 00:11:37.880
+uh everything
+seems to be working well
+
+00:11:34.160 --> 00:11:37.880
+to be working well
+
+00:11:37.920 --> 00:11:46.640
+except I uh the delete
+card feature
+
+00:11:44.480 --> 00:11:51.680
+isn't working.
+Let's give it that feedback. Let's see
+
+00:11:48.480 --> 00:11:55.040
+how it does with this. Uh and uh we will
+give it a chance and I will come back in
+
+00:11:53.360 --> 00:11:59.360
+just a second. Okay. Well, it believes
+that it's fixed it. Uh, the delete card
+
+00:11:57.360 --> 00:12:01.839
+feature should now work. Now, this shows
+me it's it's an interesting sign,
+
+00:12:00.720 --> 00:12:07.360
+particularly with some of the smaller
+models. What I dislike about this is
+
+00:12:04.240 --> 00:12:12.480
+that it has done a classic move by
+coding agents, which is to guess what it
+
+00:12:10.160 --> 00:12:16.959
+thinks the problem is, put in a fix, and
+then claim victory. And that's just
+
+00:12:14.480 --> 00:12:21.040
+riddled with problems. First of all, it
+shouldn't guess. It should prove the
+
+00:12:19.279 --> 00:12:24.639
+problem. If it thinks it has a theory,
+we would always want it to prove it. And
+
+00:12:23.120 --> 00:12:28.639
+secondly, it shouldn't just fix
+something and say it's fixed without
+
+00:12:26.480 --> 00:12:33.200
+testing and demonstrating. It needs to
+reproduce an issue, prove the root
+
+00:12:30.560 --> 00:12:36.560
+cause, fix it, demonstrate it's fixed,
+and it should always do that. And when
+
+00:12:35.040 --> 00:12:40.959
+you're watching this, particularly if
+you're somewhat new to to uh to
+
+00:12:38.880 --> 00:12:44.800
+development, then you need to be the
+boss of that process. You need to push
+
+00:12:42.959 --> 00:12:47.600
+back and challenge even if it has it
+right. And I don't know if it has it
+
+00:12:46.079 --> 00:12:52.079
+right. We will we will give it a try now
+and see if it actually got it right.
+
+00:12:48.880 --> 00:12:57.440
+Okay. So, I do mpm rundev to bring up
+the server. Uh, there it is. Here is my
+
+00:12:55.680 --> 00:13:02.160
+screen. And there we go. Let's try
+deleting.
+
+00:12:59.440 --> 00:13:06.160
+Just as I thought. No change at all. If
+it hasn't proven the problem, then it
+
+00:13:03.920 --> 00:13:08.720
+probably doesn't work. So, that that
+didn't work. Let me just check if I
+
+00:13:07.279 --> 00:13:12.800
+press keep here that that doesn't change
+anything. But I I don't think so. That
+
+00:13:10.720 --> 00:13:19.760
+that that won't change anything at all.
+Um, and in fact, we now do see an issue
+
+00:13:15.600 --> 00:13:23.440
+appearing here. Uh, okay. All right. So,
+um, I will keep hammering away at it.
+
+00:13:21.760 --> 00:13:28.240
+We'll tell it. I'll give it strictly the
+feedback that that didn't fix it. And
+
+00:13:25.279 --> 00:13:36.079
+I'm going to tell it. So, I say that
+didn't fix it. Please, first reproduce
+
+00:13:32.880 --> 00:13:44.279
+the problem
+and prove you've reproduced it.
+
+00:13:40.560 --> 00:13:44.279
+Find the root cause.
+
+00:13:44.320 --> 00:13:52.560
+Fix it.
+and prove you fixed it.
+
+00:13:50.480 --> 00:13:57.680
+That's that's how to give it
+instructions to do this in a disciplined
+
+00:13:55.440 --> 00:14:02.480
+way and you have to take it through that
+process. Uh okay. And I will I will
+
+00:14:00.000 --> 00:14:06.160
+allow it to do its thing and uh as it as
+it looks in the in the web page and I
+
+00:14:04.240 --> 00:14:09.839
+will see you again in a second. Okay. It
+now claims it has reproduced the
+
+00:14:07.760 --> 00:14:13.920
+problem, fixed it and implemented a fix
+and tested it. We will be the judge of
+
+00:14:12.000 --> 00:14:18.079
+that. Here we go. It's running. The
+server is running. I bring this up. I
+
+00:14:15.680 --> 00:14:22.959
+come in here. I press delete and indeed
+it has fixed it. Excellent. And I think
+
+00:14:20.880 --> 00:14:27.120
+that this was fortuitous, very very
+convenient because I think it's a really
+
+00:14:24.639 --> 00:14:30.880
+important learning point about first of
+all not believing it when it tells you
+
+00:14:29.040 --> 00:14:35.360
+it's found the problem and fixed it. And
+secondly, giving it those specific
+
+00:14:32.880 --> 00:14:39.600
+instructions. Reproduce the problem.
+Prove the root cause. Fix it.
+
+00:14:37.760 --> 00:14:46.000
+Demonstrate that you fixed it. That's
+the right recipe for success with
+
+00:14:41.440 --> 00:14:46.000
+debugging. Okay. Onwards.
+

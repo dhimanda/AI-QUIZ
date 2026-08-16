@@ -1,0 +1,412 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:06.720
+Okay. And now I'm going to do a control
+C to stop the server from running. It's
+
+00:00:05.120 --> 00:00:12.639
+no longer running. I'll clear that
+screen with clear. Okay. It's time for
+
+00:00:09.760 --> 00:00:18.080
+us to add some functionality. We've got
+another way to prompt our LLM. We want
+
+00:00:16.080 --> 00:00:23.359
+to do more. So at this point I want to
+mention that it's important to be taking
+
+00:00:20.160 --> 00:00:27.599
+backups as we go to be checkpointing
+because at any point particularly when
+
+00:00:25.439 --> 00:00:30.800
+you're yoloing you could mess everything
+up or the agent could mess everything up
+
+00:00:29.439 --> 00:00:34.880
+and you have to start all over again
+which would be a pain. Now the right way
+
+00:00:32.480 --> 00:00:38.719
+to do this is using git and using
+features of git that allow us to commit
+
+00:00:36.800 --> 00:00:42.320
+at various points and we will be doing
+that in the future. Uh, and if you know
+
+00:00:40.719 --> 00:00:47.039
+how to do that already, then for sure do
+that. But otherwise, the the simple way
+
+00:00:45.040 --> 00:00:52.960
+to do it, the poor person's version of
+Git, is simply to to copy and paste to
+
+00:00:50.079 --> 00:00:56.399
+duplicate the entire folder site and
+keep a backup of it that way. That way
+
+00:00:54.800 --> 00:01:00.320
+you've got a snapshot that you could
+always switch back in if you need to.
+
+00:00:58.320 --> 00:01:03.920
+So, make sure you've done that just in
+case what we do next messes everything
+
+00:01:02.320 --> 00:01:07.680
+up so you can always recall. And if you
+know how to use git, then of course just
+
+00:01:05.600 --> 00:01:12.240
+commit. Uh, and be careful of the fact
+that there's like already going to be a
+
+00:01:09.360 --> 00:01:15.760
+git repo under the web directory that
+you'll need to to remove and then just
+
+00:01:14.080 --> 00:01:20.560
+have one git repo if you if you know
+that. If you don't, just take a copy.
+
+00:01:17.759 --> 00:01:25.200
+All right, now time to ask our agent to
+do more. Okay, so here we go. I'm going
+
+00:01:23.360 --> 00:01:30.240
+to paste in here my next instruction.
+That's great. Please now add the ability
+
+00:01:27.119 --> 00:01:34.720
+to have an AI chat with a digital twin
+which can answer questions about my
+
+00:01:31.840 --> 00:01:41.759
+career. Please use open router. My open
+router API key is in thev file in the
+
+00:01:38.560 --> 00:01:46.640
+project routt. Please use the model
+named. Okay. And now I just want to
+
+00:01:44.320 --> 00:01:51.360
+bring up open router itself. This is
+open router. If you go to the models
+
+00:01:49.119 --> 00:01:55.280
+page in the main navigation, we can look
+at all the different models that open
+
+00:01:52.880 --> 00:02:00.560
+router offers. If you type free, you get
+to see all the free ones. I want to look
+
+00:01:57.360 --> 00:02:05.520
+for ones uh called GPTOSS,
+which is uh OpenAI's open-source models.
+
+00:02:03.759 --> 00:02:08.640
+There's a free version and a paid
+version. The free version, you can only
+
+00:02:06.960 --> 00:02:12.720
+use it occasionally. I'm going to pick
+the paid version. It's still super
+
+00:02:10.239 --> 00:02:16.800
+cheap, but you can choose to use either.
+Um this this is the version. I need to
+
+00:02:14.720 --> 00:02:22.879
+refresh that. And then I'm going to copy
+that model name into the clipboard. Go
+
+00:02:19.040 --> 00:02:30.640
+back to cursor. Paste that in here. Like
+so. That is the name of the model. That
+
+00:02:26.160 --> 00:02:35.599
+is all I need to do. Make the changes.
+Changes.
+
+00:02:32.560 --> 00:02:43.680
+Make sure it works.
+Let me know when ready for me. That's
+
+00:02:40.239 --> 00:02:48.480
+all. Let's set that going. Off goes our
+AI agent. I will see you back here in a
+
+00:02:46.319 --> 00:02:52.879
+few moments when the yoloing is
+complete. Okay. Well, it tells me that
+
+00:02:50.800 --> 00:02:58.400
+an AI digital twin is wired up and
+ready. The site now includes digital
+
+00:02:54.640 --> 00:03:01.760
+twin. It calls open router. It uses the
+MMV file. It's given me the
+
+00:03:00.239 --> 00:03:04.800
+instructions.
+What do you think? What's your bet? Is
+
+00:03:03.360 --> 00:03:08.080
+this going to work? Is this going to
+work? Let's see. Uh, we have to be in
+
+00:03:06.800 --> 00:03:13.360
+the web directory, which is where we
+are. pwd. There we are. We do mpm
+
+00:03:11.040 --> 00:03:18.400
+rundev.
+Well, it hasn't crashed. Now, let's
+
+00:03:16.000 --> 00:03:23.680
+bring up a browser. Here's a browser
+tab. Hold on. Make that a nice size for
+
+00:03:21.040 --> 00:03:29.360
+you. Sorry. One second. One second. I
+know it's exciting.
+
+00:03:26.319 --> 00:03:35.040
+Okay, here we go. So, after faffing
+around with that, we can go to localhost
+
+00:03:31.120 --> 00:03:38.080
+3000. And here comes a website. It It
+scrolled straight down originally. I
+
+00:03:36.720 --> 00:03:43.360
+wonder if it meant to do that to do
+digital twin chat with an AI version of
+
+00:03:40.959 --> 00:03:46.319
+Ed to explore career milestones. Look,
+it's all got the same site. It is a
+
+00:03:44.879 --> 00:03:52.000
+beautiful site, by the way, I have to
+say. Uh here we go. We scroll down and
+
+00:03:48.799 --> 00:03:54.720
+here is the digital twin section. Very
+interesting. It doesn't look like a
+
+00:03:53.200 --> 00:03:59.040
+traditional chat, but it has these
+buttons and things. All right. Shall we
+
+00:03:57.120 --> 00:04:03.599
+try chatting with the digital twin?
+Okay. Let's give it a shot. Uh, hi
+
+00:04:01.040 --> 00:04:07.040
+there.
+So, I said hi there. It's slightly
+
+00:04:05.040 --> 00:04:10.319
+janky. It like bounced around a bit, but
+I said, "Hi there. Look, look at how
+
+00:04:08.720 --> 00:04:13.760
+it's showing here. Hello. I'm the
+digital twin of Ed Donna. How can I
+
+00:04:11.920 --> 00:04:22.800
+assist you today? Perhaps with insights
+on his work, blah blah blah blah blah."
+
+00:04:15.680 --> 00:04:28.960
+Uh, what are you most proud of?
+Let's see what we get. What What is this
+
+00:04:26.080 --> 00:04:33.759
+guy Ed most proud of? Let's see. I'm
+most proud of turning a vision into
+
+00:04:31.120 --> 00:04:37.680
+tangible impact. Building Nebula from
+the ground up. As the founder said, very
+
+00:04:35.280 --> 00:04:40.960
+nice. What a nice answer. Watching
+thousands of professionals find roles
+
+00:04:39.360 --> 00:04:47.440
+that genuinely fit them. the clearest
+proof that technology can serve a deeper
+
+00:04:44.000 --> 00:04:51.520
+human focused mission. Nicely put. So,
+here we have it. We have a digital twin.
+
+00:04:50.080 --> 00:04:54.560
+It's It's interesting the way it's
+showing it here. It's actually quite
+
+00:04:52.720 --> 00:04:58.720
+nice. It's it's different. I've seen
+many digital twins and they don't tend
+
+00:04:56.880 --> 00:05:03.040
+to look this way. So, I do quite like
+it, I have to say, even if it's not not
+
+00:05:01.040 --> 00:05:06.160
+the traditional approach, but very nice.
+It does seem to be working and
+
+00:05:04.320 --> 00:05:10.000
+presumably it's calling open router.
+Well, this is really showing you, I'd
+
+00:05:08.160 --> 00:05:14.400
+say, the the the good and the rough
+edges of vibe coding. This looks pretty
+
+00:05:13.039 --> 00:05:18.240
+good, I have to say, but there's
+definitely some weird stuff like the way
+
+00:05:16.080 --> 00:05:22.400
+when it opens up, it flips down straight
+to that section. I do believe some of
+
+00:05:20.080 --> 00:05:26.000
+this navigation at the top here. Some of
+it works. Career journey works nicely.
+
+00:05:24.400 --> 00:05:30.000
+Does that portfolio? Oh, that works as
+well. Digital twin. Oh, okay. At one
+
+00:05:28.800 --> 00:05:34.400
+point, I think this wasn't working, but
+it does seem to be working right now.
+
+00:05:31.759 --> 00:05:38.240
+Uh, so so that navigation is working.
+Um, but yeah, there's the another thing
+
+00:05:36.160 --> 00:05:41.680
+that doesn't work. These buttons here. I
+tried pressing that button and nothing
+
+00:05:39.840 --> 00:05:45.680
+happened. So, there's definitely some
+things here that that that are a bit
+
+00:05:43.520 --> 00:05:50.880
+broken. And this is where you have to go
+back and iterate, iterate, iterate and
+
+00:05:48.160 --> 00:05:55.280
+improve and and see what can be done by
+going backwards and forwards. And it is
+
+00:05:52.960 --> 00:05:59.360
+a good idea to keep backups. Uh, you
+should really do it using git, but make
+
+00:05:57.280 --> 00:06:03.039
+sure you can always go back if it ever
+does something that should be reversed.
+
+00:06:01.520 --> 00:06:08.880
+And of course, the main thing to keep in
+mind here is that by by genuinely vibe
+
+00:06:06.240 --> 00:06:13.440
+coding with YOLO, we've sort of broken
+all of the rules that I said at the
+
+00:06:10.960 --> 00:06:18.479
+first first half of of today's session.
+We didn't work on an agents.md. We
+
+00:06:16.160 --> 00:06:23.759
+haven't really been checking as we go.
+And that's fine for this kind of of MVP
+
+00:06:21.440 --> 00:06:28.560
+and for experimenting and exploring. But
+if we wanted to take this further, it
+
+00:06:26.080 --> 00:06:32.720
+would now be important to take a moment
+and come back through. First of all,
+
+00:06:30.639 --> 00:06:36.880
+test everything thoroughly and fix up
+things that we're not satisfied with.
+
+00:06:34.560 --> 00:06:42.240
+Iterate on things like the prompts and
+look in at the code. And for example,
+
+00:06:39.280 --> 00:06:46.240
+now let's take a look inside web and
+find out what has this actually built
+
+00:06:44.160 --> 00:06:53.440
+and do we understand it? And so for
+example, I can come in into web into
+
+00:06:49.039 --> 00:06:58.800
+source src and come in here look inside
+app and here we could look inside API
+
+00:06:57.520 --> 00:07:04.000
+and you'll see that there is something
+called root.t ts under API chat. And if
+
+00:07:02.080 --> 00:07:09.440
+I open this up, this is where we will
+see the backend code that's getting run,
+
+00:07:06.560 --> 00:07:14.639
+which is where it is going to uh to be
+able to to call open uh call open
+
+00:07:12.880 --> 00:07:19.199
+router. Now, let's make this a little
+bit bigger and push our agent over to
+
+00:07:17.360 --> 00:07:24.319
+the side and take a look at what's
+happening here. And you can see the code
+
+00:07:21.680 --> 00:07:28.560
+that is going to make that request to
+the the the LLM. And we can now look
+
+00:07:27.120 --> 00:07:33.280
+through this and get a sense of what's
+going on. And most importantly, we can
+
+00:07:30.560 --> 00:07:38.479
+see the prompt that's being used to tell
+it who I am. And we may decide, look,
+
+00:07:36.160 --> 00:07:43.599
+this is this is quite simplistic. This
+is just a very basic prompt. We really
+
+00:07:41.120 --> 00:07:48.319
+wanted the whole LinkedIn profile with
+all the information to be sent to to the
+
+00:07:46.479 --> 00:07:51.199
+chatbot so that it could could give us
+the most robust
+

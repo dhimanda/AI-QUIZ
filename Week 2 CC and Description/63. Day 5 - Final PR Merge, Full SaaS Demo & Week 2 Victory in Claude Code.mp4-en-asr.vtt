@@ -1,0 +1,670 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.240 --> 00:00:07.279
+Okay. And here we are uh back in Claude
+Code. Let's look at the context. I'm
+
+00:00:04.720 --> 00:00:11.120
+sure it's very full. Uh let's have a
+look at it. Uh not too bad actually. It
+
+00:00:09.679 --> 00:00:17.680
+must have had to do a compact to have
+got there. I I didn't spot that. Okay,
+
+00:00:13.120 --> 00:00:23.920
+let's just say um please go ahead and
+merge the PR locally
+
+00:00:22.000 --> 00:00:31.160
+and push
+and then switch the branch to main.
+
+00:00:33.360 --> 00:00:43.520
+let it do its thing and then we are
+going to straight after that um we're
+
+00:00:40.640 --> 00:00:56.000
+going to um done merged and pushed and
+now we'll say please update claude.m MD
+
+00:00:48.960 --> 00:01:01.520
+to reflect the latest project status
+let it do its thing
+
+00:00:58.879 --> 00:01:06.000
+and then even though the context is is
+uh is quite quite clear. I still want to
+
+00:01:04.320 --> 00:01:10.240
+do a clear. I still want to reset it
+because if it has compacted, as I say,
+
+00:01:08.240 --> 00:01:14.640
+that can sometimes compress the memory
+in ways that we wouldn't want. It's good
+
+00:01:12.320 --> 00:01:20.560
+it's good to have it kind of uh be be
+properly uh set.
+
+00:01:17.600 --> 00:01:27.360
+Done. All updated. Okay. With that, we
+are ready for the final the final Jira
+
+00:01:23.680 --> 00:01:32.079
+issue. So, we do a slash clear.
+We do a slash context. Let's take a look
+
+00:01:30.320 --> 00:01:36.640
+at it. Make sure it's nice and clean.
+Yes, it is. Still lots of MCP tools. And
+
+00:01:35.200 --> 00:01:42.320
+you know the deal. You know what we have
+to do next. Okay. I'm going to do slash
+
+00:01:40.320 --> 00:01:47.040
+um MCP.
+I'm going to go to Atlassian. I'm going
+
+00:01:44.400 --> 00:01:51.920
+to say reauthenticate. Up it comes.
+Approve.
+
+00:01:48.560 --> 00:02:00.320
+Scroll down. Accept. Then back we go to
+Claude Code. And now now up a few times.
+
+00:01:56.399 --> 00:02:06.799
+Uh let's see. Here it is. Feature dev.
+All right. So we we don't want uh
+
+00:02:04.799 --> 00:02:11.599
+um
+yeah we just delete all of this um and
+
+00:02:10.000 --> 00:02:17.440
+we're going to implement the last of our
+tickets which is PL7
+
+00:02:14.239 --> 00:02:22.560
+and then also uh test and push to the
+the change to to GitHub and then then we
+
+00:02:20.640 --> 00:02:28.560
+are really done with this project which
+we will have done in uh just a matter of
+
+00:02:24.959 --> 00:02:33.599
+an hour. Uh so implement juror ticket
+PL7
+
+00:02:31.200 --> 00:02:40.560
+then
+test
+
+00:02:35.360 --> 00:02:47.680
+and submit a PR. That's all we have.
+Let's do it. Let's do it. Hopefully it
+
+00:02:44.239 --> 00:02:52.959
+can get PL/7. Okay. Yes, it looks like
+it. Support multiple users and final
+
+00:02:50.000 --> 00:02:56.720
+polish off it goes. I will let you know
+if there are good questions. Otherwise,
+
+00:02:54.480 --> 00:03:02.239
+I will see you on the other side. Okay,
+I'm again totally in shock about this,
+
+00:02:59.440 --> 00:03:06.000
+but it completed. Uh, no nothing that
+that I needed to intervene on except the
+
+00:03:04.319 --> 00:03:09.519
+usual set of questions were again good
+questions. This is everything that was
+
+00:03:07.760 --> 00:03:14.720
+built. It's everything that I could have
+wanted. It's again a huge number of
+
+00:03:12.080 --> 00:03:19.920
+changes, but the big question is will it
+work? Uh, let's find out. Let's go over
+
+00:03:17.280 --> 00:03:28.239
+here. Let's let's just stop the server.
+So, scripts slash stopmac
+
+00:03:24.480 --> 00:03:32.959
+uh and then we will do start mac
+and please have a drum roll. First of
+
+00:03:29.680 --> 00:03:39.200
+all, will it come up? Okay, it came up
+and now we will give it a try. Here we
+
+00:03:34.799 --> 00:03:43.599
+go. Drum roll. Up comes something.
+Okay, so it's coming up with something
+
+00:03:41.760 --> 00:03:48.159
+which allows me to sign in, but I don't
+need to sign in to use it. That's an
+
+00:03:46.000 --> 00:03:53.280
+interesting angle. I guess that's uh
+let's give it a try. Um, a pilot
+
+00:03:51.680 --> 00:04:00.560
+agreement
+for a trial, please.
+
+00:03:57.519 --> 00:04:05.439
+Great. A pilot agreement is fine. Let's
+just see what happens if we uh um press
+
+00:04:03.200 --> 00:04:09.920
+sign in here. There is this is really
+nice. The sign in sign up screen. Uh so
+
+00:04:08.560 --> 00:04:15.400
+yeah, we'll go we'll go straight to the
+sign up screen. We'll we'll say uh
+
+00:04:12.400 --> 00:04:15.400
+addedward.com
+
+00:04:17.359 --> 00:04:28.560
+at least that many characters. Okay,
+let's uh say uh uh Claude
+
+00:04:24.400 --> 00:04:33.600
+code for the win.
+Okay.
+
+00:04:31.040 --> 00:04:37.840
+Uh all right. So now we're in as me.
+Look, there's this little thing, my
+
+00:04:35.120 --> 00:04:41.680
+documents. Sign out. And it kept me it
+kept the context of this. Uh that's
+
+00:04:40.000 --> 00:04:45.360
+pretty impressive. So I guess it's like
+you can use it without needing to sign
+
+00:04:43.680 --> 00:04:52.800
+in and then you can and now we seem to
+be in. Um so first tell me the name of
+
+00:04:47.919 --> 00:04:56.520
+the provider. Um please uh come up with
+placeholder names.
+
+00:04:57.280 --> 00:05:13.560
+Okay. Next, the purpose um what is being
+triled an AI assistant uh an AI agent um
+
+00:05:07.039 --> 00:05:13.560
+app for the legal profession.
+
+00:05:14.400 --> 00:05:26.479
+There we go. Got it. How long will the
+pilot run? Let's go for a 90-day pilot.
+
+00:05:21.440 --> 00:05:32.520
+Uh great. will be evaluating the um uh
+evaluating
+
+00:05:28.720 --> 00:05:32.520
+the business impact.
+
+00:05:32.880 --> 00:05:45.759
+Okay, sounds clear. Liability cap um
+liability cap uh $20,000.
+
+00:05:43.199 --> 00:05:51.240
+Um
+effective
+
+00:05:47.680 --> 00:05:51.240
+effective today.
+
+00:05:53.280 --> 00:06:03.160
+Uh and then New York and New York.
+Fair enough.
+
+00:06:04.800 --> 00:06:10.960
+That seems pretty impressive. That's
+done. There was It's a bit silent at the
+
+00:06:08.400 --> 00:06:15.600
+end there, but there's now download PDF
+and there's save. Press save. Save the
+
+00:06:14.240 --> 00:06:21.840
+document. We'll call it that. Save
+document. Document saved. Back we come.
+
+00:06:18.639 --> 00:06:24.639
+Okay, fair enough. Uh I guess I can
+press a new document. It's going to come
+
+00:06:23.120 --> 00:06:30.319
+back to a blank sheet. That's that's
+very impressive indeed. Uh and uh now we
+
+00:06:27.840 --> 00:06:35.199
+can sign out and come back in. So here
+we go. Come here. Sign out. Sign in. Oh,
+
+00:06:33.919 --> 00:06:38.720
+wait. Hang on. If I just come out of
+this. Yeah. Okay. So, it's all clear.
+
+00:06:37.120 --> 00:06:43.160
+There's no more icon to go back to that
+document. Sign in. Edward.com.
+
+00:06:44.800 --> 00:06:55.280
+Claude code for the win. And we're in,
+not now. And let's have a look at this
+
+00:06:53.280 --> 00:07:03.360
+document preview. Come down here. My
+documents open.
+
+00:06:59.520 --> 00:07:07.599
+Wowzer. Wow. Wow. Wow. That is pretty
+impressive. I've got to say that is like
+
+00:07:05.599 --> 00:07:10.880
+a first hit. Maybe there's something
+maybe I didn't quite like the way it
+
+00:07:08.960 --> 00:07:15.919
+gave a sort of empty answer at the end,
+but it was pretty clear. Uh and uh yeah,
+
+00:07:13.919 --> 00:07:19.520
+so that's got persistence now. It's got
+user management. And we saved our
+
+00:07:17.840 --> 00:07:25.360
+document and we brought it back. The
+look and feel looks super polished. Uh
+
+00:07:22.240 --> 00:07:32.639
+it looks very nice indeed. Uh I'm uh I'm
+really really happy with that. Uh very
+
+00:07:28.080 --> 00:07:35.759
+nice. Very nice. Uh, I'm uh I'm I'm I'm
+blown away. I'm absolutely blown away.
+
+00:07:34.400 --> 00:07:39.680
+Yeah. After spending more time with it,
+I'm I'm super impressed. I think that
+
+00:07:37.280 --> 00:07:44.400
+that idea that it presents you with with
+a sort of not logged in way of exploring
+
+00:07:42.319 --> 00:07:49.039
+it and and then you have to to sign in
+is very clever and it's it's I guess it
+
+00:07:46.240 --> 00:07:53.120
+is a good it's the premium pattern that
+is very common with what they call
+
+00:07:50.479 --> 00:07:56.879
+product growth, PRG. But but uh yeah, it
+didn't ask me that question. It just did
+
+00:07:54.560 --> 00:07:59.520
+it and I love it. Um, if I were to
+critique, I would say that there are
+
+00:07:58.240 --> 00:08:02.720
+still some things it could have done a
+little bit better, like that message at
+
+00:08:01.120 --> 00:08:06.319
+the end. And also, I believe, if I
+remember, in the Jira issue, we
+
+00:08:04.560 --> 00:08:11.759
+specified that we wanted a legal
+disclaimer saying that this wasn't this
+
+00:08:09.039 --> 00:08:15.680
+was only for for further review. And I
+haven't been able to see that written
+
+00:08:13.440 --> 00:08:20.080
+anywhere. So, I think it missed that,
+which just go just goes to show that
+
+00:08:17.440 --> 00:08:24.080
+it's not perfect even with its review
+and so on. Uh so that's that's an
+
+00:08:22.400 --> 00:08:28.479
+example of where there still is a role
+for us to come back and double check but
+
+00:08:26.720 --> 00:08:33.279
+I I would say that that I don't know
+what you think but this is definitely
+
+00:08:30.800 --> 00:08:37.680
+definitely exceeding expectations as far
+as I'm concerned. This is as good a
+
+00:08:35.680 --> 00:08:42.320
+proof as any that we have passed this
+inflection point where you can be
+
+00:08:39.839 --> 00:08:46.800
+extremely productive with this kind of
+of project and it lends itself
+
+00:08:44.399 --> 00:08:51.040
+particularly well to these sorts of
+projects which are quite well contained
+
+00:08:48.640 --> 00:08:54.800
+and which can be nicely defined. But as
+we'll see as we get into to bigger
+
+00:08:52.720 --> 00:08:58.800
+challenges next week, you can take it
+beyond this kind of thing very much as
+
+00:08:56.720 --> 00:09:04.160
+well. And I think the fact that we tied
+it together with Jura and with GitHub uh
+
+00:09:02.000 --> 00:09:08.240
+is is particularly good. And with that,
+let's just quickly pop over to Git and
+
+00:09:06.399 --> 00:09:12.800
+make sure that the PR is waiting for us
+to review. And here we are in the repo.
+
+00:09:10.320 --> 00:09:17.120
+There is indeed one pull request. No
+surprise, it's telling us about PL7
+
+00:09:15.120 --> 00:09:23.120
+that's been completed. And it's telling
+us that there's a remarkable 1,500 lines
+
+00:09:20.000 --> 00:09:28.640
+of code added across 22 different files
+that were edited as part of this PR. And
+
+00:09:26.320 --> 00:09:35.120
+it's all pretty impressive stuff. And
+with that, I think we can tell Claude to
+
+00:09:30.720 --> 00:09:38.120
+go ahead and merge. Please merge the PR
+locally
+
+00:09:38.399 --> 00:09:49.399
+and uh then push and then switch to the
+main branch.
+
+00:09:49.440 --> 00:09:59.160
+All right, we will let it do its thing.
+That's very good indeed. We will then
+
+00:09:55.040 --> 00:09:59.160
+just update claude.md
+
+00:09:59.680 --> 00:10:10.240
+and uh we will uh then declare victory
+at this point. So please update
+
+00:10:07.600 --> 00:10:18.320
+claude.md
+with latest project status.
+
+00:10:15.839 --> 00:10:21.920
+And so again we've seen endtoend
+integration across Jura and Git. We've
+
+00:10:20.240 --> 00:10:26.880
+also seen the new skill that we added
+that allows us to use cerebrass the
+
+00:10:24.480 --> 00:10:30.399
+super fast inference which is why the
+responses from the AI were so fast
+
+00:10:28.959 --> 00:10:34.079
+behind the scenes was also using
+structured outputs so that it could
+
+00:10:32.160 --> 00:10:39.440
+apply the different fields in the
+document. Um and yeah we have built a
+
+00:10:36.880 --> 00:10:42.959
+proper SAS app and you can see that uh
+it's not like this is so far from being
+
+00:10:41.440 --> 00:10:46.399
+an app that that truly could be
+commercialized. It needs a proper
+
+00:10:44.480 --> 00:10:49.680
+database that persists behind it which
+would be fairly easy to do and it needs
+
+00:10:47.920 --> 00:10:55.519
+to be deployed to production which is
+something that that we plan on doing but
+
+00:10:51.680 --> 00:11:01.640
+uh uh let's see uh it's it's uh now
+completed claude MD as well. That is
+
+00:10:57.760 --> 00:11:01.640
+done. Let's look at the context.
+
+00:11:02.240 --> 00:11:10.720
+Uh it is a very full context. I guess it
+didn't it didn't need to compact. We got
+
+00:11:07.040 --> 00:11:15.519
+we got everything done. I I am declaring
+victory on this product. I think that we
+
+00:11:13.600 --> 00:11:22.160
+have built something quite impressive.
+And that that draws to a conclusion
+
+00:11:18.880 --> 00:11:26.480
+project three and the end of week two of
+this program and I've taken the bold
+
+00:11:24.160 --> 00:11:29.360
+step of coloring in weeks one and two
+darker. Maybe I should have done that
+
+00:11:27.760 --> 00:11:34.079
+after week one, but it certainly feels
+now like this is a major milestone. The
+
+00:11:32.160 --> 00:11:39.440
+assignment for you of course hopefully
+is obvious. You have to go and repeat
+
+00:11:36.720 --> 00:11:42.399
+this and build your own SAS product. You
+can repeat what I've done, but do
+
+00:11:41.040 --> 00:11:45.680
+something that's like takes it in a
+different direction if you want. It's
+
+00:11:44.079 --> 00:11:49.279
+kind of fun. But you could also do
+something else. Like if you think of
+
+00:11:47.360 --> 00:11:52.959
+this kind of this idea, this general
+idea of having some templates that apply
+
+00:11:51.600 --> 00:11:56.880
+to your business and being able to have
+a chat that then does something those
+
+00:11:54.880 --> 00:12:00.560
+templates and produces some documents
+that are then available to anyone that
+
+00:11:58.320 --> 00:12:05.440
+logs in. It makes a lot of sense, but do
+it by putting Jurro tickets in there or
+
+00:12:03.120 --> 00:12:10.800
+you could use GitHub issues if you
+prefer. and then just have it run end to
+
+00:12:07.920 --> 00:12:15.839
+end and use the the claude code feature
+dev as as I did that plugin which is so
+
+00:12:13.680 --> 00:12:19.200
+powerful and dividing that into a few
+tickets so you still are at the helm
+
+00:12:17.920 --> 00:12:23.360
+you're still guiding it through
+answering the questions at each step
+
+00:12:21.040 --> 00:12:28.240
+that is how to get these kinds of
+spectacular results that we had today
+
+00:12:26.320 --> 00:12:32.079
+and when you have spectacular results
+please share them share them wherever
+
+00:12:30.320 --> 00:12:36.320
+you like to share things but mostly on
+LinkedIn and if you share them and you
+
+00:12:34.560 --> 00:12:41.360
+mention it's like the week 2 project and
+you tag me, then I will see that and I
+
+00:12:38.720 --> 00:12:45.680
+will jump in and congratulate you to
+amplify your success. It's such an easy
+
+00:12:44.480 --> 00:12:49.519
+way to draw attention to your
+achievements. And look, if you see that
+
+00:12:47.839 --> 00:12:54.240
+I'm doing that to somebody else on the
+course, then please weigh in as well.
+
+00:12:52.000 --> 00:12:57.680
+Jump in and congratulate them. And that
+just helps to to have the whole
+
+00:12:55.839 --> 00:13:01.760
+community supporting each other. And
+then hopefully they will also do that to
+
+00:12:59.519 --> 00:13:06.959
+you. And it's a way to make sure that we
+are amplifying everyone's achievements,
+
+00:13:04.480 --> 00:13:11.920
+drawing more attention to the expertise
+that's being built and and also drawing
+
+00:13:09.120 --> 00:13:17.120
+attention to how phenomenal Claude code
+is and just how amazing these projects
+
+00:13:15.040 --> 00:13:21.200
+can be. And I have one request myself
+which is my editor would kill me if I
+
+00:13:18.959 --> 00:13:26.240
+didn't mention that to the extent that
+you're able to willing to rate the
+
+00:13:23.839 --> 00:13:29.920
+course on Udemy, it makes a huge
+difference. That is the main way that
+
+00:13:28.079 --> 00:13:34.399
+Udemy decides whether or not to tell
+other people about this course. So
+
+00:13:32.240 --> 00:13:38.959
+building up this community also
+massively helpful if you're able to rate
+
+00:13:36.639 --> 00:13:42.880
+it in Udemy. So I would hugely
+appreciate it. But anyways, take a
+
+00:13:40.720 --> 00:13:48.639
+moment to celebrate the fact that you
+are now a professional a professional at
+
+00:13:46.240 --> 00:13:53.920
+whatever we call it vibe engineering at
+using CLI platforms like Claude Code to
+
+00:13:51.519 --> 00:13:59.839
+build projects. And if this week was
+about getting professional, next week is
+
+00:13:56.639 --> 00:14:04.720
+about going crazy. Next week is mad.
+We're going to be doing spectacular
+
+00:14:01.839 --> 00:14:09.440
+things with agents and hooks and and
+bigger code bases. And then we're going
+
+00:14:06.639 --> 00:14:15.680
+to go to swarms and orchestrators. And
+honestly, it's it's it's it's just mad.
+
+00:14:12.399 --> 00:14:21.440
+It's wild. I can't wait to show you next
+week. You are absolutely going to love
+
+00:14:18.160 --> 00:14:25.839
+it. But in the meantime, final moment to
+celebrate where you've got to. Now you
+
+00:14:23.920 --> 00:14:32.240
+are 2thirds of the way through this
+program, 67% of the way through. Massive
+
+00:14:29.519 --> 00:14:34.720
+congratulations. I can't wait to see you
+in week
+

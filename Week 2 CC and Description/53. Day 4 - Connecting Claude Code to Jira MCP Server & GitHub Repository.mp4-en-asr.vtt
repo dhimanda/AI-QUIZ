@@ -1,0 +1,534 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:07.600
+Okay, this next part is cool. So, just
+to recap, we went into Atlassian. We
+
+00:00:05.759 --> 00:00:12.800
+created a new account if you didn't have
+one already. And then we navigated our
+
+00:00:10.000 --> 00:00:17.920
+way to spaces. We created a new space
+called pre-legal and created a new task
+
+00:00:16.320 --> 00:00:21.840
+work item that used to be called an
+issue which says something about creator
+
+00:00:20.000 --> 00:00:27.519
+company website. That is where we are.
+I've now come back into VS Code. I am
+
+00:00:25.119 --> 00:00:31.519
+looking at the PM project just because I
+wouldn't open any old project. Go to PM
+
+00:00:30.320 --> 00:00:36.399
+for convenience. We're not going to be
+actually using the project management
+
+00:00:33.120 --> 00:00:43.440
+project anymore. But here we are. And
+we're about to add an MCP server to to
+
+00:00:41.520 --> 00:00:49.840
+our Claude code. So, I'm going to paste
+in here a command claude MCP add. And
+
+00:00:47.280 --> 00:00:54.800
+I'm I'm It's a uh adding an MCP server.
+We're using the HTTP. We're using a
+
+00:00:51.840 --> 00:00:59.800
+remote MCP server from Atlassian, the
+makers of Jira, to bring in
+
+00:00:56.800 --> 00:00:59.800
+mcp.atlassian.com/v1/mcp.
+
+00:01:01.120 --> 00:01:08.400
+This is their MCP server. Let's give it
+a shot. It has added it in. We now have
+
+00:01:06.640 --> 00:01:14.479
+this MCP server. Now, we're going to
+start Claude code with Claude. Up it
+
+00:01:11.119 --> 00:01:20.240
+comes. Okay, so first up, I'm going to
+do /mcp to check out our situation with
+
+00:01:17.680 --> 00:01:25.680
+MCP servers. It tells us that we've got
+Atlassian as an installed MCP server.
+
+00:01:23.280 --> 00:01:30.560
+Atlassian, the makers of Jura, the issue
+tracking system, and but it needs
+
+00:01:28.320 --> 00:01:35.200
+authentication, it's saying. And that's
+cool because nowhere did we give it a
+
+00:01:32.560 --> 00:01:39.360
+key or anything about Jira. How could it
+know what to use? And we're now going to
+
+00:01:37.040 --> 00:01:44.799
+use this feature of MCP, which is about
+authentication, which allows you to log
+
+00:01:42.159 --> 00:01:50.000
+into something like Jura and authorize
+the Atlassian MCP for your Jura account.
+
+00:01:48.240 --> 00:01:53.520
+And that is really cool. That's what
+we're going to do now. And so look, I'm
+
+00:01:51.520 --> 00:01:57.680
+going to go to to the I'm going to press
+the down and up button to select that
+
+00:01:55.439 --> 00:02:02.399
+one. I'm press enter so that we're going
+into it. It says need authentication,
+
+00:02:00.399 --> 00:02:05.200
+not authenticated. Do you want to
+authenticate? Basically, it's
+
+00:02:03.840 --> 00:02:10.239
+authenticate or disabled. We're going to
+say authenticate. And look at that. Bam.
+
+00:02:07.520 --> 00:02:13.360
+Up comes a window. Uh Atlassian, do you
+want to authenticate? Now, if if it if I
+
+00:02:12.000 --> 00:02:18.879
+weren't already logged in, it would have
+the Atlassian login screen. I press
+
+00:02:15.599 --> 00:02:24.160
+approve and it says uh uh a lesson is
+requesting access to your account except
+
+00:02:21.200 --> 00:02:28.000
+this is the famous oorthth 2 flow. If
+you know it, if you've taken my end
+
+00:02:26.160 --> 00:02:32.560
+course, you know that flow only too
+well. It's hard to build that flow, but
+
+00:02:30.239 --> 00:02:35.760
+it works. Close this window. Return to
+clawed code. Let's do that. Now, one
+
+00:02:34.480 --> 00:02:40.080
+thing I'll tell you, and people complain
+about this all over the place, is that
+
+00:02:37.680 --> 00:02:43.760
+sometimes that authentication seems to
+get lost, forgotten, and you have to
+
+00:02:41.920 --> 00:02:48.160
+reauthenticate. And the way you know you
+have to is cuz cloud code hangs trying
+
+00:02:45.920 --> 00:02:50.959
+to use the tools. They just sit there.
+And so when you see that happening,
+
+00:02:49.680 --> 00:02:56.480
+that's a sign. You might need to come
+in, do /mcp again, and then there's a if
+
+00:02:54.160 --> 00:03:00.959
+there's a reauthenticate option for I
+show you this. Uh at last it says it's
+
+00:02:58.720 --> 00:03:03.840
+connected. Now there is a reauthenticate
+if we would need to do this, but we
+
+00:03:02.319 --> 00:03:08.080
+don't need to do that. But if we did,
+that's what we would do. But now if we
+
+00:03:06.080 --> 00:03:13.280
+just do slashcontext,
+let's look at what tools we've got
+
+00:03:09.840 --> 00:03:17.040
+access to. Uh, if I scroll up here, um,
+sorry, what am I doing? Scrolling up.
+
+00:03:14.640 --> 00:03:21.680
+Here we go. You can see there's tons of
+MCP Atlassian tools. That's what we've
+
+00:03:19.680 --> 00:03:30.560
+got access to. We can use them. Let's
+try. Please tell me about
+
+00:03:26.319 --> 00:03:33.280
+uh, Jira issue PL-1.
+Remember that? That was the one that we
+
+00:03:31.920 --> 00:03:37.040
+just did that was like, make me a
+company website, blah blah blah. So,
+
+00:03:35.360 --> 00:03:41.440
+we're going to let it do its thing. It's
+asking if it can use a tool. Um, and
+
+00:03:39.599 --> 00:03:44.799
+I'll press number two. I'll say go for
+it. You can use that tool as much as you
+
+00:03:43.120 --> 00:03:51.440
+want. It's probably going to ask me
+about more tools. Yes, do it.
+
+00:03:47.680 --> 00:03:55.599
+Uh, off it goes. And, uh, there we go.
+Here it comes. PL1. We need a simple
+
+00:03:53.840 --> 00:04:01.920
+website that describes the pre-legal
+company. It worked. Wow. Uh, so I'm
+
+00:03:59.360 --> 00:04:05.200
+almost surprised myself. Uh, so if it if
+it just hung for you, remember, you
+
+00:04:03.280 --> 00:04:09.360
+might need to reauthenticate. Um
+otherwise uh if you get stuck with this
+
+00:04:07.280 --> 00:04:13.840
+whole Jira thing, remember that you can
+also use GitHub issues which are
+
+00:04:11.680 --> 00:04:18.079
+somewhat easier but this is such a sort
+of core part of the way many teams work
+
+00:04:15.840 --> 00:04:22.960
+that I thought hooking us up to Jira
+through the Jira MCP server was a really
+
+00:04:20.400 --> 00:04:29.040
+nice thing to do. Okay. And for my next
+trick, I've shown you how we can hook up
+
+00:04:25.759 --> 00:04:34.160
+to Jira. We're now going to hook up to
+GitHub and have GitHub be part of our
+
+00:04:32.639 --> 00:04:38.320
+skill set that Claude Code will have
+access to. Let's go over to GitHub.
+
+00:04:36.160 --> 00:04:42.960
+Okay, so I'm signed into my GitHub now.
+I've just gone to github.com. Uh this is
+
+00:04:40.800 --> 00:04:47.360
+my uh my home screen. And now I'm going
+to press the new button to create a new
+
+00:04:45.840 --> 00:04:51.360
+repository.
+Okay. And I'm going to call my repo. And
+
+00:04:49.680 --> 00:04:54.560
+the reason I don't want to have you pull
+my own is that we're going to do
+
+00:04:52.800 --> 00:04:59.919
+everything from the beginning with this.
+You're going to build your whole project
+
+00:04:56.240 --> 00:05:03.759
+and workflow with Claude code. So, uh
+we're going to call this repository
+
+00:05:01.520 --> 00:05:14.000
+pre-legal, which hopefully will still be
+available. Uh we'll make the description
+
+00:05:06.560 --> 00:05:19.520
+be uh uh uh a platform for for drafting
+common legal agreements.
+
+00:05:17.199 --> 00:05:23.520
+That seems good. Uh I'm going to keep it
+private. Uh, and you may may have I'll
+
+00:05:22.000 --> 00:05:27.440
+keep it private until it's ready and
+then maybe make it public and and so
+
+00:05:25.440 --> 00:05:34.240
+that you could clone it if you wish to.
+Um, and we won't have a template and we
+
+00:05:30.639 --> 00:05:38.400
+won't have a readme um or a git ignore.
+Uh, we maybe will just have a license.
+
+00:05:36.160 --> 00:05:41.759
+We'll give it the MIT license, which is
+always a good license to have. But if
+
+00:05:40.320 --> 00:05:46.320
+you want to commercialize this, you
+could build something with a different
+
+00:05:42.880 --> 00:05:50.240
+license and we will use this. Um, oh, we
+might as well add a a a generic readme
+
+00:05:48.639 --> 00:05:54.880
+just just to have something in there.
+We'll use that and we'll press create
+
+00:05:51.919 --> 00:05:59.360
+repository and let pre-legal get
+created. There it is. A platform for
+
+00:05:57.120 --> 00:06:03.120
+drafting common legal agreements. Okay,
+nice. Okay, next up, we need to find a
+
+00:06:01.280 --> 00:06:07.280
+settings menu, but not the settings menu
+here. That's the repo settings, but
+
+00:06:05.039 --> 00:06:11.520
+rather go to your avatar menu, go down
+to settings to bring up your GitHub
+
+00:06:09.680 --> 00:06:14.560
+settings, and then you have to scroll
+all the way down on the left to
+
+00:06:12.800 --> 00:06:18.080
+developer settings. Maybe there's an
+easier way to find this. I don't know,
+
+00:06:15.919 --> 00:06:24.479
+but this is the way I know. And then to
+personal access tokens and then to fine
+
+00:06:21.600 --> 00:06:28.000
+grained tokens. It's not like this is
+easy to find. And when you've done that,
+
+00:06:26.319 --> 00:06:31.840
+you're going to press the generate new
+token button. So next up, you'll have to
+
+00:06:30.240 --> 00:06:34.960
+enter in your password perhaps. You may
+have to do a two-factor authentication
+
+00:06:33.199 --> 00:06:38.560
+to make absolutely sure you have the the
+authority to do this. And then you're
+
+00:06:36.560 --> 00:06:42.400
+creating this new fine grainer access
+token. We're going to be giving Claude
+
+00:06:40.240 --> 00:06:45.440
+code access to our repo this way. So, we
+have to be careful to make sure we give
+
+00:06:43.680 --> 00:06:49.199
+it good permissions and not too much.
+So, I'm giving it a name. I'm calling it
+
+00:06:47.039 --> 00:06:52.319
+for MCP server as just for for
+reference. So, we know that that's what
+
+00:06:50.479 --> 00:06:56.319
+we're going to call it. Um, it's going
+to expire in 30 days. It's good to have
+
+00:06:54.240 --> 00:07:00.720
+that kind of uh thing on it. You can
+have it have no expiration if you wish.
+
+00:06:58.319 --> 00:07:04.000
+Um, I've selected only select
+repositories. I've gone to select
+
+00:07:02.560 --> 00:07:09.759
+repositories and I've ticked this
+repository so that it only has access to
+
+00:07:06.880 --> 00:07:12.880
+this repo called pre-legal. And that
+seems like that that gives us complete
+
+00:07:11.599 --> 00:07:17.120
+control of this because we're only going
+to use this repo for claw code anyway.
+
+00:07:14.720 --> 00:07:22.160
+So this is a good way to to fix the
+permissions of this key on one repo. And
+
+00:07:20.160 --> 00:07:26.240
+now we get to add the actual permissions
+that it can the things it can actually
+
+00:07:23.680 --> 00:07:30.080
+do. And here it's worth starting small
+and only expanding when you need to. So
+
+00:07:28.800 --> 00:07:34.560
+what we're going to do here is we're
+going to say okay well it is going to
+
+00:07:32.639 --> 00:07:39.039
+need to be able to see the contents of
+this repo. That seems perfectly
+
+00:07:35.919 --> 00:07:43.919
+reasonable. Uh, it's going to be able to
+um look at issues. Although we're using
+
+00:07:42.000 --> 00:07:48.319
+Atlassian Jira for issues, you might
+want to use GitHub. So, it'll be able to
+
+00:07:45.759 --> 00:07:52.960
+use GitHub issues, PRs. It's going to
+have PR access. Um, and I think that's
+
+00:07:51.360 --> 00:07:56.000
+it. Now, it's possible we'll turn out
+we'll need more permissions, in which
+
+00:07:54.240 --> 00:08:01.360
+case we come back and open it up, but
+it's a good practice to start with slim
+
+00:07:58.720 --> 00:08:05.440
+permissions and open up as you need to.
+Now the access here we've got readonly
+
+00:08:03.120 --> 00:08:10.639
+access to the contents, read only to the
+issues. Um we might want to allow it to
+
+00:08:07.759 --> 00:08:14.960
+write issues if we wish. Pull requests
+we'll let have read and write access to
+
+00:08:12.639 --> 00:08:19.440
+that as well. And with that we press the
+generate token button and it prompts us
+
+00:08:17.759 --> 00:08:22.879
+to tell us a little summary of what
+being we're being allowed to do. And
+
+00:08:21.039 --> 00:08:26.879
+then we'll press the generate token
+button. And of course on the next screen
+
+00:08:24.879 --> 00:08:30.879
+it showed you the token and you must
+have copied it to your clipboard. Put it
+
+00:08:29.039 --> 00:08:34.240
+somewhere safe. Don't put it in a word
+processor program like Microsoft Word
+
+00:08:32.560 --> 00:08:38.000
+that's going to replace quotes with
+curly quotes and do stuff to it. Put it
+
+00:08:36.719 --> 00:08:41.919
+somewhere safe where it's not going to
+get mangled with uh or keep that window
+
+00:08:40.320 --> 00:08:47.600
+up to one side so you can continue to
+copy it until we're going to use it once
+
+00:08:44.080 --> 00:08:53.200
+to set up clawed code in a moment. But
+first, I want you to go back back to uh
+
+00:08:50.480 --> 00:08:58.080
+to your GitHub home where we are going
+to uh then clone this repo and then
+
+00:08:55.920 --> 00:09:04.000
+we're ready for action. Okay. So now I
+go here. I go to home and we're going to
+
+00:09:01.200 --> 00:09:08.399
+find pre-legal. It's probably under show
+more somewhere. Oh, lots of repos. Where
+
+00:09:06.080 --> 00:09:13.680
+are you? There you are. Pre-legal. Here
+it is. And now go to code and you can
+
+00:09:11.440 --> 00:09:18.399
+choose HTTPS or SSH depending on your
+setup for GitHub. Probably best to do
+
+00:09:15.839 --> 00:09:23.760
+HTTPS. Copy that to clipboard. This
+particular thing here. And now now we're
+
+00:09:21.279 --> 00:09:27.200
+going to go back to VS Code. So here we
+are in the welcome screen. You can be in
+
+00:09:25.600 --> 00:09:31.920
+anyone. You can still be in PM if you
+want. Bring up a terminal. I don't need
+
+00:09:29.440 --> 00:09:36.640
+to tell you. It's controlback tick. And
+uh I'm I'm in my home directory. Uh as
+
+00:09:34.320 --> 00:09:41.920
+we'll see if I do pwd. There I am. I'll
+do cd projects to go into my projects
+
+00:09:39.760 --> 00:09:46.959
+directory. And now I'm going to type git
+clone. And I'm going to paste in that
+
+00:09:44.320 --> 00:09:55.360
+directory here. And bam, we have
+ourselves a legal repo. CD legal ls. Oh,
+
+00:09:51.680 --> 00:09:59.760
+sorry. CD pre-legal even cd pre-legal.
+We have a pre-legal directory. Uh, ls.
+
+00:09:57.839 --> 00:10:05.839
+And there we go. We see a license and a
+readme. That's what we're expecting in
+
+00:10:01.839 --> 00:10:05.839
+pre-legal. Excellent.
+

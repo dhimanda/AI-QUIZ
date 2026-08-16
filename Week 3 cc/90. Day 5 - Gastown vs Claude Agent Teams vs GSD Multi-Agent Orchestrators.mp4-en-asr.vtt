@@ -1,0 +1,607 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:06.560
+Well, I was wrong to be too confident.
+When I went to the website after asking
+
+00:00:04.799 --> 00:00:11.360
+it to bring it up, I got a page cannot
+be displayed. I got a total fail.
+
+00:00:08.880 --> 00:00:14.559
+Nothing was there. So, I went back to
+the mayor and I said to the mayor,
+
+00:00:13.280 --> 00:00:19.760
+there's nothing there. I didn't try and
+debug it. Didn't diagnose it myself. I
+
+00:00:16.640 --> 00:00:24.800
+just said, "Please just go ahead and fix
+it. Sling your tasks. Get the polls
+
+00:00:22.640 --> 00:00:28.800
+involved. Let's make this happen." And
+bam, it did it all over again. Lots of
+
+00:00:26.880 --> 00:00:33.120
+things happened. uh all of these six
+pole cats, eight pole cats all started
+
+00:00:30.720 --> 00:00:36.640
+up, things happened and now we're coming
+back for the second time. And I'll
+
+00:00:35.520 --> 00:00:40.879
+mention again that we should give it
+some credit because it's really starting
+
+00:00:38.399 --> 00:00:45.200
+from absolute nothing. The other times
+we've had a build using the market data
+
+00:00:43.200 --> 00:00:50.160
+foundation and the extra documentation
+for market data. This time it just
+
+00:00:47.280 --> 00:00:56.000
+started from the spec, the plan.md, and
+that was it. So it's a total build from
+
+00:00:53.199 --> 00:01:00.640
+absolute scratch. That's what it had to
+do. Uh, and it did it all massively
+
+00:00:58.239 --> 00:01:03.680
+parallel. So, it's very fast. By far the
+fastest of any of the things that I've
+
+00:01:02.079 --> 00:01:08.400
+done. And a couple of other things to
+mention that you in the terminology. You
+
+00:01:06.000 --> 00:01:13.760
+saw me struggling there a bit, but I I I
+do now remember the thing called
+
+00:01:10.240 --> 00:01:18.000
+refinery that was running was a special
+uh agent, a special worker that is
+
+00:01:15.920 --> 00:01:21.920
+responsible for doing the merge
+requests, the MRS, and that's merging in
+
+00:01:20.560 --> 00:01:25.119
+the work that all the others are doing.
+So the reason that that was idle for a
+
+00:01:23.759 --> 00:01:28.240
+long time is because it wasn't there
+were no there were no MRS for it to
+
+00:01:26.640 --> 00:01:32.400
+merge and then it would suddenly pick up
+an MR when one of the pulcats was done
+
+00:01:30.880 --> 00:01:36.799
+and that's why you'd see it like kick
+into gear and the reason that there was
+
+00:01:34.320 --> 00:01:40.799
+a red refinery there was because of that
+other project I told you about that I'd
+
+00:01:38.320 --> 00:01:44.799
+run before called finally so it had its
+own refinery that was kind of dead uh
+
+00:01:43.040 --> 00:01:49.040
+and that that's what was going on and
+the process called witness is the thing
+
+00:01:46.799 --> 00:01:53.280
+responsible for watching all of this and
+notifying I think it notifies the mayor
+
+00:01:51.200 --> 00:01:57.520
+uh if anything were to go wrong. So,
+that's how it all hung together. And
+
+00:01:55.439 --> 00:02:00.719
+now, without further ado, let's see if
+we have a product. All right, here we
+
+00:01:59.200 --> 00:02:06.880
+go. I told it to bring it up on port
+802. Here we go. We do have a product.
+
+00:02:04.399 --> 00:02:10.239
+We do have a product and it looks
+remarkably similar to our other
+
+00:02:08.720 --> 00:02:14.480
+products, which at the end of the day is
+not super surprising because we spec
+
+00:02:12.160 --> 00:02:18.640
+things out quite carefully in that in
+that planning document and it was fairly
+
+00:02:16.800 --> 00:02:23.680
+precise. And also, after all, it's
+always clawed code. It's always Opus 4.6
+
+00:02:21.599 --> 00:02:27.120
+that's building all of these. Um, but
+it's interesting that we end up with
+
+00:02:24.800 --> 00:02:31.040
+very similar results. So, here we have
+something uh we've got over here on the
+
+00:02:29.200 --> 00:02:34.160
+left. Um, and it's interesting this time
+it says select a ticker from the watch
+
+00:02:32.720 --> 00:02:37.280
+list. And maybe that's what I was meant
+to do in the other one. If I think if I
+
+00:02:35.920 --> 00:02:41.920
+click here, yeah, look at that. Then we
+get to see uh the one that I just
+
+00:02:39.519 --> 00:02:47.519
+clicked on appearing here in this chart.
+And what happens now if I click here and
+
+00:02:43.840 --> 00:02:52.640
+I say Apple quantity three and I click
+buy then bang Apple appears in the
+
+00:02:50.080 --> 00:03:00.480
+portfolio heat map over on the right. Uh
+and I can also do uh Netflix and we will
+
+00:02:56.800 --> 00:03:05.120
+buy for Netflix. Press buy and the heat
+map has updated over here the portfolio.
+
+00:03:02.959 --> 00:03:09.599
+We've got positions here. It's super
+impressive. Particularly again, I mean,
+
+00:03:07.519 --> 00:03:13.360
+we can't really call it zero shot this
+time because it took it took an
+
+00:03:11.040 --> 00:03:17.040
+iteration, didn't it? So, so it took two
+iterations, but I didn't give it any
+
+00:03:15.440 --> 00:03:21.519
+particular feedback. I didn't help it
+troubleshoot. It figured all this out
+
+00:03:18.959 --> 00:03:27.280
+for itself. And this whole thing is
+running and it's alive. Wow. It's time
+
+00:03:25.040 --> 00:03:30.799
+to try the LLM part. All right. So, over
+here, I'll click in the chat. I'm going
+
+00:03:28.720 --> 00:03:36.239
+to say hi there. And let's see what
+happens. Takes a bit of time. Hello. How
+
+00:03:34.480 --> 00:03:44.640
+can I help with your portfolio today?
+Uh, I'm going to say, uh, please buy
+
+00:03:40.799 --> 00:03:48.720
+three shares of JPM.
+Let's see what happens. Drum roll,
+
+00:03:46.480 --> 00:03:52.480
+please. Sure. I will place an order.
+Bam. Look at that. JP Morgan appears
+
+00:03:51.120 --> 00:03:58.799
+here. Nice and green. I like to see
+that. And it's all uh updating
+
+00:03:55.280 --> 00:04:04.480
+everywhere. The the AI chat works.
+That's absolutely amazing. This is
+
+00:04:01.120 --> 00:04:08.640
+great. This you see right here is the
+result of running Gastown, building our
+
+00:04:06.560 --> 00:04:13.360
+entire project, including the market
+data simulator and the market data
+
+00:04:10.560 --> 00:04:18.880
+interface, the whole thing built from
+scratch and running and working. And so
+
+00:04:16.560 --> 00:04:23.440
+to recap, if I haven't completely
+confused you, we've been talking about
+
+00:04:20.799 --> 00:04:28.800
+using orchestrators or patterns for
+allowing us to manage multiple agents
+
+00:04:26.479 --> 00:04:33.520
+working together, but with some level of
+coordination between them to allow for
+
+00:04:31.120 --> 00:04:37.440
+more predictable outcomes. And we've
+really looked at three of them and we
+
+00:04:35.120 --> 00:04:42.160
+could put them alongside each other in a
+line from the most kind of controlled
+
+00:04:39.919 --> 00:04:48.240
+and disciplined through to the most
+crazy. The GSD, the get sh done is
+
+00:04:46.160 --> 00:04:53.040
+perhaps despite the the radical sounding
+name, the one that is most disciplined.
+
+00:04:50.400 --> 00:04:58.320
+It is from the family of specd driven
+designs. When there is a clear spec, it
+
+00:04:55.280 --> 00:05:03.199
+uses markdown files very cautiously. It
+goes through a period of plan of of
+
+00:05:00.880 --> 00:05:07.280
+reviewing of execution and then
+validating and then an audit at the end
+
+00:05:05.040 --> 00:05:11.440
+of it. So it's this very reliable
+disciplined process which lends itself
+
+00:05:08.880 --> 00:05:17.120
+to bigger projects to human in the loop
+and to being able to deliver measurable
+
+00:05:14.320 --> 00:05:22.880
+predictable outcomes. Okay. So it's more
+reliable, it's more slow. Then in the
+
+00:05:19.360 --> 00:05:26.800
+middle we met clawed agent teams and it
+was it's the experimental feature. Maybe
+
+00:05:24.960 --> 00:05:31.280
+it's it's now more mature for you and
+it's for sure it is faster. It took 5
+
+00:05:29.280 --> 00:05:36.560
+hours with GSD. It took about half an
+hour with Claude agent teams. And then
+
+00:05:33.759 --> 00:05:39.120
+we ended on Gas Town. I just gave you a
+preview of it. I told you you don't need
+
+00:05:38.000 --> 00:05:41.680
+to do this yourself unless you
+particularly want to go through the
+
+00:05:40.080 --> 00:05:45.680
+experience that I went through when I
+seemed a bit frazzled in places. But of
+
+00:05:44.000 --> 00:05:49.039
+course, this this kind of thing is
+emerging now. There are a few like it.
+
+00:05:47.520 --> 00:05:52.800
+Guest town is the one that's quite hyped
+at the moment, but there might be many
+
+00:05:50.400 --> 00:05:57.280
+many more. And these are ones where
+there is a sort of preset structure, but
+
+00:05:55.039 --> 00:06:01.440
+it's it's it's ready for a lot of
+concurrent work. It took about the same
+
+00:05:59.600 --> 00:06:05.360
+time as Claude agent teams. I think in
+total about half an hour but it did a
+
+00:06:03.520 --> 00:06:08.639
+lot more because we gave it the market
+data task as well. It built the whole
+
+00:06:07.120 --> 00:06:13.120
+thing from scratch and it just all
+worked second time but but just with me
+
+00:06:11.039 --> 00:06:17.520
+telling it hey go and fix this and so
+that was the most chaotic. It was the
+
+00:06:15.360 --> 00:06:21.840
+fastest in terms of building the most in
+the same amount of time and it was it
+
+00:06:19.600 --> 00:06:26.400
+was pretty impressive if if a little bit
+bewildering. And now GSD was is
+
+00:06:24.240 --> 00:06:31.680
+something which can be applied to I
+think all of the coding agents and gas
+
+00:06:29.120 --> 00:06:35.520
+town is also something which Steve
+points out a lot in the blog post is
+
+00:06:33.840 --> 00:06:38.319
+something or in the GitHub read me
+something that can be applied to the
+
+00:06:36.800 --> 00:06:42.240
+different coding agents. It's not tied
+to claw code even though he first built
+
+00:06:40.080 --> 00:06:46.720
+it around it. Claude agent teams of
+course is a feature built into claude
+
+00:06:43.840 --> 00:06:52.240
+code but as it happens that very similar
+feature similar agent features are built
+
+00:06:49.199 --> 00:06:58.319
+into the others and in particular I I
+took a look at codeex and codeex has
+
+00:06:55.280 --> 00:07:03.199
+something that's also experimental built
+into codeex and I wouldn't be doing my
+
+00:07:01.120 --> 00:07:07.680
+job if I didn't quickly give you a sneak
+peek of that. No surprise I'm sure
+
+00:07:05.759 --> 00:07:11.120
+you're getting the idea that I most
+favor the ones in the middle. I like
+
+00:07:09.360 --> 00:07:15.039
+Claude agent teams a lot between these,
+it was the one that gave me the
+
+00:07:12.720 --> 00:07:18.240
+experience of of a lot of power without
+feeling like I was completely out of
+
+00:07:16.560 --> 00:07:21.280
+control. But I'm sure that if you spend
+enough time with Gast Town, you get
+
+00:07:19.599 --> 00:07:25.599
+really used to it. Anyway, let's go
+check out Codeex sub agents. So, I'm not
+
+00:07:23.919 --> 00:07:29.280
+actually going to run it cuz I I've
+already run it and I think you've seen
+
+00:07:27.440 --> 00:07:33.199
+enough of these now. I'm just going to
+sort of show you show you the codecs and
+
+00:07:31.680 --> 00:07:36.720
+and show you how you activate the
+feature and then show you the results.
+
+00:07:34.639 --> 00:07:41.680
+But I'm back in a normal terminal window
+and I want to remind you of sprites.
+
+00:07:38.960 --> 00:07:46.960
+Remember this. I can say sprite uh sorry
+sprite.dev is the full name of it. I can
+
+00:07:43.840 --> 00:07:51.759
+do sprite list to see all of the sprites
+which I've got running. All of these
+
+00:07:49.039 --> 00:07:55.759
+remote sandboxed environments that
+fly.io is running for me. And I've got
+
+00:07:53.759 --> 00:08:01.759
+one called finally worker, the same one.
+And you can do sprite uh sprint sprite
+
+00:07:59.120 --> 00:08:06.080
+minus s finally worker. That's how you
+you say which one you're talking about.
+
+00:08:03.759 --> 00:08:11.440
+and then console and that means I want
+to like remote in I want this terminal
+
+00:08:08.319 --> 00:08:15.120
+to become a terminal for that sprite and
+that's what we're looking at right now.
+
+00:08:13.039 --> 00:08:20.080
+So if I do an ls, I can see there's a
+directory called finally in there. I can
+
+00:08:16.960 --> 00:08:24.400
+go into finally. Now I'm in finally. And
+this is in particular, if I do get
+
+00:08:21.840 --> 00:08:29.919
+status, this repo is got uh it's on
+branch codeex. I created this branch
+
+00:08:26.800 --> 00:08:34.080
+called codeex. And when running codeex
+inside your sprite, you just type
+
+00:08:32.000 --> 00:08:38.159
+codeex. It's already installed, but you
+do minus minus yolo. That is the
+
+00:08:36.159 --> 00:08:42.000
+equivalent of dangerously skip
+permissions uh for claude. They've got a
+
+00:08:40.240 --> 00:08:48.640
+couple of them for yo for for codecs,
+but d- yolo is one way to do it. And
+
+00:08:44.240 --> 00:08:53.519
+we're now in codeex in yolo mode. And in
+in codeex, you can do slash to bring up
+
+00:08:51.600 --> 00:08:57.760
+a slash command menu just as with claw
+code. And I went to /experimental,
+
+00:08:56.320 --> 00:09:02.560
+which is where you get to toggle on and
+off experimental features. And the one I
+
+00:08:59.680 --> 00:09:07.839
+picked is called sub agents. Ask codeex
+to spawn multiple agents to paralyze the
+
+00:09:05.040 --> 00:09:13.360
+work and to win in efficiency. And so,
+of course, I selected that. And then I
+
+00:09:09.680 --> 00:09:17.440
+just said, "Hey, check out plan.md and
+do this." That's what I did. It's not
+
+00:09:15.920 --> 00:09:23.040
+the only thing I did cuz if I come out
+of here, if I just do an ls, you'll also
+
+00:09:20.240 --> 00:09:26.720
+notice that I renamed claude.md to
+agents.md
+
+00:09:24.560 --> 00:09:31.600
+because I remembered that codeex expects
+agents.md, not claw.md. So that that
+
+00:09:29.600 --> 00:09:38.000
+made it work. And I think I also told
+it, let's have a look in scripts, uh,
+
+00:09:34.320 --> 00:09:43.360
+cat start_mac.
+Uh we can see what we've got right here.
+
+00:09:40.959 --> 00:09:48.959
+Uh yeah, I I wanted it to come up on
+port 803.
+
+00:09:45.519 --> 00:09:52.399
+That's how it should run. Um so uh and I
+believe that's that is now now running.
+
+00:09:50.800 --> 00:09:56.560
+Let's do a docker ps to see if it's
+running. Uh and this should tell us
+
+00:09:54.800 --> 00:10:00.720
+whether or not docker is installed and
+is running. And the idea is we expect it
+
+00:09:59.120 --> 00:10:05.920
+to be running. It's not running. So I
+will start it. Um I'll do scripts /
+
+00:10:03.839 --> 00:10:09.360
+start.
+And this is a Linux box, but Mac scripts
+
+00:10:07.920 --> 00:10:15.680
+is the same. And now it should be coming
+up and running. There we go. And it is
+
+00:10:12.000 --> 00:10:19.360
+now running on port 803. So that is
+built and running. It was built in
+
+00:10:17.519 --> 00:10:22.640
+parallel. And I got to tell you, it was
+super fast. It was faster than any of
+
+00:10:21.360 --> 00:10:26.959
+them. I don't know if it just happened
+to be having a good day. Uh but it was
+
+00:10:24.800 --> 00:10:30.800
+really very quick. It it took uh I'd say
+maybe 15 minutes end to end. So it was
+
+00:10:28.560 --> 00:10:34.959
+the fastest as as these experiments go
+of any of them. And we will see if we
+
+00:10:33.040 --> 00:10:39.920
+can whatever zero shot it, see how it
+is. if we try and bring it up. And of
+
+00:10:37.040 --> 00:10:45.200
+course, it's running in my sprite on
+port 803. And what I want to do is see
+
+00:10:43.360 --> 00:10:48.880
+what's happening on my I want to be able
+to bring it up on my computer on port
+
+00:10:46.800 --> 00:10:52.959
+803. How's that going to work? I need to
+like connect to the sprite out there in
+
+00:10:50.959 --> 00:10:58.160
+the internet. But luckily, there's a
+beautiful command I can do, which is
+
+00:10:54.480 --> 00:11:05.279
+sprite minus s finally worker finally
+dashworker. There's a command that is
+
+00:11:01.440 --> 00:11:09.200
+called um proxy proxy. And then you do
+the name of the port and that is going
+
+00:11:07.040 --> 00:11:13.920
+to take port 803
+on on Finally Worker and map it to my
+
+00:11:12.079 --> 00:11:21.680
+local port. So I can just bring up a
+browser, point it to 803 and see what's
+
+00:11:16.959 --> 00:11:21.680
+going on on there. Okay, let's try
+

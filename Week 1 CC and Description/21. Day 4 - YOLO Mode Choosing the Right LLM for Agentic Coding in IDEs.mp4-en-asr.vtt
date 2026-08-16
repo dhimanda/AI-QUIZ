@@ -1,0 +1,476 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.080 --> 00:00:08.480
+and welcome to week 1 day four. It is a
+blue day which means it is a projects
+
+00:00:05.440 --> 00:00:13.519
+day. We already spent time with cursor,
+copilot, codeex, anti-gravity. You've
+
+00:00:11.360 --> 00:00:17.359
+seen that they're all quite similar with
+their little nuances here and there.
+
+00:00:15.519 --> 00:00:22.320
+It's now time to put one of them to work
+and to do it on YOLO mode. Let's do a
+
+00:00:20.160 --> 00:00:28.320
+quick recap first. So, as a quick recap,
+we we worked with four different idees
+
+00:00:25.600 --> 00:00:33.600
+or or plugins, ID plugins, uh,
+yesterday. And first up, we used Cursor.
+
+00:00:31.359 --> 00:00:36.239
+Cursor is made by any sphere. That's the
+name of the company behind Cursor. You
+
+00:00:35.200 --> 00:00:38.960
+don't hear that so often. You hear
+Cursor, you you sort of think that
+
+00:00:37.760 --> 00:00:43.440
+Cursor is the name of the company as
+well, but it's not. uh and cursor itself
+
+00:00:40.960 --> 00:00:47.520
+is what they call a fork of VS code
+which means that VS code is actually
+
+00:00:45.360 --> 00:00:51.280
+open-source software that Microsoft has
+open sourced and you can take that and
+
+00:00:49.840 --> 00:00:55.520
+make your own version of it and that's
+what cursor that's what anyphere did and
+
+00:00:53.680 --> 00:01:00.559
+they made cursor and so it looks and
+feels very like VS code but it is a
+
+00:00:57.920 --> 00:01:05.040
+different fork of it after cursor we
+looked at GitHub copilot and there are
+
+00:01:03.280 --> 00:01:11.040
+different ways to use GitHub copilot but
+the most common and the one that we did
+
+00:01:06.799 --> 00:01:15.920
+was using it as an extension a plugin to
+the original VS Code, the proper VS
+
+00:01:13.600 --> 00:01:20.799
+Code. So, we didn't it isn't a fork of
+VS Code, it's VS Code with an extension
+
+00:01:18.400 --> 00:01:26.720
+loaded in to get you give you GitHub
+Copilot in the agent chat screen. That's
+
+00:01:23.920 --> 00:01:31.439
+what we did. And after that, we then
+used codeex. And again, there are
+
+00:01:29.200 --> 00:01:35.119
+different ways to use codeex. One of the
+ways, perhaps not the most common way
+
+00:01:33.040 --> 00:01:41.119
+actually, but but the way we did it is
+to use it as an extension in VS Code.
+
+00:01:38.880 --> 00:01:43.920
+just like GitHub copilot and the
+extension looked a bit different and it
+
+00:01:42.560 --> 00:01:47.920
+had that little little icon you had to
+click on to bring it up but otherwise
+
+00:01:46.159 --> 00:01:53.759
+there was a lot in common in some ways
+it was similar both codeex and GitHub
+
+00:01:50.479 --> 00:01:57.680
+copilot we use them as extensions within
+VS Code and when I say it's not the most
+
+00:01:56.159 --> 00:02:02.000
+common way it's because the most common
+way is to use it through the command
+
+00:01:59.680 --> 00:02:07.600
+line interface the CLI which is what
+we'll be working on next week and then
+
+00:02:04.399 --> 00:02:13.520
+finally we used anti-gravity the IDE
+from Google and this is rather like
+
+00:02:10.640 --> 00:02:19.200
+cursor. It is its own clone, its own
+fork of VS Code, a separate application
+
+00:02:16.640 --> 00:02:24.080
+that they have built forked off VS Code
+as you saw. And that's anti-gravity. And
+
+00:02:21.920 --> 00:02:29.280
+we use that too with great results. And
+when I say with great results, it's
+
+00:02:26.239 --> 00:02:35.280
+important to distinguish the IDE, the
+tooling we used from the LLM, the model
+
+00:02:32.800 --> 00:02:39.920
+that was being used as the agent to help
+us within that tooling. And we used a
+
+00:02:38.160 --> 00:02:44.800
+bunch of different LLMs whether whether
+you're aware of it or not. So one of the
+
+00:02:42.080 --> 00:02:51.200
+ones that we probably used is an LLM
+called Composer which is a a proprietary
+
+00:02:48.319 --> 00:02:56.080
+LLM that any sphere the makers of cursor
+have made. And I say probably because we
+
+00:02:53.519 --> 00:03:00.239
+had cursor on auto mode which means we
+were saying hey you can choose which
+
+00:02:57.680 --> 00:03:03.360
+model to use. And at least as of now, it
+doesn't like to tell you what it
+
+00:03:01.599 --> 00:03:07.280
+actually uses because they want to keep
+that that somewhat opaque so they can
+
+00:03:05.040 --> 00:03:11.200
+feel free to switch things up. Uh and
+and because you know they they they want
+
+00:03:09.120 --> 00:03:16.400
+to be able to do that and not have you
+worry about which model is being used to
+
+00:03:13.680 --> 00:03:21.760
+generate the code. And so we almost
+certainly were using composer which is
+
+00:03:19.200 --> 00:03:27.440
+anyphere's own model. It's what they
+call a fast frontier model, which means
+
+00:03:24.879 --> 00:03:32.400
+it is considered a leading model, but of
+the sort of small fast camp. It
+
+00:03:30.000 --> 00:03:37.360
+generates stuff really quickly. It has
+an ordinary 200,000 context size, which
+
+00:03:35.440 --> 00:03:43.200
+is which is fairly usual, the same as
+Claude. Uh, and uh, it's it's seen as a
+
+00:03:40.319 --> 00:03:47.680
+lower-end but very quick model. And
+that's probably what we used with
+
+00:03:44.720 --> 00:03:54.080
+Cursor. We also probably used Claude
+Haiku 4.5, which is the name of the Fast
+
+00:03:51.599 --> 00:03:57.920
+Frontier model from Anthropic. It's the
+smallest, fastest of the new models from
+
+00:03:56.480 --> 00:04:01.439
+Anthropic. You might have a higher
+number by the time you're watching this,
+
+00:03:59.200 --> 00:04:06.080
+but probably still with with Haiku. Uh
+it also has a 200,000 context and it's
+
+00:04:03.760 --> 00:04:10.959
+probably quite similar to Composer. Uh
+perhaps a bit more powerful. And that is
+
+00:04:08.879 --> 00:04:15.439
+one that we we were also on auto mode
+with Copilot and so we don't know for
+
+00:04:12.959 --> 00:04:21.519
+sure. It might have been using Claude
+Sonnet 4.5 which is a more powerful
+
+00:04:18.400 --> 00:04:26.000
+model perhaps also from Anthropic. Uh
+that's that would be an another one.
+
+00:04:23.919 --> 00:04:31.840
+Then when we used codeex we did of
+course use a version of GPT 5.2 the
+
+00:04:29.919 --> 00:04:36.160
+strongest model for me and we used a
+special version that's called
+
+00:04:33.360 --> 00:04:39.759
+GP25.2-codeex.
+It's confusing because codeex is in both
+
+00:04:37.840 --> 00:04:44.720
+places, but it's because it's been it's
+been specially trained to be really good
+
+00:04:42.720 --> 00:04:50.400
+at being used within codeex for
+generating code. That's what we used
+
+00:04:46.960 --> 00:04:55.600
+that has a 272,000 context window and
+it's a really really great model and and
+
+00:04:53.280 --> 00:05:01.440
+sure it works really well for us. And
+last but definitely not least, we had
+
+00:04:57.680 --> 00:05:06.080
+Gemini 3 Pro, the strongest version of
+Google's models. At least for me, it's a
+
+00:05:04.240 --> 00:05:10.080
+top Frontier model. They have a they
+have a fast frontier called Gemini 3
+
+00:05:08.080 --> 00:05:14.639
+Flash that you might have used, but
+Gemini 3 Pro and and Flash, they both
+
+00:05:11.919 --> 00:05:19.440
+have a million context window, a huge
+context window. They are very powerful
+
+00:05:17.039 --> 00:05:24.320
+models. It's perhaps not considered as
+strong as GBT 5.2 codecs, but it has a
+
+00:05:22.479 --> 00:05:28.639
+much longer context window, which gives
+it other benefits. So, they are both
+
+00:05:26.560 --> 00:05:33.600
+perhaps neck andneck when it comes to
+their overall usefulness for this kind
+
+00:05:31.120 --> 00:05:39.120
+of practice. So it's it's important to
+distinguish between the four different
+
+00:05:35.440 --> 00:05:43.759
+IDEEs we used or IDE plugins and the
+four different models and the different
+
+00:05:41.600 --> 00:05:47.840
+IDs most of them can hook up to all of
+those models like except composer is
+
+00:05:45.840 --> 00:05:51.520
+only available in cursor of course but
+generally you can switch around the
+
+00:05:49.440 --> 00:05:55.120
+models as you saw if you're paying for a
+plan where you can pick a more expensive
+
+00:05:53.120 --> 00:06:00.160
+model then you can do so so there is
+this this idea that there is two
+
+00:05:57.840 --> 00:06:03.919
+decisions to be made which IDE which
+tooling do you feel comfort comfortable
+
+00:06:02.160 --> 00:06:08.560
+working in and they're much of a
+muchness. You know, they have maybe one
+
+00:06:05.600 --> 00:06:12.560
+has an agents.mmd and the other has
+agent/
+
+00:06:10.560 --> 00:06:16.800
+rules, whatever. There's a few different
+bits and pieces here and there, but
+
+00:06:14.240 --> 00:06:22.400
+they're basically an agentic platforms
+that let you repeatedly call an LLM in a
+
+00:06:19.759 --> 00:06:26.800
+loop to achieve a goal with tools.
+That's what they're each doing. And then
+
+00:06:24.240 --> 00:06:31.919
+what really matters, the big decision is
+what LLM are you using to to actually
+
+00:06:29.759 --> 00:06:36.160
+make the decisions? And that is where
+you want to spend your time and choose
+
+00:06:33.840 --> 00:06:39.440
+your your your money wisely. And on that
+note, I've got some practical rules of
+
+00:06:37.919 --> 00:06:43.280
+thumb of things to keep in mind when
+you're making a decision about the model
+
+00:06:40.960 --> 00:06:48.160
+to pick. Uh first of all, I would
+personally uh always tend to favor a
+
+00:06:45.600 --> 00:06:53.600
+smart model over a fast model. Uh I
+would rather wait and let it do uh give
+
+00:06:51.039 --> 00:06:56.960
+an accurate highquality answer than let
+it rattle something off and then find
+
+00:06:55.440 --> 00:07:02.000
+that it's broken and then iterate and
+it's broken. I I I tend to find that
+
+00:06:59.440 --> 00:07:06.960
+it's a more pleasant experience and
+ultimately you get to a faster outcome
+
+00:07:04.000 --> 00:07:10.800
+if you favor intelligence over speed. I
+would also suggest set a budget for
+
+00:07:09.199 --> 00:07:16.400
+whatever work you're doing and then try
+and pick the most the most intelligent
+
+00:07:13.599 --> 00:07:19.680
+model that your budget supports. Uh I
+find that trying to trying to save extra
+
+00:07:17.840 --> 00:07:23.440
+money by using a cheaper model usually
+ends up costing more because of the
+
+00:07:21.280 --> 00:07:28.000
+extra iterations and the the the time
+drain. So, so, so try and pick the
+
+00:07:26.080 --> 00:07:31.520
+strongest model you can afford. If
+you're going to have smaller models,
+
+00:07:29.360 --> 00:07:35.919
+particularly free open- source models,
+you need to allow for more precise
+
+00:07:33.759 --> 00:07:40.319
+prompts, much more detailed prompts,
+very much think like you're setting a
+
+00:07:38.000 --> 00:07:44.479
+spec, a detailed spec, and you need to
+give significantly more oversight. And
+
+00:07:42.880 --> 00:07:49.120
+that leads me to the final point, which
+is if you're going to be doing YOLO, as
+
+00:07:47.199 --> 00:07:54.000
+we are today, when you just kick
+something off and you let it be, you let
+
+00:07:51.039 --> 00:07:59.360
+it run, then don't do that. In my
+opinion, with fast Frontier models or
+
+00:07:56.720 --> 00:08:03.440
+with like low-end open-source models,
+maybe you could with the really biggest
+
+00:08:00.800 --> 00:08:06.639
+open source models, but be be wary of
+that. And I'm not saying that
+
+00:08:05.120 --> 00:08:11.199
+particularly from the risk point of
+view. The risk is there. You need to be
+
+00:08:08.400 --> 00:08:15.440
+to be watching. Uh but but that's
+probably not my greatest concern. It's
+
+00:08:13.440 --> 00:08:19.360
+really just from a time and productivity
+point of view. If you're going to yolo,
+
+00:08:17.120 --> 00:08:22.960
+the the chances are so high with a
+smaller model that you'll let it go.
+
+00:08:21.280 --> 00:08:28.319
+you'll come back later and you'll just
+have a pile of nonsense. That is a high
+
+00:08:26.080 --> 00:08:33.279
+risk. If you're going to be working with
+Fast Frontier models, then I recommend
+
+00:08:30.720 --> 00:08:38.000
+that you do things step by step, baby
+steps at a time while you work through a
+
+00:08:35.680 --> 00:08:42.399
+problem and and and checking at each
+point and approving as you go with with
+
+00:08:40.399 --> 00:08:46.160
+your eyes on the diffs as you go
+through, eyes on the differences as it
+
+00:08:44.000 --> 00:08:50.399
+as it makes changes to the code on the
+edits, making sure that you are watching
+
+00:08:48.399 --> 00:08:54.640
+each one. That's that's the right
+approach for Fast Frontier. But if
+
+00:08:52.320 --> 00:09:00.480
+you're working with the top top models,
+the Frontier models like GPT52 Codeex,
+
+00:08:57.360 --> 00:09:06.000
+Gemini 3 Pro, and of course the the
+Claude Opus 4.5, my my favorite of all,
+
+00:09:03.440 --> 00:09:08.240
+then you can yolo and you can get great
+results.
+

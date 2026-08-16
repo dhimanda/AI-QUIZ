@@ -1,0 +1,587 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:06.000
+Oh my goodness. I warned you that this
+was going to be all me talking for for
+
+00:00:03.840 --> 00:00:10.480
+today, but thank you for bearing with
+me. We're we're most of the way through.
+
+00:00:08.559 --> 00:00:13.360
+And I know for some of you this is this
+is all old news as I say, but hopefully
+
+00:00:12.160 --> 00:00:16.240
+there's some interesting things there.
+Maybe you disagree with me on some
+
+00:00:14.639 --> 00:00:21.359
+points. In which case, please do put it
+in the Q&amp;A. Nothing I like more than
+
+00:00:17.920 --> 00:00:27.680
+than good debate. Agents.md I've
+mentioned it several times. This of
+
+00:00:23.680 --> 00:00:32.640
+course is the file which you use to give
+to to to prep your LLM with some
+
+00:00:30.880 --> 00:00:38.640
+information. It's particularly it's used
+by coding agents and it's a markdown
+
+00:00:36.160 --> 00:00:43.360
+file. MD is is short for markdown which
+is a sort of shorthand form. It was it
+
+00:00:41.280 --> 00:00:48.000
+sort of inspired by by thinking of a way
+that we could have something that could
+
+00:00:45.040 --> 00:00:52.640
+represent an HTML page, a web page with
+with a sort of simpler, more more human
+
+00:00:50.399 --> 00:00:57.440
+readable and writable uh version of it
+rather than all of the tags you see in
+
+00:00:54.160 --> 00:01:00.079
+HTML. So so uh the the the simple idea
+of this if you're not familiar with
+
+00:00:58.480 --> 00:01:04.320
+markdown is that if you see like like
+like a hash a single hash like it says
+
+00:01:02.640 --> 00:01:09.840
+there with hash project summary that
+means a a big heading an H1. Two hashes
+
+00:01:07.600 --> 00:01:13.360
+is like an H2. Three hashes is like an
+H3. So, it lets you have a sort of
+
+00:01:11.439 --> 00:01:17.759
+hierarchy of headings. And otherwise,
+it's pretty simple. Numbered lists,
+
+00:01:15.280 --> 00:01:22.159
+hyphens for bulleted lists, that kind of
+stuff. You pick it up fast. It's like a
+
+00:01:19.520 --> 00:01:28.080
+text file with some some useful extra
+characters to show like a like a markup
+
+00:01:24.560 --> 00:01:32.960
+styling. And this is a format which LLMs
+love. They love markdown because they've
+
+00:01:31.040 --> 00:01:37.280
+been trained with lots and lots of
+markdown. They've generated lots of
+
+00:01:34.799 --> 00:01:41.520
+markdown. They just love making markdown
+files and they love reading them and
+
+00:01:39.360 --> 00:01:46.399
+they're easy to write as well. So, it
+makes absolute sense that we would use
+
+00:01:43.600 --> 00:01:52.079
+these kinds of markdown files to prep
+our agents. and you write them in
+
+00:01:48.880 --> 00:01:56.960
+natural language style, just like you
+might write a prompt to an LLM, which
+
+00:01:54.880 --> 00:02:03.439
+means you want it to be nice and concise
+and crisp and assertive and not have too
+
+00:01:59.840 --> 00:02:07.920
+much ambiguity and and really u have as
+much signal as you can in in the words
+
+00:02:05.840 --> 00:02:13.040
+that you use. That's some of the tricks.
+This, of course, gets squashed into your
+
+00:02:10.640 --> 00:02:17.360
+context window. So, this is precious
+space. So, you don't want to be verbose.
+
+00:02:15.440 --> 00:02:22.160
+You want to make every word count. And
+so, as I say, it's a markdown format
+
+00:02:19.520 --> 00:02:26.720
+file. It gets included in the context
+for the agent. And you typically have
+
+00:02:24.720 --> 00:02:30.800
+one of these files in what's called the
+project root directory, which is like
+
+00:02:29.280 --> 00:02:34.480
+for yesterday, it was the the directory
+called instant. It's the directory at
+
+00:02:32.480 --> 00:02:39.760
+the the top of your project. And that
+file will get read in and included in
+
+00:02:37.120 --> 00:02:45.840
+the context for the LLM. But you can
+also have another agents.mmd file in
+
+00:02:43.200 --> 00:02:51.920
+every subdirectory and at any level of
+nesting at a a sub subd directory. And
+
+00:02:48.879 --> 00:02:57.280
+in that case that agents.mmd file will
+only be read in when the agent is
+
+00:02:54.720 --> 00:03:02.319
+working on files in that sub subd
+directory or or any further
+
+00:02:59.599 --> 00:03:07.599
+subdirectory. So it reads in when when
+the agent is working on any file, it
+
+00:03:04.640 --> 00:03:11.040
+will read in the agents.mmd in that
+inner directory and then it will work
+
+00:03:09.680 --> 00:03:17.040
+backwards through all the parent
+directories making sure it's got all of
+
+00:03:13.200 --> 00:03:21.040
+the relevant agents.md files in context.
+And that's why I said that that it's not
+
+00:03:18.720 --> 00:03:24.720
+true to say that agents.mmd are always
+included. They're always included if
+
+00:03:22.720 --> 00:03:30.159
+it's in the project root, but when it's
+in a subdirectory, it's only included if
+
+00:03:27.760 --> 00:03:34.879
+the agent is working on that that
+subfolder. And typically, information
+
+00:03:32.159 --> 00:03:40.400
+that you put in the most inner
+agents.mmd overrides information in any
+
+00:03:38.319 --> 00:03:44.400
+outer directory. So you can be more
+specific. If there's a new rule that
+
+00:03:42.080 --> 00:03:49.360
+should override the general rule, you
+put that deep down in a sub directory.
+
+00:03:47.280 --> 00:03:53.360
+So that's how this sort of hierarchy of
+agents.md files works. And if that's not
+
+00:03:52.159 --> 00:03:58.319
+clear to you, don't worry because we'll
+be doing plenty of it in the next few
+
+00:03:55.040 --> 00:04:03.120
+weeks. And I say agents.mmd and that is
+in fact exactly the name of the file. If
+
+00:04:00.480 --> 00:04:08.400
+you're using cursor or codeex or github
+copilot, claude code uses something
+
+00:04:06.319 --> 00:04:12.720
+called claude.mmd
+and anti-gravity uses something called
+
+00:04:10.560 --> 00:04:17.359
+gemini.md,
+but it's the same idea, a markdown file
+
+00:04:15.360 --> 00:04:21.440
+that tells the agent what to do that you
+could have in the project root or in any
+
+00:04:19.199 --> 00:04:27.360
+sub directory. And I should mention that
+cursor and github copilot have other
+
+00:04:24.800 --> 00:04:32.160
+kinds of files as well. Like cursor has
+these things called rules. Uh but I the
+
+00:04:30.240 --> 00:04:35.680
+trend that I see is that in time
+everyone is converging on these
+
+00:04:33.759 --> 00:04:40.080
+agents.mmd. So while there are still
+people that that use cursor rules uh
+
+00:04:37.840 --> 00:04:45.120
+that generally speaking more and more
+people are just focusing on agents.mmd
+
+00:04:43.199 --> 00:04:50.080
+that's become the kind of de facto
+standard agents.md or or claude.md or
+
+00:04:47.840 --> 00:04:53.919
+gemini.mmd. Uh that's how people are
+doing things these days. But there are
+
+00:04:52.000 --> 00:04:57.360
+some other approaches too that some of
+the tools have specifically for those
+
+00:04:56.000 --> 00:05:01.919
+tools. So look, we're going to spend a
+lot of time looking at what makes a good
+
+00:04:59.759 --> 00:05:06.400
+agents.mmd and what makes a bad
+agents.mmd. And it's best to see that
+
+00:05:04.320 --> 00:05:10.639
+stuff in practice. But just to give you
+a few bit bit of a sense of it, you can
+
+00:05:08.960 --> 00:05:16.080
+see here the kinds of things that I tend
+to try and do in my agents.mmd. I
+
+00:05:13.520 --> 00:05:21.440
+obviously focus on giving it the overall
+project goals um and the success
+
+00:05:18.800 --> 00:05:25.280
+criteria. I like to give it a a
+checklist that it can check things off
+
+00:05:23.600 --> 00:05:29.919
+on the success criteria so that it's
+really forced to go and do that. I also
+
+00:05:27.360 --> 00:05:34.880
+often list links to other documents that
+it can optionally load. We'll we'll
+
+00:05:32.320 --> 00:05:40.400
+cover that in due course. And then I
+like to have the clear coding standards
+
+00:05:37.600 --> 00:05:46.400
+that apply to this project. And here
+it's so important to be concise, to be
+
+00:05:43.520 --> 00:05:50.400
+specific, uh, and to try and correct for
+problems that you've had with the agent
+
+00:05:48.960 --> 00:05:54.080
+in the past. And of course, this is such
+an evolving space, and things that are a
+
+00:05:52.400 --> 00:05:59.280
+problem for me now may not be a problem
+anymore for you. But for example, uh, I
+
+00:05:57.120 --> 00:06:04.160
+hate the way that these AI agents tend
+to over complicate everything. So I
+
+00:06:01.280 --> 00:06:08.880
+always try and stress simpler is better.
+Not too many comments. Comments only
+
+00:06:05.919 --> 00:06:14.000
+when necessary. Be concise. Have short
+read me. I hate the way that LLMs love
+
+00:06:11.360 --> 00:06:18.319
+generating long wordy readmes. I used to
+be used to be so happy when people would
+
+00:06:15.840 --> 00:06:21.759
+would send me PRs uh uh with with with
+code for me to merge into my my open
+
+00:06:20.160 --> 00:06:25.039
+source repos and they would have all of
+these lengthy readmes the first time
+
+00:06:23.520 --> 00:06:28.960
+this happened a couple of years ago. I
+thought, "Wow, that's so kind of that
+
+00:06:26.479 --> 00:06:33.680
+person to write this long readme." Now I
+know better. These LLM generated readmes
+
+00:06:31.520 --> 00:06:38.639
+are just the worst. Don't do that,
+please. So, I always tell the LLM to
+
+00:06:36.000 --> 00:06:43.440
+make readmes short and no emojis,
+please. No emojis. Uh, and then I say
+
+00:06:41.680 --> 00:06:48.160
+important. It's it it turns out that it
+works well to put the word important in
+
+00:06:45.280 --> 00:06:53.199
+block capitals. Who knew? Important.
+Avoid overdefensive programming. Avoid
+
+00:06:50.960 --> 00:06:57.600
+is instance checks in Python. Just just
+horrible hacky stuff. Only manage
+
+00:06:55.520 --> 00:07:02.720
+exceptions when necessary. They love to
+to put tries around everything. And then
+
+00:07:00.319 --> 00:07:08.720
+for me, because I use UV, the Python
+package manager, I might say use uv
+
+00:07:05.440 --> 00:07:13.919
+always UV run something rather than
+Python 3 something. Always, never. Um,
+
+00:07:12.240 --> 00:07:17.280
+and so you can see some some different
+stylistic things there. You probably
+
+00:07:15.680 --> 00:07:21.919
+know this already, but you use back
+ticks to to wrap around code like that.
+
+00:07:20.319 --> 00:07:25.440
+One back tick if you have some some
+inline code, just a little bit of code,
+
+00:07:23.759 --> 00:07:29.599
+and you do three back ticks if you've
+got a whole block of code. three back
+
+00:07:27.280 --> 00:07:32.880
+ticks code and another three back ticks.
+You don't need to remember this because
+
+00:07:30.639 --> 00:07:37.840
+we'll be doing plenty of it. Just gives
+you a sense of how this works. And one
+
+00:07:35.919 --> 00:07:42.560
+final tip people tend to say for these
+things, try and focus on the positives.
+
+00:07:40.479 --> 00:07:47.919
+Try and focus on things that it should
+do. Don't do too many negatives like
+
+00:07:45.680 --> 00:07:52.160
+like I have there never Python 3. You
+can use it from time to time, but not
+
+00:07:49.280 --> 00:07:57.199
+too many because alans aren't so good at
+handling negatives. Strangely, that
+
+00:07:54.639 --> 00:08:01.840
+they're not so coherent at remembering
+things that they are not to do. They are
+
+00:07:59.759 --> 00:08:07.039
+better at remembering things that they
+are to do. So, try and focus on what it
+
+00:08:04.240 --> 00:08:10.160
+should do. Be concise and try not to
+have too much of like do not
+
+00:08:08.400 --> 00:08:13.759
+overcomplicate that I got in here. But
+you don't want too much of that because
+
+00:08:11.440 --> 00:08:18.080
+they tend to be less coherent with it.
+Focus on what it should do, less of what
+
+00:08:16.000 --> 00:08:24.800
+it should not do. And so a final point
+that I'll make here is that there was a
+
+00:08:21.199 --> 00:08:32.080
+school of thought last year and the
+school of thought very much was look
+
+00:08:27.840 --> 00:08:37.839
+your success with agent coding is from
+spending time with a really really
+
+00:08:35.519 --> 00:08:43.279
+excellent agents.mmd.
+That is where you need to sweat. You
+
+00:08:40.159 --> 00:08:46.560
+need to put time, energy, effort into
+agents.mmd. You need to have one at the
+
+00:08:45.360 --> 00:08:51.200
+top. You need to have one in different
+subdirectories. You need to work on
+
+00:08:48.399 --> 00:08:57.279
+making it really really good and have
+other documents that support it. You
+
+00:08:53.680 --> 00:09:02.720
+need to continually uh supplement with
+extra files, extra planning files,
+
+00:08:59.920 --> 00:09:09.839
+success criteria, steps that need to be
+taken to test. You need to continually
+
+00:09:05.839 --> 00:09:13.279
+rewrite your agents.md again and again,
+pruning it, removing things that don't
+
+00:09:11.440 --> 00:09:18.160
+matter anymore, adding in new things.
+And indeed, you can you can have your
+
+00:09:14.959 --> 00:09:22.800
+LLM rewrite it for you, but giving it
+very clear instructions because it is
+
+00:09:19.839 --> 00:09:27.440
+precious and every every line counts and
+and LLMs love to add to agents. MD and
+
+00:09:25.600 --> 00:09:35.040
+you need to make sure that it's tight
+and often stop your AI agent, rewrite,
+
+00:09:32.080 --> 00:09:41.760
+prune, and then reset and start your
+agent again. Fresh context, completely
+
+00:09:38.000 --> 00:09:48.320
+clear, and new agents.m MD. that it's
+it's it's hard work, but that certainly
+
+00:09:45.360 --> 00:09:54.399
+as of last year was the prevailing way
+to get the most value out of AI agents.
+
+00:09:51.519 --> 00:10:03.120
+And as you can probably tell, there is a
+new way, a new school of thought. And
+
+00:09:57.920 --> 00:10:10.399
+the 2026 mindset, it's a kind of let it
+hang out. Be more comfortable giving up
+
+00:10:06.080 --> 00:10:16.000
+the res. Let it go. you focus on the end
+goal. Focus on you what you want the LLM
+
+00:10:12.959 --> 00:10:20.800
+to achieve at the end of it. Use some of
+the new features that we will cover over
+
+00:10:18.079 --> 00:10:25.600
+the next few weeks, skills, uh having
+more loops, using agents, sub agents,
+
+00:10:23.680 --> 00:10:32.640
+and and having a swarm of different
+agents. Let it have the end goal. Let it
+
+00:10:28.880 --> 00:10:39.279
+self-correct and just let it be. Let it
+do its thing. That is the kind of
+
+00:10:35.360 --> 00:10:44.640
+prevailing 2026 mindset which is quite a
+departure from the 2025 mindset. And
+
+00:10:42.560 --> 00:10:51.360
+again, I hate to break it to you. I hate
+to break it to you, but I I am still of
+
+00:10:48.399 --> 00:10:55.279
+the 2025 school of thought. I think it's
+more nuanced than this in a second. I'm
+
+00:10:53.360 --> 00:10:58.399
+about to take you through uh that that
+there are different situations which
+
+00:10:56.560 --> 00:11:05.600
+lend themselves more to a different kind
+of strategy. But personally, I am not
+
+00:11:01.680 --> 00:11:10.560
+ready to let go of the 2025 approach
+yet. Depends on the project, depends on
+
+00:11:07.839 --> 00:11:16.320
+what you're doing as we will discuss.
+But much of the time for me, it's about
+
+00:11:13.519 --> 00:11:22.480
+the amount of work that I put in to
+agents.md and to other parts of
+
+00:11:19.760 --> 00:11:28.560
+optimizing the context window. It makes
+an enormous difference to the output and
+
+00:11:25.279 --> 00:11:32.720
+I am not yet ready to let it go. Except
+except for toy projects like a first
+
+00:11:30.800 --> 00:11:38.480
+person shooter that we did yesterday. I
+let that one go for sure, but for larger
+
+00:11:35.360 --> 00:11:43.360
+projects, I like to be all over it. And
+at least for now, I suggest the same for
+
+00:11:40.959 --> 00:11:48.079
+you. But it's a changing time. And
+increasingly during the course of 2026
+
+00:11:45.839 --> 00:11:54.320
+and beyond, you should expect to see
+people more and more often being willing
+
+00:11:50.959 --> 00:11:54.320
+just to let it go.
+

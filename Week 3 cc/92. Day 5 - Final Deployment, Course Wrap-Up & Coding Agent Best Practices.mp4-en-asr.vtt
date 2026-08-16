@@ -1,0 +1,507 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.080 --> 00:00:08.480
+But wait, there's more. There's one more
+thing. I just had a 15minute
+
+00:00:06.080 --> 00:00:13.599
+conversation, I kid you not, with
+codeex. We talked about the best place
+
+00:00:11.200 --> 00:00:19.199
+to deploy this on the internet and we
+agreed that using fly.io, the company
+
+00:00:16.720 --> 00:00:24.720
+behind sprites.dev would be a great
+choice for deploying a container asis.
+
+00:00:22.240 --> 00:00:28.560
+It wrote a script for me. We ran the
+script. We've deployed. And you're
+
+00:00:26.880 --> 00:00:33.200
+looking here, if you just look at the
+URL up there, you are looking at
+
+00:00:30.320 --> 00:00:40.079
+finally-ed.fly.dev.
+This is deployed live on the internet.
+
+00:00:36.800 --> 00:00:44.079
+The AI chat works. The uh the portfolio
+is there. The market data is live. We
+
+00:00:42.640 --> 00:00:50.399
+set up the environment variables
+correctly. Everything is running. This
+
+00:00:47.200 --> 00:00:56.239
+is now deployed. And deployment took all
+of 15 minutes. And you should do it too.
+
+00:00:53.360 --> 00:01:00.399
+So here finally, I leave you. I leave
+you finally with the project finally
+
+00:00:58.399 --> 00:01:05.840
+deployed on the internet with live
+market data and a nice light look to
+
+00:01:03.440 --> 00:01:10.720
+boot. And so take a last look at the
+different orchestrators that we've used.
+
+00:01:08.560 --> 00:01:15.119
+I would say that my favorite experience
+is with Claude agent teams and the
+
+00:01:13.200 --> 00:01:20.000
+winner of the prize in this case was
+probably Codeex. It did a fine job
+
+00:01:18.080 --> 00:01:24.960
+there. And of course, I used it through
+sprite dev, which is such a powerful way
+
+00:01:22.479 --> 00:01:30.159
+to use these these uh agents because you
+can use a coding agent in YOLO mode and
+
+00:01:27.360 --> 00:01:35.920
+feel completely secure, which is great.
+So, uh the big challenge for you now is
+
+00:01:33.040 --> 00:01:39.439
+to take the repo as it stands and give
+one of these things a try. If you're
+
+00:01:37.840 --> 00:01:44.479
+using a free model, maybe you're using
+open code with with a a free model or an
+
+00:01:42.240 --> 00:01:48.320
+open source cheap model, then you will
+have you may have a more challenging
+
+00:01:46.399 --> 00:01:52.399
+experience. Maybe using something as
+disciplined as GSD is your way of
+
+00:01:50.079 --> 00:01:55.840
+getting there. If you are splashing out
+and using something like little code,
+
+00:01:54.079 --> 00:01:59.920
+then you should have an easy old time
+with it. But see if you can't challenge
+
+00:01:58.000 --> 00:02:03.920
+it to do something a bit different.
+Maybe you want to add in a kind of the
+
+00:02:01.920 --> 00:02:08.640
+the users table so different people can
+log in as we had it in week two in the
+
+00:02:06.560 --> 00:02:12.400
+SAS legal platform. Add in that
+functionality as well. So take it in
+
+00:02:10.560 --> 00:02:16.239
+your direction. Remember the amazing
+thing about these coding agents is that
+
+00:02:13.840 --> 00:02:21.120
+it's a choose your own adventure story.
+You've got a really robust specification
+
+00:02:18.720 --> 00:02:26.160
+there in the form of the claude.md. And
+now you can build something and take it
+
+00:02:23.440 --> 00:02:31.040
+somewhere new. Give yourself your own
+trader workstation and enjoy it and see
+
+00:02:29.520 --> 00:02:35.760
+whether you get similar outcomes to me
+and whether you find that that Claude or
+
+00:02:33.519 --> 00:02:40.080
+Codeex or some other model is the winner
+and let me know. Share your results
+
+00:02:37.599 --> 00:02:43.200
+please on on Udemy. Tell me what you
+discover or of course share it on
+
+00:02:41.840 --> 00:02:48.319
+LinkedIn. That's a great place to share
+it. Put it on LinkedIn. Show what you've
+
+00:02:45.599 --> 00:02:52.400
+got and I will weigh in. I will uh add
+some comments if you tag me and I will
+
+00:02:50.080 --> 00:02:56.720
+make sure that I amplify your success.
+And again, if you see other students
+
+00:02:54.319 --> 00:03:01.120
+doing this, then please jump in yourself
+and add some comments to theirs as well.
+
+00:02:58.959 --> 00:03:06.800
+That really helps amplify the whole
+community if we're there to support each
+
+00:03:03.440 --> 00:03:10.080
+other. Okay, it's time for a wrap- up.
+It's time for us to go into the final
+
+00:03:08.080 --> 00:03:13.920
+segment. Stay for the final segment
+because it's always good to wrap things
+
+00:03:11.760 --> 00:03:18.560
+up. But unfortunately, this is the
+tearful moment when we finish things
+
+00:03:16.159 --> 00:03:23.599
+off. And what better place to finish
+things off than going back again to the
+
+00:03:20.800 --> 00:03:27.840
+Andre Carpathy tweet that started this
+whole course. And I'm going to read it
+
+00:03:25.360 --> 00:03:31.200
+to you one more time, but this time this
+time it's it's like it's like I'm
+
+00:03:29.519 --> 00:03:33.920
+speaking to you in a foreign language at
+the beginning and then the end once
+
+00:03:32.239 --> 00:03:38.000
+you've learned all of the vocabulary.
+Hopefully it all will fall into place.
+
+00:03:36.080 --> 00:03:42.400
+Andre says, "I've never felt this much
+behind as a programmer. Profession is
+
+00:03:39.920 --> 00:03:47.280
+being refactored as the bits contributed
+by a programmer are becoming sparse. I
+
+00:03:45.360 --> 00:03:51.920
+could be 10 times more powerful if I
+could just string together everything
+
+00:03:49.200 --> 00:03:55.760
+that's become available. There's a new
+layer of abstraction to master with
+
+00:03:53.760 --> 00:04:03.040
+agents, sub aents, their prompts,
+context, memory, modes, permissions,
+
+00:03:58.400 --> 00:04:09.360
+tools, plug-in skills, hooks, MCP, LSPs,
+SL commands, workflows, idees, and the
+
+00:04:06.959 --> 00:04:14.319
+need to build an all-encompassing mental
+model for the strengths and pitfalls of
+
+00:04:11.439 --> 00:04:20.639
+fundamentally stochcastic, fallible,
+unintelligible, and changing entities.
+
+00:04:17.680 --> 00:04:24.160
+Uh clearly a powerful alien tool was
+handed around except it comes with no
+
+00:04:22.240 --> 00:04:28.240
+manual and everyone has to figure out
+how to operate it. Uh while the
+
+00:04:26.400 --> 00:04:32.800
+resulting magnitude 9 earthquake is
+rocking the profession. Roll up your
+
+00:04:30.080 --> 00:04:38.560
+sleeves to not fall behind. So obviously
+the bad news is that it's not like I've
+
+00:04:35.120 --> 00:04:42.800
+given you total transparency and clarity
+because this world is moving so fast and
+
+00:04:40.960 --> 00:04:48.080
+when we look at things like guest town
+it still feels completely bewildered for
+
+00:04:44.800 --> 00:04:53.199
+me let alone for you. Uh, so yes, it is
+a bit crazy out there, but I do hope at
+
+00:04:50.960 --> 00:04:57.199
+least now that you've dimensioned the
+landscape. you've got a good sense of
+
+00:04:55.120 --> 00:05:00.800
+like things like plugins and skills and
+when to use each and you've got that
+
+00:04:59.120 --> 00:05:05.360
+hands-on experience working first of all
+in the IDE but then of course in the
+
+00:05:02.880 --> 00:05:07.840
+CLIs with claw code or codecs and now
+you know about things things that that
+
+00:05:06.639 --> 00:05:11.919
+Andre didn't even mention like
+sandboxing that's so important and
+
+00:05:10.000 --> 00:05:16.160
+powerful and how you can use that with
+YOLO mode and you know about Ralph loops
+
+00:05:14.160 --> 00:05:20.800
+and now you also know about GSD you know
+about all these different bits and
+
+00:05:17.919 --> 00:05:24.240
+pieces uh and and you've experimented
+with them and that's perhaps the most
+
+00:05:22.800 --> 00:05:28.320
+important thing that I have to say to
+you, the single most important thing is
+
+00:05:26.160 --> 00:05:31.680
+you need to be willing to experiment.
+There's not necessarily one right
+
+00:05:29.759 --> 00:05:35.280
+answer. The great thing about using
+these coding agents is you can kick it
+
+00:05:33.280 --> 00:05:39.919
+off, let it build something. If it all
+goes wrong, just simply start again, try
+
+00:05:37.759 --> 00:05:42.720
+it again with a different approach. As
+you think about the approaches, keep
+
+00:05:41.199 --> 00:05:47.199
+this chart in mind. I know I've gone
+this through this like a 100 times, but
+
+00:05:44.639 --> 00:05:52.080
+typically for more mission critical
+stuff, large code bases, for code that
+
+00:05:49.680 --> 00:05:56.639
+is at the forefront, so it may not be in
+much of the uh coding agents, training
+
+00:05:53.840 --> 00:05:59.759
+data, keep to the top row, the yellow,
+look at at managing with lots of
+
+00:05:58.080 --> 00:06:04.560
+markdown files, taking things very
+incrementally. And the top right, STD,
+
+00:06:02.400 --> 00:06:09.360
+spec driven design, that's things like
+GSD. It's it's worlds where you work
+
+00:06:07.039 --> 00:06:13.919
+step by step through a clear workflow.
+that kind of approach and a trust but
+
+00:06:11.520 --> 00:06:18.080
+verify mindset. And if you're doing
+MVPs, new build, you've got some risk
+
+00:06:16.720 --> 00:06:23.360
+appetite, you're churning out
+boilerplate code, go for the purples,
+
+00:06:20.639 --> 00:06:29.440
+yolo, but in a sandbox in something like
+sprite.dev uh or or in like a managed
+
+00:06:26.240 --> 00:06:35.280
+claude on the web. YOLO, use Ralph loops
+perhaps. And then the whole idea of
+
+00:06:32.160 --> 00:06:39.360
+multi- aent swarms and orchestration
+that we've been doing the last couple of
+
+00:06:37.120 --> 00:06:44.160
+days. And to give you some of the big
+takeaways, you should pick the right
+
+00:06:42.000 --> 00:06:48.000
+coding agent and the workflow to use
+based on how mature the project is and
+
+00:06:46.319 --> 00:06:52.080
+and what sort of risk appetites you
+have, your personal skills, what's going
+
+00:06:50.560 --> 00:06:55.759
+to suit. If you're if you're if you're a
+seasoned pro, then you're probably
+
+00:06:53.759 --> 00:06:58.560
+leaning towards the CLI tools. If you're
+still getting used to this and maybe the
+
+00:06:57.120 --> 00:07:02.880
+idees are going to feel more comfortable
+for you and just your preference, like
+
+00:07:00.880 --> 00:07:07.199
+the the mode of work that you enjoy.
+Some people just love working in CLIs
+
+00:07:05.440 --> 00:07:11.919
+and some people just prefer having the
+interactivity of an IDE and you also
+
+00:07:10.000 --> 00:07:15.440
+potentially get get familiar with some
+of the models. You might just like
+
+00:07:13.520 --> 00:07:20.720
+Claude. It might just work for you. It
+works for me. And then follow these
+
+00:07:18.720 --> 00:07:25.280
+steps. First thing to look at is the
+plugins. Plugins. It's easy to look at
+
+00:07:23.039 --> 00:07:28.560
+the official plugins and pick the most
+popular ones or the ones that out of the
+
+00:07:27.199 --> 00:07:32.479
+most popular ones that that were going
+to work for your project like feature
+
+00:07:30.240 --> 00:07:36.160
+dev or the one that simplifies code or
+that builds professional front ends.
+
+00:07:34.240 --> 00:07:41.919
+Pick the plugins are going to work for
+you. And then next up, typically skills
+
+00:07:39.759 --> 00:07:45.520
+is the next thing to do. Picking skills
+are going to really work nicely for your
+
+00:07:43.840 --> 00:07:50.080
+project. And this is also an opportunity
+to use an MCP server if there are MCP
+
+00:07:48.000 --> 00:07:53.840
+servers like Contact 7, uh, which is
+which is exactly what you need. Um,
+
+00:07:52.240 --> 00:07:59.280
+although there's also the the plug-in
+for that, too. And then just be willing
+
+00:07:56.960 --> 00:08:03.759
+to do trial and error. Just have that
+experimenters mindset. Kick it off, see
+
+00:08:02.240 --> 00:08:07.919
+what happens. If it's not going to work
+for you, you can just throw it away and
+
+00:08:05.599 --> 00:08:12.160
+go back. Uh, and having that mindset is
+just so critical. And obviously make
+
+00:08:09.759 --> 00:08:16.720
+heavy use of Git. It is your friend. It
+gives you such an easy ability to go
+
+00:08:14.080 --> 00:08:22.400
+back to where you were and also be
+disciplined about markdown docs. Get
+
+00:08:19.360 --> 00:08:26.479
+things to write to markdown. Use that as
+as it sort of baked into some of these
+
+00:08:24.319 --> 00:08:30.479
+workflows. Use it as your way of
+tracking what's going on just as we've
+
+00:08:28.400 --> 00:08:35.200
+been doing both in in weeks two and
+three. That is such a great process. And
+
+00:08:33.360 --> 00:08:39.839
+on that on that note, also just
+generally manage your context. Include
+
+00:08:37.360 --> 00:08:43.760
+code. Do slash context all the time. See
+what's going on. Don't wait for your
+
+00:08:41.839 --> 00:08:48.160
+contacts to to compact. Manage it
+yourself. Write stuff out to markdown.
+
+00:08:45.839 --> 00:08:52.640
+Write stuff to claude.md or agents.mmd
+and then do a/clear to start again and
+
+00:08:50.720 --> 00:08:57.120
+be fresh with your contacts. Being
+proactive about context management is
+
+00:08:55.040 --> 00:09:02.959
+just just the right way to do it. And
+finally, remember you own the quality of
+
+00:09:00.240 --> 00:09:08.000
+the code that you push. Remember that AI
+PR policy from JellyFin. Keep that in
+
+00:09:05.760 --> 00:09:13.279
+mind. This is code that you stand
+behind. Don't let your coding agent
+
+00:09:10.880 --> 00:09:18.640
+build slop. Don't let it put tons of
+extra test files or read me and please
+
+00:09:15.680 --> 00:09:24.800
+no emojis. Be ruthlessly on top of it.
+Make things sharp and good quality code.
+
+00:09:21.760 --> 00:09:30.480
+Own the code. Make sure that it is good
+quality. Okay, those are the major
+
+00:09:28.000 --> 00:09:30.480
+takeaways.
+

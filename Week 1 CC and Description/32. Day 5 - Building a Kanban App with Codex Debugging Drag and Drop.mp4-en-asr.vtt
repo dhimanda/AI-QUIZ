@@ -1,0 +1,472 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:09.679
+All right. So, uh, yes, approved.
+Proceed
+
+00:00:06.160 --> 00:00:14.160
+with part five. And off it goes. And
+again, I'll see you in a sec. Okay, it
+
+00:00:12.160 --> 00:00:16.640
+says now that part five is waiting for
+the sign off. Part five, you may
+
+00:00:15.440 --> 00:00:20.080
+remember, is all really about
+documenting the database because you do
+
+00:00:18.640 --> 00:00:26.400
+want to check this out first. So, I'm
+going to open this. Let me close this.
+
+00:00:22.240 --> 00:00:31.039
+Have a look at this. Uh, so the users is
+a database table. That makes sense.
+
+00:00:28.240 --> 00:00:37.600
+board, one board per user. Um, title
+stored for future multiboard expansion.
+
+00:00:33.040 --> 00:00:42.239
+That makes sense. Columns, cards. Okay.
+Ordering strategy, migration approach.
+
+00:00:39.920 --> 00:00:46.079
+So, it's interesting. It's I I had
+thought it would store everything as a
+
+00:00:43.840 --> 00:00:51.600
+JSON blob so it could be easily
+provided, but this is possibly a better
+
+00:00:48.480 --> 00:00:56.320
+design. I I'm maybe I mine was was not
+perhaps the uh most sensible way of
+
+00:00:54.160 --> 00:01:02.079
+doing it. This seems like a pretty good
+approach, I have to say. Uh, so I'm
+
+00:01:00.559 --> 00:01:06.080
+we're going to go with it. We are going
+to say that that uh we're going to trust
+
+00:01:04.320 --> 00:01:09.680
+that the AI has thought this one
+through. We're going to approve.
+
+00:01:07.920 --> 00:01:15.439
+Approved.
+Proceed
+
+00:01:12.159 --> 00:01:18.479
+to part six. I probably would have done
+it differently, but then my way might
+
+00:01:17.200 --> 00:01:23.360
+have been a little bit more hacky. This
+is perhaps a better way of doing it. We
+
+00:01:20.799 --> 00:01:27.759
+will see. I'll let it do part six and
+I'll see you in a sec. Okay. Well, I
+
+00:01:25.040 --> 00:01:30.720
+confirmed part six finished and then I
+checked it. Nothing is broken. It hasn't
+
+00:01:29.439 --> 00:01:35.200
+yet wired up the front end, the back
+end. Everything still seems to be fine.
+
+00:01:32.640 --> 00:01:44.079
+Again, I'm going to uh do a get status.
+I'm going to do a git add get commit
+
+00:01:39.520 --> 00:01:47.840
+minus m part 6 done.
+Okay. Okay, so we've taken our git
+
+00:01:45.840 --> 00:01:52.960
+checkpoint and now we come over here and
+say proceed with
+
+00:01:50.560 --> 00:01:58.159
+part seven. I'll also press keep here.
+So we keep all those changes. Proceed
+
+00:01:54.560 --> 00:02:02.399
+with part seven and off it goes. And we
+will uh yeah, a moment ago I thought
+
+00:02:00.560 --> 00:02:05.119
+that that it was already hooked up the
+front end and back end. I forgot that
+
+00:02:03.600 --> 00:02:08.800
+that's what part seven is all about.
+Part seven is hooking up the front end
+
+00:02:06.960 --> 00:02:12.560
+and the back end. That's what it's now
+doing. It's a big deal. So this is
+
+00:02:11.120 --> 00:02:16.640
+probably the most significant change
+we've had so far. I will see you when
+
+00:02:14.640 --> 00:02:21.599
+it's ready. Okay, it's been enthralling,
+but it's been 15 minutes on the go here
+
+00:02:19.280 --> 00:02:26.640
+and we are now at the point where I do
+believe we have a part seven ready for
+
+00:02:24.720 --> 00:02:30.640
+us to test and it's been a lot of
+change. A lot has happened, a lot of
+
+00:02:28.160 --> 00:02:33.599
+changes. Tests were repeatedly failing
+and it rebuilt them. It had to do a lot
+
+00:02:32.160 --> 00:02:40.000
+of rewriting of the front end for this
+to work. So anyway, let's let's do the
+
+00:02:35.840 --> 00:02:43.920
+usual um uh script start mac. Let it
+come up. See if it does come up
+
+00:02:41.280 --> 00:02:47.200
+successfully. It's building a production
+build, which is what I like to see. This
+
+00:02:45.360 --> 00:02:51.920
+is these are the the steps that it would
+need to do. Okay. And it believes that
+
+00:02:49.680 --> 00:02:57.360
+it's running. Let's go and take a look.
+Here it is. Local host 8000. Okay. So
+
+00:02:55.440 --> 00:03:02.720
+far so good. It's serving uh something
+here. User and password. We'll get those
+
+00:03:00.239 --> 00:03:10.080
+usual warnings. Here it comes. Okay.
+Okay. Uh and uh not now. All right. So,
+
+00:03:07.040 --> 00:03:15.360
+here we have it. Uh let's move this over
+here.
+
+00:03:12.319 --> 00:03:19.200
+Uh, well, that's not a good sign, is it?
+Uh, that's interesting. That one did
+
+00:03:17.360 --> 00:03:23.120
+move. There's something janky with the
+way that they move. But anyway, let's
+
+00:03:21.120 --> 00:03:27.840
+start by seeing if this has worked. So,
+we've moved this over here. Let's bring
+
+00:03:25.920 --> 00:03:34.879
+up a separate browser. Let's we'll
+actually close that down al together.
+
+00:03:29.920 --> 00:03:40.319
+Come in again. Log in as user password
+and see what's happened there. And it
+
+00:03:36.879 --> 00:03:44.720
+has indeed come up fine. It's moved it
+to the second column. It did get
+
+00:03:42.400 --> 00:03:49.280
+persisted. That's pretty impressive.
+This is working nicely. We just have to
+
+00:03:47.120 --> 00:03:52.400
+fix this uh this this problem with the
+drag and drop. So, I'll I'll dig into
+
+00:03:51.200 --> 00:03:57.680
+that a bit and then we'll give it a
+message. Okay. So, I'm going to stop the
+
+00:03:54.080 --> 00:04:02.560
+server. I'm going to do a get status.
+I'm just going to make sure we capture
+
+00:03:59.040 --> 00:04:10.840
+where we are. get add dot get commit
+minus m part seven built some drag and
+
+00:04:07.519 --> 00:04:10.840
+drop bugs.
+
+00:04:14.080 --> 00:04:23.199
+Okay. And now I'm going to see if I
+can't prompt it to fix these UI bugs.
+
+00:04:18.320 --> 00:04:31.600
+The persistence is working, but the drag
+and drop
+
+00:04:26.000 --> 00:04:40.759
+seems to only work. Occasionally,
+most of the time I drag a card,
+
+00:04:36.479 --> 00:04:40.759
+the next column highlights,
+
+00:04:41.040 --> 00:04:44.600
+but when I release
+
+00:04:45.040 --> 00:04:56.160
+the card goes back to its original
+position.
+
+00:04:51.680 --> 00:05:05.680
+Please test thoroughly and fix
+fix uh uh reproduce the problem
+
+00:05:00.880 --> 00:05:10.720
+fix it and confirm it is fixed. That is
+the way to do it. Always make sure that
+
+00:05:07.840 --> 00:05:14.240
+you're very uh prescriptive about
+debugging and we'll see how it gets on
+
+00:05:12.479 --> 00:05:17.919
+with this. I will see you in a sec.
+Okay, so this has been an interesting
+
+00:05:16.080 --> 00:05:22.000
+debugging experience just trying to get
+the drag and drop to work. It's been
+
+00:05:20.080 --> 00:05:27.360
+going at it for half an hour. It's been
+continually in this loop. It seems
+
+00:05:24.400 --> 00:05:32.000
+really stuck in a rut of trying again
+and again. And I can see it keeps saying
+
+00:05:29.520 --> 00:05:36.479
+it's likely because of this. I keep
+seeing it like jumping to conclusions,
+
+00:05:33.840 --> 00:05:40.240
+which is such a such a classic move by
+the LLM. And then somewhat to my
+
+00:05:38.479 --> 00:05:43.840
+surprise, I stopped it. You can stop it
+by pressing like the stop button that's
+
+00:05:41.759 --> 00:05:48.720
+here. And I just decided to go in and
+try it myself. And I found that it has
+
+00:05:46.240 --> 00:05:53.360
+in fact fixed it along the way. At some
+point in the last half an hour, it did
+
+00:05:50.479 --> 00:05:57.360
+actually fix it. It's working great, but
+the tests that it was running to try and
+
+00:05:55.280 --> 00:06:02.639
+test drag and drop were failing. And so
+it just continually decided that it
+
+00:05:59.680 --> 00:06:06.400
+hadn't fixed it. So kind of bizarre, but
+it it shows that that that human
+
+00:06:04.479 --> 00:06:10.479
+involvement was needed to be able to
+check and confirm that actually it's
+
+00:06:08.160 --> 00:06:14.560
+working fine. So now with that in mind,
+let me show you it working uh right now.
+
+00:06:12.800 --> 00:06:18.720
+So I'm going to bring up my server with
+startmac.shell.
+
+00:06:16.080 --> 00:06:23.520
+Up it comes. Everything is starting up.
+Go to a browser. Go to localhost 8000.
+
+00:06:21.440 --> 00:06:27.600
+Here we go. We're going to go in as user
+password. We're going to get that angry
+
+00:06:25.600 --> 00:06:31.600
+message saying it's not a good password.
+Yes. Yes, we know that. Here we are.
+
+00:06:29.600 --> 00:06:36.160
+We're at a cambban studio. I can now
+indeed drag and drop. And it works. And
+
+00:06:34.080 --> 00:06:40.080
+there it is. And now we willh do some
+more dragging. I'll drag that one over
+
+00:06:37.520 --> 00:06:42.720
+there. Now this is empty. See all of
+that. I'm going to open a new tab. I'm
+
+00:06:41.360 --> 00:06:48.000
+going to close this tab down. I'm going
+to go back to local host 8000. I'm going
+
+00:06:44.880 --> 00:06:52.160
+to log in again as user and password and
+sign in. And back we are. And you can
+
+00:06:50.240 --> 00:06:58.800
+see that that has worked. We've got an
+empty column here. Everything is looking
+
+00:06:54.800 --> 00:07:03.280
+great. Congratulations to our our agent
+to codeex. Things are going well. Okay.
+
+00:07:01.280 --> 00:07:08.080
+So, back I go here. I'm going to stop
+that server. I'm also going to do a get
+
+00:07:05.520 --> 00:07:19.360
+status. Uh, and I'm going to do a get
+add dot and get commit minus am
+
+00:07:15.520 --> 00:07:25.280
+part seven working.
+And there we've done it. We're in good
+
+00:07:21.759 --> 00:07:28.880
+shape. We we uh now have uh uh part part
+seven is in good shape. It's time for us
+
+00:07:26.960 --> 00:07:34.400
+to move on. Let's just quickly take a
+look at the plan to remind ourselves of
+
+00:07:31.440 --> 00:07:40.000
+where we are here. Uh, part seven is
+done and we're going on to part eight,
+
+00:07:36.479 --> 00:07:44.479
+which is AI connectivity. And now I have
+something important to discuss with you.
+
+00:07:42.080 --> 00:07:48.639
+Over the course of this this uh time
+that we've spent together going through
+
+00:07:45.759 --> 00:07:52.479
+parts 1 to 7, our context window has
+been gradually filling up. We don't
+
+00:07:50.400 --> 00:07:56.000
+actually get that display that we get in
+uh when we're using cursor. it's it's
+
+00:07:54.160 --> 00:07:59.360
+handling it for us, but we know that
+we're we're filling things up and we've
+
+00:07:57.840 --> 00:08:03.520
+certainly reached a point now where it's
+going to be summarizing and dropping
+
+00:08:00.800 --> 00:08:07.440
+some of the messages and so on as we
+this is something that that we are going
+
+00:08:04.960 --> 00:08:11.440
+to obsess over when we use Claude Code
+next week and and everyone that is that
+
+00:08:09.280 --> 00:08:15.919
+is a pro on Claude Code obsesses over
+this and and we don't have as much
+
+00:08:13.759 --> 00:08:20.879
+visibility to it, but we should obsess
+over it just as much nonetheless. And a
+
+00:08:18.800 --> 00:08:26.479
+technique that is a common good
+practice, but it feels kind of gling to
+
+00:08:23.280 --> 00:08:32.880
+do it is that at some point we should
+stop the chat and start again and have
+
+00:08:29.599 --> 00:08:37.680
+it read plan.md to understand where
+we've got. So that's what we're going to
+
+00:08:35.279 --> 00:08:46.240
+do now. I'm going to start by saying uh
+please confirm that plan. MD is up to
+
+00:08:42.320 --> 00:08:52.720
+date with all the latest,
+including
+
+00:08:47.760 --> 00:08:58.880
+any design decisions that you made. Let
+me know when ready. So, we're going to
+
+00:08:56.399 --> 00:09:03.519
+update plan.mmd and make sure that that
+we're super happy with it. And then
+
+00:09:01.360 --> 00:09:08.399
+we're going to do a big step of
+resetting the chat. Okay, that is done.
+
+00:09:06.640 --> 00:09:12.800
+So, I'm going to press keep here to keep
+the changes. I'm just going to do one
+
+00:09:09.839 --> 00:09:20.399
+more get status and just just see it has
+indeed updated the plan MD. I'm just
+
+00:09:15.680 --> 00:09:32.320
+going to do a get add dot get commit as
+m final uh tweaks uh final uh uh updates
+
+00:09:27.760 --> 00:09:38.800
+after part seven.
+And uh that is done. And here we go. And
+
+00:09:35.120 --> 00:09:44.000
+what I'm now going to do is over here I
+am going to rightclick here and I'm
+
+00:09:41.279 --> 00:09:51.600
+going to say new chat. Starting all over
+again. Build with agent. Here we go.
+
+00:09:46.640 --> 00:09:51.600
+It's time for us to go on to part eight.
+

@@ -1,0 +1,268 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:07.279
+And with that, And with that, we've
+reached the last few minutes of this
+
+00:00:05.200 --> 00:00:11.679
+program. You remember we started out in
+week one vibe coding for fun and profit.
+
+00:00:10.160 --> 00:00:16.640
+We built out, we went through all of the
+idees, just introducing like agents,
+
+00:00:14.639 --> 00:00:21.279
+cursor, copilot, codex, anti-gravity,
+looking at all those plugins and and the
+
+00:00:18.960 --> 00:00:25.840
+the idees themselves. Then our first
+experience with YOLO. It feels like an
+
+00:00:23.439 --> 00:00:32.399
+age away. Uh and then the commercial
+MVP, that was cool. Then we moved into
+
+00:00:29.359 --> 00:00:35.760
+claw code and open code and amp. It was
+uh commands and checkpoints for the
+
+00:00:34.239 --> 00:00:40.800
+first time and slash commands and Ralph
+loops. And then we we things got more
+
+00:00:38.320 --> 00:00:44.719
+serious. We we got to see that whole
+workflow with Jura. That was cool. All
+
+00:00:42.800 --> 00:00:50.320
+the way going through to to a git push
+and built out that legal SAS platform.
+
+00:00:47.200 --> 00:00:53.920
+And that finally took us to week three.
+By this point I said that you were now
+
+00:00:52.000 --> 00:00:59.039
+vibe engineering. You had gone from Vibe
+coding to Vibe engineering as a
+
+00:00:56.239 --> 00:01:04.000
+professional. And now this week was so
+much fun. I knew it would be. We just
+
+00:01:01.760 --> 00:01:08.880
+went crazy with first of all the idea of
+multi-agents, which is kind of boring,
+
+00:01:05.600 --> 00:01:12.640
+but then sub agents. I showed you hooks.
+Sandboxing was a much more interesting
+
+00:01:11.119 --> 00:01:16.799
+day than it might have sounded just from
+the name sandboxing. Uh when we were
+
+00:01:15.040 --> 00:01:21.280
+doing I think that for me anyway,
+sprite.dev is the is the really really
+
+00:01:19.119 --> 00:01:26.159
+great thing. But also running with with
+claw code remotely. uh hopefully you
+
+00:01:23.759 --> 00:01:31.119
+tried the the amperasan thing and also
+using it from your mobile and then also
+
+00:01:28.720 --> 00:01:36.400
+tagging Claude in a git issue. It's
+fantastic. And then the large codebase
+
+00:01:34.560 --> 00:01:39.200
+workflow day I didn't really do much
+about work large codebase workflow
+
+00:01:37.920 --> 00:01:44.079
+because I felt like we covered it
+enough. Um but h yeah instead we we
+
+00:01:42.159 --> 00:01:48.159
+spent a moment looking at some of the
+other stuff. I I got to I think that
+
+00:01:46.000 --> 00:01:52.240
+that Claude agent SDK is really
+interesting, something that's definitely
+
+00:01:50.320 --> 00:01:55.759
+worth more exploration if if if you
+found that that something useful. And
+
+00:01:54.240 --> 00:02:00.159
+then of course we looked at co-work and
+and OpenClaw was just something to take
+
+00:01:57.680 --> 00:02:05.200
+a nod at. It's uh it's all over the
+news, at least for me at the moment. And
+
+00:02:02.560 --> 00:02:11.039
+then the last couple of days have just
+been so great looking at orchestrators,
+
+00:02:08.239 --> 00:02:17.760
+of course, GSD uh Claude agent teams,
+which which is definitely my favorite.
+
+00:02:13.520 --> 00:02:23.280
+And then uh also the the craziness that
+is Gas Town uh which was something we
+
+00:02:20.400 --> 00:02:29.040
+did today. And then we finally very
+quickly I showed you codeex sub agents
+
+00:02:26.239 --> 00:02:34.000
+and then getting codeex to fix up uh the
+massive API so we could have a real
+
+00:02:31.440 --> 00:02:39.040
+finance workstation. Hopefully you've
+recreated that yourself. That completed
+
+00:02:36.480 --> 00:02:42.640
+our capstone project, project number
+four. But I know what you're thinking.
+
+00:02:40.560 --> 00:02:47.599
+It's we didn't do four projects. We did
+six projects because we also did the
+
+00:02:45.360 --> 00:02:53.840
+first person shooter on the first day
+and we did the Space Invaders.
+
+00:02:50.800 --> 00:02:57.920
+So, well, if they count as projects, so
+that would make it six projects. Uh,
+
+00:02:55.760 --> 00:03:01.920
+four commercial projects though. And
+that means, of course, that you are no
+
+00:02:59.440 --> 00:03:08.159
+longer a Vibe coder. You are no longer a
+Vibe engineer. You are now an officially
+
+00:03:05.200 --> 00:03:13.360
+an agentic engineer. I can fill in that
+third strip. You have completed the
+
+00:03:10.720 --> 00:03:18.000
+board. It's done. You're an agentic
+engineer. Congratulations. And it
+
+00:03:15.840 --> 00:03:22.800
+remains me to give you a huge thank you.
+Thank you so much for surviving the
+
+00:03:20.400 --> 00:03:26.720
+roller coaster, making it all the way to
+the end. I promised you a roller
+
+00:03:24.319 --> 00:03:32.319
+coaster, and I think I delivered. Uh so
+remember, whether you like it or not,
+
+00:03:29.120 --> 00:03:36.319
+something came with this package uh that
+that is that is yours that you can't
+
+00:03:34.239 --> 00:03:41.760
+avoid. It's like like a mandatory part
+of it. And that is me. Uh I come with
+
+00:03:38.879 --> 00:03:46.080
+it. you you you you you get me forever.
+I I want you to to to reach out to me,
+
+00:03:44.080 --> 00:03:50.080
+post on LinkedIn that you've completed
+the course with something you learned,
+
+00:03:47.519 --> 00:03:54.080
+some insight, something about it, and
+and I will come in and amplify your
+
+00:03:52.319 --> 00:03:57.519
+success. Make sure that others know
+about it. I'd love it if you post some
+
+00:03:55.920 --> 00:04:00.720
+of the projects you've built or some of
+your thoughts on on what you like and
+
+00:03:59.519 --> 00:04:05.040
+dislike about the different platforms
+we've covered or the techniques. Uh as I
+
+00:04:03.439 --> 00:04:09.360
+say, post the certificate. That's
+something that is easy for me to
+
+00:04:06.560 --> 00:04:13.760
+amplify. I would love to do so. Take a
+look through some of my other courses if
+
+00:04:11.280 --> 00:04:17.519
+that interests you. Uh I've got lots of
+stuff to build you into being an AI
+
+00:04:15.760 --> 00:04:22.720
+engineer and I have a program for people
+who want to become proficient AI
+
+00:04:20.079 --> 00:04:25.919
+engineers. I should also mention my
+editor would kill me if I didn't mention
+
+00:04:24.160 --> 00:04:29.840
+again that that uh to the extent that
+you're willing to rate this course, that
+
+00:04:28.320 --> 00:04:33.040
+is the main way that Udemy decides
+whether or not to recommend it to
+
+00:04:30.960 --> 00:04:37.040
+others. So if you found it useful, then
+please do rate it. It makes an enormous
+
+00:04:35.280 --> 00:04:41.600
+difference and I'm super grateful. But
+more important than any of this, the
+
+00:04:39.120 --> 00:04:47.520
+single most important thing for you, the
+to-do that you must do is to build. It's
+
+00:04:45.360 --> 00:04:53.199
+all about building. I hope that I have
+equipped you with the missing manual to
+
+00:04:50.080 --> 00:04:59.199
+this this alien tool that Andre Kapathy
+spoke of. You now have the ability to
+
+00:04:55.840 --> 00:05:04.639
+use this tool. Go use it. Go build some
+amazing things. Build them. Share them
+
+00:05:02.080 --> 00:05:07.520
+with me. I can't wait to see them. Thank
+you so much again.
+

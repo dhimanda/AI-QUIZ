@@ -1,0 +1,552 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:05.040
+to give you another perspective on the
+journey that you and I are about to go
+
+00:00:03.439 --> 00:00:09.120
+through. I wanted to share something
+that was written by Steve Yaggi, the
+
+00:00:07.520 --> 00:00:13.120
+author of a of a product called Guest
+Town. That's that's that's huge that
+
+00:00:10.960 --> 00:00:16.720
+that that we will look at at some point.
+And it's this this has been a very
+
+00:00:14.400 --> 00:00:22.560
+popular post when he described the
+different stages that you go through as
+
+00:00:19.039 --> 00:00:28.560
+an AI coder as you use AI in a more and
+more advanced way. So in his post, Steve
+
+00:00:25.279 --> 00:00:34.880
+described the first stage of your AI
+journey is using things like interacting
+
+00:00:31.279 --> 00:00:41.680
+with chat GBT and using AI autocomplete
+to help you code just as something that
+
+00:00:37.440 --> 00:00:46.399
+you refer over to. Stage two is when you
+have a coding agent and it's in the
+
+00:00:43.600 --> 00:00:51.039
+sidebar of your IDE just as it was for
+us with cursor moments ago, but it's
+
+00:00:48.879 --> 00:00:56.320
+asking for permission before it makes
+any change to the code. you are checking
+
+00:00:53.600 --> 00:01:00.640
+everything step by step and it's just
+there to give you suggestions maybe to
+
+00:00:58.719 --> 00:01:06.400
+make a few changes with your with your
+approval with your express consent and
+
+00:01:03.199 --> 00:01:11.280
+then stage three is the same except you
+are now in something that we like to
+
+00:01:08.000 --> 00:01:16.799
+call yolo mode yolo of course sure you
+only live once uh but this is the mode
+
+00:01:13.439 --> 00:01:22.880
+where you just don't accept changes you
+just say I accept everything go for it
+
+00:01:20.000 --> 00:01:28.880
+do do whatever you want I trust you it's
+a level of trust that you're giving the
+
+00:01:25.200 --> 00:01:33.520
+coding agent in the IDE sidebar and
+Steve also distinguished between a stage
+
+00:01:31.119 --> 00:01:37.600
+four which is where it's it's more of a
+sort of conceptual change where you
+
+00:01:35.439 --> 00:01:42.240
+don't have the coding agent in a sidebar
+but it's really occupying the main
+
+00:01:39.920 --> 00:01:45.680
+window you've kind of expanded it and as
+far as you're concerned that is where
+
+00:01:43.840 --> 00:01:49.759
+you're looking you're not looking at the
+code that it's changing you're looking
+
+00:01:47.600 --> 00:01:54.159
+at the agent of what it's telling you
+and occasionally you're checking the
+
+00:01:52.159 --> 00:01:57.600
+differences in code that it's making.
+You're seeing them fly by. You're not
+
+00:01:55.840 --> 00:02:00.320
+actually expressly accepting them.
+You're just seeing them, looking at
+
+00:01:58.799 --> 00:02:04.000
+them, but maybe you're just walking away
+and letting it do its thing. That is the
+
+00:02:02.479 --> 00:02:08.720
+distinction between stage three and
+stage four. Stage four, your attention
+
+00:02:06.320 --> 00:02:14.319
+is on the agent, not on the code. Now,
+all of stages one to four were about
+
+00:02:10.800 --> 00:02:20.239
+working in an IDE like cursor or VS
+Code. Stage five is where you've moved
+
+00:02:17.280 --> 00:02:25.440
+to the command line, to the CLI, to the
+terminal. you're using clawed code or
+
+00:02:22.879 --> 00:02:29.680
+similar a coding agent in the CLI.
+You're still on YOLO letting it do its
+
+00:02:27.680 --> 00:02:33.440
+thing and now the diffs are just
+scrolling by. You're not even checking
+
+00:02:31.680 --> 00:02:37.360
+them. You're just sitting back watching
+it happen. Maybe you're just leaving it
+
+00:02:35.200 --> 00:02:44.000
+as I say coming back later and it's
+done. That's stage five. And stage six
+
+00:02:41.040 --> 00:02:49.360
+is the same except it's not one agent
+now. You've spawned multiple agents.
+
+00:02:47.360 --> 00:02:54.400
+you've got many of them working
+concurrently on your project like you've
+
+00:02:51.840 --> 00:03:00.879
+got a little team maybe three to five
+agents and they're all running in your
+
+00:02:56.800 --> 00:03:07.440
+CLI. Okay. And then seven is just upping
+the ante. You've now got 10 or more
+
+00:03:04.560 --> 00:03:10.879
+agents in your CLI and you're managing
+them all yourself. You're like kicking
+
+00:03:09.280 --> 00:03:14.800
+them all off and watching them do their
+thing and coordinating what they're all
+
+00:03:12.720 --> 00:03:18.959
+doing. So, it's like you're you've got a
+lot of work to do to to coordinate them
+
+00:03:16.720 --> 00:03:25.280
+and they're all running. It's like
+you're hugely leveraged with all of
+
+00:03:21.599 --> 00:03:30.080
+these agents and sub agents all running,
+building your stuff for you. And of
+
+00:03:28.080 --> 00:03:36.000
+course, you see where this is heading.
+Stage eight is when you have an agent
+
+00:03:32.879 --> 00:03:40.319
+that is orchestrating the other agents.
+So, you're not manually managing this.
+
+00:03:38.239 --> 00:03:44.159
+You've got agents managing each other.
+And maybe there's a whole hierarchy.
+
+00:03:42.319 --> 00:03:48.560
+There's one agent managing a bunch of
+manager agents that are all managing a
+
+00:03:46.480 --> 00:03:53.680
+bunch of worker agents all in some
+structured way. There's a testing team,
+
+00:03:50.879 --> 00:03:58.959
+a design team. There's all sorts of
+different roles and responsibilities
+
+00:03:55.440 --> 00:04:06.159
+happening in your agents orchestrating
+other agents. That is stage eight. That
+
+00:04:02.640 --> 00:04:10.560
+is the most advanced stage in Steve's
+progression. And in Steve's original
+
+00:04:07.760 --> 00:04:15.200
+post, he also asked Google Gemini's Nano
+Banana to come up with images associated
+
+00:04:13.280 --> 00:04:18.959
+with each one. And this these are like
+the little nanobanana images. And you
+
+00:04:17.120 --> 00:04:22.560
+can see they tell that story of the
+progression particularly figure eight on
+
+00:04:20.880 --> 00:04:27.840
+the bottom right. You can really see
+that sense of hierarchy and of many
+
+00:04:25.520 --> 00:04:32.000
+agents that are organized together and
+coordinating activities. That is the
+
+00:04:30.320 --> 00:04:37.280
+journey. And I'll just make the point
+that week one of our course here is
+
+00:04:34.880 --> 00:04:40.320
+about those first four stages. Not
+really stage one because that's just
+
+00:04:38.560 --> 00:04:43.120
+using chat GPT. I imagine you can do
+that already. It's really stages 2,
+
+00:04:42.000 --> 00:04:47.199
+three, and four. We're going to be
+covering that in the first week. The
+
+00:04:45.120 --> 00:04:50.960
+second week is all about stage five.
+We're really digging down on stage five
+
+00:04:49.600 --> 00:04:55.360
+to make sure that's absolutely
+understood. And then very much the third
+
+00:04:52.880 --> 00:05:02.000
+week is about adding six, seven and
+eight to the mix so that we end up at
+
+00:04:58.400 --> 00:05:07.840
+the the the very peak performance using
+an entire orchestrated network of agents
+
+00:05:05.840 --> 00:05:12.000
+to deliver your product. And I'll make
+the point that whilst these eight stages
+
+00:05:09.919 --> 00:05:18.000
+represent moving to more and more
+sophisticated use of AI to build more
+
+00:05:15.520 --> 00:05:22.960
+and more, it's not necessarily it
+doesn't necessarily translate to to the
+
+00:05:20.240 --> 00:05:27.440
+most advanced way to use AI agents in
+the enterprise. In fact, I would argue
+
+00:05:25.280 --> 00:05:33.039
+that somewhere between stages five and
+six is the sweet spot for building
+
+00:05:30.639 --> 00:05:37.039
+quality software in the enterprise. And
+that is mostly what we will be focused
+
+00:05:34.880 --> 00:05:41.520
+on in this course. It is largely stage
+five in week two and stage six in week
+
+00:05:39.440 --> 00:05:45.199
+three. I'm going to be giving you stages
+seven and eight so you can see it
+
+00:05:43.120 --> 00:05:50.080
+happening. Whether you would actually
+use that in practice in the enterprise
+
+00:05:47.840 --> 00:05:55.199
+at least today I would say is an open
+question. But certainly you will have
+
+00:05:52.000 --> 00:06:01.120
+exposure to it. But five and six is
+really for me the sweet spot for
+
+00:05:57.440 --> 00:06:05.440
+building bulletproof reliable scalable
+software and adding the most commercial
+
+00:06:03.199 --> 00:06:11.360
+value. Okay. Now, you and I at this
+point have to have a conversation about
+
+00:06:07.919 --> 00:06:15.680
+AI costs. Always a hot topic. I get a
+bunch of questions on this every single
+
+00:06:13.120 --> 00:06:20.000
+day. And so, let me let me set the
+record straight. Let's have words on
+
+00:06:17.280 --> 00:06:26.240
+this. So, look, here's the thing. You
+can take this entire course without
+
+00:06:22.400 --> 00:06:32.560
+spending a penny on API costs. Not a
+scent. You don't need to spend anything.
+
+00:06:29.600 --> 00:06:37.680
+You can also, should you wish, consume a
+lot of your of your money. There's
+
+00:06:34.560 --> 00:06:42.560
+plenty of opportunity uh to spend plenty
+on Claude Code and others. It's a it's
+
+00:06:40.240 --> 00:06:47.199
+an easy way to burn lots of money if you
+want to ramp up and have 20 agents build
+
+00:06:44.960 --> 00:06:51.680
+something enormous. Certainly, they will
+happily take your money. So, that option
+
+00:06:49.120 --> 00:06:55.759
+is available for you. I often do and I
+have great fun. And for me, it's worth
+
+00:06:53.680 --> 00:06:59.520
+it. But it's it's your choice and you
+should always understand what you're
+
+00:06:57.520 --> 00:07:04.319
+going to spend and make sure that that
+is worth it to you. My recommendation I
+
+00:07:02.560 --> 00:07:09.280
+think to get the most out of this course
+is to just have the cursor pilot as long
+
+00:07:07.520 --> 00:07:14.080
+as you you still are eligible for that
+free period. Uh just so that you've had
+
+00:07:11.199 --> 00:07:19.199
+some experience with it and then go for
+the $20 a month plan with Claude Code
+
+00:07:17.360 --> 00:07:23.840
+which is where we'll spend weeks two and
+three and only go up beyond that if you
+
+00:07:21.759 --> 00:07:28.639
+want to get more intense. So that would
+be my recommendation, but it's not like
+
+00:07:26.080 --> 00:07:32.720
+it's required. You don't need to spend a
+scent. If you choose to not spend
+
+00:07:31.120 --> 00:07:36.000
+anything, if that's if that's how you'd
+like to approach this, please look at
+
+00:07:34.240 --> 00:07:41.360
+the resources where I'll try and put in
+extra uh tips and examples for how you
+
+00:07:38.800 --> 00:07:46.000
+do it, how you set up to use uh free
+models. And there will be some parts of
+
+00:07:43.919 --> 00:07:49.919
+the course that you might need to skip
+some things that I'll show you that that
+
+00:07:47.680 --> 00:07:53.520
+are paid products. in which case, just
+take it that I'm showing it to you for
+
+00:07:51.520 --> 00:07:57.440
+future reference, and you won't use that
+yourself, but you'll use one of the free
+
+00:07:55.039 --> 00:08:01.120
+tools instead. So, you may need to pick
+and choose as we go a little bit. I'll
+
+00:07:59.440 --> 00:08:06.319
+try and put notes about that in the
+resources and keep an eye on that. And
+
+00:08:03.919 --> 00:08:12.560
+so, for the golden rule, the golden
+rule, it is this. It is that I I will
+
+00:08:10.080 --> 00:08:17.199
+take responsibility for many things on
+this course. I am responsible for
+
+00:08:14.240 --> 00:08:22.960
+getting you to be able to to answer the
+Andre tweet at the end of 3 weeks, but I
+
+00:08:20.080 --> 00:08:27.680
+can't take responsibility for the API
+costs, the the AI costs. You need to
+
+00:08:25.840 --> 00:08:31.599
+make the decisions about the spend
+you're comfortable with, and you need to
+
+00:08:29.199 --> 00:08:35.440
+monitor any costs that you're incurring
+on the different platforms. I'll be very
+
+00:08:33.599 --> 00:08:40.159
+clear on how you do it and where you do
+it as we go. But that part of it, it
+
+00:08:38.479 --> 00:08:44.720
+needs to be on you. I'm I'm sherking
+that responsibility because I can't have
+
+00:08:42.080 --> 00:08:48.000
+that responsibility. It's pricing. It
+varies depending your different regions.
+
+00:08:46.560 --> 00:08:52.640
+There are different offers available for
+people. There are various free trials.
+
+00:08:50.240 --> 00:08:56.080
+There are special deals and and and I
+don't know about them. You will need to
+
+00:08:54.480 --> 00:08:59.440
+do that research and make sure that
+you're comfortable with whatever you
+
+00:08:57.680 --> 00:09:04.160
+sign up for. So, this is the one thing
+I'll give you as much transparency and
+
+00:09:01.440 --> 00:09:08.240
+clarity as I possibly can. But please,
+you you need to be in the driving seat
+
+00:09:05.920 --> 00:09:10.720
+when it comes to AI costs. And I know
+this is a source of frustration for
+
+00:09:09.600 --> 00:09:13.279
+people because it feels like you're
+getting nickel and dimeed when
+
+00:09:12.080 --> 00:09:17.279
+everything you sign up for is like
+another $20 a month or whatever, but
+
+00:09:15.760 --> 00:09:21.839
+it's just worth keeping in mind that
+this is the the new cost of working with
+
+00:09:20.160 --> 00:09:25.440
+this kind of technology. We're all
+familiar with the model that you might
+
+00:09:23.440 --> 00:09:30.560
+need to buy a laptop that might cost as
+much as $1,000 or or more for high-end
+
+00:09:28.399 --> 00:09:34.880
+laptops. And that doesn't surprise us,
+but this this sort of $20, $30 a month
+
+00:09:33.279 --> 00:09:38.320
+from lots of different people, that's
+something which we're not used to. And
+
+00:09:36.480 --> 00:09:42.959
+so it feels like there's there's
+friction and it's painful. But keep in
+
+00:09:40.480 --> 00:09:47.839
+mind that these vendors do it doing this
+kind of AI calculation involves hundreds
+
+00:09:45.839 --> 00:09:52.560
+of trillions of floatingpoint
+calculations. There's a lot of compute
+
+00:09:50.399 --> 00:09:56.160
+that goes into it. And someone needs to
+pay the electricity bills. They can't
+
+00:09:54.240 --> 00:10:00.959
+lose money on doing this for you. And
+and as I say, it's a it's it's
+
+00:09:58.080 --> 00:10:05.040
+astonishing that we're able to have AIs
+that can do what they can do. And so it
+
+00:10:03.440 --> 00:10:08.959
+shouldn't be massively shocking that
+there is some some cost associated with
+
+00:10:07.200 --> 00:10:14.480
+it. So for what it's worth, I will say
+that I do want to make the point again.
+
+00:10:11.440 --> 00:10:18.720
+You you're in charge of your charges. Uh
+you're you're the boss. You're in charge
+
+00:10:16.079 --> 00:10:22.560
+of that, but I'm here to help. So if you
+ever have any questions, ask me at any
+
+00:10:20.560 --> 00:10:27.200
+time. I'll give you all the information
+I can. I'll show you where to look. So,
+
+00:10:24.880 --> 00:10:30.800
+as long as you're you're happy to be in
+control of those costs, uh I'm here to
+
+00:10:29.279 --> 00:10:33.200
+make sure that they are as transparent
+as possible.
+

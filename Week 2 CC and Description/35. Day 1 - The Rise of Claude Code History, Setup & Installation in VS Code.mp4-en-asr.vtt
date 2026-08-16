@@ -1,0 +1,624 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:07.839
+And so let me tell you about the
+phenomenon that is Claude code. It all
+
+00:00:04.880 --> 00:00:12.559
+started in late 2024 when Boris
+Churnney, an engineer at Anthropic, did
+
+00:00:10.400 --> 00:00:20.480
+a side project that originally called
+Claude CLI just to sort of drive coding
+
+00:00:16.560 --> 00:00:25.279
+with Claude in an agent loop and it kind
+of took off from there. Anthropic
+
+00:00:22.880 --> 00:00:30.400
+released it generally in April. I think
+it was available to most people in
+
+00:00:26.880 --> 00:00:34.640
+February of 25 and it was considered it
+it was the first time that one of these
+
+00:00:32.000 --> 00:00:39.200
+CLI tools came out there and really took
+hold. There are so many of these now but
+
+00:00:36.719 --> 00:00:43.200
+Claude Code was where it began in April
+2025
+
+00:00:40.879 --> 00:00:49.120
+and in September 2025 I mean obviously
+during 2025 it then took off massively.
+
+00:00:46.480 --> 00:00:53.120
+September brought V2 which which brought
+this whole robust ecosystem. Many of
+
+00:00:51.520 --> 00:00:57.360
+these features have been rolled out over
+the course of the preceding months, but
+
+00:00:54.719 --> 00:01:01.359
+they sort of matured in V2. It was it
+was checkpointing, sub agents, hooks,
+
+00:00:59.520 --> 00:01:06.479
+skills, background tasks. There's also a
+claude code SDK that lets you write code
+
+00:01:04.720 --> 00:01:10.479
+to use the kind of clawed code
+ecosystem. It's not the same as one of
+
+00:01:08.400 --> 00:01:14.799
+the agent frameworks like OpenAI agents
+SDK, which is just for building your own
+
+00:01:12.479 --> 00:01:18.880
+agents. The Clawed Code SDK is for
+working within the Clawed Code
+
+00:01:16.560 --> 00:01:24.400
+ecosystem. Now, at this time, the best
+model on the planet from Anthropic was
+
+00:01:21.840 --> 00:01:28.720
+Claude Sonnet 4.5, which is one of the
+best models in the world. Uh, but it was
+
+00:01:26.560 --> 00:01:33.600
+certainly up there in the top few. And
+it was it was going it was great, but
+
+00:01:30.960 --> 00:01:40.400
+there was certainly rough edges. And in
+November, Anthropic released Opus 4.5,
+
+00:01:37.680 --> 00:01:45.920
+their strongest model. And many people
+see this as an inflection point in
+
+00:01:42.560 --> 00:01:51.759
+agentic coding. Generally, Opus 4.5
+changed the game and coming after that
+
+00:01:48.240 --> 00:01:58.560
+Gemini 3 Pro, Google's top top model
+seen as in in the similar camp and
+
+00:01:54.240 --> 00:02:02.560
+codeex 5.2 uh GBT 5.2 Codeex from OpenAI
+that we've we've been working with is
+
+00:02:00.240 --> 00:02:07.200
+also at that tier. But Opus was the
+first one. Opus 4.5 the first one that
+
+00:02:05.200 --> 00:02:13.200
+that had people sitting back and saying
+something has changed. We've reached a
+
+00:02:09.840 --> 00:02:17.920
+point where suddenly LLM coding agents
+are so much more reliable that we can
+
+00:02:16.000 --> 00:02:23.120
+really trust them to do a lot of code
+and not be having to check all the divs.
+
+00:02:20.720 --> 00:02:30.239
+And that's a big deal. At about the same
+point, uh, Anthropic passed a billion
+
+00:02:26.160 --> 00:02:34.160
+dollars of of run rate revenue, ARR, uh,
+with Claude Code, which was which was
+
+00:02:32.080 --> 00:02:40.239
+quite a milestone. And then as of
+January, Anthropic released co-work,
+
+00:02:37.280 --> 00:02:44.239
+which is like taking Claude code beyond
+coding. The same idea, but now for other
+
+00:02:43.040 --> 00:02:47.519
+things. And of course, we won't be
+covering that in this course because
+
+00:02:45.519 --> 00:02:50.800
+we're all about coding. But for sure,
+you can look at it and and at the moment
+
+00:02:49.360 --> 00:02:55.920
+there's a lot of hype around something
+called Open Claw, which is like a sort
+
+00:02:53.040 --> 00:03:01.599
+of open-source version of it also to be
+used just generally for for co-working
+
+00:02:58.879 --> 00:03:06.800
+in your life. Uh so lots of other
+related stuff. Enthropic also investing
+
+00:03:03.920 --> 00:03:12.000
+heavily in in labs which is also looking
+at more groundbreaking ways to use
+
+00:03:08.879 --> 00:03:16.400
+clawed code. So tons and tons going on.
+There's probably been lots of great big
+
+00:03:14.159 --> 00:03:20.080
+things happening super recently after I
+record this video and I'll try and put
+
+00:03:18.159 --> 00:03:24.800
+things in the resources. But I do urge
+you as well to not get too caught up in
+
+00:03:22.560 --> 00:03:28.959
+the hype. The things that are really
+powerful and compelling are the things
+
+00:03:26.879 --> 00:03:32.080
+that tend to to live for a few months.
+And if you get caught up in all of the
+
+00:03:30.640 --> 00:03:35.760
+excitement of the week, it can feel
+overwhelming. Claude Code has been
+
+00:03:33.920 --> 00:03:40.000
+around for enough time for us to know
+it's here to stay. It's really powerful.
+
+00:03:38.640 --> 00:03:43.599
+And a big part of this journey as well
+has been the journey of MCP, which is
+
+00:03:42.080 --> 00:03:48.560
+somewhat aligned with this. It kind of
+came out in late 2024. It took hold.
+
+00:03:46.239 --> 00:03:52.879
+It's it's uh now got 100 million
+downloads a month. It's just huge. And
+
+00:03:50.959 --> 00:03:57.280
+of course, MCP is a big part of the
+Claude Code ecosystem as well that we
+
+00:03:55.519 --> 00:04:01.760
+will be covering. Okay, the time has
+come for us to install Claude Code and
+
+00:03:59.760 --> 00:04:06.159
+find out what all the fuss is about.
+Now, I will say that Claude Code, of
+
+00:04:03.840 --> 00:04:12.560
+course, the Claude uh platform comes
+with a subscription price. It's another
+
+00:04:08.959 --> 00:04:17.919
+of these $20 a monthes and it's optional
+for you. You cannot pay anything. And
+
+00:04:15.360 --> 00:04:22.880
+later today, I will show you how to work
+with free models or very cheap models
+
+00:04:20.560 --> 00:04:26.320
+through Claude code, but it's not what I
+recommend. the experience will not be as
+
+00:04:24.880 --> 00:04:29.600
+good as for people that are willing to
+pay. And I think if there's anything
+
+00:04:28.320 --> 00:04:33.120
+that you want to invest in for this
+course, I would suggest that an
+
+00:04:31.199 --> 00:04:36.639
+anthropic subscription might be the
+thing. Remember again how much cheaper
+
+00:04:34.800 --> 00:04:40.720
+it is than buying a laptop or something
+like that. And you're getting so much
+
+00:04:38.960 --> 00:04:44.160
+power and capability, but it's a
+personal choice. You should only do it
+
+00:04:42.479 --> 00:04:48.080
+if you're happy with it. And there are
+plenty of other ways to do it without
+
+00:04:45.759 --> 00:04:51.440
+paying a penny. So, so you should you
+should choose. You can always start free
+
+00:04:49.600 --> 00:04:56.960
+and choose whether or not to use a paid
+model later if you wish, but let's go
+
+00:04:54.639 --> 00:05:02.080
+and get everything set up right now.
+Okay, so I've gone to a browser and I've
+
+00:04:58.560 --> 00:05:08.479
+gone to claude.ai. claude.ai. Here it
+is. This is the front door to talk to
+
+00:05:05.759 --> 00:05:12.000
+anthropics claude. And as with many of
+these AIs, there are two different ways
+
+00:05:10.240 --> 00:05:16.479
+to think about pricing, two different
+products. There is the API for making
+
+00:05:14.880 --> 00:05:20.400
+repeated calls for building your own
+products. That's what we used with open
+
+00:05:18.160 --> 00:05:25.600
+router last week. And there's also the
+consumer subscription product for a
+
+00:05:23.120 --> 00:05:29.919
+user. And in this context, we are being
+a user. So that is the kind of plan that
+
+00:05:28.400 --> 00:05:33.759
+we're thinking about. And there's a
+pricing menu here that will tell you
+
+00:05:31.280 --> 00:05:38.160
+more about those pricing plans. There is
+a free tier for just chatting with
+
+00:05:35.680 --> 00:05:44.720
+Claude like chat GBT. We're not going to
+be using that. There is a pro tier which
+
+00:05:41.520 --> 00:05:50.240
+is $20 a month if build monthly or local
+equivalent. And uh this allows you to
+
+00:05:47.440 --> 00:05:55.520
+access claude code on the web and in
+your terminal, which is what we're going
+
+00:05:52.240 --> 00:06:01.600
+to do. And there is also Max, which has
+a $100 a month and a $200 a month plan.
+
+00:05:59.199 --> 00:06:06.560
+And I'll have you know, I am spending
+the $200 a month plan because I'm crazy.
+
+00:06:04.400 --> 00:06:11.759
+But I use it all the time. I use it all
+the time. And I have no doubt whatsoever
+
+00:06:09.120 --> 00:06:17.680
+that I am getting value from that $200 a
+month. Unbelievable value. Uh, so I I
+
+00:06:14.880 --> 00:06:22.080
+I'm not obviously a salesperson for
+Anthropic, but I can tell you I am a
+
+00:06:20.080 --> 00:06:27.280
+happy customer. Occasionally a very
+angry customer with with Claude, but
+
+00:06:24.160 --> 00:06:31.520
+most of the time very happy customer.
+Okay. So, I I would certainly suggest
+
+00:06:29.600 --> 00:06:34.560
+that you consider this. As I say, you
+don't need to. I will give you free
+
+00:06:32.880 --> 00:06:38.080
+alternatives later, but for now, I'm
+going to assume that you either already
+
+00:06:35.840 --> 00:06:42.080
+have or you are now signing up to have a
+pro subscription. When you do that, you
+
+00:06:39.919 --> 00:06:46.000
+would press try Claude. uh it will take
+you through to its screens um and you
+
+00:06:44.319 --> 00:06:50.160
+would then sign in I you know with your
+Google credentials with email and go
+
+00:06:47.840 --> 00:06:55.440
+through the usual sign up process to
+have a Claude account. Then it's time to
+
+00:06:52.880 --> 00:06:59.039
+install Claude Code. So now you go to
+code.claude.com
+
+00:06:57.280 --> 00:07:04.720
+and it redirects you to to the the
+ClaudeCode website. Here it is. And
+
+00:07:02.400 --> 00:07:08.800
+getting Claude code is installed on your
+computer is really very simple. It's
+
+00:07:07.039 --> 00:07:12.080
+just using this one line of code that
+will appear here that it will generate
+
+00:07:10.160 --> 00:07:15.919
+the right line of code for your system.
+Uh but or as it says if you want if you
+
+00:07:14.400 --> 00:07:20.720
+want the proper documentation, you click
+here and this has the details. It knows
+
+00:07:19.039 --> 00:07:25.280
+that I'm on a Mac. So, it's showing me
+this first and foremost. This is the
+
+00:07:22.720 --> 00:07:29.520
+command for Windows. You copy it to your
+clipboard like here. Uh or there's
+
+00:07:27.440 --> 00:07:32.800
+another Windows approach as well. And
+then you can paste that as we will in
+
+00:07:31.599 --> 00:07:36.560
+just a second. We're going to take it
+over. We're going to use the terminal in
+
+00:07:34.400 --> 00:07:40.880
+VS Code. Why not? and we're going to use
+that to install claw code. So I'm going
+
+00:07:38.560 --> 00:07:46.479
+to copy the Mac OS one right now. And
+now I'm going to open up VS Code and see
+
+00:07:42.880 --> 00:07:49.680
+you there. So here we are in VS Code. If
+you've got other windows open here like
+
+00:07:48.080 --> 00:07:53.199
+various agent chats then close them
+down. You go to file new window. If
+
+00:07:51.919 --> 00:07:56.960
+you're not seeing something a bit like
+this. And now I'm going to bring up a
+
+00:07:54.879 --> 00:08:01.440
+terminal which remember is control and
+back tick. I think it's also control and
+
+00:07:59.120 --> 00:08:06.560
+J on a PC and command J on a Mac. Yes,
+it is. Command J on a Mac. Crl J on a PC
+
+00:08:04.720 --> 00:08:12.960
+brings up the terminal or control and
+the back tick thing there or just view
+
+00:08:09.680 --> 00:08:18.080
+terminal. Okay. And then paste. I'm
+going to paste in the command that I
+
+00:08:15.199 --> 00:08:22.479
+copied from elsewhere uh from from
+Claude's page. And I press enter and
+
+00:08:19.680 --> 00:08:26.240
+it's now going to install Claude code on
+my computer. Well, it thinks that one
+
+00:08:24.319 --> 00:08:30.639
+through. If you're on a PC and you get a
+bunch of permissions errors, but you're
+
+00:08:28.160 --> 00:08:35.519
+not authorized to run scripts, simply
+Google that or ask chat GPT. It will
+
+00:08:33.279 --> 00:08:39.279
+tell you about the absolutely standard
+instructions you need to run on your PC
+
+00:08:37.760 --> 00:08:44.159
+so that you have permissions to run
+scripts like this. Very ordinary thing
+
+00:08:41.440 --> 00:08:48.480
+to do. Okay, I ran it, set it up, it's
+successfully installed. I'm on version
+
+00:08:45.600 --> 00:08:51.920
+2.1.29. You may well be on a much more
+recent version than that. And let me
+
+00:08:50.560 --> 00:08:56.399
+know if there's anything new that you
+want to to to have be shown here. At the
+
+00:08:54.959 --> 00:09:00.399
+very least, I will add it to the course
+resources. So, make sure that there's
+
+00:08:58.080 --> 00:09:04.160
+lots of good information about tips and
+tricks from recent versions. But the
+
+00:09:02.640 --> 00:09:07.760
+core stuff should all be here.
+Everything we're going to cover, we are
+
+00:09:05.839 --> 00:09:13.680
+ready to use Claude Code. We're also
+going to do something extra, which is
+
+00:09:09.440 --> 00:09:18.320
+install the Claude Code extension for VS
+Code. And I'm going to explain this and
+
+00:09:16.240 --> 00:09:23.360
+navigate it in just a second. But first
+up, please open the extensions window,
+
+00:09:20.720 --> 00:09:29.279
+which is view extensions or it's control
+shiftx on a PC, commandshift X on a Mac.
+
+00:09:27.120 --> 00:09:33.680
+And you can see I I Claude code is
+already installed for me. But if you
+
+00:09:30.560 --> 00:09:38.240
+search for Claude code, uh, it should
+come up as the top extension. Claude
+
+00:09:36.080 --> 00:09:42.560
+Code for VS Code. It's from Anthropic.
+Tick means it's verified. I have almost
+
+00:09:40.720 --> 00:09:48.000
+4 million downloads. You probably have
+more. And you would want to press the
+
+00:09:44.800 --> 00:09:52.080
+install button to install this extension
+so that you have the Claw Code extension
+
+00:09:49.760 --> 00:09:56.480
+for VS Code. And now this is a little
+bit confusing, but let me just explain
+
+00:09:53.760 --> 00:10:00.959
+that when you're now in VS Code using
+Claude Code, there are two different
+
+00:09:58.720 --> 00:10:05.839
+ways that you can do things. One of
+those ways is going to be to use the
+
+00:10:03.760 --> 00:10:09.440
+extension, the Claude Code extension.
+And and you do that by pressing the
+
+00:10:07.760 --> 00:10:12.800
+little Claude button that's appeared up
+here. You see that right next to the
+
+00:10:10.959 --> 00:10:16.959
+codeex button that we had before.
+There's too many sidebars. You press
+
+00:10:14.720 --> 00:10:20.880
+that and you get this thing appearing
+and it's like one of these sidebar. Let
+
+00:10:18.880 --> 00:10:26.320
+me get rid of the terminal here. This is
+clawed code appearing here in a sidebar.
+
+00:10:24.240 --> 00:10:31.600
+But there's a different way to do it,
+which is not to use this sidebar, but
+
+00:10:28.640 --> 00:10:36.880
+rather to be in a terminal and to run it
+from within the terminal in VS Code. And
+
+00:10:35.120 --> 00:10:41.120
+that is what we are going to be doing
+this week. And you may may wonder why.
+
+00:10:39.120 --> 00:10:47.519
+They're very similar, very similar
+experiences. The one that is using the
+
+00:10:43.600 --> 00:10:52.000
+sidebar over here is more baked into the
+platform into VS Code. It's more built
+
+00:10:49.839 --> 00:10:57.519
+in. It's a bit more like using something
+like the the codeex uh sidebar as well.
+
+00:10:54.720 --> 00:11:02.000
+It's more of an agent chat and and so
+it's more sort of it's it controls VS
+
+00:10:59.920 --> 00:11:06.959
+Code a bit better. And so in some ways
+that's better, but it's a slightly more
+
+00:11:04.959 --> 00:11:11.360
+constrained version of the product. You
+don't have all the pro features. It's a
+
+00:11:09.040 --> 00:11:15.519
+little bit more packaged for more of a
+novice user. And we're not novice users
+
+00:11:13.920 --> 00:11:19.920
+anymore. This is what we would have used
+last week in week one when we like
+
+00:11:17.600 --> 00:11:23.360
+sidebars and agent chats like that. But
+we're pros now. We're going to be Vive
+
+00:11:21.920 --> 00:11:26.959
+engineers by the end of this week. So,
+we want to work directly in the
+
+00:11:24.800 --> 00:11:29.839
+terminal. It's convenient to use this
+terminal here because then we'll have
+
+00:11:28.079 --> 00:11:34.320
+the file explorer. We'll have the other
+VS code tooling around us and it's aware
+
+00:11:32.240 --> 00:11:38.079
+that it's being used in VS Code. So, it
+still has some control over the other
+
+00:11:35.760 --> 00:11:42.480
+panes. But that way, we get to use the
+full featured clawed code. So, again, a
+
+00:11:40.640 --> 00:11:47.760
+bit confusing. You can use it as the
+terminal CLI app within the VSCO
+
+00:11:45.440 --> 00:11:51.040
+terminal or in the sidebar. We're going
+to be doing the terminal.
+

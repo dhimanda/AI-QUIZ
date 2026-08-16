@@ -1,0 +1,558 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:07.120
+You know that I'm a hands-on type. I
+like building stuff. And that means I
+
+00:00:04.080 --> 00:00:11.519
+like blue days the most. Blue days,
+building days. Welcome to the
+
+00:00:09.440 --> 00:00:15.839
+culmination of week two. Welcome to week
+2, day five. Let's get cracking. This is
+
+00:00:14.639 --> 00:00:20.240
+the day that we're going to build out a
+SAS platform. I'm working on one that is
+
+00:00:18.080 --> 00:00:23.760
+going to be a legal document drafter
+called pre-legal that we started
+
+00:00:22.000 --> 00:00:27.279
+yesterday. You might be working on that,
+too. Or you might be going in a totally
+
+00:00:25.279 --> 00:00:30.880
+different direction. maybe inspired by
+the idea of having some template
+
+00:00:28.720 --> 00:00:35.200
+documents, having an AI chat that lets
+you add commercial value. That's what
+
+00:00:33.040 --> 00:00:38.960
+we're doing. Let's get into it. And
+don't hate me, but repetition is
+
+00:00:37.040 --> 00:00:44.239
+important sometimes. And we're going to
+repeat for one more time the MCP skills
+
+00:00:41.760 --> 00:00:48.239
+plug-in stuff. Just at a high level,
+there are these three ways to give
+
+00:00:45.600 --> 00:00:53.440
+Claude capabilities. You're pretty
+familiar with MCP now. the way to stitch
+
+00:00:50.480 --> 00:00:58.640
+together models and tools, skills, which
+are just these text file, these markdown
+
+00:00:55.600 --> 00:01:02.399
+files that allow you to to add in
+information to Claude in a way that is
+
+00:01:00.320 --> 00:01:07.280
+progressive and which is efficient use
+of context and then plugins which is a
+
+00:01:05.199 --> 00:01:12.000
+sort of package of of all of the above
+and other stuff too like agents that
+
+00:01:09.600 --> 00:01:17.840
+you're now getting a good handle on. And
+all of this together that has it has
+
+00:01:14.799 --> 00:01:23.680
+pros and cons. Uh and the the pros for
+MCP is again about the adoption, the
+
+00:01:20.640 --> 00:01:27.759
+ecosystem, the flexibility. The con is
+that it can be uh uh something that use
+
+00:01:26.080 --> 00:01:32.159
+up lots of context and they can be
+complex and we saw the Jirro one can do
+
+00:01:30.320 --> 00:01:37.040
+things like losing its authentication
+and stuff which is really annoying.
+
+00:01:33.759 --> 00:01:41.680
+skills simpler, easier, very efficient
+with the context, maybe less powerful
+
+00:01:39.360 --> 00:01:46.880
+and plugins, some something of the best
+of both, very easy to set up, but they
+
+00:01:44.240 --> 00:01:50.159
+are strictly for clawed code. That is
+that is the layer of the land. And when
+
+00:01:48.640 --> 00:01:53.920
+you're looking for new functionality, of
+course, the first place to start is with
+
+00:01:51.840 --> 00:01:58.479
+plugins, and you go for things like MCP
+when you want to get very detailed and
+
+00:01:55.439 --> 00:02:03.119
+specific as we did with Atlassian's Jira
+and and with the GitHub one, too. All
+
+00:02:00.560 --> 00:02:08.959
+right. And then the other thing to recap
+is going to be the the thing that we
+
+00:02:05.680 --> 00:02:15.040
+built yesterday which began by reading
+in a Jura issue using the Atlassian MCP
+
+00:02:12.720 --> 00:02:19.599
+server. And based on a Jira issue that
+had been written and was out there on
+
+00:02:16.800 --> 00:02:23.360
+Jira, we then used the feature dev
+plugin which took us through the
+
+00:02:20.879 --> 00:02:30.080
+sevenstep process, step six of which we
+skipped. Uh and that then was used to
+
+00:02:26.640 --> 00:02:35.840
+create a PR using the GitHub MCP server.
+All of this running inside Claude code
+
+00:02:32.800 --> 00:02:40.319
+all kicked off by that one command. That
+command is part of the feature dev
+
+00:02:37.680 --> 00:02:44.800
+plugin. We just said implement jura
+issue PL3 with an X.js app in a
+
+00:02:43.280 --> 00:02:50.160
+directory called front end and raise a
+PR when you're done. That's it. Go do
+
+00:02:47.120 --> 00:02:53.040
+it. And it went and did it. And so the
+thing that's missing from here that you
+
+00:02:51.599 --> 00:02:56.800
+might be like, Ed, you said that we were
+going to do skills. We didn't use a
+
+00:02:54.720 --> 00:03:01.120
+skill. So we'll make up for that today
+and recap a reminder on how skills fit
+
+00:02:59.680 --> 00:03:06.879
+into the picture. They can be included
+in plugins of course, but basically it's
+
+00:03:03.360 --> 00:03:11.519
+this idea of having um metadata which
+describes at some very simple level what
+
+00:03:09.519 --> 00:03:17.200
+this skill is about and that always gets
+read into context and then progressively
+
+00:03:14.239 --> 00:03:21.680
+the model decides do I need do I need to
+use this and if so then it reads in the
+
+00:03:19.440 --> 00:03:26.239
+instructions and in reading the
+instructions there are references
+
+00:03:23.280 --> 00:03:31.120
+potentially to other files and even to
+scripts that can be run and only if it
+
+00:03:28.879 --> 00:03:36.319
+needs to the model decides to read them
+in as well. So there's this sort of
+
+00:03:33.200 --> 00:03:40.720
+three level of of depth of information
+that the model can read. It always reads
+
+00:03:38.159 --> 00:03:45.760
+the top the metadata and it chooses what
+else to read in. And the metadata and
+
+00:03:43.040 --> 00:03:50.480
+the instructions all sit together in one
+file called skill.md together. The
+
+00:03:48.560 --> 00:03:54.560
+metadata is at the top. You may remember
+it has like like a special way of of of
+
+00:03:52.959 --> 00:03:59.920
+symbolizing it with some hyphens that we
+will do in a second. So you've got that.
+
+00:03:56.879 --> 00:04:04.959
+Um and uh yeah they they're implemented
+using this fancy thing called a file
+
+00:04:01.920 --> 00:04:08.879
+system architecture which is just saying
+hey it's just you use folders with a
+
+00:04:06.799 --> 00:04:12.480
+particular name and so the structure is
+shown right there you have a doc clord
+
+00:04:10.879 --> 00:04:17.199
+in your home directory and you also have
+one in your project directory and if in
+
+00:04:15.120 --> 00:04:22.479
+there you put a skill with this kind of
+folder structure then lo and behold that
+
+00:04:19.759 --> 00:04:28.720
+will be a skill that claude code can use
+that's all there is to it okay so here I
+
+00:04:24.960 --> 00:04:33.919
+am back back in VS code back in the
+pre-legal repo. It's time for us to get
+
+00:04:31.680 --> 00:04:38.000
+on with today's project. I'm just going
+to do a quick git status to understand
+
+00:04:36.320 --> 00:04:43.600
+where things stand. Check. We're in
+branch main. And actually, and in
+
+00:04:41.120 --> 00:04:47.600
+submitting all the PRs, Claude Code did
+not automatically submit the Claude
+
+00:04:46.160 --> 00:04:52.160
+directory because it felt like it wasn't
+actually associated with with any uh um
+
+00:04:50.479 --> 00:04:58.080
+of the work that it was doing. So let's
+just do a getit add to bring that in and
+
+00:04:54.960 --> 00:05:03.919
+commit that
+the uh clawed settings
+
+00:05:01.360 --> 00:05:08.240
+and push that to the repo so that we
+have now made sure that we have
+
+00:05:05.360 --> 00:05:12.560
+everything consistently in our repo and
+that other people in the project will
+
+00:05:09.919 --> 00:05:17.199
+also be using the same plugin as us. All
+right now in starting up our project for
+
+00:05:15.199 --> 00:05:20.240
+real work based on on where we are with
+pre-legal, there's a few things we might
+
+00:05:18.880 --> 00:05:23.120
+want to do. One of them is something
+that that maybe we should have done
+
+00:05:21.440 --> 00:05:26.000
+yesterday, but but uh I thought we'd
+wait until the real project kicked off.
+
+00:05:24.560 --> 00:05:31.600
+And what is that? What do you normally
+do at the start of a project like this?
+
+00:05:27.840 --> 00:05:35.600
+You normally make a good claude.md file.
+But first, there's something that I've
+
+00:05:33.199 --> 00:05:39.759
+not even mentioned to you, which is that
+there's more than one claw.md file. And
+
+00:05:38.320 --> 00:05:43.360
+I'm not referring to the fact you can
+have many of them in different
+
+00:05:40.880 --> 00:05:48.160
+subfolders. I'm saying that not only is
+there one in your project directory, but
+
+00:05:45.919 --> 00:05:51.840
+you can have a claude MD file somewhere
+completely different. And you probably
+
+00:05:50.000 --> 00:05:56.240
+already guessed this. You know the way
+that there's this claude folder right
+
+00:05:54.720 --> 00:05:59.440
+here, which is where you have settings.
+And you remember I told you you could
+
+00:05:57.520 --> 00:06:04.639
+have skills in here as well. And that
+you can also have skills in your home
+
+00:06:01.919 --> 00:06:09.600
+directory. Well, you can also have a
+claude.md file in your home directory.
+
+00:06:07.680 --> 00:06:14.560
+And that means it's not associated with
+any project. It's associated with you
+
+00:06:12.319 --> 00:06:19.360
+the user. It's for your work with
+Claude. And of course, I have one in my
+
+00:06:17.199 --> 00:06:23.280
+home directory and you should too. And
+it's something which should should tie
+
+00:06:20.800 --> 00:06:26.720
+to to your style and to what matters for
+you when you're working with claw code.
+
+00:06:25.360 --> 00:06:30.479
+And back in the day, there was always
+people all had the sort of the
+
+00:06:28.319 --> 00:06:34.639
+claude.mmed that you should have. And of
+course, anthropic has has been catching
+
+00:06:32.400 --> 00:06:38.560
+up and it's been incorporating common
+things already in opus. So there's less
+
+00:06:37.440 --> 00:06:42.400
+need to have something that's
+boilerplate. Nonetheless, I have some
+
+00:06:40.560 --> 00:06:47.759
+things that are my pet peeves. And so I
+will show you right now. I have just
+
+00:06:44.000 --> 00:06:52.560
+gone to to um VS Code to new window and
+then I did like an open and then I just
+
+00:06:50.080 --> 00:06:56.639
+opened in my home directory and this is
+what I see. So this is my entire home
+
+00:06:54.479 --> 00:07:01.599
+directory. There's lots of dot folders
+in here. There's one called Claude and
+
+00:06:59.039 --> 00:07:05.280
+this contains all of Claude's own folder
+structure that you shouldn't touch that
+
+00:07:03.440 --> 00:07:09.039
+has lots of things that are the stuff
+that that it looks at like its
+
+00:07:06.800 --> 00:07:14.000
+telemetry. It's got some project
+information that it stores, lots of
+
+00:07:11.039 --> 00:07:17.280
+stuff, and then it has a claude.md.
+And that's what we're looking at right
+
+00:07:15.440 --> 00:07:20.560
+here. And I've just got a few
+instructions in here. And if you Google,
+
+00:07:19.120 --> 00:07:25.440
+you'll find that people have all sorts
+of tips about things to put in here. As
+
+00:07:22.639 --> 00:07:31.280
+I say, generally speaking, Anthropic has
+added a lot of this in by default. So,
+
+00:07:28.560 --> 00:07:36.319
+you should just use this to add in extra
+nuggets of information that you want to
+
+00:07:33.599 --> 00:07:40.560
+to add to Claude's context every single
+time. So the key is to keep this super
+
+00:07:38.400 --> 00:07:45.440
+short and concise and make every word
+count because every token count open a
+
+00:07:43.360 --> 00:07:49.919
+preview because this goes in every
+single context that you ever have. So
+
+00:07:47.599 --> 00:07:53.599
+I've just got like very important be
+simple approach task in a simple
+
+00:07:51.759 --> 00:07:57.680
+incremental way. Work incrementally
+always small simple steps. I know I'm
+
+00:07:56.080 --> 00:08:01.680
+repeating myself but when you really
+want something to be remembered that's
+
+00:07:59.520 --> 00:08:07.120
+not a terrible thing to do. Validate and
+check each increment before moving on.
+
+00:08:03.360 --> 00:08:10.960
+Use latest APIs as of now. Mandatory
+code style. Do not overengineer. Do not
+
+00:08:09.199 --> 00:08:15.280
+program defensively. You'll recognize
+some of this I've also been using in my
+
+00:08:12.639 --> 00:08:20.479
+claw.mds within the project for for your
+benefit. But I have this stuff in as the
+
+00:08:17.520 --> 00:08:27.280
+standard. Use UV as the Python package
+manager. Always UV run. Never Python 3.
+
+00:08:24.080 --> 00:08:30.800
+Always UV add. Never pip install. Favor
+clear, concise dock string comments. And
+
+00:08:29.199 --> 00:08:34.959
+by the way, that's because I love UV and
+it it works really well for everything I
+
+00:08:32.880 --> 00:08:39.599
+do. And I recommend the same, but you
+may not. You might prefer to use a more
+
+00:08:36.959 --> 00:08:43.599
+more vanilla Python and pip. Favor
+concise dock string comments. Be sparing
+
+00:08:41.839 --> 00:08:48.240
+with comments outside dock strings.
+Favor short modules, important debugging
+
+00:08:46.320 --> 00:08:52.560
+and fixing, and so on. All right. And
+I'm going to add in here a few things
+
+00:08:50.080 --> 00:09:00.120
+here. Uh why not since we're here, let's
+come here and let's say uh never never
+
+00:08:56.640 --> 00:09:00.120
+use emojis.
+
+00:09:00.320 --> 00:09:12.320
+No emojis. We'll put it twice. No emo.
+Never use emojis uh in code or in print
+
+00:09:09.279 --> 00:09:16.320
+statements. Print or log or log print
+statements or logging. Let's make that
+
+00:09:14.640 --> 00:09:22.800
+super clear because that causes problems
+on PCs and it causes nothing but trouble
+
+00:09:18.560 --> 00:09:29.360
+and and claw code loves emojis and keep
+um uh keep read
+
+00:09:26.959 --> 00:09:36.959
+uh concise
+uh and avoid
+
+00:09:32.640 --> 00:09:42.560
+too many and and clean up
+up old files. Um, that that will
+
+00:09:40.959 --> 00:09:46.240
+probably do. May maybe that's a bit mal
+we won't we'll just say keep read me
+
+00:09:44.399 --> 00:09:51.040
+concise. That seems fine. That's enough.
+That's enough. Two more things that we
+
+00:09:47.920 --> 00:09:54.480
+have added to the general claude.mmd. A
+great practice to have. You don't need
+
+00:09:52.959 --> 00:09:57.519
+to copy what I've got here. You should
+do whatever matters to you. Maybe you
+
+00:09:55.760 --> 00:10:01.279
+like emojis. Maybe you like long
+readmes. In which case, keep it. But if
+
+00:09:59.440 --> 00:10:04.560
+you're like me, then put it in here. And
+then I've got some important debugging
+
+00:10:02.959 --> 00:10:09.040
+stuff. That's just again the really key
+points here. Always identify root cause
+
+00:10:06.800 --> 00:10:12.959
+before fixing. Prove the problem first.
+Don't guess. Test one test at a time. Be
+
+00:10:11.040 --> 00:10:18.959
+methodical. Don't jump to conclusion.
+Don't apply workarounds. That sounds
+
+00:10:15.519 --> 00:10:22.320
+good. Um, uh, and let's also add
+reproduce
+
+00:10:20.800 --> 00:10:27.279
+consistently.
+Let's put that in there. Keep it short
+
+00:10:24.240 --> 00:10:33.040
+and sharp, but that is the point. Um,
+okay. And with that, I've saved that
+
+00:10:29.920 --> 00:10:37.440
+file. That's given us a good claude.md
+in our home directory that will always
+
+00:10:35.200 --> 00:10:37.440
+get
+

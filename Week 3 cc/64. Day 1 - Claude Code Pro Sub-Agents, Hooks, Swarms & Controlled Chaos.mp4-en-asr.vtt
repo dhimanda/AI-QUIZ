@@ -1,0 +1,503 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:08.000
+It's week three. It's a big finale week
+and I am going to give you a week to
+
+00:00:05.520 --> 00:00:13.440
+remember. Just you wait and see. Welcome
+to week three of the AI coder course.
+
+00:00:11.440 --> 00:00:18.560
+This is going to be really terrific.
+Starting with a yellow day, a product
+
+00:00:15.759 --> 00:00:23.439
+day. More of Claude code. Let's get into
+it. And just to add to the sizzle for
+
+00:00:20.880 --> 00:00:29.199
+me, just this week, the new version of
+Claude, Claude 4.6, Opus has come out
+
+00:00:26.640 --> 00:00:32.800
+and also codeex 5.3. And this is old
+news for you. Maybe you're already on
+
+00:00:30.880 --> 00:00:36.880
+Claude version 10 by now. But for me,
+it's completely new and I absolutely
+
+00:00:34.480 --> 00:00:41.120
+love it. I've been having a blast and I
+can't wait to experience this with you
+
+00:00:39.040 --> 00:00:45.440
+this week. And wow, do I have a week
+lined up for you. It's about today
+
+00:00:43.360 --> 00:00:51.120
+looking at multi- aents, sub agents,
+hooks, swarms, lots of stuff, giving you
+
+00:00:48.320 --> 00:00:54.960
+the lay of the land with with the deeper
+functionality you get into with these
+
+00:00:52.640 --> 00:01:00.000
+CLI platforms. Then tomorrow's
+sandboxing such a critical topic. Then
+
+00:00:57.840 --> 00:01:03.920
+looking at the bigger picture of what
+it's like to work successfully with
+
+00:01:01.840 --> 00:01:08.640
+massive code bases because it's all very
+well doing these these cute simple
+
+00:01:06.080 --> 00:01:12.560
+oneperson projects, but what's it like?
+How are you successful when you're
+
+00:01:10.320 --> 00:01:16.880
+working with a big code base debugging
+across a large project? And then it's
+
+00:01:15.119 --> 00:01:20.880
+all about day four. Day four is when we
+go crazy. Day four is when we do all
+
+00:01:18.400 --> 00:01:26.400
+that new stuff, swarms and orchestrators
+and all that stuff, ending with a
+
+00:01:23.360 --> 00:01:30.080
+capstone project to remember. And if I
+could take you back to what I had at the
+
+00:01:28.240 --> 00:01:37.119
+beginning of last week and and from week
+one, which was those eight stages of the
+
+00:01:33.439 --> 00:01:42.960
+evolution of the coding agent programmer
+from Steve and you can see that that we
+
+00:01:40.159 --> 00:01:49.119
+really focused on stage five last week
+as we went deep into using uh using claw
+
+00:01:46.240 --> 00:01:54.159
+code, using the CLI, looking let letting
+diffs scroll by and we're now heading
+
+00:01:51.759 --> 00:02:00.159
+into this other more radical territory
+of stages six, seven, and a multi- aents
+
+00:01:57.200 --> 00:02:05.759
+and then many many agents a swarm and
+then orchestrating agents. This is the
+
+00:02:02.719 --> 00:02:10.399
+bigger deal and it comes with with a lot
+of excitement and a little bit of chaos.
+
+00:02:07.920 --> 00:02:14.080
+And I'll also remind you of the the time
+when I explained that there are these
+
+00:02:12.400 --> 00:02:18.480
+two different mindsets. There's the
+mindset you can have with a kind of
+
+00:02:15.840 --> 00:02:23.200
+missionritical enterprise software where
+you might be micromanaging working
+
+00:02:21.120 --> 00:02:26.480
+closely with something like claw code.
+You might be in the sort of mode where
+
+00:02:24.640 --> 00:02:30.400
+you are planning and executing and then
+reviewing and testing and then going to
+
+00:02:28.480 --> 00:02:34.560
+the way of sort of specd driven design
+with trust but verify mindset. And this
+
+00:02:33.040 --> 00:02:38.879
+is very similar to how we were working
+at the end of last week when we were
+
+00:02:36.160 --> 00:02:42.959
+putting like issues into Jira or into
+GitHub and then tracking it all the way
+
+00:02:40.800 --> 00:02:48.400
+through and testing the outcomes leaving
+a lot to the CLI agent but still having
+
+00:02:46.160 --> 00:02:53.040
+a watchful eye on what's going on and
+really working with a kind of one agent
+
+00:02:50.959 --> 00:02:58.720
+one you and Claude code kind of
+construct and then I went through the
+
+00:02:55.840 --> 00:03:02.879
+2026 kind of techniques that are really
+surfacing emerging in a big way now.
+
+00:03:01.440 --> 00:03:07.760
+YOLO has been around for a while, but
+but increasingly just going with it is
+
+00:03:05.680 --> 00:03:11.599
+working. Ralph loops, we experimented
+with them. They're really cool. And then
+
+00:03:09.840 --> 00:03:17.599
+going all the way to this idea of like
+multi- aent, swarms, orchestration,
+
+00:03:15.360 --> 00:03:22.640
+that whole universe, which is what we
+will be unlocking this week. And yet
+
+00:03:20.159 --> 00:03:27.200
+again, as I remind you that you you can
+pick the the approach that works best
+
+00:03:24.800 --> 00:03:31.680
+for your skill set, for your risk
+appetite, for the appetite of the team
+
+00:03:29.680 --> 00:03:36.239
+around you, for the circumstances, the
+type of project. But regardless of which
+
+00:03:33.840 --> 00:03:40.720
+one you choose, always keep in mind
+you're using the LLM, the coding agent,
+
+00:03:38.640 --> 00:03:44.319
+as a tool to assist you to do your work
+more efficiently. But ultimately, you
+
+00:03:42.640 --> 00:03:49.599
+are accountable for the code you
+deliver. You're the boss. It's your work
+
+00:03:46.879 --> 00:03:53.200
+product. the the coding agent is there
+to help you accelerate. So this week
+
+00:03:51.519 --> 00:03:57.680
+we're going to move fast. We're going to
+cover a lot of ground and and never
+
+00:03:55.920 --> 00:04:01.680
+fear, I'm going to end the week by kind
+of laying out the the whole ecosystem
+
+00:03:59.760 --> 00:04:05.519
+and giving you a good sense of of
+exactly how to approach it and when to
+
+00:04:03.599 --> 00:04:10.560
+follow which technique. But generally
+speaking, the pro techniques we're going
+
+00:04:07.760 --> 00:04:15.760
+to be covering a lot this week fall into
+two different balancing categories. On
+
+00:04:13.760 --> 00:04:19.199
+the one hand, there are a lot of the
+techniques we're going to be covered
+
+00:04:17.120 --> 00:04:25.120
+which give you a kind of sense of of
+chaos in the way they magnify everything
+
+00:04:22.320 --> 00:04:28.400
+going on. We've already met YOLO, of
+course, which you you know what I mean
+
+00:04:26.560 --> 00:04:32.320
+now by chaos. It's like, okay, we're
+just going to adjust it. There's there's
+
+00:04:30.320 --> 00:04:36.560
+Ralph loops, which definitely feel
+chaotic. It's like, okay, I'm in a set
+
+00:04:34.639 --> 00:04:41.759
+of going. I'm going to go and have lunch
+or dinner or or overnight come back and
+
+00:04:39.520 --> 00:04:45.440
+just see what's happened. And then
+there's there's this thing called GSD
+
+00:04:43.360 --> 00:04:51.360
+that we will meet at some point. There
+are swarms which is big multi- aent kind
+
+00:04:48.400 --> 00:04:57.520
+of let it all happen. All of these are
+different chaotic techniques. And then
+
+00:04:54.960 --> 00:05:02.560
+contrasting with that there is a sense
+of using these pro techniques to give
+
+00:05:00.240 --> 00:05:05.520
+you more control. The opposite. And what
+do I mean by control? You're probably
+
+00:05:03.919 --> 00:05:11.120
+wondering what could this mean? Well,
+what I mean is, for example, you can use
+
+00:05:08.320 --> 00:05:15.440
+the file system as your way of keeping
+everything connected and communicating,
+
+00:05:13.360 --> 00:05:19.840
+having all of your different processes,
+reading and writing files that keep
+
+00:05:17.360 --> 00:05:24.800
+track of architecture decisions, open
+questions, testing strategies, and use
+
+00:05:22.639 --> 00:05:30.160
+the file system heavily as your way of
+coordinating across everything going on.
+
+00:05:27.360 --> 00:05:34.320
+You can have self-correcting kinds of
+processes. This sort of contrasting with
+
+00:05:32.320 --> 00:05:37.280
+Ralph loops, I guess. Rather than just
+having things that just keep going
+
+00:05:35.440 --> 00:05:41.360
+bigger and bigger and bigger, you can
+have some of your processes responsible
+
+00:05:39.280 --> 00:05:45.759
+for testing, responsible for code
+reviews, keeping everything on rails,
+
+00:05:43.440 --> 00:05:51.440
+pulling everything in a kind of negative
+feedback if if the the chaos is a
+
+00:05:48.160 --> 00:05:54.639
+positive feedback. And sandboxes, which
+we're covering tomorrow, are a way to
+
+00:05:53.280 --> 00:05:58.240
+make sure that all of the craziness
+that's going on is going on in a
+
+00:05:56.560 --> 00:06:01.280
+contained world that you can always
+destroy and throw away and start again.
+
+00:06:00.160 --> 00:06:05.280
+And that gives you a lot more
+repeatability around a process that is a
+
+00:06:03.600 --> 00:06:10.000
+bit chaotic. And then finally,
+orchestration, which perhaps some in in
+
+00:06:08.479 --> 00:06:13.759
+some people's minds belongs more in the
+chaos side of it, but orchestration is
+
+00:06:12.160 --> 00:06:16.960
+about having all of your agents out
+there, but having them have some kind of
+
+00:06:15.360 --> 00:06:21.680
+a hierarchy and roles and
+responsibilities such that maybe one one
+
+00:06:19.360 --> 00:06:25.840
+agent is managing others and there's
+some coordination going on. And in doing
+
+00:06:23.840 --> 00:06:30.160
+so, you're you're sort of reeling in a
+bit the craziness and you're having
+
+00:06:27.840 --> 00:06:34.800
+things in a more structured, organized
+way. So, I would put orchestration
+
+00:06:32.080 --> 00:06:38.000
+firmly in the control side of the house.
+And so, with this in mind, with this
+
+00:06:36.240 --> 00:06:42.639
+idea that there's like there's chaos and
+there's control, my suggestion is that
+
+00:06:40.400 --> 00:06:48.000
+what you are aiming for with this this
+week and these pro techniques is a world
+
+00:06:45.360 --> 00:06:51.360
+with controlled chaos. That is what
+we're looking to do here. Think of it
+
+00:06:49.600 --> 00:06:54.720
+like an like a nuclear reactor. If you
+remember that when when they put those
+
+00:06:52.800 --> 00:06:58.960
+rods down to control it's like a it's
+like a control chain reaction that's
+
+00:06:56.960 --> 00:07:04.880
+going on. And it's that mindset that you
+should be having with the the procoding
+
+00:07:01.680 --> 00:07:08.479
+agent techniques. Controlled chaos. It's
+driven somewhat by how mature is your
+
+00:07:06.800 --> 00:07:12.160
+project, what is your comfort zone to
+take take risks. Where are you at the
+
+00:07:10.639 --> 00:07:16.720
+moment? But that that would that would
+decide how much control and how much
+
+00:07:13.919 --> 00:07:21.759
+chaos and how to balance the two. And I
+would always suggest begin with control.
+
+00:07:19.440 --> 00:07:26.000
+Don't don't start out I mean you you can
+start out with some experiments with
+
+00:07:24.080 --> 00:07:30.639
+like running a Ralph loop with many
+iterations with with kicking off a huge
+
+00:07:28.800 --> 00:07:34.880
+swarm. You can do some of these things
+to get some sort of foundational ideas
+
+00:07:32.800 --> 00:07:40.080
+out there. But then when it comes to the
+real project, I would start with more
+
+00:07:37.520 --> 00:07:44.880
+control and then gradually loosen your
+grip and allow more chaos as you see
+
+00:07:42.800 --> 00:07:48.800
+good results and then put back more
+control if things start going off the
+
+00:07:46.720 --> 00:07:53.440
+rails. And so a lot of this week is
+about striking that right balance that
+
+00:07:51.199 --> 00:07:58.240
+that sense of balancing the positive
+feedback of of the chaos that just keeps
+
+00:07:56.319 --> 00:08:02.960
+getting bigger and bigger with the
+negative feedback loops of the control
+
+00:08:00.479 --> 00:08:08.160
+that reels things in and keeps things
+nicely on rails. And and that getting
+
+00:08:05.919 --> 00:08:13.039
+that right is how you achieve an
+amplification of what you're able to do
+
+00:08:10.560 --> 00:08:17.280
+and still getting good results. So with
+that in mind, we're going to go through
+
+00:08:14.560 --> 00:08:21.520
+a bunch of pro features today. I will
+quickly explain them and then we'll dig
+
+00:08:19.280 --> 00:08:25.599
+in and give them a try in a repo. We are
+going to be looking at how do you create
+
+00:08:23.680 --> 00:08:28.479
+a slash command. We've used some some
+slash commands. You can create your own.
+
+00:08:27.199 --> 00:08:34.000
+So I just want to show you how to do
+that. We're going to look at multi-
+
+00:08:31.199 --> 00:08:38.560
+aents and sub aents. Explain the
+differences and use them. Multi-agents
+
+00:08:36.240 --> 00:08:41.839
+is is uh not necessarily a well-
+definfined term and is a bit of a bore
+
+00:08:40.080 --> 00:08:46.399
+of just saying you can start up multiple
+clawed codes basically not not much to
+
+00:08:43.839 --> 00:08:52.640
+it. Sub aents is is the great stuff.
+That's what we'll really dig into. Agent
+
+00:08:49.120 --> 00:08:57.600
+teams is the sort of new world the new
+stuff. I will introduce it today. We
+
+00:08:55.040 --> 00:09:02.320
+won't use it until I think uh day four
+of this week or Yeah. Yeah. Day four
+
+00:09:00.320 --> 00:09:07.040
+hooks, which is very interesting and
+which allows us to achieve things like
+
+00:09:03.920 --> 00:09:11.839
+Ralph loops. And then just a final topic
+is going to be about ways that you can
+
+00:09:09.200 --> 00:09:15.200
+create your own plug-in for sharing it
+around your team or even putting on your
+
+00:09:13.279 --> 00:09:19.600
+own marketplace, which is a really neat
+pro feature as well. So this is just
+
+00:09:17.360 --> 00:09:24.399
+equipping you with more tools in your
+toolkit which we'll then put into
+
+00:09:21.519 --> 00:09:24.399
+practice in the coming
+

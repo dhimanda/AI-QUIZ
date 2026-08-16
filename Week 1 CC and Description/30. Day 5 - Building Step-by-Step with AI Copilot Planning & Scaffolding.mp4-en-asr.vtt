@@ -1,0 +1,576 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:09.040
+Okay, so I have this docs directory and
+I have a file called plan.mmd
+
+00:00:05.920 --> 00:00:14.320
+and here it is highlevel steps for the
+project. I have got 10 parts of building
+
+00:00:12.160 --> 00:00:19.119
+this that I've written out. Now we
+didn't need to do it this way. We could
+
+00:00:16.320 --> 00:00:23.119
+have the LLM just write the 10 steps
+itself and that's very much a decision
+
+00:00:21.279 --> 00:00:27.599
+about whether you want to first have it
+do a highle plan which is super common
+
+00:00:25.519 --> 00:00:32.239
+in these things. But I am quite
+opinionated on this and I wanted to set
+
+00:00:29.920 --> 00:00:36.160
+I wanted to put it on guard rails and I
+recommend you do too. If you have
+
+00:00:34.640 --> 00:00:39.600
+opinions on this, let me take you
+through this plan and you'll see what I
+
+00:00:37.440 --> 00:00:46.399
+mean about how how simply I want to take
+it. Part one is itself plan enrich this
+
+00:00:44.239 --> 00:00:51.760
+document to plan out each of these parts
+in detail with substeps listed out as a
+
+00:00:49.200 --> 00:00:57.680
+checklist to be checked off by the agent
+and with tests and success criteria for
+
+00:00:54.399 --> 00:01:01.280
+each. Also create an agents.mmd file
+inside the front-end directory. There's
+
+00:00:59.680 --> 00:01:06.560
+nothing there that describes the
+existing code there. Ensure the user
+
+00:01:03.840 --> 00:01:12.159
+checks and approves the plan. That seems
+like a really robust first step. Second
+
+00:01:09.439 --> 00:01:16.799
+step, scaffolding. Set up the docker
+infrastructure, the back end with fast
+
+00:01:14.240 --> 00:01:21.920
+API and write the start and stop scripts
+in the scripts directory. This should
+
+00:01:18.799 --> 00:01:26.960
+serve example static HTML to confirm a
+hello world example running locally and
+
+00:01:24.479 --> 00:01:30.479
+also making an API call. It's good
+stuff. As I say, an LLM will write this
+
+00:01:28.799 --> 00:01:33.759
+for you if you don't want to do this. If
+you're a senior engineer, then hopefully
+
+00:01:32.240 --> 00:01:38.159
+you know where I'm coming from. This is
+a very good methodical way to build
+
+00:01:36.479 --> 00:01:43.200
+slowly. The thing I have in my mind
+always is that if any one of these steps
+
+00:01:40.720 --> 00:01:47.680
+doesn't work, then I have a really good
+sense of how to dig in and figure out
+
+00:01:44.960 --> 00:01:52.159
+why with with the co-pilot. And I always
+try and work that way. Each step should
+
+00:01:49.840 --> 00:01:57.759
+be something that that I know how to dig
+into that. Part three, add in the front
+
+00:01:55.040 --> 00:02:03.520
+end now update. So the front end is
+built and served so the demo cam board
+
+00:02:00.640 --> 00:02:09.599
+is on display. Part four, the fake user
+signin experience. Part five, database
+
+00:02:06.880 --> 00:02:16.480
+model. Set up the database schema.
+Document the approach and get user sign
+
+00:02:11.840 --> 00:02:21.599
+off. Part six, backend. Add API roots so
+the backend can read and change the
+
+00:02:18.720 --> 00:02:26.319
+canban. Test it thoroughly. The database
+should be created if it doesn't exist.
+
+00:02:24.000 --> 00:02:31.040
+And then of course part seven bring the
+front end and the back end together. Now
+
+00:02:28.800 --> 00:02:35.760
+by part seven we'll be able to use the
+front end to actually call the back end.
+
+00:02:32.959 --> 00:02:39.120
+We'll be able to move around uh cards on
+on the canban board and the database
+
+00:02:37.760 --> 00:02:43.840
+will update. We should be able to log
+out and log in again and see it there.
+
+00:02:41.200 --> 00:02:48.560
+See it remaining and that will be cool.
+Part eight is is the AI connectivity
+
+00:02:46.720 --> 00:02:54.959
+allow the backends to make an AI call
+via open router test it with two plus
+
+00:02:51.519 --> 00:03:00.160
+two. Part nine is so that that that
+simple plumbing is extended so that we
+
+00:02:57.360 --> 00:03:05.760
+could send the cambban board send a
+question and get back an answer and
+
+00:03:02.800 --> 00:03:10.800
+potentially a change to the camban. And
+finally, part 10 is adding a beautiful
+
+00:03:08.000 --> 00:03:17.360
+widget supporting full AI chat and
+allowing the LLM to change the camban
+
+00:03:14.000 --> 00:03:21.440
+board. That's the plan. Okay. So, this
+is just the kind of preparation that one
+
+00:03:19.599 --> 00:03:26.400
+does to get things off on the right
+footing. Everything is is tight. We know
+
+00:03:24.159 --> 00:03:29.760
+what we want to do. You don't need to
+lay out the 10 highle steps like this,
+
+00:03:28.080 --> 00:03:33.280
+but if you know what you what you want,
+then you should. Uh but you could also
+
+00:03:31.360 --> 00:03:36.400
+have it come up with a highle plan. All
+right. And with all of this, it's time
+
+00:03:34.879 --> 00:03:42.080
+now I'm going to make this look nice and
+neat. Um, everything is is of course at
+
+00:03:39.360 --> 00:03:47.920
+this point checked in and on GitHub. So
+we we we have a snapshot of the code as
+
+00:03:45.120 --> 00:03:51.200
+it is. And one of the crucial points I'm
+going to be making to you is that when
+
+00:03:49.040 --> 00:03:55.840
+you work in this way, you go step by
+step. You're always checkpointing by
+
+00:03:53.599 --> 00:04:00.480
+doing by taking like a like a git commit
+at each point. So you can always walk
+
+00:03:58.239 --> 00:04:03.760
+back if you need to. That's always that
+option is always available to you and
+
+00:04:02.159 --> 00:04:07.760
+indeed you should take it if you're not
+happy with where you get to. It's time
+
+00:04:05.519 --> 00:04:11.280
+for us to do part one. Okay, I'm going
+to make the agent nice and big over
+
+00:04:09.519 --> 00:04:16.000
+here. I'm going to make sure I'm going
+to go with the GPT52 codeex. We've had a
+
+00:04:14.080 --> 00:04:22.800
+good run with this. It made the canvan
+front end. We should let it keep going.
+
+00:04:18.239 --> 00:04:31.199
+Okay. And now I'm going to say um please
+review agents.mmd
+
+00:04:26.320 --> 00:04:35.199
+and the plan and proceed with and let me
+know if you have any questions. That's
+
+00:04:32.720 --> 00:04:42.840
+the first way to start. And let me know
+if you have any questions.
+
+00:04:38.720 --> 00:04:42.840
+Do not do any work yet.
+
+00:04:43.040 --> 00:04:51.759
+That's always a great way to start. Ask
+ask me to uh enable GPT 5.2. Ask me
+
+00:04:49.680 --> 00:04:57.360
+questions is a great way to start.
+That's a a really good way of doing it.
+
+00:04:54.240 --> 00:05:00.800
+We've got lots of screens here. Okay, so
+it's got some questions. Number one, do
+
+00:04:58.800 --> 00:05:04.800
+you want me to enrich Plan.md with
+detailed checklist, tests, and success
+
+00:05:02.400 --> 00:05:07.840
+criteria? Uh number two, should I create
+the front-end agents as part of the plan
+
+00:05:06.479 --> 00:05:10.960
+enrichment or only after plan
+improvement? Number three, for
+
+00:05:09.440 --> 00:05:15.440
+comprehensive tests, you have a minimum
+coverage target or specific test types
+
+00:05:13.360 --> 00:05:20.479
+you want prioritized. These all seem
+like they're they're kind of um uh easy
+
+00:05:18.320 --> 00:05:24.080
+easy questions. It hasn't found anything
+particularly uh particularly
+
+00:05:22.160 --> 00:05:32.960
+complicated. So I think uh number one is
+is is yes uh create uh yes enrich plan
+
+00:05:30.639 --> 00:05:42.840
+MD.
+Uh two yes create agents.m MD for front
+
+00:05:39.120 --> 00:05:42.840
+end right away.
+
+00:05:43.280 --> 00:05:56.479
+three. Uh so do we have a minimum uh uh
+coverage target um uh 80%
+
+00:05:52.800 --> 00:06:04.120
+uh unit test coverage
+minimum
+
+00:05:58.240 --> 00:06:04.120
+and robust uh integration testing.
+
+00:06:06.000 --> 00:06:15.120
+Go ahead
+with part one. All right. Off it goes.
+
+00:06:12.000 --> 00:06:19.039
+Off it goes. Okay. So, it's now going to
+go off and do this. And of course, as
+
+00:06:17.360 --> 00:06:24.639
+you can see, we're I'm just taking it
+step by step. I'm not in YOLO mode. And
+
+00:06:22.400 --> 00:06:28.319
+so, I'm I'm here expecting to approve
+things and check things as they come.
+
+00:06:26.960 --> 00:06:32.160
+And I'm only going to ever give it
+permission to do one more step because
+
+00:06:30.479 --> 00:06:37.520
+we're doing it the proper way. We're
+doing it the slow, methodical way, which
+
+00:06:34.800 --> 00:06:42.240
+is the way to build bulletproof systems
+with an AI co-pilot like Copilot. I will
+
+00:06:40.639 --> 00:06:46.000
+see you in a minute. Okay, it didn't
+take long at all and it's uh it's
+
+00:06:44.319 --> 00:06:51.759
+updated the project plan. Let me make
+this screen a bit better size for us.
+
+00:06:48.960 --> 00:06:56.080
+Here is the detailed project plan. Um
+and you can see it has indeed for for
+
+00:06:53.680 --> 00:07:00.639
+part one. It's it's put check boxes by
+everything. Um and uh plan is detailed
+
+00:06:59.199 --> 00:07:04.560
+and actionable. Let's have a look. We'll
+be the judge of that. Uh so it's got a
+
+00:07:02.800 --> 00:07:08.720
+docker file. That's what I like to see.
+Creating this adding minimal read me
+
+00:07:07.199 --> 00:07:13.520
+notes. It knows that I want it to be
+minimal. Uh, ensure UV is used inside
+
+00:07:11.199 --> 00:07:17.360
+the container. That's correct. Good. Set
+up scripts. Okay. I like the fact that
+
+00:07:15.840 --> 00:07:21.680
+it's got some tests here. It's got a
+health endpoint. That's a that's a nice
+
+00:07:19.520 --> 00:07:28.400
+nice plan indeed. It's got success
+criteria listed out here. I like that.
+
+00:07:24.400 --> 00:07:33.440
+Uh, checklist here. Um, and then um
+front end. This seems good. Yes. Yes.
+
+00:07:31.440 --> 00:07:40.720
+Fake user signin experience. Yes.
+Database modeling. Okay. Um, create SQL
+
+00:07:38.080 --> 00:07:45.280
+light database implement CRUD endpoints.
+That's good. This all looks perfectly
+
+00:07:43.280 --> 00:07:49.759
+reasonable. You should be doing this,
+too. We're looking for any signs of
+
+00:07:47.039 --> 00:07:54.879
+anything that we don't like, but it all
+looks good to me. A simple endpoint.
+
+00:07:52.400 --> 00:08:01.599
+Yes. Integration test that that
+validates the two plus two. Um, okay.
+
+00:07:57.840 --> 00:08:07.919
+Yep. That seems that seems fine. And
+build sidebar. Um, okay. This seems um
+
+00:08:06.160 --> 00:08:12.639
+this seems very good to me. I think all
+10 parts are understood. Um now we also
+
+00:08:10.479 --> 00:08:17.759
+want to look at the agents.mmd that it
+should have created here. Uh and let's
+
+00:08:15.440 --> 00:08:23.199
+see. Okay, good. It is indeed app router
+if you know about that. This all seems
+
+00:08:20.319 --> 00:08:28.720
+great. Uh it's pretty short, but that's
+fine. Uh okay, good, good, good, good,
+
+00:08:26.160 --> 00:08:33.599
+good. All right, I'm pretty happy with
+that. Uh so we're going to say yes to
+
+00:08:31.039 --> 00:08:41.360
+approve this and move on to step two.
+All right. So, confirmed, approved,
+
+00:08:37.039 --> 00:08:46.240
+approved. Onto step two.
+All right. Which is, of course, this
+
+00:08:43.440 --> 00:08:51.200
+scaffolding. So, we'll now let it do
+this. And you should be doing the same.
+
+00:08:47.839 --> 00:08:54.480
+And I realize it feels like it it feels
+like we're going in such small steps
+
+00:08:52.800 --> 00:08:58.320
+after we've yoloed yesterday. You're
+thinking, "Oh, why can't I just tell it
+
+00:08:55.839 --> 00:09:03.200
+do all 10 steps? Just do all 10 steps.
+I'll come back later." But the thing is,
+
+00:09:00.560 --> 00:09:06.880
+this is too big a deal. If we do all 10
+steps, it will go off the rails and
+
+00:09:05.519 --> 00:09:09.760
+things will go wrong. You could always
+try if you want if you want to be bold,
+
+00:09:08.640 --> 00:09:13.600
+you want to be brave because you can
+always go back and get to where we were.
+
+00:09:11.839 --> 00:09:17.040
+So, for sure, you could just say, "Hey,
+let's do all 10 steps." Uh, but I think
+
+00:09:15.440 --> 00:09:20.720
+you'll find as as you and I will
+experience. I'm sure we're going to hit
+
+00:09:18.959 --> 00:09:25.120
+some roadblocks along the way. And if we
+just let it do all of its thing, things
+
+00:09:22.640 --> 00:09:29.839
+would go ary. All right, I'll see you in
+a second when we have our part two done.
+
+00:09:27.519 --> 00:09:36.080
+Okay, so it says part two scaffolding is
+in place. Uh, it's got a fast API back
+
+00:09:32.720 --> 00:09:40.640
+end. It's got all of this. Um, now what
+I'm interested in is whether it has
+
+00:09:37.839 --> 00:09:49.240
+actually tested it itself. I think it's
+just inspected. So, that's no good. Did
+
+00:09:42.800 --> 00:09:49.240
+Did you test part two yourself?
+
+00:09:49.519 --> 00:10:00.160
+Let's see. No, I did not run test yet.
+Please run tests thoroughly.
+
+00:09:56.560 --> 00:10:10.080
+Bring up the server.
+Make sure it works.
+
+00:10:03.360 --> 00:10:15.040
+Check the um the the uh the the roots.
+Bring it down.
+
+00:10:13.040 --> 00:10:21.519
+Let me know
+when you are confident.
+
+00:10:19.040 --> 00:10:25.839
+Okay, that's a great example. You see,
+it just wanted to move on. It just said
+
+00:10:23.040 --> 00:10:31.120
+two is done and and it hadn't actually
+tested it. Uh the uh create a virtual
+
+00:10:29.360 --> 00:10:36.399
+environment
+uh allow.
+
+00:10:34.320 --> 00:10:39.839
+Why is it doing this exactly? This seems
+a bit strange. We're meant to be using
+
+00:10:38.000 --> 00:10:43.680
+UV. We're not expecting a
+requirements.ext.
+
+00:10:41.600 --> 00:10:48.320
+Let's see what's happening here. I'm
+suspicious. I am suspicious. I see a
+
+00:10:46.800 --> 00:10:53.760
+requirements.ext.
+Okay, we'll let it do its thing.
+
+00:10:51.519 --> 00:10:57.600
+Um,
+and uh, yeah, we'll see where this goes
+
+00:10:55.920 --> 00:11:01.600
+in the in the end. I will see you back
+here in a second. So, it's been running
+
+00:10:59.680 --> 00:11:04.720
+various commands and I've been pressing
+allow, looking at them, understanding
+
+00:11:03.279 --> 00:11:08.640
+what it's doing. It's been stuck with
+some test failures and trying things
+
+00:11:06.399 --> 00:11:11.920
+again. And now I know what these things
+are doing. So, I know that they're safe
+
+00:11:10.079 --> 00:11:14.240
+and I've been allowing them. If you know
+it already, if you if you're someone
+
+00:11:13.120 --> 00:11:17.680
+that's that's worked with this before,
+you can allow it. If you don't know,
+
+00:11:15.920 --> 00:11:22.800
+then you can get a sense for it. You can
+you can ask chat GPT uh to to explain
+
+00:11:21.200 --> 00:11:26.720
+what's going on. Get get a second pair
+of eyes or you can deny and then and
+
+00:11:24.959 --> 00:11:31.519
+then just ask it to explain what it's
+doing and why. But this is it's it's for
+
+00:11:29.519 --> 00:11:34.399
+someone if if you're new to this area,
+then not only is this important for you
+
+00:11:33.040 --> 00:11:37.680
+to make sure that you're satisfied with
+everything that's happening, but as I
+
+00:11:35.839 --> 00:11:42.320
+say, it's also this amazing learning
+opportunity to to to inquire and see
+
+00:11:40.720 --> 00:11:44.959
+what it takes to build this kind of
+software.
+

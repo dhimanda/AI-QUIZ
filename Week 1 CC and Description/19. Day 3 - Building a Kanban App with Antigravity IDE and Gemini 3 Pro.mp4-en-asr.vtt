@@ -1,0 +1,555 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:09.040
+Okay, it's time for us to move on from
+codeex and move to anti-gravity,
+
+00:00:05.839 --> 00:00:12.320
+the last the fourth of our list of four.
+And uh you know, I can't resist but
+
+00:00:10.800 --> 00:00:16.320
+having this up a little bit more. I
+think that obviously Codex did a
+
+00:00:14.320 --> 00:00:20.720
+fantastic job. The bar is high for
+anti-gravity. It's worth pointing out
+
+00:00:18.400 --> 00:00:26.400
+that the reason codeex did so well is
+because we are using the absolute
+
+00:00:23.359 --> 00:00:30.560
+frontier frontier model now. I whilst we
+we had it set to pick its own model
+
+00:00:28.560 --> 00:00:36.480
+before but I'm I'm pretty sure that with
+cursor we were using composer which is
+
+00:00:33.280 --> 00:00:41.760
+cursor's internal lowerc cost model that
+that they have built um optimized for
+
+00:00:38.800 --> 00:00:48.000
+cursor that's good but not at codeex
+level not not at GPT 5.2 2 codeex level
+
+00:00:46.079 --> 00:00:53.920
+and then after that I believe when we
+were using GitHub copilot I was using
+
+00:00:50.800 --> 00:00:59.600
+Claude Haiku 4.5 which is good but again
+it's a smaller model uh codeex 5.2 to
+
+00:00:56.960 --> 00:01:06.159
+and on high reasoning. Really strong
+model. Strong model means strong results
+
+00:01:02.559 --> 00:01:11.680
+that you can see for sure. Okay, enough
+on to anti-gravity. All right. Well, I
+
+00:01:08.720 --> 00:01:16.320
+am back. I'm back in cursor again. I'm
+back in the instant project in cursor
+
+00:01:14.560 --> 00:01:20.320
+because this is where we go to reset
+things. We might as well. It's just like
+
+00:01:17.840 --> 00:01:24.400
+a a useful terminal to have open. I'm
+still in the projects directory. If you
+
+00:01:22.080 --> 00:01:28.880
+do a pwd, make sure that you are in
+projects or do cd dot dot if you're
+
+00:01:26.720 --> 00:01:33.920
+inside instant. And then what I'm going
+to do, of course, as before, is I'm
+
+00:01:30.960 --> 00:01:38.880
+going to rename by doing move mv the
+cambban folder, the whole folder to be
+
+00:01:36.400 --> 00:01:42.640
+codeex_ban.
+And once I've done this, that is that
+
+00:01:41.280 --> 00:01:49.759
+has been renamed. There's no more
+camban. And I can now do a git clone to
+
+00:01:46.240 --> 00:01:54.000
+bring back down again. There it is.
+We've got ourselves a new fresh camban.
+
+00:01:52.159 --> 00:01:58.159
+It's time for us to try out
+anti-gravity. Okay, here we are at
+
+00:01:56.479 --> 00:02:04.079
+anti-gravity's website. It's at
+anti-gravity.google.
+
+00:02:00.320 --> 00:02:08.879
+Uh, cool URL. Uh, and so it says
+experience liftoff with the next
+
+00:02:05.920 --> 00:02:12.319
+generation IDE. And there is a download
+for Mac OS. And I'm guessing you've got
+
+00:02:10.640 --> 00:02:15.599
+a download for and whatever your
+platform is, but there's also a download
+
+00:02:14.000 --> 00:02:19.599
+button up here where you can actually
+pick the one that you want. and you
+
+00:02:17.840 --> 00:02:23.200
+should then download it. And if you're
+on a Mac, you'll have something where,
+
+00:02:21.120 --> 00:02:26.879
+as usual, you drag the icon into
+applications. If you're on a PC, you got
+
+00:02:24.959 --> 00:02:30.480
+a little wizard. When you launch it,
+there'll be a few questions. You should
+
+00:02:28.640 --> 00:02:35.280
+just pick the defaults. Stick with what
+it wants. Pick whatever color scheme you
+
+00:02:32.800 --> 00:02:40.480
+like. Uh for everything else, just stick
+with the defaults. Go through it. And it
+
+00:02:38.400 --> 00:02:43.760
+should open up. And I'm guessing that
+you're going to see something that's
+
+00:02:41.519 --> 00:02:51.040
+going to look surprisingly familiar.
+Let's see. Okay. So, first up, first up,
+
+00:02:47.360 --> 00:02:56.640
+it looks kind of similar to Cursor again
+and to VS Code. And that's because it is
+
+00:02:53.120 --> 00:03:01.840
+VS Code again like Cursor. It is just a
+clone of VS Code, a fork. They've remade
+
+00:02:59.599 --> 00:03:05.519
+VS Code for anti-gravity. That's why
+it's similar. It's because it's the same
+
+00:03:03.519 --> 00:03:09.519
+thing. And you may see exactly the
+screen I've got here. And if not, guess
+
+00:03:07.440 --> 00:03:14.319
+what you do? You go to file and new
+window. Uh, and then you will see this.
+
+00:03:12.080 --> 00:03:18.159
+Uh, surprising, huh? Uh now you should
+have already signed into Google with a
+
+00:03:16.560 --> 00:03:22.239
+Google or with a Google account as part
+of of downloading this but if not over
+
+00:03:20.000 --> 00:03:28.640
+here on the top right this is where you
+you set up your your Google or login and
+
+00:03:25.200 --> 00:03:32.959
+would log in to Google in the usual way.
+Uh and so that's that's how we've got to
+
+00:03:30.720 --> 00:03:37.360
+where we are. And you can see that we're
+facing a screen which has the usual
+
+00:03:35.280 --> 00:03:41.200
+stuff with an open folder and an agent
+conversation. This time it's on the
+
+00:03:38.640 --> 00:03:45.200
+right. And uh it's time for us to uh to
+open a folder. Okay, I'm pressing open
+
+00:03:43.360 --> 00:03:49.200
+folder. I'm going to go into projects.
+I'm going to go into Canban and I'm
+
+00:03:46.959 --> 00:03:53.760
+going to open it. And here we have a
+very familiar looking screen with a
+
+00:03:51.120 --> 00:03:59.840
+middle area files on the on the left and
+over here on the right is our agent
+
+00:03:56.560 --> 00:04:05.760
+chat. And uh it's telling us about uh
+Gemini 3 flash frontier level
+
+00:04:02.400 --> 00:04:10.959
+intelligence blazing fast speed. Okay.
+And a generous and more generous quotas.
+
+00:04:08.799 --> 00:04:14.480
+Okay. Um, and so just just to take you
+through what we see here. First up, you
+
+00:04:12.879 --> 00:04:19.840
+can see, hang on, let me just dismiss
+this. You can see that there is an
+
+00:04:16.880 --> 00:04:23.840
+dismiss that you can see there's the
+ability to choose between a planning
+
+00:04:22.079 --> 00:04:28.479
+mode or or not. We'll leave it on
+planning mode. We've got a selection of
+
+00:04:26.240 --> 00:04:33.120
+models. Uh, and interestingly, you can
+see that Google offers the anthropic
+
+00:04:30.880 --> 00:04:38.960
+models as well as using the open-source
+version of GPTOSS.
+
+00:04:35.600 --> 00:04:43.759
+Um, but we are going to uh leave it here
+and uh yeah, we we can now uh we can now
+
+00:04:42.320 --> 00:04:47.520
+give this a whirl. All right. And if I
+could draw your attention here to the
+
+00:04:45.520 --> 00:04:50.560
+settings, anti-gravity settings on the
+bottom here. Click there. Up comes a few
+
+00:04:49.360 --> 00:04:56.479
+things that we can we can mess around
+with. Uh first of all, agent autofix
+
+00:04:52.800 --> 00:05:00.800
+lints. So, so a lint error is when the
+code doesn't pass some basic checks
+
+00:04:58.639 --> 00:05:04.320
+about the way that it's been structured.
+And you can uh set that on, which we
+
+00:05:02.880 --> 00:05:08.240
+will do, which means that it will fix
+any of those kinds of errors that
+
+00:05:06.000 --> 00:05:13.199
+surface. Good practice to do that. Uh
+and now here is like being able to
+
+00:05:10.320 --> 00:05:18.000
+control yolo mode. If in doubt, leave
+this on request reviews so that it needs
+
+00:05:15.360 --> 00:05:22.880
+to check with you before, but I'm going
+to put this on to always proceed and
+
+00:05:20.880 --> 00:05:27.280
+always proceed. There's a rather nice
+agent decides option here where it can
+
+00:05:25.280 --> 00:05:31.759
+decide whether or not it wants to ask
+you for permission, but I'm going to be
+
+00:05:29.680 --> 00:05:35.759
+yoloing all the way today. You should
+only do that if you're comfortable with
+
+00:05:33.520 --> 00:05:41.120
+it. All right, so those are some
+settings for us. Uh, and now we've got
+
+00:05:38.400 --> 00:05:44.479
+this on planning mode. We're almost
+ready to go. There's one more thing we
+
+00:05:42.560 --> 00:05:48.240
+need to do. having a single file called
+agents.md
+
+00:05:46.639 --> 00:05:53.520
+has has been something of a sort of
+evolving standard that people have just
+
+00:05:50.720 --> 00:05:58.400
+kind of adopted although as you'll see
+Claude code uses claude.mmd but but
+
+00:05:55.759 --> 00:06:02.800
+otherwise very similar but anti-gravity
+has not adopted the standard they've
+
+00:06:00.240 --> 00:06:06.720
+gone a different direction so we are not
+going to use agents.md
+
+00:06:04.960 --> 00:06:12.400
+but instead we're going to click here
+select all and copy all of that so just
+
+00:06:09.759 --> 00:06:18.319
+edit menu sect all edit menu copy or or
+command Command A, command C on a Mac,
+
+00:06:14.560 --> 00:06:22.319
+control arr C on a PC. All right. And
+now instead of that, we're going to put
+
+00:06:20.319 --> 00:06:26.720
+this somewhere else. Okay. We're going
+to create a new folder in the root in
+
+00:06:24.639 --> 00:06:31.600
+the project root in in Camban. Right
+click anywhere here, select new folder,
+
+00:06:28.639 --> 00:06:36.639
+and we're going to call it agent like
+so. And then within agent is like a
+
+00:06:35.120 --> 00:06:40.240
+special folder that anti-gravity
+expects. And you can have different
+
+00:06:38.400 --> 00:06:44.319
+folders within this that tell it about
+different things. And in particular,
+
+00:06:41.840 --> 00:06:48.880
+there's an important folder called rules
+that tells it it's rules. And then
+
+00:06:46.720 --> 00:06:53.440
+within this folder, you can make
+markdown files. And we are only going to
+
+00:06:50.720 --> 00:06:57.840
+have one. And we will call it uh new
+file. We can call it anything we want,
+
+00:06:54.880 --> 00:07:02.720
+but we'll call it like like a um uh
+strategy.
+
+00:06:59.919 --> 00:07:07.520
+MD. And when we do that, it comes up
+with this special look. It's expecting
+
+00:07:05.039 --> 00:07:12.240
+this to be in a certain way. First of
+all, there is an activation mode which
+
+00:07:10.000 --> 00:07:16.960
+is telling anti-gravity in what
+circumstances does it need to read all
+
+00:07:14.319 --> 00:07:21.440
+of this into context. All right. And so
+we are going to say always on. It could
+
+00:07:19.680 --> 00:07:25.520
+also be manual. It could be model
+decision if we wanted the model to be
+
+00:07:23.680 --> 00:07:31.840
+able to choose. And I'm now going to
+paste in the content which is the whole
+
+00:07:28.560 --> 00:07:36.080
+of our agents.md and save that. And it's
+done. Always remember to save by the
+
+00:07:33.599 --> 00:07:40.400
+way. Uh, command S on a Mac, control S
+on a PC. Make sure that the dot
+
+00:07:37.919 --> 00:07:44.880
+disappears. So, that is a saved file.
+Okay, we've saved that. I'm now I'm
+
+00:07:42.400 --> 00:07:51.199
+actually going to delete this agents.mmd
+to avoid any confusion here. We've only
+
+00:07:47.360 --> 00:07:56.800
+got our single rule, our strategy.mmd in
+the rules directory within the aagent
+
+00:07:54.160 --> 00:08:00.800
+directory in the camb project route. And
+with that, we're actually ready to go.
+
+00:07:58.400 --> 00:08:04.800
+And so over here on the right, I'm going
+to say to Gemini that, uh, please go
+
+00:08:03.199 --> 00:08:09.120
+ahead.
+Go ahead
+
+00:08:06.879 --> 00:08:12.879
+and see what it does. Uh, and it's off.
+And we're using, of course, uh, oh,
+
+00:08:10.720 --> 00:08:18.720
+we're using Gemini 3 Pro. I've left it
+on. Uh, okay. Gemini 3 Pro high. So,
+
+00:08:16.160 --> 00:08:24.080
+this is on a big tier of Gemini. We're
+going with the strongest version. And,
+
+00:08:20.960 --> 00:08:28.960
+uh, we will see how it fares with this.
+I will see you back here in a moment.
+
+00:08:26.479 --> 00:08:33.440
+Okay. Well, it's completed. It's
+finished. It's given me this summary
+
+00:08:30.800 --> 00:08:38.479
+here. The KBAN MVP walkthrough with this
+nice little thing with a apparently a
+
+00:08:35.519 --> 00:08:41.440
+screenshot of it moving. How about that?
+Is that for real? Is this what it's
+
+00:08:40.159 --> 00:08:46.080
+actually going to look like? That would
+be cool. It's got like a recording of
+
+00:08:43.680 --> 00:08:51.040
+it. Isn't that crazy? And then here is
+the instructions on how to run it. Um,
+
+00:08:48.880 --> 00:08:55.279
+okay. And then we'll see here. It wants
+me to to accept all the changes that it
+
+00:08:53.120 --> 00:09:00.160
+made. And, uh, it seems to be ready for
+me to try it. I do believe it is
+
+00:08:56.880 --> 00:09:05.120
+actually already running. So, uh, okay,
+let's bring up a browser. Uh, and, uh,
+
+00:09:02.959 --> 00:09:09.200
+let's see. Let's see how it does. Okay,
+so this is what I see in a browser.
+
+00:09:07.600 --> 00:09:12.959
+First of all, I should point out
+something. You may have seen that while
+
+00:09:11.120 --> 00:09:16.800
+this was running, it was actually
+bringing up browsers and testing it
+
+00:09:15.040 --> 00:09:19.600
+itself, checking the screens look good.
+That's how I did that screen recording.
+
+00:09:18.160 --> 00:09:23.680
+And so, I know it was actually real
+screen recording. Uh and it also brought
+
+00:09:21.920 --> 00:09:28.080
+up this thing called called playrights
+which is where it drives a browser with
+
+00:09:26.240 --> 00:09:32.320
+browser automation software to run a
+series of tests. Uh and uh you can also
+
+00:09:30.480 --> 00:09:36.959
+you can see that it in in some of these
+tests it was failing and it fixed them
+
+00:09:34.640 --> 00:09:39.920
+and then it would then saw success. For
+some reason it didn't actually seem to
+
+00:09:38.000 --> 00:09:43.760
+fix that last one but but anyways it was
+working away beavering away doing all of
+
+00:09:42.240 --> 00:09:48.399
+this and it's time for us to see what it
+actually looks like. And here it is.
+
+00:09:45.839 --> 00:09:53.200
+This is the result. Here is the result
+from Gemini uh through anti-gravity.
+
+00:09:51.680 --> 00:09:56.959
+Let's see what we make of it. And first
+up, I'd say I think it looks pretty
+
+00:09:54.560 --> 00:10:00.800
+good. It looks fresh and clean. Uh and
+think I think it looks very good. We can
+
+00:09:59.040 --> 00:10:06.240
+flip things around. Yes, that all seems
+to work. Let's move that over there.
+
+00:10:02.959 --> 00:10:09.680
+Let's uh see if we can add a card. Enter
+cutter. Okay, that's a bit janky having
+
+00:10:07.760 --> 00:10:16.560
+like a local host thing there, but we'll
+say uh okay. Uh and then uh there it is.
+
+00:10:14.560 --> 00:10:21.279
+And now can we come in? Oh, we can't
+actually add a description to that. That
+
+00:10:18.880 --> 00:10:28.640
+seems a bit mediocre. Uh, and can we
+change this title? Yes, we can. Um, this
+
+00:10:24.880 --> 00:10:32.640
+is good. There we go. Uh, that's done.
+Okay, that's great. So, I'd say that
+
+00:10:30.800 --> 00:10:38.959
+this adding a new card is the only thing
+that feels a little bit simplistic.
+
+00:10:35.279 --> 00:10:38.959
+Let's see if we can't improve that.
+
