@@ -1,0 +1,556 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:07.040
+Okay, now I don't mean to confuse you,
+but I have now quit VS Code just to
+
+00:00:05.200 --> 00:00:10.559
+start fresh. And I brought up cursor
+again. It looks so similar. It's like,
+
+00:00:08.960 --> 00:00:14.559
+okay, all right. There's still the
+sidebar on the right. This is instant.
+
+00:00:12.320 --> 00:00:18.000
+I'm back in instant again because look
+what I want to do is I'm in the the
+
+00:00:16.080 --> 00:00:22.160
+project subdirectory. So if you were
+when you open up instant, you're inside
+
+00:00:19.439 --> 00:00:28.320
+instant. I've done cd dot dot and I'm
+back up in the projects subdirectory. If
+
+00:00:24.880 --> 00:00:33.280
+I do pwd, you can see I'm in my projects
+directory. And there's now a new folder
+
+00:00:30.880 --> 00:00:38.320
+called Cananban that has everything that
+GitHub Copilot just built. And I'm going
+
+00:00:35.840 --> 00:00:44.239
+to change that name. I'm going to do mv
+move, which is like rename canban. And
+
+00:00:42.000 --> 00:00:49.600
+I'm going to change it to being like
+copilot copilot_ban
+
+00:00:47.760 --> 00:00:54.160
+or whatever you want, but just to keep a
+record of it. But that's now removed
+
+00:00:51.360 --> 00:00:58.320
+camban altogether because now we're
+going to go in and do this all over
+
+00:00:56.640 --> 00:01:03.039
+again. And so do you remember the next
+command I'm going to run? It's going to
+
+00:00:59.600 --> 00:01:07.520
+be get clone and then that that you
+could take from the course resources or
+
+00:01:04.400 --> 00:01:12.640
+or from my my GitHub cam.git. I run that
+and we've now got ourselves a fresh
+
+00:01:09.760 --> 00:01:18.720
+canban folder again just with the one
+file which is our agents.md.
+
+00:01:15.840 --> 00:01:25.360
+Okay, it is time for the next on our
+list, OpenAI's codeex. And here we are
+
+00:01:22.159 --> 00:01:29.920
+on the Codeex web page from OpenAI
+telling us all about Codeex. And you'll
+
+00:01:27.600 --> 00:01:35.200
+see that Codeex is first and foremost
+one of these CLI kinds of tools like
+
+00:01:33.119 --> 00:01:39.600
+Claude Code. And next week is when we're
+going to be getting deep into CLI tools,
+
+00:01:38.000 --> 00:01:44.240
+but and it even tells you how to get
+started with like a CLI, a command, and
+
+00:01:42.000 --> 00:01:48.159
+it shows you screenshots of it looking
+looking like one of these kinds of
+
+00:01:45.759 --> 00:01:52.399
+interfaces that we will get to in time.
+But it turns out that there is another
+
+00:01:49.680 --> 00:01:58.560
+way that you can use codeex which is
+again as another VS Code extension.
+
+00:01:56.079 --> 00:02:02.640
+Codeex is a VS Code extension too. And
+for this week since we're all about
+
+00:02:00.000 --> 00:02:06.640
+using the IDE that's how we'll do it. So
+I'm going to see you back over in VS
+
+00:02:04.799 --> 00:02:10.080
+Code. Can you launch that again, please?
+I'll see you there. So after you launch
+
+00:02:08.239 --> 00:02:13.120
+VS Code, you should see a screen. Maybe
+a welcome screen. Maybe it's a screen
+
+00:02:11.440 --> 00:02:19.280
+like this. Whatever it is, you should be
+able to press control shiftx on a PC or
+
+00:02:16.480 --> 00:02:24.879
+commandshiftx on a Mac. It's also going
+to be the view menu. And then it is
+
+00:02:21.920 --> 00:02:28.879
+extensions. And up comes the extensions
+like this. And right now it's still got
+
+00:02:26.879 --> 00:02:32.319
+GitHub Copilot selected cuz that's the
+last search I did. I'm going to delete
+
+00:02:30.959 --> 00:02:36.879
+that. And you never guess what I'm going
+to search for. I'm going to search for
+
+00:02:33.680 --> 00:02:40.480
+Codeex. And uh there it is right up at
+the top here. Of course, I'm already
+
+00:02:38.239 --> 00:02:45.200
+installed because I've used it. Codeex
+OpenAI's coding assistant. It's from
+
+00:02:43.440 --> 00:02:49.280
+OpenAI with that tick to show you that
+it's the real deal. And it's had for me
+
+00:02:47.440 --> 00:02:54.560
+three and a bit million downloads for
+you, probably a lot more. This is it.
+
+00:02:52.400 --> 00:02:58.400
+This is Codeex. You should press
+install. Mine's already installed, so I
+
+00:02:56.720 --> 00:03:02.080
+don't have that. Once you've done that,
+you will have Codeex on your system.
+
+00:03:00.800 --> 00:03:06.159
+Okay? And it's possible you might need
+to to quit VS Code and bring it back up
+
+00:03:04.239 --> 00:03:09.280
+again. But once you have the way that
+you'll know that you have Codeex
+
+00:03:07.680 --> 00:03:13.440
+installed in VS Code is because you'll
+have this little symbol over here, a
+
+00:03:11.200 --> 00:03:17.120
+little codec symbol. What a treat. You
+press that and up comes a sidebar. It's
+
+00:03:15.840 --> 00:03:22.879
+on the left side rather than the right
+side. So, so you know something's
+
+00:03:19.040 --> 00:03:27.280
+different. Uh and here we are in Codeex.
+Uh so, uh are you ready? The first thing
+
+00:03:25.760 --> 00:03:32.640
+I'm going to do is I'm going to go to
+the file new window box and I need to re
+
+00:03:30.799 --> 00:03:36.640
+I'm going to do open and I'm going to go
+into projects and I'm going to open
+
+00:03:34.159 --> 00:03:40.239
+canban. Click into it and press open.
+And here it is with the single
+
+00:03:38.560 --> 00:03:44.879
+agents.mmd
+file. And I'm going to make this bigger.
+
+00:03:42.959 --> 00:03:47.920
+And confusingly,
+you see what's going on here?
+
+00:03:46.080 --> 00:03:51.280
+Confusingly, we have copilot over here
+on the right. X out of that. We don't
+
+00:03:49.599 --> 00:03:55.200
+want that. Go away copilot. We're done
+with you. You're you're you're dead to
+
+00:03:52.879 --> 00:03:59.840
+us. We've moved on. We're on to codeex.
+We We can now press the codeex button
+
+00:03:57.120 --> 00:04:03.519
+over here to open up the codeex screen
+right here and get to it. And I'm going
+
+00:04:01.920 --> 00:04:07.760
+to make it a bit bigger with command
+plus. There we go. And also I'm going to
+
+00:04:05.920 --> 00:04:12.239
+drag this to the right so we have a
+little bit more space. Uh, and I need to
+
+00:04:10.560 --> 00:04:16.160
+mention that you can go to the you need
+to go to the settings right here. And
+
+00:04:14.159 --> 00:04:23.680
+this is where you would log in with your
+OpenAI account. And now Codex is I
+
+00:04:20.079 --> 00:04:28.000
+believe as far as I know only a paid uh
+model approach. Actually before I say
+
+00:04:25.520 --> 00:04:32.240
+that maybe just click here to see uh you
+could you could take a look at this and
+
+00:04:29.520 --> 00:04:36.080
+see whether if you don't have uh chatgbt
+account whether you're able to choose
+
+00:04:34.160 --> 00:04:40.160
+any other models but I do believe that
+you need to have an open AI account at
+
+00:04:37.520 --> 00:04:45.520
+least you do as of now like a like a
+subscription plan a chat GPT uh plan not
+
+00:04:43.360 --> 00:04:49.120
+not an open AI account. Um, and so
+that's that's what you would need to do.
+
+00:04:47.040 --> 00:04:52.720
+And you can, of course, skip this one.
+It's going to be so much the same as all
+
+00:04:50.960 --> 00:04:55.680
+the others. I just want to show you the
+tooling. It's not important that you
+
+00:04:54.400 --> 00:04:59.680
+have accounts for all these different
+platforms if you don't wish to, but but
+
+00:04:57.759 --> 00:05:02.880
+I do. And that is the one that we are
+going to use right now. So, we can see
+
+00:05:01.040 --> 00:05:07.120
+we've got some drop downs here. There's
+there's uh agent full access is what I
+
+00:05:05.759 --> 00:05:11.759
+have selected. Actually, I think it was
+original and agent and I moved it to
+
+00:05:09.039 --> 00:05:19.360
+agent full access which is which is like
+again the the the YOLO mode. Um then
+
+00:05:15.759 --> 00:05:25.199
+there's choosing the model. So GPT 5.2
+codeex for me right now is the the
+
+00:05:22.800 --> 00:05:28.080
+strongest most powerful model that we've
+got. You you probably remember this from
+
+00:05:26.639 --> 00:05:31.199
+looking at my my screenshot of
+artificial analysis. But no doubt by the
+
+00:05:30.080 --> 00:05:34.560
+time that you're doing this there'll be
+new models. There'll be more. And so you
+
+00:05:32.960 --> 00:05:40.000
+should use what whatever whatever you
+wish. if you're a chat GPT subscriber.
+
+00:05:37.280 --> 00:05:45.680
+And over here is the reasoning effort.
+This is where you can control um how how
+
+00:05:43.280 --> 00:05:50.240
+deeply it thinks using that that trick
+that we discussed. Uh and making it
+
+00:05:48.240 --> 00:05:55.120
+higher will get you better outcomes,
+higher quality, but it will take longer.
+
+00:05:52.479 --> 00:05:59.440
+And it's not always better. Sometimes
+you find that if you make it think too
+
+00:05:57.120 --> 00:06:03.520
+much, then it can overthink. it can kind
+of agonize over stuff in a way that that
+
+00:06:02.000 --> 00:06:06.720
+feels counterproductive, like it should
+have just gone for it. So, it's not
+
+00:06:05.039 --> 00:06:10.160
+always the case that more thinking leads
+to better outcomes. It depends a bit on
+
+00:06:08.720 --> 00:06:13.440
+the project and and there's there's a
+sort of art and science to that. But all
+
+00:06:12.160 --> 00:06:17.280
+things considered, I'm going to have
+this on high. I think that's the right
+
+00:06:15.520 --> 00:06:21.199
+one for me now. All right. And with
+that, there isn't there isn't a plan
+
+00:06:19.120 --> 00:06:24.720
+mode, but but we've told it that that we
+want it in the in agents.mmd to do its
+
+00:06:23.280 --> 00:06:32.080
+planning first. So, I'm just going to
+say please go ahead. Uh, it also knows
+
+00:06:28.319 --> 00:06:35.840
+to look for an agents.m MD. So, it
+should already understand. Look, it's
+
+00:06:34.160 --> 00:06:42.479
+identifying documentation to read. It's
+reading agents.m MD and it's thinking
+
+00:06:39.919 --> 00:06:47.360
+and it's now going to do its thing. And
+so, uh, I'm going to let it, uh, work
+
+00:06:45.120 --> 00:06:52.080
+for a bit and I will see you in a
+minute. Okay. Well, that's cool. It
+
+00:06:50.160 --> 00:06:55.520
+lasted a lot longer than any of the
+others so far. That was a good 15
+
+00:06:53.919 --> 00:06:58.880
+minutes that have gone by. I know it was
+just a second for you, but it was 15
+
+00:06:56.800 --> 00:07:03.520
+minutes for me. And it's been going.
+It's been doing tons of stuff. I also
+
+00:07:01.440 --> 00:07:08.639
+noticed down here that you can see the
+context window usage right here, just as
+
+00:07:06.160 --> 00:07:15.919
+we did with cursor at the beginning. 16%
+used uh 42,000 out of 258,000 tokens
+
+00:07:13.039 --> 00:07:19.919
+used. Okay. And it tells us, if we have
+a look, it's given us a little report
+
+00:07:17.360 --> 00:07:24.639
+here. It says that the dev server is is
+running launched via mpm rundev. Uh so
+
+00:07:22.960 --> 00:07:28.560
+it's it's running. It tells me how I can
+stop it if I wish to. And uh it's
+
+00:07:27.120 --> 00:07:32.560
+telling me everything that it's changed,
+including 74 different files. That's a
+
+00:07:30.639 --> 00:07:38.479
+lot of work. Okay, it's time for us to
+to try this out. All right, so we're
+
+00:07:34.400 --> 00:07:45.599
+going to go to localhost 3000. And wow.
+Okay, well, it definitely looks cool. Uh
+
+00:07:42.240 --> 00:07:51.520
+single board canban studio. It's got a
+cool name. Focus. One board, five
+
+00:07:48.160 --> 00:07:55.120
+columns, zero clutter.
+Uh all right. And here we go. Here are
+
+00:07:53.520 --> 00:07:59.360
+the different things. So, let's let's
+see if the functionality works. Uh, and
+
+00:07:57.199 --> 00:08:03.680
+I I love the what what it's got here.
+Uh, move that over here. And there it
+
+00:08:01.360 --> 00:08:09.440
+goes. Can we can we rearrange? Yes, we
+can rearrange. Can we remove? Yes, we
+
+00:08:06.080 --> 00:08:16.720
+can remove. Can we rename in progress to
+Wow. And look at that. It updates there.
+
+00:08:12.720 --> 00:08:20.960
+Okay. Okay. I got to hand it to it. This
+This is pretty amazing. This This is
+
+00:08:18.639 --> 00:08:26.400
+great. Definitely best so far. It looks
+beautiful. It's uh yeah, really nice.
+
+00:08:23.840 --> 00:08:32.479
+And uh yeah, we we should of course try
+uh uh impressed.
+
+00:08:30.240 --> 00:08:37.120
+I am.
+Uh there we go. There we go. Well, I'm
+
+00:08:35.279 --> 00:08:41.440
+blown away by that. This is as this is
+an example again of what they call zero
+
+00:08:39.120 --> 00:08:45.839
+shot. This is just we we we gave it the
+instructions. We let it be. This is the
+
+00:08:44.159 --> 00:08:49.920
+outcome. It didn't even ask any
+questions. It just built this just like
+
+00:08:48.240 --> 00:08:54.480
+that. And I know what you're thinking.
+You're thinking, "Okay, Ed, but look,
+
+00:08:52.560 --> 00:08:59.200
+you've you've raced through all of this.
+You haven't you haven't shown us how how
+
+00:08:56.959 --> 00:09:03.519
+to write the code, how the how it works,
+like like how do you build an XJS app to
+
+00:09:01.760 --> 00:09:07.040
+do all of this? So, so how can I check
+if it's if it's done a good job?" Well,
+
+00:09:05.519 --> 00:09:10.240
+look, I've got a secret for you here,
+and it's just you keep this between you
+
+00:09:08.560 --> 00:09:14.640
+and me, if that's okay. Uh, the secret
+is I don't know how to write this kind
+
+00:09:12.080 --> 00:09:18.080
+of front-end code either. I'm a lousy
+React developer. I've built some React
+
+00:09:16.800 --> 00:09:22.240
+screens before, but I'm really bad at
+them. They look horrible. uh as front-
+
+00:09:20.080 --> 00:09:27.440
+end developers on my team will tell you
+uh but uh but but uh this this is doable
+
+00:09:26.160 --> 00:09:32.000
+even if you don't know how to write
+front-end code that's the amazing thing
+
+00:09:29.839 --> 00:09:36.000
+you can act like the manager you can
+give feedback I mean I knew that mpm
+
+00:09:34.399 --> 00:09:40.880
+rundev was how to bring up the server
+but you can ask it that as well and
+
+00:09:38.720 --> 00:09:45.760
+we'll talk tomorrow and and throughout
+the next few weeks about the ways in
+
+00:09:42.800 --> 00:09:51.120
+which you can operate handinhand with
+with a collaborator like this to get the
+
+00:09:48.240 --> 00:09:55.920
+best out of both. But the bottom line is
+uh amazingly particularly actually with
+
+00:09:53.360 --> 00:09:58.959
+front-end stuff, you don't need to have
+a detailed understanding of the
+
+00:09:57.279 --> 00:10:03.120
+technology to be able to build things
+like this. Now, of course, the the
+
+00:10:01.120 --> 00:10:07.760
+devil's in the detail and and and it's
+fine for a toy project like this, but
+
+00:10:05.519 --> 00:10:11.360
+things get a lot more complicated when
+you have a much bigger system and when
+
+00:10:09.760 --> 00:10:15.920
+you have much more advanced uh
+requirements. And that's why this is
+
+00:10:13.279 --> 00:10:20.320
+still day three of a 3-week course and
+we've got lots still to go. But I gotta
+
+00:10:18.399 --> 00:10:22.640
+say this, I I think this is really
+awesome.
+

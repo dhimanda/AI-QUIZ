@@ -1,0 +1,543 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.080 --> 00:00:05.920
+Well, this is exciting. We're in cursor.
+We're going to do some vibe coding. So,
+
+00:00:04.480 --> 00:00:11.599
+first up, just just to tell you some
+shortcut keys, which are good to know.
+
+00:00:08.080 --> 00:00:17.840
+Um, on uh to to flip in and out the the
+side bar on the left, the file system.
+
+00:00:14.559 --> 00:00:21.520
+On a Mac, it's commandB. On a PC, it's
+controlB. So, if you press that a couple
+
+00:00:19.840 --> 00:00:26.400
+of times, look at that. You'll see that
+it's coming in and out. It also uh it
+
+00:00:23.920 --> 00:00:32.880
+mentions that just just here as well. Uh
+and uh for the right hand bar over here
+
+00:00:29.599 --> 00:00:39.120
+which has the agent chat on a Mac it's
+command option B and on a PC it's
+
+00:00:36.399 --> 00:00:42.879
+control option B. So let me do that a
+few times. There you go. You see? So
+
+00:00:41.040 --> 00:00:46.399
+that's that's something uh nice to get
+used to. So that's how you can bring in
+
+00:00:44.719 --> 00:00:50.640
+and out the two different screens if
+they're not there right now. Okay,
+
+00:00:48.480 --> 00:00:54.399
+that's oriented you. Now we're going to
+look at this repo and see what files
+
+00:00:52.640 --> 00:00:59.280
+we've got. Okay. Well, I have news for
+you. We don't have a lot of files. In
+
+00:00:57.199 --> 00:01:03.280
+fact, we've only got one file in this
+repo. It was a lot of palava for one
+
+00:01:01.440 --> 00:01:07.040
+file cloning this repo. I could have
+just given you this file, but here it
+
+00:01:05.199 --> 00:01:10.640
+is. It is, of course, the file called
+agents.md,
+
+00:01:08.880 --> 00:01:16.640
+which is the file that is going to be
+loaded in by default into the the the
+
+00:01:14.080 --> 00:01:21.439
+agents memory when we set it going. And
+if I click on it, we can have a look at
+
+00:01:18.560 --> 00:01:25.520
+it. And it's written in markdown, which
+means that it's got all the familiar
+
+00:01:23.439 --> 00:01:29.200
+markdown tags. That's a main heading.
+That's a secondary heading. It's got
+
+00:01:27.439 --> 00:01:34.720
+different sections. It's got bulleted
+lists and numbered lists with various
+
+00:01:32.079 --> 00:01:40.479
+sections. You can also rightclick on the
+file and say open preview. And if you do
+
+00:01:37.759 --> 00:01:44.640
+that, you see it in a sort of formatted
+way. And this is if you if you will,
+
+00:01:42.400 --> 00:01:48.240
+this is the way that the agent sees it
+because it sees markdown and it
+
+00:01:46.399 --> 00:01:52.079
+interprets it as actually being the
+headings that it is. So this is really
+
+00:01:50.240 --> 00:01:57.759
+looking at it the way the agent will see
+it. Okay. And I wrote this agents.mmd. I
+
+00:01:55.280 --> 00:02:01.119
+didn't generate it. I hand wrote it. I
+cranked it out. And I'm going to take
+
+00:01:59.200 --> 00:02:06.079
+you through it right now. So the idea of
+this project is to try and build a
+
+00:02:03.360 --> 00:02:10.959
+simple project management application.
+Something which has like a camban board
+
+00:02:08.239 --> 00:02:14.640
+like you have in in in Jira or in Trello
+or products like that. If you're not
+
+00:02:12.640 --> 00:02:17.680
+familiar with them, Google it and you'll
+see what I mean. And so we want one of
+
+00:02:16.560 --> 00:02:21.760
+these things. It's like like a like a
+sort of note board with cards that you
+
+00:02:19.599 --> 00:02:25.760
+can move between them. So I've got the
+first section is called business
+
+00:02:23.280 --> 00:02:30.800
+requirements of the canban project. We
+want an MVP, a minimum viable product, a
+
+00:02:28.319 --> 00:02:34.400
+prototype if you will of a canban style
+project management application as a web
+
+00:02:32.480 --> 00:02:38.959
+app. It should only have one board.
+Let's keep it simple. Always start
+
+00:02:36.239 --> 00:02:44.800
+simple. Have fixed five columns that can
+be renamed. Each card will have a title
+
+00:02:42.000 --> 00:02:48.400
+and details only. We want a drag and
+drop interface to move cards between
+
+00:02:46.720 --> 00:02:51.760
+columns. Okay, so that's not so simple,
+but we need something that's going to be
+
+00:02:49.840 --> 00:02:56.319
+cool. You're going to be able to add a
+card, uh, delete an existing card, but
+
+00:02:54.400 --> 00:03:00.720
+no more functionality than that. No
+archive, no search and filter. Keep it
+
+00:02:58.560 --> 00:03:05.760
+simple. The priority is a slick,
+professional, gorgeous UI, very simple
+
+00:03:03.519 --> 00:03:09.120
+features, and it should open with dummy
+data. There are the business
+
+00:03:07.200 --> 00:03:13.280
+requirements. They're laid out. The
+sorts of tricks to doing a good
+
+00:03:10.879 --> 00:03:17.120
+agents.md. You want to lay things out to
+be precise. You don't want to be
+
+00:03:14.720 --> 00:03:20.319
+ambiguous. You want to be very clear to
+generally focus on the positives. But
+
+00:03:18.959 --> 00:03:25.519
+I've got a couple of negatives in there,
+but that's okay. Generally, focus on on
+
+00:03:22.800 --> 00:03:30.400
+being sort of assertive and clear and
+and do it in a way that means that it's
+
+00:03:28.239 --> 00:03:34.560
+absolutely obvious what needs to be
+built. And I know what you're thinking.
+
+00:03:32.080 --> 00:03:37.680
+You're thinking, "But but Ed, when in
+real world when we're building big
+
+00:03:36.080 --> 00:03:41.599
+projects, they're much more complicated
+than this." And I say patience,
+
+00:03:39.840 --> 00:03:44.799
+patience. We've got three weeks
+together. There'll be time to get more
+
+00:03:43.440 --> 00:03:49.440
+complicated. We want to start with
+something neat. Okay. So this is is the
+
+00:03:48.080 --> 00:03:52.959
+requirements and by the way you should
+feel free to change this if you want to
+
+00:03:51.280 --> 00:03:56.879
+have something different if you want to
+see what get the same as me or similar
+
+00:03:54.879 --> 00:04:01.280
+to me then stick with this but feel free
+to change it the technical details so we
+
+00:03:59.760 --> 00:04:06.159
+I am going to try and tell it how I
+wanted to build it a bit I want it to be
+
+00:04:03.760 --> 00:04:10.400
+a NexJS app I want it to use that
+technology I want it to be in a
+
+00:04:08.560 --> 00:04:14.400
+subdirectory called front end so there
+can be a subdirectory here called front
+
+00:04:11.840 --> 00:04:19.840
+end no persistence nothing being saved
+here no user login or anything like
+
+00:04:17.040 --> 00:04:24.880
+that. Tell it to use popular libraries
+as simple as possible but with an
+
+00:04:21.919 --> 00:04:28.720
+elegant UI. There's you might say, isn't
+that some repetition with the previous
+
+00:04:26.479 --> 00:04:31.840
+section? There's no harm in repetition
+with these things, particularly for the
+
+00:04:30.400 --> 00:04:36.800
+really important points you want to
+make. Be be clear. It's fine to repeat
+
+00:04:34.720 --> 00:04:41.440
+yourself. Okay. Next up, I've got a
+color scheme. These are my favorite
+
+00:04:38.639 --> 00:04:45.759
+colors that I use for my my various
+decks. So, I just pasted it in here. I
+
+00:04:43.440 --> 00:04:48.639
+had it to hand. You can change this up.
+Use your own or just take it out. Let
+
+00:04:47.440 --> 00:04:52.560
+let it come up with its own color
+scheme. You don't need to to do this if
+
+00:04:50.479 --> 00:04:57.680
+you don't wish. And then I got a
+strategy section. Write a plan with
+
+00:04:55.520 --> 00:05:02.639
+success criteria for each phase to be
+checked off. Include project
+
+00:04:59.520 --> 00:05:06.320
+scaffolding, rigorous unit testing. Then
+execute the plan. Then carry out
+
+00:05:04.560 --> 00:05:11.520
+extensive integration testing with
+playright or similar fixing defects.
+
+00:05:09.600 --> 00:05:16.080
+Only completes when the MVP is finished
+and tested with the server running and
+
+00:05:13.840 --> 00:05:19.199
+ready for the user. I use many of these
+same kinds of things often. So, so this
+
+00:05:18.080 --> 00:05:24.960
+is something that's that's fairly
+boilerplate. It's always good to lay it
+
+00:05:21.680 --> 00:05:28.880
+out this way. Increasingly, it's less
+necessary to say things like this
+
+00:05:26.800 --> 00:05:33.440
+because this kind of strategy is the
+kind of default strategy that most of
+
+00:05:31.280 --> 00:05:37.120
+these agentic AIs are now following more
+and more closely. But there's no harm in
+
+00:05:35.520 --> 00:05:40.960
+putting it in here. And I found this was
+kind of helpful. So, I've kept it in.
+
+00:05:39.039 --> 00:05:45.039
+And then at the end, coding standards.
+These three are just three that that I
+
+00:05:42.960 --> 00:05:48.160
+like to use. similar kind of thing.
+Actually, I I used to use a lot more
+
+00:05:46.720 --> 00:05:52.400
+than this. I used to use this a lot, but
+but it's becoming increasingly less
+
+00:05:50.240 --> 00:05:57.840
+necessary to say this because LLMs are
+starting to get the joke, but I say use
+
+00:05:55.360 --> 00:06:02.080
+latest versions of libraries, idiomatic
+approaches as of today. I don't need to
+
+00:06:00.560 --> 00:06:06.560
+tell it the date. I need to hardcode the
+date because they've got access to that,
+
+00:06:03.759 --> 00:06:10.720
+but I just remind it to to be cognizant
+that it needs to look at the latest
+
+00:06:08.160 --> 00:06:16.000
+versions. Keep it simple. Never
+overengineer. Always simplify. No
+
+00:06:13.520 --> 00:06:20.479
+unnecessary defensive programming, no
+extra features, focus on simplicity.
+
+00:06:18.800 --> 00:06:25.120
+Again, it's less necessary to say it
+now, but I still it's I still see it
+
+00:06:22.720 --> 00:06:31.039
+frequently over complicating and I feel
+like you can't stress this too much. So,
+
+00:06:27.280 --> 00:06:36.720
+I do be concise. Keep read me minimal,
+important. No emojis ever. Like to put
+
+00:06:34.560 --> 00:06:41.120
+that in there because these things love
+to make emojis and emojis are a pain and
+
+00:06:39.600 --> 00:06:44.319
+they just get in the way. And and maybe
+you like emojis, in which case you can
+
+00:06:42.639 --> 00:06:48.720
+take this out and and let it let it go
+to town. But uh I I find it thoroughly
+
+00:06:46.800 --> 00:06:54.160
+tiresome and and it also does actually
+cause some breaks sometimes with with
+
+00:06:50.800 --> 00:06:59.120
+Windows PCs. So So I like to say no no
+emojis. As I say, you you can you can
+
+00:06:56.639 --> 00:07:02.880
+add on more and you feel free to add on
+some of your your own pet peeves to get
+
+00:07:01.280 --> 00:07:06.080
+this right. And it's something that that
+can be a sort of living breathing
+
+00:07:04.319 --> 00:07:09.199
+document for you of the the coding
+stands you like. And we'll find out
+
+00:07:07.680 --> 00:07:12.960
+later how you can have things like this
+in a more central place where they're
+
+00:07:10.800 --> 00:07:17.680
+used for all of your projects. Now, you
+might be thinking, "Okay, Ed, but you
+
+00:07:15.039 --> 00:07:21.440
+just shown us this file, but don't don't
+we have to learn how to write these
+
+00:07:19.120 --> 00:07:26.720
+kinds of things ourselves?" And the
+answer is, "Well, yes, but to be honest,
+
+00:07:24.560 --> 00:07:31.680
+you can always just start with what I've
+got here as a starting point, or you can
+
+00:07:29.199 --> 00:07:35.599
+just write one yourself from scratch. It
+actually honestly doesn't matter that
+
+00:07:33.840 --> 00:07:40.000
+much. You got to get into the habit of
+being very specific and simple about
+
+00:07:38.080 --> 00:07:43.280
+what you want. You don't need to give it
+technical details. It can figure that
+
+00:07:41.680 --> 00:07:46.400
+out itself. You don't need to give a
+color scheme. You don't need to give it
+
+00:07:44.720 --> 00:07:49.759
+the strategy, but you could just copy
+exactly what I've got here. And the
+
+00:07:48.240 --> 00:07:53.120
+coding standards again, you could start
+with exactly what I've got. You could
+
+00:07:51.360 --> 00:07:56.960
+add to them over during this course,
+we're going to be experimenting with
+
+00:07:54.800 --> 00:08:01.120
+different kinds of of of standards and
+rules that we will give these LLMs. So,
+
+00:07:59.680 --> 00:08:06.960
+this is something which you can you can
+experiment with. You can also begin with
+
+00:08:03.759 --> 00:08:11.680
+something much more minimal, run it, see
+what you get, and then delete everything
+
+00:08:09.280 --> 00:08:15.599
+that it's built, and rewrite this to be
+something that's more precise and and
+
+00:08:13.599 --> 00:08:18.800
+accounts for where it went wrong when it
+was just just allowed to do whatever it
+
+00:08:16.960 --> 00:08:22.960
+wants. That's a very effective
+technique, working iteratively like
+
+00:08:20.639 --> 00:08:27.680
+that. So, these are all great ways to
+build your agents.mmd
+
+00:08:25.280 --> 00:08:31.680
+and and uh yeah, honestly, you can you
+can always just begin with what I have
+
+00:08:29.680 --> 00:08:35.519
+here and just updating the requirements
+to be what you want. And now I'd like
+
+00:08:33.440 --> 00:08:41.279
+you to bring up the cursor settings. You
+can get to it from the settings menu or
+
+00:08:37.599 --> 00:08:48.480
+on a PC, control shiftJ. On a Mac,
+command shiftJ. Here it is. Go to
+
+00:08:44.240 --> 00:08:54.560
+agents. Scroll down to the um auto run
+section. And this is now your choice. If
+
+00:08:52.800 --> 00:09:00.320
+you know, if you have some sense of what
+you're doing, you're familiar with the
+
+00:08:56.080 --> 00:09:06.000
+risks, you can do this on yolo mode. Run
+everything unsandboxed as we did for
+
+00:09:03.120 --> 00:09:10.160
+instant. Now, this is a very low risk.
+The project we're about to do is low
+
+00:09:07.680 --> 00:09:14.000
+risk, and personally, I'm happy doing
+this. I know what's happening. I can
+
+00:09:12.000 --> 00:09:17.279
+kick it off. I'll walk away. It's a risk
+I'm comfortable with. But it's a
+
+00:09:15.680 --> 00:09:21.440
+personal preference. If you're not
+entirely sure about what's going on and
+
+00:09:19.600 --> 00:09:26.800
+what you're signing up for, then please
+leave it auto run in sandbox or even ask
+
+00:09:24.399 --> 00:09:31.200
+every time. And that way you'll see what
+it's doing at each step, the files it's
+
+00:09:28.959 --> 00:09:33.680
+creating. You will say approve and you
+can keep doing that. And you can keep
+
+00:09:32.560 --> 00:09:37.760
+doing that until you get more
+comfortable with what's happening. And
+
+00:09:35.120 --> 00:09:42.640
+then you can move it into run everything
+sand unsandbox to yolo mode when you're
+
+00:09:40.560 --> 00:09:48.959
+ready. But I'm I'm here to take some
+risks. So I'm going with that from the
+
+00:09:44.480 --> 00:09:48.959
+get-go. Okay, there we go.
+

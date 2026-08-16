@@ -1,0 +1,1389 @@
+{
+  "title": "AI Coder Course — Exam Portal",
+  "subtitle": "Week 1–3 quizzes from the lecture subtitles and descriptions. Multiple choice only.",
+  "instructorNote": "Questions are drawn only from what the course actually taught. Options are meant to be close — not guessable by length or jargon.",
+  "sections": {
+    "week1": {
+      "id": "week1",
+      "title": "Week 1 — Vibe Coding",
+      "blurb": "IDEs, LLMs, agents.md, YOLO vs Ralph, and a commercial-style MVP.",
+      "questionCount": 20,
+      "questions": [
+        {
+          "id": "w1-01",
+          "topic": "Agent definition",
+          "question": "According to the late-2025 consensus definition taught in the course, what is an AI agent?",
+          "options": [
+            "An LLM that runs tools in a loop to achieve a goal",
+            "A chatbot given a long system prompt and a memory store",
+            "Any system that can browse the web without a human present",
+            "An LLM whose tokens orchestrate future model calls as a workflow"
+          ],
+          "correct": "An LLM that runs tools in a loop to achieve a goal",
+          "hint": "The definition that “planted the flag” names three ingredients, not just independence.",
+          "explanation": "Correct: Simon Willison’s late-2025 consensus, which the course treats as current, is that an AI agent is an LLM that runs tools in a loop to achieve a goal. Wrong: a long system prompt plus memory is still just an application around a model, not that definition. Wrong: early OpenAI-style “works independently” (for example a browser agent booking things) is an older, narrower framing. Wrong: “an LLM controls the workflow” is the earlier Hugging Face / Anthropic Building Effective Agents wording, which the course presents as prior, not the winning 2025 flag.",
+          "source": "Week 1, Day 2 — Tools, Loops, and the Definition of AI Agents"
+        },
+        {
+          "id": "w1-02",
+          "topic": "Illusion of memory",
+          "question": "Why can a chat product appear to remember your name later in the same thread?",
+          "options": [
+            "The app resends the whole conversation on every new model call",
+            "The model writes your identity into its weights after the first turn",
+            "A separate memory network sits beside the language model and is queried",
+            "Only the latest user message is sent, plus a hidden user-profile token"
+          ],
+          "correct": "The app resends the whole conversation on every new model call",
+          "hint": "Every raw model call is stateless; the “memory” has to live in the input.",
+          "explanation": "Correct: each LLM call is stateless. Chat products create an illusion of memory by resending the entire conversation so far. Wrong: the model does not update its weights from your chat. Wrong: there is not a second neural net inside the LLM that stores you. Wrong: sending only the latest message (even with a magic profile token) is exactly what would make “Who am I?” fail on a raw call.",
+          "source": "Week 1, Day 2 — How LLMs Work / Context Engineering"
+        },
+        {
+          "id": "w1-03",
+          "topic": "Tokens and inference",
+          "question": "At each generation step, what does an LLM actually emit?",
+          "options": [
+            "A probability distribution over possible next tokens",
+            "The single most likely next word, with no alternatives scored",
+            "A complete paragraph assembled internally in one internal shot",
+            "A database lookup of the closest matching training document"
+          ],
+          "correct": "A probability distribution over possible next tokens",
+          "hint": "The unit is not “the next word,” and generation is not one-shot.",
+          "explanation": "Correct: the model outputs a probability distribution over every possible next token (often a word, often part of a word). Inference then samples/chooses, appends that token, and feeds the growing sequence back in. Wrong: it is not limited to a single unscored word. Wrong: it does not write a full paragraph in one internal step. Wrong: it is a statistical pattern matcher, not a document lookup.",
+          "source": "Week 1, Day 2 — How LLMs Work: Tokens, Memory, and Reasoning"
+        },
+        {
+          "id": "w1-04",
+          "topic": "Tool execution",
+          "question": "When a coding agent “uses Python” or “searches the web,” who actually runs that action?",
+          "options": [
+            "Surrounding software interprets special tokens and executes the tool",
+            "The transformer runs the interpreter or browser inside its own layers",
+            "The model simply rewords the final answer; no extra runtime is involved",
+            "A second model trained only on tool APIs executes the call by itself"
+          ],
+          "correct": "Surrounding software interprets special tokens and executes the tool",
+          "hint": "The neural net never leaves token-land; something around it has to act.",
+          "explanation": "Correct: the LLM only emits tokens. If the prompt allows special outputs (Python, search, and so on), surrounding software interprets them, runs the tool, and calls the model again with the result. Wrong: the transformer does not browse or execute Python in its layers. Wrong: tool use is not just nicer wording of the answer. Wrong: a second specialist model is not what the course taught as the execution path.",
+          "source": "Week 1, Day 2 — Tools, Loops, and the Definition of AI Agents"
+        },
+        {
+          "id": "w1-05",
+          "topic": "Vibe coding",
+          "question": "What did Karpathy originally mean by “vibe coding”?",
+          "options": [
+            "Fully giving in to the vibes and forgetting that the code even exists",
+            "Using autocomplete while still reading and approving every single diff",
+            "Writing a precise spec first, then letting an agent execute it in phases",
+            "Pair-programming while you type the production code and the model comments"
+          ],
+          "correct": "Fully giving in to the vibes and forgetting that the code even exists",
+          "hint": "The original tweet is about an attitude toward the code, not a workflow brand.",
+          "explanation": "Correct: Karpathy coined vibe coding as fully giving in to the vibes, embracing the exponentials, and forgetting that the code even exists — possible because LLMs were getting too good. Wrong: reading every diff is the opposite of that original stance. Wrong: spec-then-execute is closer to 2025 structured / spec-driven work. Wrong: you typing production code is ordinary pair programming, not the original vibe-coding claim.",
+          "source": "Week 1, Day 1 — Vibe Coding, Agentic Coders & Coding Agents"
+        },
+        {
+          "id": "w1-06",
+          "topic": "Agentic coder vs coding agent",
+          "question": "In this course’s terminology, what is an “agentic coder”?",
+          "options": [
+            "A person who uses agents to help them write software",
+            "A person whose job is to implement agent frameworks from scratch",
+            "A platform such as Cursor or Claude Code that writes the code",
+            "An amateur who ships prompts without ever looking at the output"
+          ],
+          "correct": "A person who uses agents to help them write software",
+          "hint": "The course warns that the same phrase is used two different ways in the industry.",
+          "explanation": "Correct: on this course, “agentic coder” means someone using agents to help them code. Wrong: other people use the same phrase for people building agents — that is not this course’s meaning. Wrong: Cursor and Claude Code are coding agents (platforms), not “agentic coders.” Wrong: shipping blindly is closer to irresponsible vibe coding, not the course definition of agentic coder.",
+          "source": "Week 1, Day 1 — Vibe Coding, Agentic Coders & Coding Agents"
+        },
+        {
+          "id": "w1-07",
+          "topic": "Yegge stages",
+          "question": "In Steve Yegge’s eight stages, what is the conceptual shift at stage 4?",
+          "options": [
+            "The agent occupies the main window and attention moves off the code",
+            "You enable YOLO so the sidebar agent can accept every tool call",
+            "You leave the IDE entirely and work only through a terminal CLI",
+            "A master orchestrator starts managing other manager and worker agents"
+          ],
+          "correct": "The agent occupies the main window and attention moves off the code",
+          "hint": "YOLO in the sidebar is earlier; the CLI and orchestrators are later stages.",
+          "explanation": "Correct: stage 4 is the shift where the agent occupies the main window, diffs fly by, and your attention is on the agent rather than the code — you may even walk away. Wrong: YOLO while still in the IDE sidebar is stage 3. Wrong: CLI agents are stage 5. Wrong: a master/orchestrator agent is stage 8.",
+          "source": "Week 1, Day 1 — The 8 Stages of AI Coding"
+        },
+        {
+          "id": "w1-08",
+          "topic": "Enterprise sweet spot",
+          "question": "Where did the instructor place the sweet spot for quality, reliable, scalable software?",
+          "options": [
+            "Between stages 5 and 6 — CLI agents, not full orchestration",
+            "At stage 8 — a master agent managing manager and worker teams",
+            "At stages 2 and 3 — sidebar agents that still ask permission",
+            "At stage 1 — ChatGPT and autocomplete used as a side reference"
+          ],
+          "correct": "Between stages 5 and 6 — CLI agents, not full orchestration",
+          "hint": "More sophisticated on the ladder is not the same as “best for enterprise.”",
+          "explanation": "Correct: more sophisticated is not automatically better for enterprise. The taught sweet spot is between stages 5 and 6 (CLI, maybe a few concurrent agents). Stages 7–8 are shown; whether you would use them in enterprise “today” is left open. Wrong: stage 8 is not the recommended enterprise default. Wrong: stages 2–3 are Week 1 IDE territory, not the quality/scale sweet spot. Wrong: stage 1 is explicitly not where Week 1 even starts.",
+          "source": "Week 1, Day 1 — The 8 Stages of AI Coding"
+        },
+        {
+          "id": "w1-09",
+          "topic": "Context windows",
+          "question": "Which taught context-window sizes match GPT 5.2, Claude Sonnet/Opus 4.5, and Gemini as presented?",
+          "options": [
+            "About 400K, 200K, and 1M tokens respectively",
+            "About 200K, 400K, and 1M tokens respectively",
+            "About 1M, 200K, and 400K tokens respectively",
+            "About 128K, 128K, and 200K tokens respectively"
+          ],
+          "correct": "About 400K, 200K, and 1M tokens respectively",
+          "hint": "Headline maxima still degrade in quality before you hit the hard cap.",
+          "explanation": "Correct: taught maxima were GPT 5.2 ≈ 400K, Claude Sonnet/Opus 4.5 ≈ 200K, Gemini (Antigravity) ≈ 1M. Quality degrades before the hard limit; best performance is near the start of a window. Wrong: 200K then 400K swaps GPT and Claude. Wrong: putting 1M on GPT is backwards. Wrong: 128K figures are not the numbers taught for these models.",
+          "source": "Week 1, Day 2 — Context Engineering"
+        },
+        {
+          "id": "w1-10",
+          "topic": "agents.md hierarchy",
+          "question": "When nested agents.md files conflict, which rule did the course teach?",
+          "options": [
+            "The inner file for the subtree being worked on overrides the outer one",
+            "The root agents.md always wins over any subdirectory file",
+            "Every nested agents.md loads at session start and is merged equally",
+            "Nested files load only if you @-mention them in the user prompt"
+          ],
+          "correct": "The inner file for the subtree being worked on overrides the outer one",
+          "hint": "Not every nested file is always in context — only the path the agent is in.",
+          "explanation": "Correct: root agents.md is always in context. Nested agents.md files load only when the agent works in that subtree (walking inward, then parents). Inner overrides outer. Wrong: outer does not beat inner. Wrong: nested files are not all loaded at once. Wrong: you do not have to @-mention them for the hierarchy to apply. Related names: Claude Code uses claude.md; Antigravity uses gemini.md / .agent rules — same idea.",
+          "source": "Week 1, Day 2 — Mastering agents.md"
+        },
+        {
+          "id": "w1-11",
+          "topic": "Writing agents.md",
+          "question": "What writing style did the course recommend for an agents.md file?",
+          "options": [
+            "Concise positive instructions, with success criteria as a checklist",
+            "Long lists of “never” and “don’t” rules to block every past failure",
+            "A friendly README packed with emojis so the agent stays cooperative",
+            "As many tokens as the window allows, so nothing important is omitted"
+          ],
+          "correct": "Concise positive instructions, with success criteria as a checklist",
+          "hint": "Those tokens are precious, and models handle some instruction shapes better than others.",
+          "explanation": "Correct: keep it concise, assertive, high-signal. Include project goals and success criteria as a checklist. Prefer what to do over long “never/don’t” lists — models handle positives more coherently. IMPORTANT in caps and backticks help; short READMEs; no emojis. Wrong: piles of negatives are the discouraged style. Wrong: emoji READMEs are treated as slop. Wrong: filling the window hurts quality; less is more.",
+          "source": "Week 1, Day 2 — Mastering agents.md"
+        },
+        {
+          "id": "w1-12",
+          "topic": "Ralph Loops",
+          "question": "How does a Ralph Loop differ from ordinary YOLO agent mode?",
+          "options": [
+            "It wraps the inner tool loop in an outer self-feedback loop that can run overnight",
+            "It is simply YOLO with a longer timeout and no extra evaluation step",
+            "A human types new feedback at the start of each of about ten cycles",
+            "It replaces the inner tool loop with a single one-shot completion"
+          ],
+          "correct": "It wraps the inner tool loop in an outer self-feedback loop that can run overnight",
+          "hint": "YOLO is roughly dinner-length; this pattern is a category of long-running self-feedback.",
+          "explanation": "Correct: coined by Geoffrey Huntley (Ralph Wiggum). An agent already loops tools to a goal; Ralph wraps that in an outer loop: run → evaluate → generate its own feedback / update objectives → run again, up to ~10 big cycles. YOLO ≈ an hour / dinner; Ralph ≈ hours / overnight. Wrong: it is not just a longer YOLO timeout. Wrong: the human does not type each cycle’s feedback (the FPS demo was one-shot). Wrong: the inner tool loop still exists.",
+          "source": "Week 1, Day 2 — Evolution of AI Coding Workflows: YOLO to Ralph Loops"
+        },
+        {
+          "id": "w1-13",
+          "topic": "Choosing a workflow",
+          "question": "For which work did the course recommend a structured 2025-style process instead of Ralph loops?",
+          "options": [
+            "Mission-critical systems, large repos, and novel libraries with little training data",
+            "Greenfield boilerplate React, HTML, and CRUD prototypes with higher risk appetite",
+            "Overnight MVP experiments in an empty directory you can throw away",
+            "Toy games where a one-shot prompt is enough to get a playable result"
+          ],
+          "correct": "Mission-critical systems, large repos, and novel libraries with little training data",
+          "hint": "Match the workflow to the job — including work the models have barely seen.",
+          "explanation": "Correct: structured plan/review/spec-driven work is for mission-critical enterprise, commercial SaaS, large codebases, and highly innovative work (the MCP-server example: models lack training data and write non-idiomatic code). Wrong: boilerplate greenfield, throwaway MVPs, and toy games are exactly where YOLO / Ralph / swarms were treated as reasonable. You remain accountable either way.",
+          "source": "Week 1, Day 2 — Evolution of AI Coding Workflows"
+        },
+        {
+          "id": "w1-14",
+          "topic": "IDE vs plugin vs CLI",
+          "question": "How did the course position GitHub Copilot relative to Cursor?",
+          "options": [
+            "Copilot is typically a VS Code extension; Cursor is a VS Code fork",
+            "Copilot is a VS Code fork; Cursor is only a plugin on real VS Code",
+            "Both are CLI-first tools that happen to offer a sidebar as a backup",
+            "Copilot is Google’s fork of VS Code, while Cursor is Microsoft’s IDE"
+          ],
+          "correct": "Copilot is typically a VS Code extension; Cursor is a VS Code fork",
+          "hint": "The taxonomy is IDEs vs plugins vs CLIs — not “which chat panel looks nicer.”",
+          "explanation": "Correct: three surfaces were taught. IDEs (Cursor / Codex app / Antigravity / Windsurf) have windows and panes; Cursor is an Anysphere fork of VS Code. Plugins: GitHub Copilot as a VS Code extension is the common Copilot path. CLIs: Claude Code popularized the retro terminal. Wrong: those fork/plugin roles are reversed. Wrong: Copilot is not CLI-first in this taxonomy. Wrong: Google’s fork is Antigravity, not Copilot.",
+          "source": "Week 1, Day 1 & Day 4 — Surfaces and choosing an LLM"
+        },
+        {
+          "id": "w1-15",
+          "topic": "Antigravity rules",
+          "question": "Where do Antigravity’s persistent agent rules live, as taught?",
+          "options": [
+            "In .agent/Rules files such as strategy.md, not a root agents.md",
+            "In a root agents.md, loaded the same way Cursor and Copilot load it",
+            "In claude.md, because Antigravity shares Claude Code’s memory file",
+            "Only in Cursor-style rules files that have fully replaced agents.md"
+          ],
+          "correct": "In .agent/Rules files such as strategy.md, not a root agents.md",
+          "hint": "Same idea as agents.md, different filename and folder — easy to mix up in a comparison.",
+          "explanation": "Correct: Antigravity (Google’s VS Code fork) used .agent/Rules/strategy.md, with activation modes such as always on. Wrong: it does not use root agents.md the way Cursor/Copilot/Codex do. Wrong: claude.md is Claude Code. Wrong: Cursor still converges on agents.md; rules files were not taught as having replaced it. The Kanban ranking also warned not to compare IDEs without comparing models.",
+          "source": "Week 1, Day 3 — Antigravity IDE and Gemini 3 Pro"
+        },
+        {
+          "id": "w1-16",
+          "topic": "Be the Boss",
+          "question": "Under the “Be the Boss” principles, what three things should a concise agents.md cover?",
+          "options": [
+            "What to build (the spec), the style, and measurable success",
+            "The model name, the API key location, and whether YOLO is enabled",
+            "A full architecture, every future epic, and an 80% coverage quota",
+            "Team bios, a marketing README, and a list of banned libraries"
+          ],
+          "correct": "What to build (the spec), the style, and measurable success",
+          "hint": "The first principle is an investment in one short file — not a giant spec dump.",
+          "explanation": "Correct: invest in a concise agents.md covering the spec, style, and measurable success. Other principles: start simple (the whole first file is an MVP), work incrementally, don’t get lazy after early wins, and manage frustration/downsides. Wrong: model/key/YOLO are session choices, not that file’s job. Wrong: boiling the ocean and an 80% quota were later shown as traps. Wrong: bios and emoji READMEs are slop, not the spec.",
+          "source": "Week 1, Day 4 — Five Principles for Successful Vibe Coding"
+        },
+        {
+          "id": "w1-17",
+          "topic": "Learning vs AI assistance",
+          "question": "In the Anthropic-cited comparison of juniors with vs without AI assistants, what happened on a quiz about the underlying library?",
+          "options": [
+            "The AI group scored about 50% and the no-AI group about 67%",
+            "The AI group scored about 67% and the no-AI group about 50%",
+            "Both groups scored about the same, with a large speed win for the AI group",
+            "The AI group scored near 90%, showing assistants improve conceptual learning"
+          ],
+          "correct": "The AI group scored about 50% and the no-AI group about 67%",
+          "hint": "The lecture’s point was a learning cost, not a claim that assistants make you smarter.",
+          "explanation": "Correct: on a quiz about the underlying library, the AI-assisted group scored ~50% and the no-AI group ~67%. Small productivity gain on that task, significant learning hit. Keep learning while using agents. Wrong: swapping the scores reverses the finding. Wrong: they did not score the same. Wrong: assistants were not shown to improve that quiz performance.",
+          "source": "Week 1, Day 4 — Responsible YOLO Coding / OpenRouter"
+        },
+        {
+          "id": "w1-18",
+          "topic": "OpenRouter",
+          "question": "What problem does OpenRouter solve as taught in the course?",
+          "options": [
+            "One account and key can reach many providers instead of separate vendor keys",
+            "It is itself a frontier LLM that replaces GPT, Claude, and Gemini",
+            "Free endpoints keep full privacy by default and never train on your prompts",
+            "It stores your .env in the cloud so you never paste an API key locally"
+          ],
+          "correct": "One account and key can reach many providers instead of separate vendor keys",
+          "hint": "It is a gateway in the middle — and the free path has an explicit privacy tradeoff.",
+          "explanation": "Correct: openrouter.ai sits in the middle so you don’t need separate OpenAI/Anthropic/Google accounts. One key (must match exactly, including the sk-or-v1- prefix). Wrong: it is not an LLM. Wrong: for free models you enable privacy settings that may train on inputs and may publish prompts — not “full privacy by default.” Wrong: keys still live in local .env (and .gitignore), not in OpenRouter’s vault as a substitute for .env.",
+          "source": "Week 1, Day 4 — Setting Up OpenRouter for AI Projects"
+        },
+        {
+          "id": "w1-19",
+          "topic": "Docker",
+          "question": "How did the course map Dockerfile, image, and container?",
+          "options": [
+            "Recipe, snapshot/blueprint, and the live isolated environment",
+            "Live process, recipe file, and the cloud registry that stores it",
+            "Virtual machine, hypervisor, and the guest operating system kernel",
+            "Compose file, Kubernetes pod, and the running production service"
+          ],
+          "correct": "Recipe, snapshot/blueprint, and the live isolated environment",
+          "hint": "Agents care about this because isolation and portability change how safely they can run.",
+          "explanation": "Correct: Dockerfile = recipe; image = snapshot/blueprint built from it; container = live isolated environment from an image (one image can yield many containers). Docker is a lightweight “computer within your computer” vs VMs. Relevant to agentic work for isolation (harder to smash the host) and portability. Wrong: those three roles are scrambled. Wrong: containers are not full VMs. Wrong: Compose/K8s were not the three terms taught in Web Apps 101.",
+          "source": "Week 1, Day 5 — Web Apps 101: Front-End, Back-End, APIs & Docker"
+        },
+        {
+          "id": "w1-20",
+          "topic": "Coverage theater",
+          "question": "What went wrong when the project rules demanded 80% unit-test coverage?",
+          "options": [
+            "The model followed the letter of the rule and ground out low-value tests",
+            "The model refused to write any tests until the coverage line was removed",
+            "Coverage above 80% made the agent skip integration tests automatically",
+            "The package manager refused to run the suite until coverage dropped below 80%"
+          ],
+          "correct": "The model followed the letter of the rule and ground out low-value tests",
+          "hint": "Models often obey the metric you wrote, not the quality you meant.",
+          "explanation": "Correct: an 80% coverage target caused letter-of-the-law grinding on low-value tests; the agent did not push back. Re-steer: valuable tests beat hitting 80%; missing 80% is OK. Same “trust but verify” theme as skipped tests, pip instead of UV, and “I fixed it” without a repro. Wrong: it did not refuse tests. Wrong: coverage did not auto-skip integration tests as a taught mechanism. Wrong: UV/pip was a separate drift issue, not a coverage lockout.",
+          "source": "Week 1, Day 5 — Planning, scaffolding, and FastAPI Kanban"
+        }
+      ]
+    },
+    "week2": {
+      "id": "week2",
+      "title": "Week 2 — Vibe Engineering",
+      "blurb": "Claude Code CLI, MCP vs skills vs plugins, Jira-to-PR, and debugging.",
+      "questionCount": 20,
+      "questions": [
+        {
+          "id": "w2-01",
+          "topic": "Vibe engineering",
+          "question": "What gap does Simon Willison’s term “vibe engineering” fill?",
+          "options": [
+            "Seasoned professionals accelerating with LLMs while staying accountable for the software",
+            "A faster, looser version of vibe coding that ignores how the code actually works",
+            "Anthropic’s official name for Claude Code’s professional subscription tier",
+            "Karpathy’s name for forgetting that the code exists and shipping overnight loops"
+          ],
+          "correct": "Seasoned professionals accelerating with LLMs while staying accountable for the software",
+          "hint": "The term is a contrast with “fast, loose, irresponsible” prompt-driven building.",
+          "explanation": "Correct: Willison coined vibe engineering for seasoned professionals who accelerate with LLMs while proudly staying accountable. Vibe coding, as he defined it here, is fast/loose/irresponsible with no attention to how the code works. Wrong: vibe engineering is not “vibe coding but quicker.” Wrong: it is not an Anthropic product name. Wrong: Karpathy’s original vibe coding is the opposite attitude, not this professional gap-filler.",
+          "source": "Week 2, Day 1 — Welcome to Pro Week: From Vibe Coding to Vibe Engineering"
+        },
+        {
+          "id": "w2-02",
+          "topic": "Claude Code origin",
+          "question": "What was Claude Code originally, before it became a mature product?",
+          "options": [
+            "A late-2024 side project by Boris Cherny, first called Claude CLI",
+            "Anthropic’s VS Code fork, shipped as an IDE before any terminal existed",
+            "The Claude Code SDK, released first so people could build their own agents",
+            "A plugin marketplace that later grew a command-line interface around it"
+          ],
+          "correct": "A late-2024 side project by Boris Cherny, first called Claude CLI",
+          "hint": "The origin story is a terminal agent loop, not an IDE that later grew a CLI.",
+          "explanation": "Correct: late 2024, Anthropic engineer Boris Cherny built a side project originally called Claude CLI. Generally available around February 2025, wider April 2025. September 2025 V2 matured checkpointing, subagents, hooks, skills, background tasks, and a Claude Code SDK. Wrong: it did not start as a VS Code fork. Wrong: the SDK drives the Claude Code ecosystem; it is not OpenAI Agents SDK and was not the first form. Wrong: marketplaces came later.",
+          "source": "Week 2, Day 1 — The Rise of Claude Code"
+        },
+        {
+          "id": "w2-03",
+          "topic": "/init and claude.md",
+          "question": "What does Claude Code’s /init command produce, and what is the professional caveat?",
+          "options": [
+            "A drafted claude.md from the repo — but you should not rely on Claude writing its own",
+            "A required new agents.md that Claude Code always reads instead of claude.md",
+            "A compact of the current session so /init can be run at the start of every day",
+            "A permission rule that permanently enables bypass-permissions for the project"
+          ],
+          "correct": "A drafted claude.md from the repo — but you should not rely on Claude writing its own",
+          "hint": "Claude Code’s memory file is not named the same as Cursor’s.",
+          "explanation": "Correct: Claude Code uses claude.md, not AGENTS.md. /init analyzes the repo and drafts claude.md. Best practice: do not rely on Claude writing its own; the human supervisor should write or heavily edit it. Wrong: it does not switch the product onto agents.md. Wrong: /init is not compaction and is not required every session. Wrong: it is not YOLO.",
+          "source": "Week 2, Day 1 — Getting Started with Claude Code CLI: Init, Context & Testing"
+        },
+        {
+          "id": "w2-04",
+          "topic": "Context buffer",
+          "question": "In /context, what is the reserved buffer at the end of Claude Code’s window for?",
+          "options": [
+            "Wiggle room so the session can compact (compress memory) before it hard-fails",
+            "Unused waste that you should fill with extra MCP servers to use the quota",
+            "A copy of claude.md that is loaded twice so it cannot be forgotten",
+            "Space reserved exclusively for YOLO so dangerous commands have their own budget"
+          ],
+          "correct": "Wiggle room so the session can compact (compress memory) before it hard-fails",
+          "hint": "Claude Code’s taught window size is 200K — and compaction is not lossless.",
+          "explanation": "Correct: Claude’s context is 200,000 tokens. /context shows memory (including claude.md), messages, free space, and an end buffer reserved so it can compact with wiggle room. Wrong: filling that buffer with extra MCP is the opposite of the advice. Wrong: claude.md is not duplicated into the buffer. Wrong: YOLO is a permission mode, not a token budget. Compacting mid-task was repeatedly warned against.",
+          "source": "Week 2, Day 1 — Init, Context & Testing"
+        },
+        {
+          "id": "w2-05",
+          "topic": "Hallucinated git secrets",
+          "question": "A code-review agent “critically” says your OpenRouter key is in git and must be rotated. What failure mode was demonstrated?",
+          "options": [
+            "A highly confident false positive: .env was gitignored and not on GitHub",
+            "A true finding: if .env exists on disk it is always already in git history",
+            "A sub-agent bug that the parent is allowed to treat as a sufficient root cause",
+            "A compaction artifact that only happens after /clear, never during review"
+          ],
+          "correct": "A highly confident false positive: .env was gitignored and not on GitHub",
+          "hint": "Confident, strongly worded security claims still have to be verified by a human.",
+          "explanation": "Correct: the review claimed rotate the key / remove .env from git history. False: .env was gitignored and not on GitHub. Classic LLM failure: highly confident, strongly worded. After pushback it admitted a sub-agent misread — and the instructor said don’t accept “the sub-agent got it wrong” as enough; it should have checked. The mistake can repeat after compact. Wrong: local .env ≠ in git. Wrong: blaming the sub-agent is not sufficient. Wrong: this was a review hallucination, not a /clear-only bug.",
+          "source": "Week 2, Day 1 — Claude Code Review: Fixing Hallucinations"
+        },
+        {
+          "id": "w2-06",
+          "topic": "/compact vs /clear",
+          "question": "What is the difference between /compact and /clear in Claude Code?",
+          "options": [
+            "/compact keeps a summary of the chat; /clear wipes history back to config files",
+            "/clear keeps a summary of the chat; /compact deletes claude.md from disk",
+            "They are identical except /compact also enables bypass-permissions",
+            "/compact restores git; /clear restores the last named session’s files"
+          ],
+          "correct": "/compact keeps a summary of the chat; /clear wipes history back to config files",
+          "hint": "One is a lossy summary; the other is a clean brain that re-reads your markdown.",
+          "explanation": "Correct: /compact summarizes/resets conversation history but keeps a summary (optional keep-instructions). /clear wipes history like a fresh `claude`, then it rereads config (claude.md). Prefer /compact yourself at task boundaries — not auto-compact mid-rewrite. After compact: often sharper, but lost discussion can repeat mistakes; put keep-forever facts in claude.md. Wrong: /clear does not keep a summary and does not delete claude.md. Wrong: neither flag is YOLO. Wrong: neither is git or session-file restore.",
+          "source": "Week 2, Day 2 — Commands, Shortcuts & Configuration"
+        },
+        {
+          "id": "w2-07",
+          "topic": "Shift+Tab vs YOLO",
+          "question": "What does Shift+Tab actually toggle in Claude Code, compared with real YOLO?",
+          "options": [
+            "Accept-edits (and plan mode) — not the same as bypassing all permissions",
+            "Bypass-permissions YOLO, which is also what accept-edits always enables",
+            "Named session resume, which restores both conversation and the working tree",
+            "Ralph Loop install, which is the official way to turn on skip-permissions"
+          ],
+          "correct": "Accept-edits (and plan mode) — not the same as bypassing all permissions",
+          "hint": "Auto-approving file diffs is a smaller switch than “do not ask before dangerous commands.”",
+          "explanation": "Correct: Shift+Tab cycles accept-edits on (auto-approve file diffs) and plan mode. With Opus, forcing plan mode is less necessary. Accept-edits is not YOLO. Real YOLO is `claude --dangerously-skip-permissions`, which will not ask before potentially dangerous commands — Anthropic’s warning says use a sandboxed container; you take responsibility. Wrong: those two modes are not the same. Wrong: Shift+Tab is not session resume. Wrong: Ralph is a plugin, not this shortcut.",
+          "source": "Week 2, Day 2 — Commands and YOLO Mode"
+        },
+        {
+          "id": "w2-08",
+          "topic": "Sessions vs checkpoints vs git",
+          "question": "Sessions, checkpoints, and git all “go back.” What does resuming a session restore?",
+          "options": [
+            "The conversation and context state — not the files in the repo",
+            "A full disk image of every file, including script and sub-agent edits",
+            "Only the last git commit, because sessions are aliases for commits",
+            "Checkpoints of each prompt plus a guaranteed revert of all side effects"
+          ],
+          "correct": "The conversation and context state — not the files in the repo",
+          "hint": "Three granularities: whole chat, per-prompt rewind, and real code history.",
+          "explanation": "Correct: sessions are whole conversation/context. Resume restores conversation, not repo/code. Checkpoints correspond to each prompt; rewind can restore conversation, code, or both — but only changes Claude knows it made. Git is the bulletproof long-term code snapshot. Wrong: there is no full disk image. Wrong: sessions are not git aliases. Wrong: rewind cannot undo independent script/sub-agent/human edits.",
+          "source": "Week 2, Day 2 — Sessions, Checkpoints & Git"
+        },
+        {
+          "id": "w2-09",
+          "topic": "Rewind limits",
+          "question": "Which changes can checkpoint rewind not undo?",
+          "options": [
+            "Edits made independently by a script, a sub-agent, or you outside Claude’s log",
+            "Any file Claude itself edited in the current session, by definition",
+            "Conversation text only — rewind never touches files, so this case cannot arise",
+            "Git commits created during the session, which rewind always deletes"
+          ],
+          "correct": "Edits made independently by a script, a sub-agent, or you outside Claude’s log",
+          "hint": "Rewind is not a VM snapshot; git remains the real safety net.",
+          "explanation": "Correct: rewind can only undo changes Claude knows it made. If a script or sub-agent changed files independently, or you changed files, those edits will not revert. Instructor workflow: git as primary safety net; checkpoints for immediate mistakes. Wrong: known Claude edits can be reverted (optionally with conversation). Wrong: rewind can restore code, not only chat. Wrong: rewind does not delete git commits.",
+          "source": "Week 2, Day 2 — Checkpoints, Rewind, and YOLO"
+        },
+        {
+          "id": "w2-10",
+          "topic": "Ralph vs Feature Dev",
+          "question": "How do Ralph Loops and the Feature Dev plugin sit relative to each other?",
+          "options": [
+            "Ralph is an outer autonomy loop; Feature Dev is a regimented seven-stage rail",
+            "Feature Dev is Ralph with a nicer name and the same overnight chaos",
+            "Ralph is the official Anthropic internal process; Feature Dev is a toy loop",
+            "Both are Shift+Tab modes; Feature Dev is simply Ralph with accept-edits on"
+          ],
+          "correct": "Ralph is an outer autonomy loop; Feature Dev is a regimented seven-stage rail",
+          "hint": "One is “let it iterate”; the other is “stay on rails and play a primary role.”",
+          "explanation": "Correct: Ralph (Huntley / Ralph Wiggum), installed as `ralph-loop@claude-plugins/official`, wraps an outer loop — great for prototypes/MVPs. Feature Dev is the polar opposite: Anthropic’s internal-style seven-stage feature workflow (explore, architecture, quality review, clarifying questions). Wrong: they are not the same product. Wrong: Feature Dev, not Ralph, is the official rails plugin. Wrong: neither is a Shift+Tab mode.",
+          "source": "Week 2, Day 2 & Day 4 — Ralph Loops and Feature Dev"
+        },
+        {
+          "id": "w2-11",
+          "topic": "What MCP is",
+          "question": "What is MCP actually standardizing, in the “USB-C for AI” metaphor?",
+          "options": [
+            "A protocol for connecting AI apps to external systems — not the tools themselves",
+            "Anthropic’s model weights, so every host runs the same Claude checkpoint",
+            "The stock-price and docs tools that ship inside Claude Code by default",
+            "Prompt templates and resources, which the course said overtook tools in popularity"
+          ],
+          "correct": "A protocol for connecting AI apps to external systems — not the tools themselves",
+          "hint": "The game-changer taught here is ecosystem adoption, not unique protocol magic.",
+          "explanation": "Correct: MCP (Model Context Protocol) is an open standard for connecting AI apps to external systems. Originally tools, prompt templates, and resources — tools took off. MCP is connectivity, not the tools themselves. Wrong: it is not model weights. Wrong: stock/docs servers are examples you add, not the protocol. Wrong: tools, not prompts/resources, were what took off. Cons: too many servers bloat context.",
+          "source": "Week 2, Day 3 — MCP, Skills & Plugins: The Big Three"
+        },
+        {
+          "id": "w2-12",
+          "topic": "Local vs remote MCP",
+          "question": "A “local” MCP server for live stock prices runs on your machine. What did the course emphasize?",
+          "options": [
+            "Local vs remote is where the process runs — local servers can still call the internet",
+            "Local means the server is offline-only and cannot fetch live market data",
+            "Local MCP is not real MCP; only remote SSE servers get the USB-C benefits",
+            "Local always means you wrote the server; shared npx/UV packages do not count"
+          ],
+          "correct": "Local vs remote is where the process runs — local servers can still call the internet",
+          "hint": "Polygon/Massive was the worked example of this confusion.",
+          "explanation": "Correct: local/remote refers to where the server process runs, not whether tools call the internet. Polygon ran locally but fetched live (or stale-free-tier) prices. Most MCP servers are local and still come from a shared repo (npx/UV/pip). Wrong: local ≠ offline. Wrong: local still gets MCP benefits. Wrong: you did not have to author it. Remote transports: SSE is legacy; streamable HTTP is the modern way.",
+          "source": "Week 2, Day 3 — MCP Servers: Hosts, Clients, and Discovery"
+        },
+        {
+          "id": "w2-13",
+          "topic": "Skill progressive disclosure",
+          "question": "For installed skills, what is always loaded into context?",
+          "options": [
+            "Only each skill’s metadata (name and description), via progressive disclosure",
+            "Every skill’s full instructions, scripts, and extra docs, all the time",
+            "Nothing until you type the skill’s slash name exactly, including the plugin prefix",
+            "The entire skill.md body, but never the YAML header, to save tokens"
+          ],
+          "correct": "Only each skill’s metadata (name and description), via progressive disclosure",
+          "hint": "Think of skills as extra claude.md files that load in layers, not all at once.",
+          "explanation": "Correct: three levels — (1) metadata name+description, always loaded; (2) instructions, if triggered; (3) resources/scripts only if needed. Scripts run via shell; processing stays out of context and only the result returns. Wrong: full files are not always loaded. Wrong: slash invocation helps but metadata is still always there. Wrong: the YAML header is the always-on part, not the part that is skipped.",
+          "source": "Week 2, Day 3 — Skills vs MCP"
+        },
+        {
+          "id": "w2-14",
+          "topic": "Plugins first",
+          "question": "When MCP, skills, and plugins could all work, what is the default starting point taught?",
+          "options": [
+            "Start with plugins, unless you know you need a specific MCP or skill",
+            "Always configure MCP first because it is lower-level and therefore safer",
+            "Always write a standalone skill first, then wrap it in MCP for discovery",
+            "Install as many of all three as possible so the model has more options"
+          ],
+          "correct": "Start with plugins, unless you know you need a specific MCP or skill",
+          "hint": "More extensions can confuse the model; auth-heavy tools are the usual MCP exception.",
+          "explanation": "Correct: start with plugins (bundles of MCPs, skills, slash commands, hooks, later agents). Use MCP directly for specialized tools with particular auth (GitHub, Jira, market data). Use standalone skills when repo-shared markdown/scripts are the point. Don’t overload plugins. Wrong: MCP-first is not the default. Wrong: skills-first then MCP is backwards of the framework. Wrong: more options cause routing confusion and context degradation.",
+          "source": "Week 2, Day 3 — MCP vs Skills vs Plugins: Choosing the Right Setup"
+        },
+        {
+          "id": "w2-15",
+          "topic": "Jira and GitHub MCP",
+          "question": "Why were Jira and GitHub added as raw MCP servers rather than only as plugins?",
+          "options": [
+            "They are powerful tools with particular authorization, so MCP is the proper path",
+            "Plugins cannot wrap GitHub or Jira at all, even as a discovery convenience",
+            "MCP is required because skills cannot live in a repo that also uses git",
+            "The GitHub plugin uses a PAT in claude.md, which is safer than MCP headers"
+          ],
+          "correct": "They are powerful tools with particular authorization, so MCP is the proper path",
+          "hint": "Skills were also taught as weaker on authorization than the MCP standard.",
+          "explanation": "Correct: famous, powerful, particular authorization — go through MCP. Atlassian: remote HTTP + OAuth 2; hangs often mean lost auth → /mcp and reauthenticate. GitHub: remote HTTP with Authorization header = fine-grained PAT (slim repo scopes). An official GitHub plugin exists but uses slightly different auth (env var); they still added MCP. Wrong: a GitHub plugin does exist. Wrong: skills/git can coexist. Wrong: PATs do not go in claude.md.",
+          "source": "Week 2, Day 4 — Jira MCP, GitHub MCP, and Feature Dev"
+        },
+        {
+          "id": "w2-16",
+          "topic": "Debugging strategy",
+          "question": "What is the first action in the disciplined debugging strategy before a long agent tangent?",
+          "options": [
+            "Git commit a snapshot; do not trust rewind as your only restore point",
+            "Turn on bypass-permissions so the agent can apply fixes without stopping",
+            "Immediately /clear so the bug cannot pollute claude.md with extra tokens",
+            "Paste a request to “just fix it” and refuse to provide the stack trace"
+          ],
+          "correct": "Git commit a snapshot; do not trust rewind as your only restore point",
+          "hint": "If the first paste-the-error loop fails, the next move is a markdown file with proof, not more YOLO.",
+          "explanation": "Correct: (1) git commit first — rewind misses side effects. (2) Small issues: paste the stack trace as-is, repeatedly. (3) If that fails: revert, then a regimented debug.md — reproduce, investigate, hypotheses, prove root cause, fix and prove it, write lessons into claude.md. (4) Red herring: restore, note what it is not, restart. Wrong: YOLO is not step one. Wrong: /clear before capturing lessons loses them. Wrong: “just fix it” without a repro is the failure mode.",
+          "source": "Week 2, Day 4 — Debugging Strategies for Claude Code"
+        },
+        {
+          "id": "w2-17",
+          "topic": "Home vs project claude.md",
+          "question": "Why must the home-directory claude.md stay short?",
+          "options": [
+            "It is injected into every session, so every token is paid on every project",
+            "Claude Code ignores project claude.md unless the home file is under 20 lines",
+            "Home files cannot mention UV or style rules; those belong only in plugins",
+            "A long home file disables compaction, which is required for Max plans"
+          ],
+          "correct": "It is injected into every session, so every token is paid on every project",
+          "hint": "There are two claude.md files with different jobs — global style vs this product.",
+          "explanation": "Correct: home claude.md is user-global, every project, every session. Keep it to pet peeves / extra nuggets (UV not pip, no emojis, prove root cause, short modules). Project claude.md is the human “boss” lever for this product (don’t duplicate Jira). Wrong: there is no 20-line ignore rule. Wrong: UV/style are exactly what he put in the home file. Wrong: length does not disable compact.",
+          "source": "Week 2, Day 5 — Skills & claude.md Setup"
+        },
+        {
+          "id": "w2-18",
+          "topic": "Available vs loaded tools",
+          "question": "After adding a large MCP server such as Polygon/Massive, /context showed a long tool list but only a few tools in the window. What distinction is that?",
+          "options": [
+            "Available vs loaded: not every listed tool is billed into the prompt",
+            "Local vs remote: loaded tools are remote and available tools are local",
+            "Skills vs MCP: loaded means a skill wrapped the MCP automatically",
+            "Host vs server: available tools belong to Claude; loaded tools belong to you"
+          ],
+          "correct": "Available vs loaded: not every listed tool is billed into the prompt",
+          "hint": "2026 Claude Code got better at not stuffing every tool description into the window.",
+          "explanation": "Correct: Polygon/Massive exposed many tools; only needed ones were loaded (example: a snapshot ticker at ~156 tokens). Available vs loaded is the efficiency feature so one fat server does not blow the window. Wrong: this is not the local/remote distinction. Wrong: it is not “a skill wrapped it.” Wrong: it is not host vs you. Context7 still added two tools (resolve library ID + query docs) you may need to say “use Context7” to trigger.",
+          "source": "Week 2, Day 3 — Adding MCP Servers: Context7 & Polygon IO"
+        },
+        {
+          "id": "w2-19",
+          "topic": "Feature Dev skipped tests",
+          "question": "Feature Dev built a full Next.js app from a vague Jira ticket and opened a PR. What still went wrong until a human asked?",
+          "options": [
+            "A later stage was skipped — no automated tests, no manual tests, no reviewer agents",
+            "Clarifying questions mean the plugin is stuck and cannot scaffold an app",
+            "A merged PR guarantees every Feature Dev stage already ran, including tests",
+            "Sub-agents brief the parent in full, so skipped tests would have been obvious"
+          ],
+          "correct": "A later stage was skipped — no automated tests, no manual tests, no reviewer agents",
+          "hint": "Farming work out of the parent window has a cost: the orchestrator understands less.",
+          "explanation": "Correct: Feature Dev stopped for clarifying questions (good), then built and PRed. Introspection: phase 6 skipped — no automated tests, no manual tests, no reviewer agents. Build passing ≠ validation. Sub-agents keep details out of parent context, so the orchestrator can miss that. Wrong: questions are the vague-ticket handling, not a stuck state. Wrong: a PR does not imply tests. Wrong: sub-agents do not automatically brief the parent in full.",
+          "source": "Week 2, Day 4 — Claude Code Builds a Full Next.js App from a Jira Ticket"
+        },
+        {
+          "id": "w2-20",
+          "topic": "Cerebras skill and missed Jira text",
+          "question": "For the Cerebras-backed legal-doc chat, why reject streaming, and what Jira requirement was still missed at the end?",
+          "options": [
+            "Cerebras is fast enough that one structured call is cleaner; the legal disclaimer was still missing",
+            "Streaming is required for any chat UX; the disclaimer appeared automatically from Jira",
+            "Cerebras is a Claude model, so streaming is built in; signup was the missed requirement",
+            "Multiple LLM calls were required for extraction; Feature Dev cannot miss Jira text"
+          ],
+          "correct": "Cerebras is fast enough that one structured call is cleaner; the legal disclaimer was still missing",
+          "hint": "A custom skill can steer the code — and a human still has to check acceptance criteria.",
+          "explanation": "Correct: three architecture agents proposed streaming; he wanted one structured LLM call (reply text + fields) because Cerebras is so fast streaming is unnecessary. The skill’s LiteLLM/OpenRouter/Cerebras extra_body showed up in the PR. PL-7 still missed the legal disclaimer from Jira despite review — human double-checks. Claude also added an unprompted try-before-signin (PLG) pattern. Wrong: streaming was not required. Wrong: Cerebras is an inference provider, not a Claude model. Wrong: Feature Dev + tests do not guarantee every Jira line lands.",
+          "source": "Week 2, Day 5 — Custom Cerebras skill, architecture, and final SaaS demo"
+        }
+      ]
+    },
+    "week3": {
+      "id": "week3",
+      "title": "Week 3 — Agentic Engineering",
+      "blurb": "Sub-agents, sandboxes, GSD vs Agent Teams vs Gastown, and the capstone.",
+      "questionCount": 20,
+      "questions": [
+        {
+          "id": "w3-01",
+          "topic": "Controlled chaos",
+          "question": "For “controlled chaos,” which order did the instructor recommend on a real project?",
+          "options": [
+            "Begin with control, loosen into chaos if results are good, tighten again if it rails off",
+            "Begin with a huge swarm, then add docs only after the first merge conflict",
+            "Treat orchestration as a chaos technique and skip sandboxes until production",
+            "Pick YOLO or spec-driven design forever; mixing them is how projects fail"
+          ],
+          "correct": "Begin with control, loosen into chaos if results are good, tighten again if it rails off",
+          "hint": "Think control rods in a reactor — chaos techniques are useful, not the default start.",
+          "explanation": "Correct: chaos techniques include YOLO, Ralph, swarms that “let it all happen.” Control includes shared filesystem docs, negative-feedback review/test, destroyable sandboxes, and orchestration with hierarchy (firmly control). Aim for controlled chaos: start with control, loosen, tighten if needed. Wrong: starting with a huge swarm is the opposite order. Wrong: orchestration and sandboxes are control, not optional chaos. Wrong: you pick by risk and project type, not a lifetime allegiance.",
+          "source": "Week 3, Day 1 — Sub-Agents, Hooks, Swarms & Controlled Chaos"
+        },
+        {
+          "id": "w3-02",
+          "topic": "Commands vs sub-agents",
+          "question": "A /doc-review slash command and a reviewer sub-agent can run the same prompt. What is the key difference?",
+          "options": [
+            "The slash command runs in the main thread and pollutes parent context; a sub-agent is a separate call",
+            "The sub-agent always appears as /reviewer; slash commands never show in /context",
+            "Slash commands isolate context like workers; sub-agents append every token to the parent",
+            "Skills are isolated workers by default; slash commands and sub-agents are identical"
+          ],
+          "correct": "The slash command runs in the main thread and pollutes parent context; a sub-agent is a separate call",
+          "hint": "If /context grows after the review, you did not actually offload the work.",
+          "explanation": "Correct: a slash command is a shortcut prompt in the same conversation. A sub-agent is a separate LLM call; the main chat may not know the review transcript, though it can discover that plan.md gained a section. Wrong: custom agents do not appear as slash commands. Wrong: those isolation roles are reversed. Wrong: skills/commands run in the main thread unless you wrap them as agents.",
+          "source": "Week 3, Day 1 — Custom Slash Commands / Building Agents & Sub-Agents"
+        },
+        {
+          "id": "w3-03",
+          "topic": "Slash commands and skills",
+          "question": "What are the two taught ways to add a custom slash command, and which is now the common default?",
+          "options": [
+            "A markdown file in .claude/commands/, or a skill that also appears as a slash command — skills are now the default",
+            "Only a plugin marketplace listing; command files and skills never show in /",
+            "A YAML-only registry plus $ARGUMENTS in settings.json; skills cannot appear as commands",
+            "Home-directory commands are project-scoped; repo commands apply to every project"
+          ],
+          "correct": "A markdown file in .claude/commands/, or a skill that also appears as a slash command — skills are now the default",
+          "hint": "Saving the markdown file is the command — there is no extra registry step.",
+          "explanation": "Correct: (1) .claude/commands/ (project or home for all projects), typically lowercase-hyphen names, $ARGUMENTS replaced by text after the slash. (2) Skills automatically appear as slash commands (Cerebras → /cerebras-inference). Today people mostly use skills; command files still work and don’t need YAML front matter. Wrong: marketplaces are not the only path. Wrong: skills do appear as commands. Wrong: home vs project scope is the other way around.",
+          "source": "Week 3, Day 1 — Creating Custom Slash Commands"
+        },
+        {
+          "id": "w3-04",
+          "topic": "Sub-agents vs agent teams",
+          "question": "What can an agent team do that a sub-agent generally cannot?",
+          "options": [
+            "Teammates stay long-lived, message each other, and you can talk to them without going through the lead",
+            "A teammate always returns a summary to a single caller and then disappears",
+            "Teams share one context window, which makes them cheaper than sub-agents",
+            "Sub-agents can DM each other on a shared task list; teams cannot"
+          ],
+          "correct": "Teammates stay long-lived, message each other, and you can talk to them without going through the lead",
+          "hint": "Anthropic’s table: sub-agents report back efficiently; teams keep full independent windows.",
+          "explanation": "Correct: sub-agent = main Claude delegates one task, isolated context, result returns, generally not long-lived, you cannot message it independently. Agent teams = lead + teammates with long-running presence, they message each other (tester → frontend), human can address teammates directly. Teams are experimental and expensive (full independent windows, don’t return context to caller). Wrong: “return and disappear” is the sub-agent pattern. Wrong: teams are costlier, not cheaper. Wrong: DMs are the team feature.",
+          "source": "Week 3, Day 1 & Day 4 — Subagents vs Agent Teams"
+        },
+        {
+          "id": "w3-05",
+          "topic": "Hooks",
+          "question": "For a Stop hook that should write planning/review.md via Codex, which hook action did he call most reliable?",
+          "options": [
+            "command — a shell action; prompt/agent hooks are fiddly and may not write files",
+            "prompt — instructions to Claude, because only Claude can touch the filesystem",
+            "agent — spawn a sub-agent, because prompt hooks are the ones that cannot run",
+            "matcher — matchers are an action type that always writes the review file"
+          ],
+          "correct": "command — a shell action; prompt/agent hooks are fiddly and may not write files",
+          "hint": "Ralph loops are believed to be a Stop hook that re-prompts “you’re not finished.”",
+          "explanation": "Correct: hooks fire on events (PreToolUse, Stop, permission wait, before compact, …). Optional matcher filters when. Actions: command (shell), prompt (instructions), agent (spawn sub-agent). Prompt/agent are fiddly (permission limits; can’t write files). command is the most predictable. Demo: Stop → `codex exec` → planning/review.md. Don’t use hooks unless needed. Wrong: prompt/agent were the unreliable writers. Wrong: matcher is a filter, not an action that writes files.",
+          "source": "Week 3, Day 1 — Claude Code Hooks"
+        },
+        {
+          "id": "w3-06",
+          "topic": "Approval fatigue and native sandbox",
+          "question": "Why can clicking approve on every tool call be less safe than it feels?",
+          "options": [
+            "Approval fatigue: you stop reading, so you are YOLO with a false sense of safety",
+            "Manual approval always disables the native sandbox, so clicks are required to stay safe",
+            "Sandboxes exist only for enterprise compliance and never change YOLO willingness",
+            "YOLO and sandboxing are opposites; you must pick exactly one forever"
+          ],
+          "correct": "Approval fatigue: you stop reading, so you are YOLO with a false sense of safety",
+          "hint": "A ring-fence that auto-approves inside the box can be both more productive and more honest.",
+          "explanation": "Correct: unsandboxed 1/2/3 approvals produce fatigue — you stop reading. A sandbox ring-fences files/network and raises YOLO willingness for the right reason. Native /sandbox is OS-level, local, lighter than Docker; easy on Mac/Linux; Windows needed WSL at filming. Deny rules always win; web search may still ask. Wrong: clicks are not what enables the sandbox. Wrong: sandboxes are a control tool, not only compliance. Wrong: YOLO-in-a-sandbox is the intended pairing.",
+          "source": "Week 3, Day 2 — Sandboxing and Cloud Execution"
+        },
+        {
+          "id": "w3-07",
+          "topic": "Ampersand remote",
+          "question": "What does prefixing a prompt with & do in a local Claude Code session?",
+          "options": [
+            "Sends the full conversation so far to Anthropic’s cloud sandbox as a remote task",
+            "Runs the prompt locally in the background without leaving your machine",
+            "Attaches uncommitted files to Claude on the web so GitHub is optional",
+            "Installs the GitHub app workflows without needing gh auth login"
+          ],
+          "correct": "Sends the full conversation so far to Anthropic’s cloud sandbox as a remote task",
+          "hint": "Remote execution is delegating to another engine — typically GitHub-centric and already sandboxed.",
+          "explanation": "Correct: five remote entry points: (1) & in a local session (full conversation so far), (2) claude --remote, (3) claude.ai/code in a browser (trusted network is the usual pick; finishes via PR), (4) Claude mobile Code tab, (5) GitHub issue @Claude after the GitHub app — repo must be committed. Teleport attaches a remote session locally; /tasks lists remotes. Wrong: & is not local background. Wrong: on-the-web Claude clones committed git. Wrong: /install-github-app still needs gh.",
+          "source": "Week 3, Day 2 — Remote Execution & Five Ways to Run Claude Code"
+        },
+        {
+          "id": "w3-08",
+          "topic": "Sprites.dev",
+          "question": "Why is skip-permissions treated as acceptable on a Sprites.dev sandbox?",
+          "options": [
+            "The sprite is an isolated remote machine, so YOLO will not smash your laptop",
+            "Sprites only run Claude, and Anthropic auto-reverts any destructive command",
+            "sprite create provisions a slow VM, so dangerous commands cannot finish",
+            "GitHub auth in the sprite uses a browser on the remote box, which blocks YOLO"
+          ],
+          "correct": "The sprite is an isolated remote machine, so YOLO will not smash your laptop",
+          "hint": "Third-party sandboxes are agent-agnostic — Claude, Codex, OpenCode, and so on.",
+          "explanation": "Correct: Sprites.dev (Fly.io) = stateful, checkpoint/restore, hardware-isolated Linux. Auto dangerously-skip-permissions is “okay” because of isolation — unlike YOLO on your laptop. Agent-agnostic; claude is preinstalled (quit/relaunch if it is an old build); /resume after gh auth (browser still opens on your laptop). Wrong: not Claude-only, no auto-revert magic. Wrong: create was ~0.6s, not a slow VM. Wrong: the auth browser is local.",
+          "source": "Week 3, Day 2 — Third-Party Cloud Sandboxes on Sprites.dev"
+        },
+        {
+          "id": "w3-09",
+          "topic": "Large-repo context",
+          "question": "On a large inherited codebase, why is @plan.md in CLAUDE.md a different strategy than linking planning/market-data.md?",
+          "options": [
+            "@ inserts the entire file every session; a path/link lets the agent read it only when needed",
+            "A markdown link always dumps the file; @ is a cheap pointer that never costs tokens",
+            "Large-repo docs should live in one giant root CLAUDE.md so nothing is missed",
+            "Generated subdirectory docs should be accepted without a human eyeball"
+          ],
+          "correct": "@ inserts the entire file every session; a path/link lets the agent read it only when needed",
+          "hint": "Progressive disclosure for packages: enough interface to call the right functions, not every file.",
+          "explanation": "Correct: @file inserts the entire file. For large repos, describe + path so the agent chooses to read (like skills). Invest in progressive CLAUDE.md/AGENTS.md per directory. Keep docs updated; you eyeball Claude’s drafts. Wrong: @ is expensive, not cheap. Wrong: one giant root file burns context. Wrong: generated docs still need human review. Also: bite-sized work; never “refactor the whole 50-person repo.”",
+          "source": "Week 3, Day 3 — Best Practices for Large Team Codebases"
+        },
+        {
+          "id": "w3-10",
+          "topic": "Claude Agent SDK",
+          "question": "What is the Claude Agent SDK for, as taught?",
+          "options": [
+            "Programmatically driving Claude Code (skills, plugins, tools) from your own code",
+            "Anthropic’s generic agent framework, competing with LangGraph-style libraries",
+            "The TUI inside the Claude Code terminal, formerly named Claude Agents SDK",
+            "A way to skip dotenv override so API keys from the shell cannot be replaced"
+          ],
+          "correct": "Programmatically driving Claude Code (skills, plugins, tools) from your own code",
+          "hint": "The name is singular “Agent,” and it is not “build any agent.”",
+          "explanation": "Correct: formerly Claude Code SDK; drives the Claude Code ecosystem from code (query loop, allowed_tools, etc.). Use case: an app on that ecosystem, or skipping the terminal. Don’t burn Opus in a tight loop. Wrong: it is not a generic agent framework (that contrast was also made vs OpenAI Agents SDK in Week 2). Wrong: you don’t use it as the TUI; the package name is not plural. Wrong: the demo used load_dotenv(override=True) as a warning to actually override.",
+          "source": "Week 3, Day 3 — Driving Claude Code Programmatically with Claude Agent SDK"
+        },
+        {
+          "id": "w3-11",
+          "topic": "Cowork vs OpenClaw",
+          "question": "How do Claude Cowork and OpenClaw differ in the course’s framing?",
+          "options": [
+            "Cowork is Anthropic’s desktop agent for non-coding work; OpenClaw is a local chat-app sidekick with serious security risk",
+            "OpenClaw is Anthropic’s official coding orchestrator; Cowork is only a GitHub Action",
+            "Both run only in Anthropic’s cloud and are the course’s core swarm tools",
+            "Cowork is a new coding IDE; OpenClaw is safe-by-default because it cannot see your files"
+          ],
+          "correct": "Cowork is Anthropic’s desktop agent for non-coding work; OpenClaw is a local chat-app sidekick with serious security risk",
+          "hint": "One is a research-preview tab next to Chat and Code; the other is a hyped personal agent on your machine.",
+          "explanation": "Correct: Cowork takes the Claude Code experience to everyday/business tasks (desktop tabs: Chat, Code = on-the-web, Cowork). Demo: receipts folder → Excel. OpenClaw (Claudebot/Maltbot lineage) is a personal sidekick via Telegram/WhatsApp, often with access to everything on your computer — security people worry; sandbox it; not course core; if you can’t use a terminal you’re not ready. Wrong: OpenClaw is not official Anthropic orchestration. Wrong: neither is the core swarm tool. Wrong: Cowork isn’t a coding IDE; OpenClaw is risky because it can see local files.",
+          "source": "Week 3, Day 3 — Claude Cowork and OpenClaw"
+        },
+        {
+          "id": "w3-12",
+          "topic": "When to use teams",
+          "question": "Per the Anthropic table as taught, when should you pick agent teams over sub-agents?",
+          "options": [
+            "When workers must share findings, challenge each other, and coordinate on their own",
+            "When you need a cheap, focused worker that returns a summary to the caller",
+            "Whenever you are on Windows, because sub-agents require tmux",
+            "Whenever you want maximum inter-agent chat, because more chatter always helps"
+          ],
+          "correct": "When workers must share findings, challenge each other, and coordinate on their own",
+          "hint": "Teams use full independent context windows and do not return that context to the caller.",
+          "explanation": "Correct: use sub-agents for quick focused workers that report back (relatively efficient). Use teams when they must share findings, challenge each other, coordinate on their own. Cost warning: teams are expensive. Enable with experimental flag; in-process teammateMode works on Mac and PC (Shift+Up/Down); tmux is Mac/Linux. Wrong: cheap report-back is the sub-agent case. Wrong: Windows uses in-process, not “sub-agents need tmux.” Wrong: too much chatter makes them grind.",
+          "source": "Week 3, Day 4 — Claude Code Agent Teams"
+        },
+        {
+          "id": "w3-13",
+          "topic": "Delegate mode",
+          "question": "What problem does Shift+Tab delegate mode prevent on an agent team?",
+          "options": [
+            "The lead doing the work itself instead of waiting for teammates to complete",
+            "Teammates messaging each other without going through the human",
+            "The experimental teams flag turning off after the first prompt",
+            "Git becoming unavailable until the team is cleaned up"
+          ],
+          "correct": "The lead doing the work itself instead of waiting for teammates to complete",
+          "hint": "A common failure is the lead jumping in; docs also say to prompt “wait for teammates.”",
+          "explanation": "Correct: Shift+Tab → delegate mode so the lead doesn’t do the work. Also prompt “wait for teammates to complete.” Shift+Up/Down switch teammates; Ctrl+T toggles the task list; “clean up the team” to shut down. He skipped feature-dev/code-simplifier on the team because they spawn sub-agents and you lose control. Wrong: teammate DMs are a desired feature. Wrong: delegate mode is not the experimental flag. Wrong: git stays available.",
+          "source": "Week 3, Day 4 — Setting Up Claude Code Agent Teams"
+        },
+        {
+          "id": "w3-14",
+          "topic": "GSD",
+          "question": "What failure mode was GSD designed to fight, and how did it compare with Agent Teams in the live run?",
+          "options": [
+            "Context rot; it used sub-agents and cost on the order of 10× the time and tokens of teams",
+            "Merge conflicts; it used Agent Teams and finished in about 15 minutes",
+            "Approval fatigue; it is Claude-only and avoided markdown state on purpose",
+            "Sandbox escapes; it skipped permissions by default and reused the Cerebras skill faithfully"
+          ],
+          "correct": "Context rot; it used sub-agents and cost on the order of 10× the time and tokens of teams",
+          "hint": "GSD is spec-driven design plus radical orchestration — more rails than teams.",
+          "explanation": "Correct: GSD (“get s*** done”) fights context rot as context fills. SDD + orchestration + meta-prompting; works on Claude Code, OpenCode, Gemini CLI; uses sub-agents, not Agent Teams; state in markdown; plan/execute/verify. His run ~5 hours vs teams ~30 min, ~10× tokens; serial, overstoried, thrashed on tests; slight edge to Agent Teams for experience. Wrong: it does not use Agent Teams and was not the fast one. Wrong: not Claude-only; it leans on files. Wrong: he still approved commands; GSD also rewrote inference instead of using the Cerebras skill as written.",
+          "source": "Week 3, Day 4 — GSD vs Claude Agent Teams"
+        },
+        {
+          "id": "w3-15",
+          "topic": "Gastown glossary",
+          "question": "In Gastown, who merges parallel workers’ MRs and who do you actually talk to?",
+          "options": [
+            "The refinery merges MRs; the mayor is the Claude you talk to as coordinator",
+            "The witness merges MRs; polecats are the only Claudes you are allowed to prompt",
+            "Beads merge MRs; the deacon is required even when you have a single project",
+            "The convoy merges MRs; a rig is a worker agent nicknamed a polecat"
+          ],
+          "correct": "The refinery merges MRs; the mayor is the Claude you talk to as coordinator",
+          "hint": "Gastown is Yegge’s extreme stage-8 orchestrator — optional, bewildering, built for concurrency.",
+          "explanation": "Correct: mayor = the Claude you talk to. Polecat = worker. Refinery = merges MRs / merge conflicts (expected with many parallel writers). Witness = monitors polecats, notifies the mayor. Beads ≈ git-like issues/ledger. Convoy = bundle of tasks slung to polecats. Rig = project; crew = workspace inside a rig. Deacon watches multiple projects. Wrong: witness monitors, doesn’t merge. Wrong: deacon is for multi-project; beads are tickets. Wrong: convoy is a task bundle; rig is a project.",
+          "source": "Week 3, Day 5 — Gastown Orchestrating Swarms"
+        },
+        {
+          "id": "w3-16",
+          "topic": "Orchestrator lineup",
+          "question": "Order GSD, Claude Agent Teams, and Gastown from most disciplined to most chaotic, as taught.",
+          "options": [
+            "GSD, then Agent Teams (his favorite to work with), then Gastown",
+            "Gastown, then GSD, then Agent Teams as the slowest rails option",
+            "Agent Teams, then Gastown, then GSD as the most concurrent option",
+            "GSD, then Gastown, then Agent Teams, which he ranked as the daily chaos default"
+          ],
+          "correct": "GSD, then Agent Teams (his favorite to work with), then Gastown",
+          "hint": "Two of the three can wrap multiple coding agents; one is a Claude Code feature.",
+          "explanation": "Correct: most disciplined → most crazy: GSD (SDD family, markdown state, slow/reliable, human-in-the-loop) → Claude Agent Teams (faster, ~30 min, experimental, his favorite experience — power without feeling totally out of control) → Gastown (massive concurrency, fastest throughput, hyped/bewildering). GSD and Gastown can target multiple coding agents; Agent Teams is a Claude Code feature. Wrong: Gastown is not the most disciplined. Wrong: GSD is not the most concurrent. Wrong: Teams was not ranked as the chaos default.",
+          "source": "Week 3, Day 5 — Gastown vs Claude Agent Teams vs GSD"
+        },
+        {
+          "id": "w3-17",
+          "topic": "Codex vs Claude on the capstone",
+          "question": "On the trader-workstation capstone, what was the instructor’s split verdict on Codex vs Claude Code?",
+          "options": [
+            "Claude Code remains his favorite platform; on this bake-off Codex led on speed and live-data quality",
+            "He switched his daily CLI to Codex and dropped Claude Code after the Fly.io deploy",
+            "Agent Teams won the live P&L bake-off; Codex could not fix the hardcoded market-data key",
+            "Codex automatically reads claude.md, so no file rename was needed in the sprite"
+          ],
+          "correct": "Claude Code remains his favorite platform; on this bake-off Codex led on speed and live-data quality",
+          "hint": "Codex wanted agents.md, used --yolo, enabled experimental sub-agents, and finished in about 15 minutes.",
+          "explanation": "Correct: Codex in a sprite with --yolo and experimental sub-agents built the app ~15 minutes (fastest). UI looked different and, to him, best; only Codex kept the portfolio updating; Codex found Claude’s wrong hardcoded Massive key and explained after-hours quiet tape. Claude Code remains his favorite tooling; on this capstone Codex led. Deploy to Fly.io in a short Codex talk. Wrong: he did not switch daily drivers. Wrong: Teams/GSD looked static on P&L; Codex did fix the key. Wrong: he renamed to agents.md because Codex does not read claude.md.",
+          "source": "Week 3, Day 5 — Codex Wins and Course Wrap-Up"
+        },
+        {
+          "id": "w3-18",
+          "topic": "Plugin layout",
+          "question": "What extra files can a Claude Code plugin include besides commands, skills, agents, and hooks?",
+          "options": [
+            "mcp.json for MCP servers and lsp.json so Claude can validate an uncommon language",
+            "Only marketplace.json inside the plugin folder; MCP cannot ship inside a plugin",
+            "A required agents.md at the plugin root; plugin.json is optional metadata",
+            "tmux.conf, because plugins are how you enable experimental agent teams"
+          ],
+          "correct": "mcp.json for MCP servers and lsp.json so Claude can validate an uncommon language",
+          "hint": "A plugin is a folder with claude-plugin/plugin.json; a marketplace.json is how you distribute many plugins.",
+          "explanation": "Correct: required claude-plugin/plugin.json (name, description, version) plus folders commands/skills/agents/hooks. Later also mcp.json and lsp.json (LSP because of Karpathy’s tweet; common languages already known). Marketplace: .claude-plugin/marketplace.json, add via /plugin (GitHub or local ./), install, restart. Wrong: MCP can ship in a plugin; marketplace.json is the catalog, not the only extra file. Wrong: plugin.json is required. Wrong: teams are a settings flag, not a plugin tmux file.",
+          "source": "Week 3, Day 1 — Building Custom Claude Code Plugins and Marketplaces"
+        },
+        {
+          "id": "w3-19",
+          "topic": "Windows native sandbox",
+          "question": "At filming, what extra requirement did native /sandbox have on Windows?",
+          "options": [
+            "WSL — or skip native sandbox and use Anthropic cloud or a third-party sprite instead",
+            "Docker Desktop only; WSL was explicitly not involved in the sandbox story",
+            "A paid Max plan; Pro cannot turn on /sandbox on any operating system",
+            "tmux teammateMode, because sandboxing is implemented as an agent team"
+          ],
+          "correct": "WSL — or skip native sandbox and use Anthropic cloud or a third-party sprite instead",
+          "hint": "Native sandbox is local OS-level, not Anthropic’s servers.",
+          "explanation": "Correct: /sandbox is built into Claude Code, local, OS-level, lighter than Docker, easy on Mac and Linux. Windows required WSL at filming (native Windows “coming soon”). Don’t take on WSL just for this — use Claude on the web or Sprites. Wrong: Docker/dev containers were the older technique he skipped as already a given. Wrong: sandbox is not a Max-only flag. Wrong: tmux is a teams mode, not sandbox.",
+          "source": "Week 3, Day 2 — Setting Up Claude Code Sandbox"
+        },
+        {
+          "id": "w3-20",
+          "topic": "Agentic engineer and leverage order",
+          "question": "What title does the course say you earn at the end of the finale week, and what order of leverage should you use when extending an agent setup?",
+          "options": [
+            "Agentic engineer — official plugins first, then skills, then MCP if needed",
+            "Vibe coder — MCP servers first, then plugins, then a home claude.md dump",
+            "Orchestrator operator — Gastown first, then OpenClaw, then native /sandbox",
+            "Prompt engineer — auto-compact first, then emoji READMEs, then YOLO on the laptop"
+          ],
+          "correct": "Agentic engineer — official plugins first, then skills, then MCP if needed",
+          "hint": "The identity arc is vibe coder → vibe engineer → this title — and you still own the code.",
+          "explanation": "Correct: Week 1 vibe coding, Week 2 vibe engineering, Week 3 unlocks agentic engineer. Mandate: build. Leverage order: official plugins (feature-dev, simplifier, frontend-design) → skills → MCP if needed (Context7). Extra topics Karpathy’s tweet omitted: sandboxing+YOLO, Ralph, GSD. Proactive context: don’t wait to auto-compact; dump to markdown then /clear. Git is a rewind button. Own quality (Jellyfin, no slop/emojis). Wrong: you are past “just vibe coder,” and MCP-first is backwards. Wrong: Gastown/OpenClaw are optional/teaser, not the leverage order. Wrong: auto-compact-wait and emoji READMEs are anti-patterns.",
+          "source": "Week 3, Day 5 — Course Recap: From Vibe Coding to Agentic Engineer"
+        }
+      ]
+    },
+    "combined": {
+      "id": "combined",
+      "title": "Combined — All Weeks",
+      "blurb": "Thirty mixed questions across the full three-week arc.",
+      "questionCount": 30,
+      "questions": [
+        {
+          "id": "c-01",
+          "topic": "Course identity arc",
+          "question": "The course names three successive professional identities. Which sequence is correct?",
+          "options": [
+            "Vibe coding, then vibe engineering, then agentic engineer",
+            "Prompt engineering, then context engineering, then vibe coding",
+            "Agentic engineer, then vibe engineering, then YOLO coding",
+            "Vibe engineering, then missing-manual studies, then prompt engineering"
+          ],
+          "correct": "Vibe coding, then vibe engineering, then agentic engineer",
+          "hint": "Each week’s subtitle is an identity, not just a tool list.",
+          "explanation": "Correct: Week 1 is vibe coding for fun and profit (IDEs, first YOLO, commercial MVP). Week 2 is vibe engineering (Willison) — CLI professionals who stay accountable. Week 3 unlocks agentic engineer (sub-agents, sandboxes, orchestrators). Wrong: prompt→context is a Day 2 skill shift, not the three-week identity arc. Wrong: you do not start as an agentic engineer. Wrong: vibe engineering is Week 2, not Week 1.",
+          "source": "Week 1 roadmap, Week 2 Pro Week intro, Week 3 recap"
+        },
+        {
+          "id": "c-02",
+          "topic": "Memory filenames",
+          "question": "You need persistent instructions in Cursor, Claude Code, and Antigravity. Which filenames match the course?",
+          "options": [
+            "agents.md, claude.md, and gemini.md / .agent rules respectively",
+            "claude.md in all three, because the industry fully standardized in 2025",
+            "agents.md for Claude Code, claude.md for Cursor, and AGENTS.md for Antigravity",
+            "Only Cursor rules files; markdown memory files were taught as deprecated"
+          ],
+          "correct": "agents.md, claude.md, and gemini.md / .agent rules respectively",
+          "hint": "Same job, different product conventions — a nested file still overrides for its subtree.",
+          "explanation": "Correct: agents.md for Cursor, Codex, GitHub Copilot; claude.md for Claude Code; gemini.md / .agent/Rules for Antigravity. Trend is convergence on agents.md as de facto standard, but Claude Code still wants claude.md (a one-line @AGENTS.md trick can share). Wrong: not one filename everywhere. Wrong: those names are swapped. Wrong: markdown memory files were not deprecated.",
+          "source": "Week 1 Days 2–3; Week 2 Day 1"
+        },
+        {
+          "id": "c-03",
+          "topic": "Four tricks",
+          "question": "Which four “software tricks” around next-token prediction did the course say take you from 2022 ChatGPT to coding agents?",
+          "options": [
+            "Illusion of memory, reasoning/thinking, tools, and loops",
+            "Fine-tuning, RAG, vector databases, and mixture-of-experts routing",
+            "System prompts, temperature, top-p sampling, and stop sequences",
+            "YOLO mode, Ralph loops, MCP, and Gastown polecats"
+          ],
+          "correct": "Illusion of memory, reasoning/thinking, tools, and loops",
+          "hint": "Tools-in-a-loop is the trick that most clearly turns a token predictor into an agent.",
+          "explanation": "Correct: apparent intelligence is largely four tricks in software around the model: illusion of memory, reasoning/thinking tokens, tools, and loops. Wrong: fine-tuning/RAG/MoE were not that four-item list. Wrong: decoding knobs are not the agent recipe. Wrong: YOLO/Ralph/MCP/Gastown are later workflow/product layers built on top of those tricks.",
+          "source": "Week 1, Day 2 — How LLMs Work / Tools and Loops"
+        },
+        {
+          "id": "c-04",
+          "topic": "Reasoning tokens",
+          "question": "A two-coin puzzle is used to show “think step by step.” Without reasoning the model says 1/2. What is the taught answer with reasoning, and why?",
+          "options": [
+            "2/3, because you were not told which of the two coins is the one showing heads",
+            "1/2, because a fair coin is still 50/50 no matter how the problem is worded",
+            "1/4, because two coins have four faces and only one face is tails",
+            "1, because “one is heads” means the other must be tails in the example"
+          ],
+          "correct": "2/3, because you were not told which of the two coins is the one showing heads",
+          "hint": "Reasoning tokens are not a calculator; they change which probability the model actually computes.",
+          "explanation": "Correct: toss two coins, one is heads; chance the other is tails? Without reasoning → 1/2. With thinking tokens → 2/3, because you were not told which coin is heads. Models were trained to emit thinking tokens before the answer; generating them improves accuracy. Wrong: 1/2 is the unreasoning trap. Wrong: 1/4 and 1 are not the taught answers.",
+          "source": "Week 1, Day 2 — How LLMs Work: Tokens, Memory, and Reasoning"
+        },
+        {
+          "id": "c-05",
+          "topic": "Claude Code as CLI",
+          "question": "Claude Code is primarily which kind of surface, and what did that surface change about usefulness?",
+          "options": [
+            "A CLI that can iterate, test, and modify until a goal — a step-change vs IDE chat",
+            "A VS Code fork whose sidebar is the professional surface for vibe engineering",
+            "A plugin on real VS Code, positioned the same way as GitHub Copilot",
+            "A cloud-only IDE; the terminal mode is a dumbed-down training-wheels view"
+          ],
+          "correct": "A CLI that can iterate, test, and modify until a goal — a step-change vs IDE chat",
+          "hint": "There is a VS Code extension, but the course treats the retro terminal as the real product.",
+          "explanation": "Correct: Claude Code invented/popularized the productive retro-terminal CLI; it can iterate/test/modify until a goal, which dramatically increased usefulness vs Week 1 IDE chats. The sidebar exists but is more constrained/packaged for novices. Wrong: it is not primarily a VS Code fork (that is Cursor/Antigravity). Wrong: Copilot is the plugin example. Wrong: the terminal is the full-featured surface, not training wheels.",
+          "source": "Week 1 Day 1 surfaces; Week 2 Day 1 CLI vs sidebar"
+        },
+        {
+          "id": "c-06",
+          "topic": "When not to YOLO",
+          "question": "When is YOLO with a coding agent actually discouraged?",
+          "options": [
+            "With fast-frontier/small models, and on unsandboxed machines for dangerous commands",
+            "Only with Opus 4.5, GPT 5.2 Codex, or Gemini 3 Pro on a throwaway sprite",
+            "Whenever you have a concise agents.md, because specs make YOLO unnecessary",
+            "On Sprites.dev, because third-party isolation makes skip-permissions forbidden"
+          ],
+          "correct": "With fast-frontier/small models, and on unsandboxed machines for dangerous commands",
+          "hint": "Two different lectures, same theme: model quality and blast radius both have to qualify.",
+          "explanation": "Correct: Week 1 — YOLO only with top-tier (Opus 4.5, GPT 5.2 Codex, Gemini 3 Pro); fast-frontier (Composer, Haiku) needs baby steps. Week 2/3 — real YOLO (`--dangerously-skip-permissions` / Codex `--yolo`) belongs in a sandbox (native, Anthropic cloud, Sprites). Wrong: those named models are when YOLO is more defensible. Wrong: agents.md does not make YOLO “off.” Wrong: Sprites is where skip-permissions is treated as OK.",
+          "source": "Week 1 Day 4 model choice; Week 2 YOLO; Week 3 sandboxes"
+        },
+        {
+          "id": "c-07",
+          "topic": "Jellyfin / owning the code",
+          "question": "Jellyfin’s LLM contribution policy, as taught, includes which golden rule?",
+          "options": [
+            "Do not YOLO a vague prompt onto the repo and commit the result as-is; you own the code",
+            "LLM-generated code is banned entirely, including using a model as a private aid",
+            "You must commit claude.md/agents.md so reviewers can see the prompt that produced the diff",
+            "Translations in issues are banned, but dumping agent READMEs into PRs is encouraged"
+          ],
+          "correct": "Do not YOLO a vague prompt onto the repo and commit the result as-is; you own the code",
+          "hint": "Generation is cheap; senior review of slop is expensive — quality beats “was it LLM-shaped.”",
+          "explanation": "Correct: LLMs OK as aid, not a flood of slop. LLM output banned in issues/PRs/comments except translations. Don’t commit LLM meta files (claude.md/agents.md). You must explain the change without LLM text. Golden rule: do not YOLO a vague vibe prompt onto the repo and commit as-is. Mantra: the code comes from us; we own it. Wrong: private aid is allowed. Wrong: meta files are banned from the PR, not required. Wrong: translations are the exception that is allowed; README spam is the problem.",
+          "source": "Week 1, Day 4 — Responsible YOLO; echoed in Week 3 wrap"
+        },
+        {
+          "id": "c-08",
+          "topic": "Watch like a hawk",
+          "question": "Karpathy described his workflow flipping to roughly 80% agents / 20% edits. What did he push back against in that same arc?",
+          "options": [
+            "Agent-swarm / “no IDE” hype — if you care about the code, watch them like a hawk",
+            "Using agents at all, because he still claims a clean, measurable 10× velocity",
+            "Skill atrophy concerns, which he said are overblown if you YOLO enough",
+            "Slop, which he treated as only a visual-design problem of purple landing pages"
+          ],
+          "correct": "Agent-swarm / “no IDE” hype — if you care about the code, watch them like a hawk",
+          "hint": "Net faster, mainly because they do more work — not a clean 10×, and slop/atrophy are real.",
+          "explanation": "Correct: late Jan flip ~80% agents / 20% edits. Agent-swarm / no-IDE hype is too much; models make mistakes; if you care about the code, watch like a hawk. Speedup is net faster / expansion, not clean 10×. Fun vs typing; atrophy of reading code; “slop apocalypse.” Wrong: he does not claim clean 10×. Wrong: he is worried about atrophy. Wrong: slop includes emoji-README spam, not only purple UIs.",
+          "source": "Week 1, Day 5 — Karpathy on Vibe Coding & Commercial MVP"
+        },
+        {
+          "id": "c-09",
+          "topic": "Front end vs back end",
+          "question": "Where do secrets belong in the web-apps picture, and which early projects were front-end only?",
+          "options": [
+            "On the server in .env; the FPS game and the first Kanban board were front-end only",
+            "In the browser so the agent can always see them; the first Kanban already had a Python API",
+            "Committed to git so every session loads them; the FPS and the OpenRouter site were front-end only",
+            "In OpenRouter’s dashboard only; Python cannot back a JavaScript UI in this course"
+          ],
+          "correct": "On the server in .env; the FPS game and the first Kanban board were front-end only",
+          "hint": "Front end = HTML/CSS/JS in the browser; back end = server, database, LLM calls, secrets.",
+          "explanation": "Correct: secrets and LLM calls belong on the back end in .env (gitignored). Day 1 FPS and Day 3 Kanban were front-end only; Day 4’s site had a JS back end calling OpenRouter; Day 5 added a Python FastAPI back end. Python is the most common back end for LLM/AI coding in the course. Wrong: keys in the browser are the anti-pattern. Wrong: Day 3 was not Python. Wrong: do not commit .env; Python was the Day 5 back end.",
+          "source": "Week 1, Day 5 — Web Apps 101"
+        },
+        {
+          "id": "c-10",
+          "topic": "UV vs pip",
+          "question": "Agents often prefer pip and requirements.txt. What did the instructor mandate instead, and where?",
+          "options": [
+            "UV (`uv run`, `uv add`) — in agents.md / home claude.md, because you must insist",
+            "Conda only, because UV cannot run inside Docker containers in this course",
+            "pip, because that is what models prefer and fighting them wastes context",
+            "npm for Python, so the same lockfile can serve Next.js and FastAPI"
+          ],
+          "correct": "UV (`uv run`, `uv add`) — in agents.md / home claude.md, because you must insist",
+          "hint": "If you do not write the positive instruction, the agent will drift back to pip.",
+          "explanation": "Correct: agents prefer pip/requirements.txt; you must insist on UV. That rule showed up in Week 1 full-stack agents.md and again as a global home claude.md pet peeve in Week 2. Wrong: conda was not the mandate. Wrong: “let them use pip” is the drift to prevent. Wrong: npm is the JS side, not the Python packager.",
+          "source": "Week 1 Day 5 FastAPI setup; Week 2 Day 5 home claude.md"
+        },
+        {
+          "id": "c-11",
+          "topic": "OpenCode vs Claude Code",
+          "question": "OpenCode vs Claude Code: what trade-off did the instructor state?",
+          "options": [
+            "OpenCode wins on model flexibility; Claude Code is preferred because the platform is organized around Claude",
+            "GLM 4.7 in OpenCode matched Opus 4.5 on the independent refactor, so Claude Code is obsolete",
+            "OpenCode cannot connect paid Claude or GPT; Claude Code is the only multi-model CLI",
+            "OpenCode’s Plan mode writes files immediately; Claude Code cannot plan at all"
+          ],
+          "correct": "OpenCode wins on model flexibility; Claude Code is preferred because the platform is organized around Claude",
+          "hint": "Free/OSS reviews can look impressive and still be far from frontier on a full fix-and-refactor.",
+          "explanation": "Correct: OpenCode is the easy OSS/multi-model path (GLM 4.7, Kimi, OpenCode Zen, OpenRouter). Top OSS still far from frontier for independently implementing a full refactor vs Opus 4.5. He still prefers Claude Code’s platform fit; OpenCode wins flexibility / multi-model sessions. Wrong: GLM did not match Opus on the refactor. Wrong: OpenCode can connect many providers. Wrong: OpenCode Plan mode forces think-before-act and does not write until Build.",
+          "source": "Week 2, Day 1 — OpenCode as a Claude Code alternative"
+        },
+        {
+          "id": "c-12",
+          "topic": "AMP Free",
+          "question": "How is AMP Free actually “free,” and what do you not pick?",
+          "options": [
+            "About $10/day of frontier-model credit for watching ads; AMP picks the model for you",
+            "You pay $10/day; Ctrl+S then lets you choose Opus vs GPT the way /model does",
+            "It only runs local Ollama models; Rush mode is the high-quality thinking setting",
+            "It is Anthropic’s free Claude Code tier, limited to the ChatGPT-style web chat"
+          ],
+          "correct": "About $10/day of frontier-model credit for watching ads; AMP picks the model for you",
+          "hint": "Ctrl+S cycles Smart → Deep → Rush — quality/speed modes, not a vendor picker.",
+          "explanation": "Correct: AMP Free ≈ $10/day of frontier credit for watching ads (not $10 you pay). You don’t pick the model. Ctrl+S cycles Smart / Deep / Rush. Demo ~272k context. Claude Code still had the edge; AMP is an easy free/frontier-ish option. Wrong: you don’t pay $10 or pick Opus vs GPT. Wrong: Rush is the faster mode; AMP is not Ollama-only. Wrong: AMP is not Anthropic’s free chat tier.",
+          "source": "Week 2, Day 1 — AMP Code, OpenCode & Claude Code with OpenRouter"
+        },
+        {
+          "id": "c-13",
+          "topic": "Local model hardware",
+          "question": "What hardware floor did the course give for a worthwhile local coding model via Ollama?",
+          "options": [
+            "On the order of 64 GB GPU RAM, or 64 GB unified RAM on Mac; a 20B model is not enough",
+            "Any modern laptop with 8 GB RAM, because GPT-OSS 20B was the recommended daily driver",
+            "Local models match Opus quality at 16 GB if you use LM Studio instead of Ollama",
+            "Claude Code on localhost:11434 still bills Anthropic, so hardware does not matter"
+          ],
+          "correct": "On the order of 64 GB GPU RAM, or 64 GB unified RAM on Mac; a 20B model is not enough",
+          "hint": "The practical cheap path taught was OpenCode Zen or OpenRouter, not a thin laptop GPU.",
+          "explanation": "Correct: ≥64 GB GPU RAM, or ≥64 GB unified RAM on Mac. GPT-OSS 20B is not enough; need about OSS 120B, which almost nobody can run. Practical free/cheap: OpenCode Zen or OpenRouter (or rent a cloud GPU). Wrong: 8 GB / 20B was explicitly not enough. Wrong: 16 GB was not taught as Opus-equal. Wrong: pointing Claude Code at Ollama is actually local — hardware still matters.",
+          "source": "Week 2, Day 1 — OpenCode, Ollama, and local models"
+        },
+        {
+          "id": "c-14",
+          "topic": "MCP host/client/server",
+          "question": "In MCP terms, what is Claude Code, and what do you usually mean by “adding an MCP”?",
+          "options": [
+            "Claude Code is the host; you add a server (someone else’s tool bundle)",
+            "Claude Code is the MCP server; you write a new host for each tool",
+            "Claude Code is the client process you install from mcp.so, not the app",
+            "Host and server are the same process; “adding an MCP” means fine-tuning Claude"
+          ],
+          "correct": "Claude Code is the host; you add a server (someone else’s tool bundle)",
+          "hint": "People saying “I’m using this MCP” almost always mean a particular MCP server.",
+          "explanation": "Correct: Host = overall AI app (Claude Code, ChatGPT, an Agents SDK app). Client = code inside the host, one per set of tools, baked in. Server = someone else’s tool bundle. You give the host a server description; it sets up a client and runs the server. Wrong: Claude Code is not the server. Wrong: you don’t install Claude as a client from a marketplace. Wrong: adding MCP is not fine-tuning.",
+          "source": "Week 2, Day 3 — MCP Servers Explained: Hosts, Clients, and Discovery"
+        },
+        {
+          "id": "c-15",
+          "topic": "Context7",
+          "question": "What failure mode does Context7 exist to prevent?",
+          "options": [
+            "Models hallucinating outdated APIs because of a training cutoff",
+            "Compaction deleting claude.md in the middle of a Feature Dev run",
+            "OAuth tokens expiring on the Atlassian remote MCP server",
+            "Sprites.dev serving an old Claude Code build until you relaunch"
+          ],
+          "correct": "Models hallucinating outdated APIs because of a training cutoff",
+          "hint": "One terminal command, then the model can pull version-specific docs — if you actually trigger the tools.",
+          "explanation": "Correct: Context7 (Upstash) lets the model pull up-to-date, version-specific docs. Two tools: resolve library ID and query docs. Triggering can be hit-and-miss — say “use Context7.” Vet the real publisher; clones exist. A Context7 plugin wraps the same MCP for easier discovery. Wrong: those other failures are real in the course but are not what Context7 is for.",
+          "source": "Week 2, Day 3 — Context7 MCP"
+        },
+        {
+          "id": "c-16",
+          "topic": "Atlassian reauth",
+          "question": "Atlassian MCP tools hang with no useful error. What is the taught first fix?",
+          "options": [
+            "Assume auth was lost: open /mcp and reauthenticate, then retry the Jira call",
+            "Assume the issue key is wrong and rewrite the ticket ID in claude.md",
+            "Assume the model is still thinking and wait for compact to finish the hang",
+            "Assume GitHub PAT scopes are the cause and rotate the OpenRouter key"
+          ],
+          "correct": "Assume auth was lost: open /mcp and reauthenticate, then retry the Jira call",
+          "hint": "Auth often gets lost; hanging Atlassian tools were a running operational theme.",
+          "explanation": "Correct: remote Atlassian MCP uses OAuth 2. Auth often gets lost; symptom: tools hang. /mcp → reauthenticate. Do this before big Feature Dev runs. Wrong: a bad key is possible but not the demonstrated hang. Wrong: hangs are not “thinking” or compact. Wrong: GitHub PAT and OpenRouter keys are different credentials.",
+          "source": "Week 2, Days 4–5 — Jira MCP workflow"
+        },
+        {
+          "id": "c-17",
+          "topic": "Invoking custom agents",
+          "question": "A custom reviewer agent is defined in .claude/agents/reviewer.md. How do you invoke it?",
+          "options": [
+            "Ask Claude to use the reviewer sub-agent — it does not appear as a slash command",
+            "Type /reviewer, because every agent file is automatically a slash command",
+            "Agents only live in .claude/commands/; without that folder they cannot run",
+            "You must always set model to Haiku or the file is ignored"
+          ],
+          "correct": "Ask Claude to use the reviewer sub-agent — it does not appear as a slash command",
+          "hint": "If you omit tools and model in the markdown, the agent inherits the parent’s.",
+          "explanation": "Correct: custom agents do not appear as slash commands. Prompt “use the reviewer sub agent”; Claude decides. Work stays out of main context. Locations: project .claude/agents/, user ~/.claude, or plugins. If tools/model omitted, inherit parent. Wrong: /reviewer is how commands/skills work, not agents. Wrong: commands/ is the other folder. Wrong: Haiku is optional (explore often uses it).",
+          "source": "Week 3, Day 1 — Building Agents & Sub-Agents"
+        },
+        {
+          "id": "c-18",
+          "topic": "Naive multi-agent",
+          "question": "Naive “three Claudes in three terminals” on a thin plan.md is likely to fail. Why?",
+          "options": [
+            "The pieces will not fit and the agents will not even know the others exist",
+            "Terminal isolation automatically coordinates via git, so the risk is only cost",
+            "That pattern is what “agent teams” means, so a lead will assign interfaces",
+            "Empty backend/frontend/tests folders are enough of a contract for parallelism"
+          ],
+          "correct": "The pieces will not fit and the agents will not even know the others exist",
+          "hint": "Shared planning docs — not extra terminals — are the stabilizing force.",
+          "explanation": "Correct: pressing + and telling three Claudes to build frontend/backend/tests without a fleshed-out plan is a fiasco: interfaces won’t match; they won’t know the others exist. FiNALLY used planning/ plus @plan.md in CLAUDE.md so agents leave information for each other. Agent teams are a different, experimental product with a lead, messaging, and a task list — not merely extra terminals. Wrong: git isolation is not coordination. Wrong: empty folders are not the contract.",
+          "source": "Week 3, Day 1 — FiNALLY setup and naive multi-Claude"
+        },
+        {
+          "id": "c-19",
+          "topic": "Context hygiene",
+          "question": "What should you do instead of waiting for auto-compact when context is almost full and another ticket remains?",
+          "options": [
+            "Write keep-forever facts into claude.md / plan.md, then /clear and start the next task",
+            "Let auto-compact fire in the middle of the rewrite so nothing important is dropped",
+            "Run /compact and /clear together, then skip updating markdown because the summary is lossless",
+            "Install more MCP servers so the buffer fills with tools instead of conversation"
+          ],
+          "correct": "Write keep-forever facts into claude.md / plan.md, then /clear and start the next task",
+          "hint": "2026 compacting is better than 2025, but the operational habit is still: you choose the boundary.",
+          "explanation": "Correct: fear compacting mid-task (incoherence, dropped facts, repeated mistakes). Instructor habit: update claude.md with implemented status, then /clear rather than compacting a full window. 2026 advice was to trust compacting more than in 2025, but students were still taught to manage boundaries. Wrong: auto-compact mid-rewrite is the failure mode. Wrong: summaries are not lossless. Wrong: more MCP accelerates compact.",
+          "source": "Week 1 context engineering; Week 2 Days 4–5 ops; Week 3 wrap"
+        },
+        {
+          "id": "c-20",
+          "topic": "Large-repo workflow row",
+          "question": "On a 50-person production codebase, which row of the course chart should you reach for?",
+          "options": [
+            "2025 / yellow: markdown, incremental slices, spec-driven / GSD, trust but verify",
+            "2026 / purple: YOLO on the laptop, Ralph overnight, and a full-repo simplify swarm",
+            "Stage 8 only: Gastown polecats as the default enterprise process",
+            "Skip tests and coverage entirely, because review is cheaper than generation"
+          ],
+          "correct": "2025 / yellow: markdown, incremental slices, spec-driven / GSD, trust but verify",
+          "hint": "Greenfield MVPs can take the 2026 row; inherited large repos generally cannot.",
+          "explanation": "Correct: mission-critical / large / out-of-training-distribution → 2025 techniques (docs, incremental, SDD/GSD, trust but verify). MVP / boilerplate / risk appetite → 2026 (YOLO in a sandbox, Ralph, swarms). Large-repo day: progressive docs, plugins then skills, bite-sized chunks, reject coverage theater and over-mocking, human review of slop. Wrong: purple craziness on a 50-person repo was explicitly discouraged (including Ralph-looping a whole-repo simplify). Wrong: Gastown is optional extreme, not the enterprise default. Wrong: generation is cheap and review is hard — you need tests and humans more, not less.",
+          "source": "Week 1 workflows; Week 3 large codebases and wrap chart"
+        },
+        {
+          "id": "c-21",
+          "topic": "Plugins vs agent teams",
+          "question": "Why skip Feature Dev and Code Simplifier while running Claude Agent Teams on FiNALLY?",
+          "options": [
+            "Those plugins spawn sub-agents, and you lose control of the team’s work",
+            "They are Claude-only, and Agent Teams can only use OpenCode plugins",
+            "Frontend-design and Playwright cannot be installed in the same repo as teams",
+            "Skip-permissions is required for teams, and those plugins disable YOLO"
+          ],
+          "correct": "Those plugins spawn sub-agents, and you lose control of the team’s work",
+          "hint": "He still installed frontend-design, Context7, and Playwright — the issue was nested workers.",
+          "explanation": "Correct: avoid feature-dev / code-simplifier on a team because they spawn sub-agents and you lose control. He also skipped a dedicated reviewer to reduce chatter. Result was more serial than expected (probably better); ~30 minutes, zero-shot runnable app; he did not skip permissions because chaos + YOLO is extra risky. Wrong: Agent Teams is Claude Code; those plugins are Claude plugins. Wrong: he did install frontend-design and Playwright. Wrong: skip-permissions was not required here.",
+          "source": "Week 3, Day 4 — Agent Teams for the trading app"
+        },
+        {
+          "id": "c-22",
+          "topic": "10x vs 2–3x",
+          "question": "What did the 10× feeling become after the first hard blocker in the multi-agent workstation, and which debug loop should be internalized?",
+          "options": [
+            "About 2–3× faster than writing it yourself; reproduce → markdown issue → fix → prove",
+            "A guaranteed 10× end-to-end; skip the repro because agents never need a written bug",
+            "Slower than handwriting; abandon git and rely on rewind for the rest of the project",
+            "Exactly 10× if you read every diff; the four-step loop is only for Copilot in VS Code"
+          ],
+          "correct": "About 2–3× faster than writing it yourself; reproduce → markdown issue → fix → prove",
+          "hint": "Expect the first fix to fail. Stay the boss even if you are not reading every line.",
+          "explanation": "Correct: tmux quad of Codex/Claude felt 10×, then a blocker where agents looped; still 2–3× vs writing it himself. Internalize: reproduce → understand in a markdown issue → fix → test/prove; expect the first fix to fail. Same spirit as Week 1’s repro → root cause → fix → demonstrate, and Week 2’s debug.md. Wrong: 10× is not guaranteed. Wrong: git remains the rewind button. Wrong: the loop is course-wide, and reading every diff is not required to get 2–3×.",
+          "source": "Week 3 Day 5 wrap; Week 1–2 debugging mantras"
+        },
+        {
+          "id": "c-23",
+          "topic": "Beyond Karpathy’s list",
+          "question": "Which extra topics did the instructor say Karpathy’s “missing manual” tweet did not name?",
+          "options": [
+            "Sandboxing plus YOLO, Ralph loops, and GSD",
+            "Agents, sub-agents, MCP, skills, hooks, and slash commands",
+            "Plugins, tools, permissions, context, and IDE integrations",
+            "Prompts, memory, modes, workflows, and LSPs"
+          ],
+          "correct": "Sandboxing plus YOLO, Ralph loops, and GSD",
+          "hint": "The tweet is the vocabulary list; a few later techniques still sit outside it.",
+          "explanation": "Correct: re-read Karpathy’s list (agents, sub-agents, prompts, context, memory, modes, permissions, tools, plugins, skills, hooks, MCP, LSPs, slash commands, workflows, IDEs) plus things he didn’t name: sandboxing + YOLO, Ralph loops, GSD. Wrong: those other items are on Karpathy’s list as taught.",
+          "source": "Week 1 missing-manual lecture; Week 3 best-practices wrap"
+        },
+        {
+          "id": "c-24",
+          "topic": "codex exec",
+          "question": "What does `codex exec \"...\"` do that opening a Codex IDE panel does not?",
+          "options": [
+            "Runs a prompt as a shell-level peer agent, for example writing planning/review.md",
+            "It is a Claude Code slash command that can only run inside the TUI",
+            "It requires Codex; a second Claude is not allowed to play the reviewer role",
+            "It shares the full parent transcript with Codex so isolation is impossible"
+          ],
+          "correct": "Runs a prompt as a shell-level peer agent, for example writing planning/review.md",
+          "hint": "Tell the wrapper agent “do not review yourself” so it actually shells out.",
+          "explanation": "Correct: Codex CLI (`codex`) is OpenAI’s Claude Code equivalent. `codex exec` runs a prompt as a shell-level agent — used to review plan.md → review.md, and later as a Stop-hook reviewer of changes since last commit. A second Claude could also be the reviewer; different LLMs are “fun, not required.” Wrong: it is not a Claude slash command. Wrong: Claude can review too. Wrong: the point is isolation (even if Claude sometimes cheats and reads the file itself).",
+          "source": "Week 3, Day 1 — Codex CLI reviews and hooks"
+        },
+        {
+          "id": "c-25",
+          "topic": "GitHub @Claude",
+          "question": "GitHub @Claude on an issue will clone the repo in Anthropic’s cloud. What must be true first?",
+          "options": [
+            "Everything it needs is committed and pushed; uncommitted files are not visible there",
+            "Uncommitted working-tree files are uploaded automatically with the issue comment",
+            "You only connected GitHub in the browser; workflow YAMLs are optional",
+            "Native /sandbox on Windows without WSL is enough to replace the GitHub app"
+          ],
+          "correct": "Everything it needs is committed and pushed; uncommitted files are not visible there",
+          "hint": "The setup PR adds .github/workflows/claude.yml and claude-code-review.yml after gh auth login.",
+          "explanation": "Correct: @Claude in a GitHub issue uses the Claude GitHub app, clones the repo, so everything must be committed. Setup: connect GitHub, /install-github-app, needs gh auth login, merge the PR that adds the two workflow YAMLs. Wrong: uncommitted files stay local. Wrong: browser connect alone is not enough. Wrong: native sandbox is a different, local approach.",
+          "source": "Week 3, Day 2 — GitHub integration and five remote paths"
+        },
+        {
+          "id": "c-26",
+          "topic": "Test quality",
+          "question": "What testing behavior did the course say LLMs do “to a fault,” and what should a good test survive?",
+          "options": [
+            "Over-mocking to hit coverage paths; tests should survive a reimplementation but fail when logic breaks",
+            "Refusing to write mocks; 80% coverage is the goal agents should optimize",
+            "Deleting integration tests; mocks are the best proof of production behavior",
+            "Writing fewer tests than humans; more tests are always better regardless of quality"
+          ],
+          "correct": "Over-mocking to hit coverage paths; tests should survive a reimplementation but fail when logic breaks",
+          "hint": "Put the testing strategy in AGENTS.md/claude.md and push back on test slop the way you would in a human review.",
+          "explanation": "Correct: don’t obsess on 80% coverage (Week 1 already showed letter-of-the-law grinding). LLMs over-mock. Want tests that survive reimplementation but fail when logic breaks. Wrong: 80% is not the goal. Wrong: mocks do not prove production; Week 1 also preferred live OpenRouter tests over mocks for the AI integration. Wrong: more tests are not always better.",
+          "source": "Week 1 Day 5 coverage trap; Week 3 Day 3 large-repo tests"
+        },
+        {
+          "id": "c-27",
+          "topic": "Productivity multipliers",
+          "question": "A senior engineer says agents are “always 10×.” What did the course actually claim about multipliers?",
+          "options": [
+            "Big wins on greenfield UI; incremental or even negative on large, novel, or legacy work",
+            "A clean 10× on every task with Opus, including novel MCP servers outside training data",
+            "Negative on Next.js CRUDs, and 10× only on out-of-distribution backend protocols",
+            "Multipliers ignore task shape and only change when YOLO or Ralph mode is enabled"
+          ],
+          "correct": "Big wins on greenfield UI; incremental or even negative on large, novel, or legacy work",
+          "hint": "Always net positive with top agents was the vibe — how much still depends on the job.",
+          "explanation": "Correct: 10× sometimes (Kanban/React greenfield: days → minutes). Incremental on large/legacy/complex backend. Can subtract value on work outside training data (streamable HTTP MCP server — faster to write himself). Estimation trap: code rattles out, then you hit a wall for hours. Capstone: 10× feeling became 2–3× after the first blocker. Wrong: not 10× on novel MCP. Wrong: greenfield UI is where the big wins were. Wrong: YOLO is not the multiplier switch.",
+          "source": "Week 1 Days 2 & 4; Week 2 estimation; Week 3 capstone"
+        },
+        {
+          "id": "c-28",
+          "topic": "Fresh context after debug",
+          "question": "After a long failing debug chat, why start a new session that only re-reads agents.md and plan.md?",
+          "options": [
+            "An empty-ish window with those files is efficient context; the old debug trace is clutter",
+            "New chats cannot see markdown files, so the agent is forced to invent a cleaner architecture",
+            "You should keep one chat for the whole project so the model “remembers” every stack trace",
+            "plan.md is ignored unless the previous transcript is still in the window"
+          ],
+          "correct": "An empty-ish window with those files is efficient context; the old debug trace is clutter",
+          "hint": "Write the design decision into plan.md first — the new chat will not remember it otherwise.",
+          "explanation": "Correct: after ~30 minutes of drag-and-drop looping, the human confirmed the UI already worked while tests still failed. Practice: update plan.md with design decisions, new chat, re-read plan.md/agents.md so the window isn’t full of the old debug. Same idea as Week 2 /clear between Jira tickets. Wrong: new chats can read files. Wrong: one mega-chat is how you burn the window. Wrong: plan.md is for the new session to load.",
+          "source": "Week 1 Day 5 Codex drag-and-drop; Week 2 ticket hygiene"
+        },
+        {
+          "id": "c-29",
+          "topic": "Cloud network preset",
+          "question": "Which remote network preset did he recommend for Claude Code’s cloud environment, and how does a successful browser run usually finish?",
+          "options": [
+            "Trusted network; the work typically lands as a GitHub pull request",
+            "None (air-gapped); the work is copied back only via teleport into your working tree",
+            "Full network always; mobile Code tab cannot see the same sessions as the browser",
+            "Trusted means no network; @Claude issues therefore cannot open PRs"
+          ],
+          "correct": "Trusted network; the work typically lands as a GitHub pull request",
+          "hint": "Research-preview remote can be slow and flaky — still the path that made phone-driven coding possible.",
+          "explanation": "Correct: claude.ai/code first-time cloud environment network: none / trusted / full; trusted is the usual pick. Completes via GitHub PR. Mobile Code tab shares the same sessions. Wrong: none is the air-gap option, not the usual pick, and teleport is how you attach a remote session, not the default finish. Wrong: full is not “always,” and mobile does share sessions. Wrong: trusted is not “no network.”",
+          "source": "Week 3, Day 2 — Claude Code on the web, mobile, and GitHub"
+        },
+        {
+          "id": "c-30",
+          "topic": "Accountability",
+          "question": "Who is accountable for agent-produced code in this course, and what instinct did Willison say you still need?",
+          "options": [
+            "You are; including an instinct for what to outsource to AI and what to keep",
+            "The model vendor is; once tests pass, human proof is optional",
+            "The team lead agent is; orchestration transfers accountability off the human",
+            "Open source maintainers are; Jellyfin will catch slop so you do not have to"
+          ],
+          "correct": "You are; including an instinct for what to outsource to AI and what to keep",
+          "hint": "Frontend was treated as safer to delegate than backend code that actually calls LLMs.",
+          "explanation": "Correct: repeated from Week 1 through Week 3: you are the boss; it is your work product. Willison’s practices include tests, planning, docs, git, review (including LLM self-review), managing a collaborator who will cheat if allowed, QA, research, and instinct for what to outsource. Instructor: frontend he can fully delegate; LLM-calling backend often struggles (Week 1 main.py mess). Wrong: vendors, lead agents, and maintainers do not take your accountability. Jellyfin’s policy is extra social pressure, not a safety net that replaces you.",
+          "source": "Week 1–3 accountability thread; Week 2 Willison practices"
+        }
+      ]
+    }
+  }
+}

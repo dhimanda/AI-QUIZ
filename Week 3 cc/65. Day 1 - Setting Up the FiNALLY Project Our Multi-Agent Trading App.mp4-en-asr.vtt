@@ -1,0 +1,540 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.240 --> 00:00:06.560
+Welcome back to VS Code. We're going to
+be spending a lot of time in here this
+
+00:00:03.919 --> 00:00:10.639
+week. Bring up your favorite terminal
+with control back tick. It's the only
+
+00:00:09.280 --> 00:00:15.599
+terminal. I don't know be your favorite
+terminal, but whatever. Your terminal.
+
+00:00:13.200 --> 00:00:19.199
+Bring it up and then go into your into
+your home directory and into your
+
+00:00:17.119 --> 00:00:24.000
+projects directory. And you're going to
+do a git clone of just a sort of basic
+
+00:00:21.920 --> 00:00:28.960
+scaffolding I've got in place for you.
+Here it is. It's the project is called
+
+00:00:26.080 --> 00:00:33.120
+finally. Finally, because it's our final
+week. It's when we're going multi- aent
+
+00:00:31.519 --> 00:00:39.280
+and it's also finally because that
+stands for finance ally. We're going to
+
+00:00:36.160 --> 00:00:43.600
+build a live trader workstation with
+cool market data and stuff happening and
+
+00:00:41.760 --> 00:00:47.840
+it's going to feel like a high-end
+application and we're going to do it
+
+00:00:45.360 --> 00:00:53.840
+with an army of agents. We're going to
+do it all this week. It's in this this
+
+00:00:50.320 --> 00:00:58.800
+repo finally clone it and then open it
+up as a new project and I will see you
+
+00:00:56.480 --> 00:01:02.800
+there. Okay. So, you open it up as a
+project by by going over project and
+
+00:01:00.960 --> 00:01:06.240
+then going into projects finally. And
+it's showing you now. And it should look
+
+00:01:05.040 --> 00:01:08.880
+something like this. There might be more
+files in here cuz I'm I'm sort of
+
+00:01:07.520 --> 00:01:11.920
+figuring out how much I want to give you
+as a starting point. And we're going to
+
+00:01:10.320 --> 00:01:15.680
+work on some of this together. We're
+going to set up a whole foundation that
+
+00:01:13.760 --> 00:01:20.240
+we can then give to a bunch of agents to
+build the whole project for us in as
+
+00:01:17.600 --> 00:01:23.920
+much of a like a oneshot experience as
+we can do. But let me just talk you
+
+00:01:22.159 --> 00:01:28.159
+through it. Close everything down. Let
+me show you what we've got here. So in
+
+00:01:26.479 --> 00:01:33.680
+in finally your starting point should
+look something like this. There is a uh
+
+00:01:31.119 --> 00:01:37.920
+the usual there's an emptyish readme.
+There's a claude.mmd that we'll go
+
+00:01:35.280 --> 00:01:41.680
+through in a second. There's a bunch of
+directories that are empty that may not
+
+00:01:40.320 --> 00:01:47.200
+even show up for you because they're
+empty like a backend db front end. These
+
+00:01:45.280 --> 00:01:51.759
+are all completely empty. And there's
+one called planning which has a single
+
+00:01:49.439 --> 00:01:55.680
+document plan.md.
+And then there's also an empty test. All
+
+00:01:54.000 --> 00:02:00.240
+right. That's the uh there's a there's a
+useful git ignore and then there's the
+
+00:01:57.840 --> 00:02:05.040
+of course the claw.md that we will look
+at now and there's also f file where I
+
+00:02:02.880 --> 00:02:11.280
+put my open routter key in there just
+copied it from before okay into the
+
+00:02:07.840 --> 00:02:16.480
+claw.md it's very short finally project
+the finance ally finally I'm probably
+
+00:02:14.160 --> 00:02:21.040
+not the first person to think of that uh
+but still it works nicely for this this
+
+00:02:18.400 --> 00:02:25.120
+project uh and it just says all project
+documentation is in the planning
+
+00:02:22.959 --> 00:02:30.239
+directory this is that point I made
+about one of the the stabilizing forces
+
+00:02:28.080 --> 00:02:34.959
+is to get all of your different coding
+agents to be converging on shared
+
+00:02:33.120 --> 00:02:39.680
+documentation which is where they can
+leave information for each other to to
+
+00:02:36.959 --> 00:02:45.440
+keep them all communicating closely. The
+key document is in plan.mmd included in
+
+00:02:42.800 --> 00:02:50.480
+full here. And then I'm using that at
+notation as a way of ensuring that this
+
+00:02:48.080 --> 00:02:56.160
+entire document gets brought into
+context every time. It has no choice. So
+
+00:02:54.239 --> 00:03:01.040
+it all sort of revolves around this
+plan. MD and this is going to be our
+
+00:02:58.640 --> 00:03:04.959
+tool for how we control the build of the
+whole application. And so this this
+
+00:03:03.200 --> 00:03:09.760
+document which I'll open in preview mode
+so we see it nice and formatted. This is
+
+00:03:07.120 --> 00:03:14.400
+going to be our business requirements.
+That is what I want us to build. And the
+
+00:03:12.319 --> 00:03:19.920
+first stage is us building this out so
+that it feels like it's robust. So the
+
+00:03:17.440 --> 00:03:24.239
+vision is that we're building a stunning
+AI powered trading workstation. It
+
+00:03:22.959 --> 00:03:27.760
+doesn't matter if you don't know about
+financial services. This is still going
+
+00:03:25.920 --> 00:03:32.720
+to make sense to you. If you know what
+stocks and shares are, that's that's all
+
+00:03:30.000 --> 00:03:38.720
+you need. It's going to stream live
+market data. It's going to let users
+
+00:03:35.280 --> 00:03:43.040
+trade in a simulated portfolio and it's
+going to integrate an LLM assistant that
+
+00:03:40.959 --> 00:03:48.319
+can analyze portfolios and execute
+trades on your behalf. It looks and
+
+00:03:45.360 --> 00:03:53.440
+feels like a modern Bloomberg terminal
+with an AI co-pilot which could be a
+
+00:03:51.519 --> 00:03:58.560
+whole product in its own. This could be
+a real for reals product. And I say in
+
+00:03:56.799 --> 00:04:03.360
+this vision that it's the capstone
+project for the course built entirely by
+
+00:04:01.200 --> 00:04:07.439
+coding agents demonstrating how
+orchestrated agents can produce a
+
+00:04:05.439 --> 00:04:12.799
+production quality full stack
+application inter agents interact
+
+00:04:09.680 --> 00:04:18.320
+through files in the planning directory
+that lays the lays the scene out there
+
+00:04:15.519 --> 00:04:21.680
+for for you and also for the AI agents.
+Okay. And I should confess that I
+
+00:04:19.840 --> 00:04:26.560
+started with a paragraph like that and I
+just put it in in actually in Claude in
+
+00:04:23.759 --> 00:04:30.400
+Claude.ai AI the chatbot and iterated a
+bit for most of the rest of this. So
+
+00:04:28.560 --> 00:04:35.120
+most of the rest of this is just based
+on generated but from some question and
+
+00:04:33.360 --> 00:04:38.320
+answering with me which is a good way to
+do it. You could also do it in cloud
+
+00:04:36.320 --> 00:04:42.880
+code but but I chose just to use the
+chat product. So the user experience
+
+00:04:41.120 --> 00:04:47.520
+explains that it's all going to run in
+in Docker that it will a browser will
+
+00:04:45.199 --> 00:04:52.880
+open to local host and that you'll be
+able to then uh do things like watch
+
+00:04:49.600 --> 00:04:56.560
+prices stream monitor the portfolio chat
+with an AI assistant. There's a bit
+
+00:04:54.960 --> 00:05:00.479
+about the visual design and the usual
+color scheme that I like but you should
+
+00:04:58.320 --> 00:05:05.040
+put in your own color scheme. This
+architecture thing here was generated of
+
+00:05:02.560 --> 00:05:08.639
+course by by Claude uh and it's very
+clear that there are some some roots
+
+00:05:06.639 --> 00:05:12.800
+explained here. We're going to very
+consistent with how we've done some of
+
+00:05:09.919 --> 00:05:16.560
+the prior projects use SQL light. Um
+we're going to have like a background
+
+00:05:14.000 --> 00:05:20.639
+task for market data. Okay. And then
+there's some explanation as to why the
+
+00:05:18.960 --> 00:05:24.400
+directory structure is laid out there
+and it's consistent with what's already
+
+00:05:22.320 --> 00:05:28.080
+been set up and there's some stuff about
+the boundaries between areas because as
+
+00:05:27.039 --> 00:05:32.639
+you can imagine we're going to be
+looking into having multiple coding
+
+00:05:30.240 --> 00:05:36.479
+agents working on different parts. So
+focusing on the boundaries is really
+
+00:05:34.720 --> 00:05:40.320
+important because agents need to know
+what they're responsible for and and how
+
+00:05:38.560 --> 00:05:42.960
+they have to interact with each other.
+Next section explains about the
+
+00:05:41.520 --> 00:05:47.680
+environment variables that there's going
+to be uh an open route API key which
+
+00:05:45.360 --> 00:05:52.400
+which uh you already have and then
+optionally an API key to something
+
+00:05:50.000 --> 00:05:56.560
+called massive formerly known as polygon
+that I cover in some of my other
+
+00:05:54.080 --> 00:06:00.800
+courses. It's optional because the idea
+is you don't need to have real market
+
+00:05:58.479 --> 00:06:05.039
+data because this product will include a
+simulated market data. So, it can be
+
+00:06:03.039 --> 00:06:10.000
+just as cool without having to pay a
+scent. You can see everything going on
+
+00:06:07.680 --> 00:06:13.759
+as if it's a live market. And that can
+be a great way to build out trading
+
+00:06:12.000 --> 00:06:17.120
+agents, equity traders, because you want
+to see how they respond to simulated
+
+00:06:15.280 --> 00:06:21.840
+data as well as the real thing. Uh but
+you'll be able should should you wish to
+
+00:06:18.960 --> 00:06:25.280
+pay for proper equity market data or
+even crypto or options or whatever you
+
+00:06:23.600 --> 00:06:30.960
+like you should be able to switch that
+in with an API key change. Okay. And
+
+00:06:29.280 --> 00:06:34.160
+then that's all explained in this next
+section on market data explaining that
+
+00:06:32.639 --> 00:06:38.479
+there's two different options and
+explaining how we will use SSE approach
+
+00:06:36.800 --> 00:06:42.400
+the same way that information is
+streamed back when you're working with
+
+00:06:40.080 --> 00:06:46.479
+an AI as a way of streaming back market
+data live onto the user interface. And
+
+00:06:44.880 --> 00:06:51.280
+then we're going simple with the
+database. We're going to use SQL light
+
+00:06:48.639 --> 00:06:54.800
+as before, lazily set up the first time
+you launch the app. A little bit more
+
+00:06:53.120 --> 00:06:58.880
+sophisticated than last week that it's
+going to persist between sessions as as
+
+00:06:57.199 --> 00:07:03.599
+you can see if you read through it. Uh
+but still quite simplistic, but it
+
+00:07:00.960 --> 00:07:08.720
+should be an easy task to upgrade this
+to use like a a database like superbase.
+
+00:07:06.240 --> 00:07:12.400
+So it's an API based Postgress database
+on the cloud if you wish to. But we'll
+
+00:07:11.199 --> 00:07:15.520
+keep it simple for this because we're
+trying to build the app, not necessarily
+
+00:07:14.240 --> 00:07:20.800
+worry about sort of third party
+integrations. Bit more on the API
+
+00:07:18.319 --> 00:07:25.919
+endpoints. And then more about the LLM
+integration. We're going to use the same
+
+00:07:23.199 --> 00:07:29.599
+Cerebrass approach or open router
+approach because I love the way it's so
+
+00:07:27.919 --> 00:07:32.960
+fast. You don't need to use Cerebrass if
+you don't want to. And we're going to
+
+00:07:30.880 --> 00:07:36.960
+use structured outputs just as we did in
+week two. So we can have an interactive
+
+00:07:34.880 --> 00:07:40.160
+conversation with an LLM and allow it to
+do things like make trading decisions
+
+00:07:38.800 --> 00:07:44.160
+and change the way that the user
+interface looks. So that's all part of
+
+00:07:42.240 --> 00:07:49.039
+how this is explained. And you can see
+that I've included a dot claude and I've
+
+00:07:46.560 --> 00:07:53.199
+just copied in the cerebrass skill that
+we made in week two. So we're just
+
+00:07:51.039 --> 00:07:57.440
+taking that same skill again. So we've
+got the skill, it can use it right away.
+
+00:07:55.280 --> 00:08:01.599
+We know how that works. We know that
+just by putting that folder in there,
+
+00:07:59.680 --> 00:08:05.680
+it's just going to have this new skill.
+That's the the the crazy thing about
+
+00:08:03.440 --> 00:08:10.240
+skills and stuff about how it will
+execute automatically. Uh this reads a
+
+00:08:08.560 --> 00:08:14.960
+little bit LLM generated, but it doesn't
+matter. It's fine. And then front-end
+
+00:08:12.879 --> 00:08:18.479
+design, how the screens will be laid
+out. I chatted with Claude a while about
+
+00:08:17.199 --> 00:08:23.360
+this to make sure that I was happy with
+it. And then the way that it's all going
+
+00:08:20.879 --> 00:08:27.840
+to be deployed super simply in one
+Docker container, just as we did last
+
+00:08:25.120 --> 00:08:30.720
+week, it's a really easy pattern. LLMs
+love to try and put things into multiple
+
+00:08:29.280 --> 00:08:34.479
+Docker containers and make it more
+complicated than it needs to be. This is
+
+00:08:32.800 --> 00:08:38.479
+why it did that to start with and I came
+in and said, "No, that's not necessary.
+
+00:08:36.240 --> 00:08:41.680
+We don't need it." That's the kind of of
+place where human involvement is so
+
+00:08:40.080 --> 00:08:44.880
+important. And it can be hard for people
+that aren't familiar with these kinds of
+
+00:08:43.120 --> 00:08:48.880
+architectures and you just have to
+really challenge yourself to ask the
+
+00:08:47.040 --> 00:08:54.160
+pointed questions of could this be
+simpler. Make sure that it is as simple
+
+00:08:51.360 --> 00:08:57.360
+as possible. All right? And then uh how
+how we'll be able to start and stop. And
+
+00:08:55.680 --> 00:09:01.120
+one one of the great benefits of having
+it all be in one docker container like
+
+00:08:59.040 --> 00:09:05.680
+this is it also means that should you
+wish we can easily deploy it to the
+
+00:09:03.519 --> 00:09:10.800
+cloud. We could easily just just take
+this and put it up there uh on a hugging
+
+00:09:08.080 --> 00:09:14.800
+face space perhaps or even deployed to
+AWS apprunner or something like that
+
+00:09:13.120 --> 00:09:19.920
+ways that we cover on my production
+course if you wish to go live with this
+
+00:09:17.120 --> 00:09:24.480
+afterwards. And then finally stuff about
+how we will test it with unit tests and
+
+00:09:22.560 --> 00:09:28.080
+end toend tests. That is the
+documentation. That is the business
+
+00:09:26.160 --> 00:09:34.160
+requirements docs slightly fleshed out
+with Claude. Uh and it is our starting
+
+00:09:30.480 --> 00:09:38.720
+point for the finally project. a juicy
+great big project which is going to feel
+
+00:09:36.240 --> 00:09:43.600
+immensely satisfying and which as much
+as possible we're going to try and run
+
+00:09:40.640 --> 00:09:46.320
+using multiple agents in controlled
+chaos. Yes.
+

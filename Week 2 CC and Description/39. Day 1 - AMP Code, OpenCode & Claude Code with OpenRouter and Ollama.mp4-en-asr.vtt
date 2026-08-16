@@ -1,0 +1,779 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.240 --> 00:00:07.520
+And then there's AMP. AMP is somewhat
+like open code in that it's it's not
+
+00:00:05.600 --> 00:00:12.000
+affiliated with any provider. The idea
+is that it's an agent coder that you can
+
+00:00:10.400 --> 00:00:17.440
+run that can attach to multiple
+providers and run different bits of
+
+00:00:14.160 --> 00:00:22.400
+analysis. It comes in a terminal variant
+which is how it's most famous and then
+
+00:00:19.600 --> 00:00:27.039
+also as extensions to any of VS Code
+Cursor or Windsurf which as we all know
+
+00:00:24.240 --> 00:00:31.920
+are really all the same thing anyway.
+And uh this otherwise it it has it's
+
+00:00:30.000 --> 00:00:37.040
+well known. It has something called AMP
+free and AMP free which which first time
+
+00:00:35.680 --> 00:00:42.719
+you look at this it's a bit confusing.
+It seems to suggest that AMP free uh is
+
+00:00:39.680 --> 00:00:45.280
+actually $10 per day. Uh which doesn't
+sound free at all but that's not what
+
+00:00:44.000 --> 00:00:49.600
+it's saying. It's saying that you get
+kind of $10 of credit a day in this plan
+
+00:00:47.680 --> 00:00:55.120
+in response for in return for looking at
+ads. And the tech community love loves
+
+00:00:52.320 --> 00:00:58.559
+to get get really up in arms about ads.
+The pitch folks come out. But I think
+
+00:00:56.640 --> 00:01:02.960
+this is a great deal. I figures if the
+ads are being served and they're things
+
+00:01:00.000 --> 00:01:06.640
+which which maybe even are not unuseful,
+then fair enough. It sounds like that's
+
+00:01:04.559 --> 00:01:09.920
+a good good way to earn $10 a day.
+Anyways, so that is something that is
+
+00:01:08.320 --> 00:01:13.840
+available for you should should you
+should you wish. Uh let's just take a
+
+00:01:12.000 --> 00:01:19.600
+look back here. Uh I'm going to copy
+that into a clipboard. Let's go and give
+
+00:01:16.560 --> 00:01:25.040
+AMP a try. Well, here I am back in VS
+Code in the same PM project. I just just
+
+00:01:22.400 --> 00:01:29.280
+put Ctrl C to open code and I'm now just
+going to paste in that command to
+
+00:01:26.720 --> 00:01:34.320
+install AMP code. Why not? Let's do it
+right here. Uh, and apparently it's
+
+00:01:32.159 --> 00:01:38.000
+done. It It believes that it has been
+installed. We'll see. All right. And
+
+00:01:36.320 --> 00:01:41.680
+after installing, you type the word AMP
+to launch it. The first time you come
+
+00:01:39.439 --> 00:01:46.799
+in, it's going to tell you uh that you
+need to log in. You you say yes. You do.
+
+00:01:44.880 --> 00:01:50.479
+It will launch a browser window. It will
+ask you to log into AMP. You don't have
+
+00:01:48.640 --> 00:01:54.079
+an account yet, so you'll say sign up.
+It will ask for you to give an email and
+
+00:01:52.159 --> 00:01:57.600
+password or use a Google or flow, which
+is what I just did. Went through that
+
+00:01:55.680 --> 00:02:02.560
+flow, came straight back here, and it
+just works. So, you're now into AMP.
+
+00:02:00.399 --> 00:02:07.759
+First thing to notice is the ads. You're
+getting an ad served up here, which is
+
+00:02:04.640 --> 00:02:11.840
+how you are paying for your $10 of free
+uh model usage every day. Secondly,
+
+00:02:10.399 --> 00:02:16.959
+what's kind of curious is that you don't
+get to choose a different model. AMP
+
+00:02:15.040 --> 00:02:21.599
+likes to pick the model for you behind
+the scenes. It's trying to serve up the
+
+00:02:18.959 --> 00:02:24.959
+best it can given the task at hand. And
+you just kind of trust it and go with
+
+00:02:23.360 --> 00:02:30.640
+the flow. And it's also worth knowing
+that that Ctrl S is a way to toggle the
+
+00:02:28.720 --> 00:02:34.879
+different modes you're in. You see on
+the on the right here it says smart. I'm
+
+00:02:32.720 --> 00:02:41.120
+in the smart mode. I do control S and it
+goes to deep and then rush. Smart is the
+
+00:02:38.239 --> 00:02:45.920
+sort of like standard. Deep is slower
+thinking and rush is faster, quicker. So
+
+00:02:44.080 --> 00:02:50.319
+I'm going to have it on deep. I would
+rather take the time to get it right.
+
+00:02:47.920 --> 00:02:55.040
+I'm going to delete this code review one
+more time. I feel kind of bad deleting
+
+00:02:52.879 --> 00:03:03.200
+GLM's code review there. And I'm going
+to say, please uh review everything in
+
+00:03:00.879 --> 00:03:10.480
+this project.
+Carry out a code review
+
+00:03:06.959 --> 00:03:18.959
+and write your conclusions
+to a file code review in the docs
+
+00:03:15.280 --> 00:03:22.959
+directory and off it goes. And of
+course, you're now familiar with the C
+
+00:03:20.959 --> 00:03:28.400
+LII experience. You're used to seeing
+the sort of thing going on, these kinds
+
+00:03:24.959 --> 00:03:34.319
+of status things as stuff happens, as
+AMP works on it. And we can see this is
+
+00:03:31.360 --> 00:03:42.159
+the context usage. It's got 5% of the
+272K and that it's we've we've spent 4
+
+00:03:39.040 --> 00:03:46.239
+cents of our free plan. This is the free
+$10 that we've got. Uh and uh it's
+
+00:03:44.720 --> 00:03:51.040
+giving us a sense of the time as well
+and we're in deep mode. So all of this
+
+00:03:48.480 --> 00:03:54.560
+is happening. This is how you use AMP.
+Uh get a sense for this as well. I'll
+
+00:03:52.959 --> 00:03:57.519
+see you when the review is complete.
+Okay. Well, it wrote a nice code review
+
+00:03:56.080 --> 00:04:01.920
+and I realized I'd accidentally just
+said code review, not code review. MD.
+
+00:04:00.159 --> 00:04:06.000
+So, I had to prompt it to fix that to be
+a code review markdown file. Now, it's
+
+00:04:04.319 --> 00:04:10.400
+done that and we can see what it's
+found. It's found something critical.
+
+00:04:08.640 --> 00:04:14.080
+Uh, yeah. Okay. The authentication thing
+again. That's fair enough. That's a good
+
+00:04:11.760 --> 00:04:18.799
+catch. Uh, credentials are hardcoded.
+Yep. This is all this is all real stuff.
+
+00:04:16.560 --> 00:04:22.800
+It's found some real problems. Uh, it's
+offering to fix them. It could certainly
+
+00:04:20.720 --> 00:04:26.400
+do that for us. We can see from the fact
+that it's got um uh Oh, I click on that
+
+00:04:25.199 --> 00:04:29.919
+and it gives me the context window
+details here. Uh we can see from this
+
+00:04:28.560 --> 00:04:33.840
+that even though it doesn't want us
+particularly to have full visibility
+
+00:04:31.919 --> 00:04:39.280
+into the model it's using, it's probably
+using one of the uh OpenAI models that
+
+00:04:37.040 --> 00:04:43.040
+has that that uh that that context
+length. And this feels like it's a
+
+00:04:41.040 --> 00:04:49.919
+high-end model to me. And we know that
+we have effectively spent 42 cents of
+
+00:04:46.320 --> 00:04:54.320
+our free uh $10 aotment by virtue of
+watching these adverts right here. Uh so
+
+00:04:52.560 --> 00:04:58.160
+that gives you a good sense of what you
+can do here. You can keep going and
+
+00:04:56.160 --> 00:05:02.960
+again you've got an experience which is
+sort of crossprovider but is otherwise
+
+00:05:00.720 --> 00:05:06.880
+quite similar to claude code although
+from my experience claude code has the
+
+00:05:05.199 --> 00:05:11.360
+edge and as a final thing to show you
+for amp if I go now to their website at
+
+00:05:09.199 --> 00:05:15.120
+ampcode.com I am now logged in because
+I've gone through that credentials
+
+00:05:12.960 --> 00:05:19.680
+process if I come up here to my avatar
+menu I can go to settings and here
+
+00:05:17.280 --> 00:05:25.120
+you'll see that I'm on the ampfree plan
+I have $9.58
+
+00:05:21.759 --> 00:05:28.639
+remaining in my 10day aotment uh 10day
+$10 aotment. I don't know if you'll have
+
+00:05:26.880 --> 00:05:34.320
+the same allotment, but but uh hopefully
+you do. And uh there is also the way
+
+00:05:31.520 --> 00:05:38.639
+here that you can purchase credits
+should you wish to be spending more. And
+
+00:05:36.560 --> 00:05:43.280
+you can have like an automatic topup
+situation as well. And I can connect
+
+00:05:40.800 --> 00:05:48.320
+through to to my GitHub credentials if I
+want. So this uh this is all the way
+
+00:05:46.240 --> 00:05:53.919
+that you configure your AMP code
+account. But but overall uh AMP gives
+
+00:05:50.880 --> 00:05:58.400
+you this very easy way to have access to
+models for free uh and even like like
+
+00:05:56.240 --> 00:06:05.919
+Frontier model level performance with
+this $10 a day a lotment in return for
+
+00:06:02.479 --> 00:06:10.479
+watching some some ads up at the top. Uh
+okay, that's AMP Code. We're going to go
+
+00:06:08.160 --> 00:06:14.080
+back to Claude Code now because we're
+going to talk about hooking up Claude
+
+00:06:12.080 --> 00:06:17.120
+Code to other providers. Okay, so we're
+going to run Claude Code again. I've
+
+00:06:15.360 --> 00:06:21.280
+gone I'm back in I'm in the PM project.
+I've I've stopped AMP, cleared the
+
+00:06:18.880 --> 00:06:25.520
+screen. Before we do anything, we're
+going to set a few environment variables
+
+00:06:23.280 --> 00:06:28.880
+that's going to control anthropic and
+tell it we don't want you to call
+
+00:06:27.039 --> 00:06:32.400
+Anthropic's models. We want you to call
+something different, open router to
+
+00:06:30.960 --> 00:06:36.160
+start with. And it's worth noting that
+this is not the way that Anthropic likes
+
+00:06:34.160 --> 00:06:40.000
+you to run Claude code. Claude Code is
+designed to run with Claude and they
+
+00:06:37.759 --> 00:06:44.720
+have optimized the experience so that
+the tooling is best equipped to be
+
+00:06:42.880 --> 00:06:48.240
+working with Anthropic's models. So,
+we're going to have a janky experience
+
+00:06:46.240 --> 00:06:52.080
+doing this. and even configuring it is a
+bit of a janky experience. So, I've got
+
+00:06:50.319 --> 00:06:55.840
+separate commands for either a Mac or a
+PC. I'm going to do it on a Mac. In the
+
+00:06:53.919 --> 00:06:59.360
+course resources, you'll have both. And
+unless you particularly want to
+
+00:06:57.440 --> 00:07:02.720
+experiment with this, I I recommend you
+watch me, but don't necessarily do this.
+
+00:07:01.120 --> 00:07:06.800
+For the open source stuff, you should
+use Open Code or AMP, uh, unless you
+
+00:07:04.960 --> 00:07:10.000
+really want to be doing it this way. So
+the first command I'm going to run is
+
+00:07:08.160 --> 00:07:16.000
+something that on a Mac is going to load
+in my MMV file and set that open router
+
+00:07:13.280 --> 00:07:19.919
+API key to be an actual environment
+variable that's set. Okay. And now I'm
+
+00:07:17.919 --> 00:07:23.599
+going to set a bunch of environment
+variables. I'm just going to paste in a
+
+00:07:21.680 --> 00:07:26.160
+bunch of commands. Here they all are.
+I'll run them and tell you. I'm just
+
+00:07:25.199 --> 00:07:29.280
+setting a bunch of environment
+variables. I think on a PC I'll have the
+
+00:07:28.080 --> 00:07:32.560
+list of instructions. No, I think you
+have to run them one by one. Sorry about
+
+00:07:30.720 --> 00:07:37.120
+that. I'm setting a bunch of environment
+variables. Anthropic default Haiku
+
+00:07:34.960 --> 00:07:41.680
+model. I'm setting it to be the moonshot
+AI Kimmy K2. I got this from open
+
+00:07:39.520 --> 00:07:46.400
+router. That is of course the the Kimmy
+K2 model we looked at uh we saw before.
+
+00:07:43.919 --> 00:07:51.039
+I don't I think we used GLM. Kimmy K2 is
+another great open- source model uh from
+
+00:07:48.960 --> 00:07:55.120
+Chinese AI startup Moonshot AI and it's
+perhaps the strongest of the open source
+
+00:07:53.039 --> 00:07:59.680
+models right now. I'm also setting
+anthropic default sonet model and
+
+00:07:57.039 --> 00:08:04.479
+default opus model to also be this. If
+you don't do that, then it ends up
+
+00:08:02.080 --> 00:08:11.360
+flipping to using uh Claude's models.
+Anyway, uh then I'm setting something
+
+00:08:06.879 --> 00:08:14.360
+called anthropic base URL to be uh
+openroot.ai/API.
+
+00:08:14.400 --> 00:08:20.560
+And I'm which which means that this this
+is saying when anthropic when you were
+
+00:08:18.560 --> 00:08:25.280
+contacting Claude in the cloud, instead
+of using the normal URL you use, I want
+
+00:08:22.879 --> 00:08:29.680
+you to use this one instead. And
+sneakily we're using open routter
+
+00:08:27.520 --> 00:08:32.880
+instead. It's not that sneaky. Anthropic
+knows we could do this. It's put this
+
+00:08:31.039 --> 00:08:36.240
+feature in for a purpose. But but you
+know that that's the idea. We're saying
+
+00:08:34.399 --> 00:08:40.320
+don't actually talk to Claude. Talk to
+open router instead. And for the
+
+00:08:38.479 --> 00:08:44.640
+anthropic orth token, I'd like you to
+use open router key, my open router key.
+
+00:08:42.880 --> 00:08:47.600
+And I'm going to blank out anthropics
+key. Uh it looks like I might be missing
+
+00:08:46.160 --> 00:08:51.680
+the export. I think this will work fine
+for me, but I'll have the exactly the
+
+00:08:49.360 --> 00:08:55.120
+right commands in the course resources.
+All right. And once we've done all of
+
+00:08:52.880 --> 00:08:59.200
+that, we can now launch Claude code to
+use Kimmy K2. And here is the command.
+
+00:08:57.600 --> 00:09:02.320
+is instead of just claude, we're doing
+claude-model
+
+00:09:00.800 --> 00:09:07.839
+and then I'm using the name of the model
+which I've taken from open router. I run
+
+00:09:04.800 --> 00:09:12.800
+this claude code comes up. If I do /mod
+to look at the model situation, you can
+
+00:09:09.839 --> 00:09:16.240
+see that we have moonshot AI Kimmy K2 as
+our model and it thinks it also has
+
+00:09:14.720 --> 00:09:20.160
+access to these other models too. What
+it doesn't know is that we've set them
+
+00:09:17.519 --> 00:09:25.920
+all to be Kimmy K2. And so we're using
+Kimmy K2 uh across the board here. Uh,
+
+00:09:24.000 --> 00:09:30.720
+and uh, let's let's ask it a question.
+And we'll keep it to a fairly simple
+
+00:09:27.279 --> 00:09:37.200
+one. How about describe the purpose of
+this project and we'll have that run.
+
+00:09:34.399 --> 00:09:41.839
+And off it goes. And it's thinking. And
+you can see it's of course the same
+
+00:09:38.560 --> 00:09:45.920
+Claude code tooling we're using. This
+sort of stuff wasn't coming from CL.
+
+00:09:43.839 --> 00:09:49.279
+This is part of the software. And what's
+come back has been a description of what
+
+00:09:48.240 --> 00:09:52.640
+it's doing based on the project
+documentation structure. This is a
+
+00:09:51.040 --> 00:09:56.720
+project management web application with
+the following key features and it's got
+
+00:09:54.959 --> 00:10:01.120
+some information in there which looks
+right. And just in case you don't
+
+00:09:58.320 --> 00:10:06.320
+believe me, here is open router. This is
+my uh activity page, my avatar menu. Go
+
+00:10:04.399 --> 00:10:12.560
+to activity. Up comes this. And you'll
+see that the most recent calls are Kimmy
+
+00:10:08.959 --> 00:10:18.320
+K2 uh where it it passed in a whole
+bunch of stuff and it got back just the
+
+00:10:15.440 --> 00:10:23.360
+tokens presumably of that summary. So,
+that seems to work well. And that is how
+
+00:10:20.640 --> 00:10:26.320
+you direct it to uh using open router.
+And if you're wondering why I didn't ask
+
+00:10:24.480 --> 00:10:31.920
+it to do a code review, it's because I
+did that before and it made a royal mess
+
+00:10:28.560 --> 00:10:35.920
+of it. So, that was too much for Kim K2.
+Uh and it's probably just some sort of
+
+00:10:33.920 --> 00:10:39.360
+misunderstanding between the way that
+the the tooling was set up, but you can
+
+00:10:37.519 --> 00:10:43.200
+try and see what you get. But if you're
+going to use open source models like
+
+00:10:41.040 --> 00:10:47.200
+this, then the key is to be willing to
+experiment. You'll find some things will
+
+00:10:45.120 --> 00:10:51.120
+work, some things won't. It's all, you
+know, things are changing fast. I know a
+
+00:10:48.800 --> 00:10:56.880
+lot of people like using Grock, some of
+the fast variants of Grock with a K. Uh,
+
+00:10:54.079 --> 00:11:00.959
+so from Elon Musk. So, worth trying
+that, too. Uh, as long as you're willing
+
+00:10:58.640 --> 00:11:05.440
+to experiment, there's lots to be done
+here. All right, last but not least,
+
+00:11:02.959 --> 00:11:09.440
+we're going to try Olama running locally
+on my machine. And this might be a total
+
+00:11:07.839 --> 00:11:14.320
+mess. I don't know if my machine can
+handle it. We'll find out. Okay, here we
+
+00:11:11.600 --> 00:11:18.240
+go. Wish me luck. I've uh done control C
+twice to get get out of claw code.
+
+00:11:16.160 --> 00:11:22.959
+Cleared the screen. Here we go. I'm
+going to start by copying and pasting in
+
+00:11:20.640 --> 00:11:26.560
+a set of commands on a PC. You'll need
+to use different commands from the
+
+00:11:24.079 --> 00:11:31.519
+course resources one by one. We have set
+the default models to be GPOSS. We're
+
+00:11:29.360 --> 00:11:34.880
+pointing instead of pointing to clawed
+up in the cloud or pointing to the my
+
+00:11:33.040 --> 00:11:38.720
+local host. My computer's just there.
+I'm looking over there as if you know
+
+00:11:36.160 --> 00:11:42.959
+it's there, but it's right there. Uh and
+uh it's running on port 11434, the
+
+00:11:40.800 --> 00:11:46.160
+default. That's where Olama is installed
+and running. If you're not familiar with
+
+00:11:44.959 --> 00:11:49.839
+this, then don't worry. You need to have
+a big computer. And I'll put
+
+00:11:47.440 --> 00:11:56.720
+instructions in the resources. And with
+that, I should be able to launch Claude
+
+00:11:51.839 --> 00:12:01.200
+by typing Claude D-model GPTOSs.
+Let's find out what happened. Here we
+
+00:11:58.160 --> 00:12:06.320
+go. I press enter. Up it comes. Let's do
+/models to find it. SLM models. Sorry.
+
+00:12:03.760 --> 00:12:11.120
+To find out what's going on. GPT4. GPT
+OSS is number four is the one that is
+
+00:12:08.480 --> 00:12:18.320
+selected. Okay. Let's say keep it very
+simple. Please summarize
+
+00:12:14.240 --> 00:12:23.279
+this project for me. Okay, let's see
+what happens. I will give it a minute.
+
+00:12:21.440 --> 00:12:27.760
+And it might take a minute. I'm I'll see
+if my GPU starts to get hammered. Uh
+
+00:12:25.839 --> 00:12:32.320
+you're still there. You still see me.
+Okay, everything seems to be good.
+
+00:12:29.279 --> 00:12:36.320
+There's no smoke yet. Uh I will see you
+in a minute or maybe in an hour when
+
+00:12:34.639 --> 00:12:40.000
+this model finishes running locally. If
+you have a big powerful computer, then
+
+00:12:38.639 --> 00:12:44.160
+you might be finding things are running
+very fast. You might also be able to
+
+00:12:41.920 --> 00:12:48.160
+rent a GPU in the cloud. But honestly,
+if you're going to use super powerful
+
+00:12:46.240 --> 00:12:52.480
+models, your best way to do it is
+through open router where they can still
+
+00:12:49.920 --> 00:12:55.839
+be incredibly cheap. Well, while I'm
+I've been blathering away uh and it does
+
+00:12:54.480 --> 00:13:00.959
+appear to be coming back with a
+response. Uh so, uh we will see whether
+
+00:12:58.880 --> 00:13:04.720
+uh whether if I keep this I keep this
+sentence going for long enough. Yes,
+
+00:13:02.240 --> 00:13:09.519
+we'll get an answer. Here we go. Uh this
+did. And I can see my GPU has been flat
+
+00:13:06.800 --> 00:13:12.959
+out. But this is a response. A project
+management MVP, a local only web app
+
+00:13:11.279 --> 00:13:18.000
+that uses it's very good. That's very
+true. Uh hardcoded password. It's it's
+
+00:13:15.760 --> 00:13:22.639
+recognized that uh and it's it
+recognizes how to run it on my on my
+
+00:13:19.600 --> 00:13:27.680
+Mac. That is correct. And uh there we
+go. Uh so that did work. That was indeed
+
+00:13:25.680 --> 00:13:32.639
+I I know for for a fact it was using my
+local model because I saw my GPU going
+
+00:13:29.920 --> 00:13:36.880
+flat out. Uh, so that gives you a good
+example of how you can use clawed code
+
+00:13:35.200 --> 00:13:41.040
+on your computer if you have a big
+enough beefy enough computer. Then you
+
+00:13:39.440 --> 00:13:45.839
+could be potentially productive using
+this. And with that, that's enough.
+
+00:13:43.600 --> 00:13:50.959
+Enough yellow. Enough messing around
+with platforms for today. I showed you
+
+00:13:48.320 --> 00:13:55.440
+claude code. I showed you open code. I
+showed you amp code. And then we went
+
+00:13:53.440 --> 00:13:59.440
+back to claw code and used it with open
+router and oama instead. If you close
+
+00:13:57.760 --> 00:14:03.040
+down those terminals and start up a
+fresh terminal, your your environment
+
+00:14:01.279 --> 00:14:06.800
+variables should be reset and you'll be
+back to claude code with Claude, which
+
+00:14:05.040 --> 00:14:11.600
+is a great place to be and is where we
+need to be for tomorrow as we dig all
+
+00:14:09.199 --> 00:14:17.760
+the way into Claude code and become
+advanced users of it. And with that,
+
+00:14:14.639 --> 00:14:22.399
+wow, you're 40% of the way through this
+program to being an expert aentic
+
+00:14:20.240 --> 00:14:27.120
+engineer. 40% of the way through.
+Tomorrow's another yellow day. I'll see
+
+00:14:24.720 --> 00:14:27.120
+them.
+

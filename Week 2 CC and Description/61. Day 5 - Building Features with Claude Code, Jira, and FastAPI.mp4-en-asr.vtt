@@ -1,0 +1,639 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:08.000
+Here we go. Now, we're going to do the
+feature dev. Uh feature dev uh feature
+
+00:00:06.160 --> 00:00:16.800
+dev. You can just press down and tab.
+And then I'm going to say uh implement
+
+00:00:11.440 --> 00:00:25.760
+Jira ticket PL4
+and um um and make a PL.
+
+00:00:22.960 --> 00:00:32.000
+That's it. That's all we're doing. Off
+it goes. It's connecting to Alassian.
+
+00:00:28.640 --> 00:00:34.880
+It's pulling PL4 and uh things are
+happening. I will see you back here in a
+
+00:00:33.680 --> 00:00:39.600
+minute. I'm going to be I know I'm going
+to be amazed and shocked. Uh let's see
+
+00:00:37.440 --> 00:00:44.399
+what happens. Okay, it's come back and
+asked me questions like before. The
+
+00:00:41.600 --> 00:00:48.320
+first one it's saying is that for this
+V1 foundational ticket, should
+
+00:00:46.000 --> 00:00:52.399
+authentication be functional or just
+have placeholder roots? And it should be
+
+00:00:50.800 --> 00:00:55.520
+placeholder only, which I thought we
+were clear about in the ticket, but
+
+00:00:53.760 --> 00:00:59.600
+maybe not enough. So, I'm going to move
+to placeholder only. That's that
+
+00:00:58.079 --> 00:01:03.120
+question for the front-end backend
+integration. Should the current NDA form
+
+00:01:01.120 --> 00:01:07.600
+functionality remain client side or
+should the form data be saved persisted
+
+00:01:05.360 --> 00:01:12.320
+to the back end? Let's keep it client
+side. Uh, and that's it. That's the end
+
+00:01:09.920 --> 00:01:17.520
+of our questions. Off it goes back to
+thinking. Okay, it's now following the
+
+00:01:14.400 --> 00:01:20.960
+steps more precisely. It's got to the
+architecture design and it's asking me
+
+00:01:19.360 --> 00:01:23.759
+to review this. If you look at the
+bottom here, it says, does this
+
+00:01:22.320 --> 00:01:28.320
+architecture approach look good to
+proceed with the implementation? So,
+
+00:01:25.280 --> 00:01:32.799
+let's have a look at it. Um, let me see.
+Uh, I have a clearer sense. Here we go.
+
+00:01:30.560 --> 00:01:37.360
+Static front end. Fast API. That's good.
+Front end. Next.j static. That's fine.
+
+00:01:35.200 --> 00:01:40.960
+Fast API with UV. SQL light for future
+use. Yes. Placeholder roots only. Yes.
+
+00:01:39.360 --> 00:01:45.119
+Single container multage build. Yes.
+That's what I like. This all looks good.
+
+00:01:43.280 --> 00:01:49.360
+PI projectl. I'm pleased to see that's
+what it didn't do before that that I
+
+00:01:47.119 --> 00:01:54.240
+didn't like. This seems sensible. Um,
+that's sensible. This is a good uh
+
+00:01:51.200 --> 00:01:57.200
+structure. Uh oh. I hope that that's not
+going to be Oh, yeah. It's got roots.
+
+00:01:55.759 --> 00:02:05.520
+Okay. Yeah. Yeah. I like that. I like
+that. Docker compose is good. Uh fine.
+
+00:02:01.200 --> 00:02:09.679
+Um and this is all makes sense to me. I
+think this is good. Um add add the
+
+00:02:08.160 --> 00:02:14.959
+database to get ignore. That's very
+sensible. Uh okay. I think this is uh
+
+00:02:12.879 --> 00:02:19.760
+this is good. Uh that that all looks
+very sensible. Now, of course, if if you
+
+00:02:17.840 --> 00:02:24.239
+are not familiar with these technical
+decisions, then that's good because it's
+
+00:02:22.080 --> 00:02:28.400
+got a chat with me, chat about this
+thing where you can ask questions,
+
+00:02:25.920 --> 00:02:32.160
+probe. This is where even if you're not
+from a technical background, you need to
+
+00:02:29.920 --> 00:02:36.319
+be the boss. Be like the inquisitive
+manager that asks some probing questions
+
+00:02:34.640 --> 00:02:40.480
+to make absolutely sure you understand
+the different decisions because this is
+
+00:02:38.000 --> 00:02:44.480
+your opportunity to challenge. And and
+you know, increasingly it it's getting
+
+00:02:42.560 --> 00:02:49.200
+better and better. It's hard to to find
+faults in this, but had it done this
+
+00:02:46.400 --> 00:02:53.360
+before uh in our prior project PM, I
+would have noticed that it was had a
+
+00:02:50.800 --> 00:02:56.239
+monolithic main.py and other other
+problems with it that I would have have
+
+00:02:54.640 --> 00:03:00.720
+seen ahead of time, but it's not making
+that mistake now. Perhaps because it's
+
+00:02:58.239 --> 00:03:06.080
+been guided through this process. Okay,
+so I'm pressing one, yes, proceed, and
+
+00:03:03.280 --> 00:03:10.800
+off it goes. Well, that's incredible. It
+says that it's done everything. It says
+
+00:03:07.840 --> 00:03:15.519
+that it's tested it. All 76 tests pass,
+it says. and the API endpoints are done
+
+00:03:13.840 --> 00:03:21.280
+and that it's uh completed everything
+and it's made a PR and uh so I guess we
+
+00:03:18.560 --> 00:03:25.920
+should now test it ourselves and then we
+can move on to the next if we believe
+
+00:03:23.200 --> 00:03:29.519
+it. Let's uh find out the the uh we
+we've got ourselves again a script that
+
+00:03:27.840 --> 00:03:34.000
+we should be able to run. We'll go and
+do that now. So I bring up a new
+
+00:03:31.440 --> 00:03:40.640
+terminal window. Here we go. I'm going
+to do scripts slash start
+
+00:03:38.879 --> 00:03:45.760
+dashmac.shell
+shell. Okay, it's building something.
+
+00:03:43.519 --> 00:03:51.519
+It's done. It's started it. It says
+right here. Let's uh open this up. Here
+
+00:03:48.400 --> 00:03:55.599
+we go. Click on here. Up it comes. It
+looks the same, but we know it's running
+
+00:03:53.200 --> 00:04:00.319
+through this this bigger infrastructure
+now. Uh and uh I guess we could just
+
+00:03:58.480 --> 00:04:03.760
+just quickly check that if we do New
+York that it appears over on the right.
+
+00:04:01.760 --> 00:04:07.599
+It does seem to. And what about the
+downloading? Is this still going to
+
+00:04:05.040 --> 00:04:12.560
+work? Yep, that still seems to work. Uh
+here we go. Here are my downloads.
+
+00:04:09.439 --> 00:04:17.199
+recent download and there it is fine.
+It's all working. It's uh that's great
+
+00:04:15.120 --> 00:04:23.360
+on a different route on localhosted
+8000. It's it's uh coming through just
+
+00:04:19.600 --> 00:04:28.400
+great. Amazing. Okay. So, back we come
+uh here and uh yeah, we can we can see
+
+00:04:26.479 --> 00:04:33.440
+that that tons and tons of stuff has
+been built. Uh if we go to back end and
+
+00:04:30.800 --> 00:04:46.000
+roots and and and lots of things here.
+Um, okay. So now I'm going to say, um,
+
+00:04:37.919 --> 00:04:53.880
+please merge the PR locally and push
+push to main and uh, switch branch to
+
+00:04:50.880 --> 00:04:53.880
+main.
+
+00:04:56.240 --> 00:04:59.960
+Let's make that happen.
+
+00:05:02.000 --> 00:05:07.919
+And then at the end of this, off it
+goes. It's doing all of its things. And
+
+00:05:06.720 --> 00:05:14.400
+what are we going to do next? We're just
+going to go push ahead and do do PL5,
+
+00:05:11.039 --> 00:05:18.400
+the next of our actions. Uh so this is
+of course a bigger one. I'm just going
+
+00:05:15.520 --> 00:05:23.840
+to go up here. Uh feature dev implement
+juror ticket PL5 and make a PR. Um maybe
+
+00:05:21.840 --> 00:05:29.039
+maybe before we should do this. Not so
+fast. Not so fast. Let's look at
+
+00:05:26.080 --> 00:05:33.600
+context. Always look at the context.
+Let's take a look. How are we doing
+
+00:05:31.120 --> 00:05:37.919
+here? Scroll up. Look at that. It is
+pretty full. Why don't we do something a
+
+00:05:35.360 --> 00:05:45.840
+bit different? Why don't we say um
+please um update uh add add
+
+00:05:43.360 --> 00:05:54.080
+some concise
+details to the end of claude.md
+
+00:05:51.440 --> 00:05:59.240
+with an update
+on what has been implemented.
+
+00:06:01.120 --> 00:06:08.759
+and change
+anything that's no longer accurate
+
+00:06:08.960 --> 00:06:16.160
+in claw.md because I remember there's a
+section at the top when we say this is
+
+00:06:12.639 --> 00:06:20.479
+what we've got. Okay. So, we'll let it
+do that because we're going to want to
+
+00:06:17.680 --> 00:06:23.759
+now now reset it to do the next one. Uh,
+and this is a good practice because if
+
+00:06:22.319 --> 00:06:27.520
+we just leave it going, it's going to
+fill up the rest of the context. Then
+
+00:06:25.440 --> 00:06:31.520
+it's going to do a compact. And as it
+does that compact, it's always a bit
+
+00:06:29.759 --> 00:06:35.680
+risky. What you tend to find is that it
+selectively forgets some of the things
+
+00:06:33.600 --> 00:06:40.639
+that did really matter from things like
+claw.md in its attempts to squash
+
+00:06:37.919 --> 00:06:44.400
+everything down. So people are people
+are afraid of compacting for good
+
+00:06:42.639 --> 00:06:47.360
+reason. You get used to this kind of
+fear of the compact once you've done
+
+00:06:45.759 --> 00:06:50.479
+this for a while because performance
+tends to degrade after it. All right,
+
+00:06:49.360 --> 00:06:56.720
+now we've done that. Let's go and have a
+look at claw.md. Let's see what we've
+
+00:06:52.319 --> 00:07:00.639
+got here. Uh, open preview. Um, and uh,
+this is a SAS product. The current
+
+00:06:58.240 --> 00:07:04.319
+implementation supports okay with no
+development progress. That's all good.
+
+00:07:02.319 --> 00:07:10.880
+AI design. It hasn't messed this up. It
+still says use your skill color scheme
+
+00:07:07.280 --> 00:07:17.680
+implemented status. Okay. Good. Good.
+Good. Good. All right. Fabulous. Now,
+
+00:07:14.639 --> 00:07:22.319
+now we can start again with Claude code.
+We can clear the context with clear
+
+00:07:19.840 --> 00:07:28.080
+conscience and then get on with the next
+one. So, uh, we will we will get on with
+
+00:07:24.960 --> 00:07:33.120
+that. So, I'm going to do slashcle.
+There we go. No content. It's all gone.
+
+00:07:31.440 --> 00:07:38.400
+Context. Let's have a look at it. Nice
+and fresh. Uh, it's of course still got
+
+00:07:36.000 --> 00:07:43.280
+that memory in there. You can see that
+the memory file is 1.8K tokens. It's got
+
+00:07:41.199 --> 00:07:48.720
+got a little bit in there. Uh, so we've
+got some stuff in there. Now, if I go up
+
+00:07:45.840 --> 00:07:53.919
+up up, here we go. Implement Jurro
+ticket PL5 and make a PR. Uh but we may
+
+00:07:52.479 --> 00:07:57.759
+need to reauthenticate. Should we just
+give it a try? Let's see what happens if
+
+00:07:55.680 --> 00:08:06.039
+it's able to regure or whether it's
+going to get stuck. Uh it's uh let me
+
+00:08:00.560 --> 00:08:06.039
+see. We'll do this. Uh
+
+00:08:07.520 --> 00:08:13.360
+I think this is a good sign. This is
+what happens when it gets stuck. It just
+
+00:08:11.039 --> 00:08:16.639
+stays like this. When this happens, it
+means it needs me to reauthenticate. So
+
+00:08:15.199 --> 00:08:20.960
+if this happens to you, that's what's
+going on. Uh I know this from bitter
+
+00:08:18.960 --> 00:08:26.000
+personal experience. So you press escape
+to interrupt like that. Uh and now we've
+
+00:08:23.680 --> 00:08:30.160
+interrupted. We do /mptp
+and we come into our MCP servers. We go
+
+00:08:28.319 --> 00:08:34.880
+into Atlassian. We're going to
+reauthenticate.
+
+00:08:31.919 --> 00:08:40.080
+Up comes this. Approve.
+And back down here. Accept.
+
+00:08:37.760 --> 00:08:45.600
+That is now done. Return to claude code.
+Back we go. You see I'm pretty quick at
+
+00:08:42.159 --> 00:08:49.600
+this now. Here we go. Try again. Now I
+think we'll find it. We'll be able to do
+
+00:08:46.880 --> 00:08:53.360
+it quite fast. Running. And it's off.
+There we go. Okay, I'll see you in a
+
+00:08:51.279 --> 00:08:56.399
+second. Okay, so it's asking me
+questions and they are really great
+
+00:08:55.120 --> 00:08:59.760
+questions. And these are the kinds of
+questions that you might go back and ask
+
+00:08:57.920 --> 00:09:04.160
+your business sponsor or product person
+if you were trying to code this. Should
+
+00:09:01.760 --> 00:09:08.560
+the chat UI completely replace the form
+or coexist with it so your user can
+
+00:09:07.120 --> 00:09:13.839
+switch between the chat and the form
+view? I I think number one, replace the
+
+00:09:11.040 --> 00:09:18.080
+form entirely. We want a chat UI. That
+is the new way of doing things. Uh so
+
+00:09:15.760 --> 00:09:23.440
+it's just going to be number one. That
+is it. One. Should the document preview
+
+00:09:21.360 --> 00:09:28.480
+live updates or only after the user?
+Live updates for sure. Number one, how
+
+00:09:26.320 --> 00:09:36.080
+should the AI conversation begin? AI
+greets and asks first question. Um, yes,
+
+00:09:31.760 --> 00:09:39.519
+let's uh uh let's do that. Um, when all
+the required fields are filled in, what
+
+00:09:37.680 --> 00:09:46.000
+should happen? AI confirms and show
+download. Um, the that sounds right.
+
+00:09:43.200 --> 00:09:49.360
+Yes, one. Okay. Submit answers. Great
+questions. really good questions. They
+
+00:09:47.760 --> 00:09:55.680
+are like the sorts of things that one
+would ask typically. Uh so uh yeah, this
+
+00:09:52.720 --> 00:09:59.600
+this process this this anthropic uh
+built process to guide you through
+
+00:09:57.600 --> 00:10:02.240
+really does seem to work. Next up is
+going to be the architecture design and
+
+00:10:00.959 --> 00:10:06.480
+it'll ask me some architecture
+questions. Okay, it's responded with the
+
+00:10:04.399 --> 00:10:11.760
+architecture setup. Let's have a look at
+what it's saying. So it is saying uh
+
+00:10:10.480 --> 00:10:14.560
+before designing the architecture, I
+have a few questions about the
+
+00:10:13.040 --> 00:10:18.240
+implement. Sorry, here we go. Phase
+four. Let me uh uh launch this. All
+
+00:10:16.880 --> 00:10:22.880
+three architecture approaches are
+complete. So it launched three different
+
+00:10:19.760 --> 00:10:27.760
+agents. Minimal, clean, and pragmatic.
+Minimal changes. Replace NDA form with
+
+00:10:25.040 --> 00:10:33.279
+chat interface. Reuse everything else.
+Stateless backend. Sure. Okay. Clean
+
+00:10:31.120 --> 00:10:37.600
+architecture. Full session management.
+Database persistence. SSC. No, we don't
+
+00:10:35.120 --> 00:10:40.959
+want that. Definitely not. Pragmatic
+balance. Streaming responses with
+
+00:10:39.200 --> 00:10:46.240
+parallel field extraction. Stateless
+backend clean blah blah blah. two
+
+00:10:43.519 --> 00:10:53.600
+parallel one for structured feature good
+UX simple to implement
+
+00:10:49.279 --> 00:10:58.000
+um let me see
+uh that's that's a difficult one um I
+
+00:10:56.560 --> 00:11:01.839
+actually I don't particularly think we
+need streaming because we're using
+
+00:10:59.600 --> 00:11:05.200
+Cerebrass which is so fast that
+streaming is not going to be required
+
+00:11:03.760 --> 00:11:15.360
+and I'd rather we just have the
+structured extraction um I uh um I think
+
+00:11:11.200 --> 00:11:21.440
+I'm going to go for the minimal one. Um,
+I'm going to go here for two. Is it
+
+00:11:19.279 --> 00:11:28.360
+going to let me chat about it? Yeah, I I
+guess I'm going to chat about this. Uh,
+
+00:11:23.920 --> 00:11:28.360
+say chat about this. Okay.
+
+00:11:30.320 --> 00:11:44.480
+Uh, okay. So, um, would you like to
+clarify? I'd like the the simple back
+
+00:11:38.880 --> 00:11:51.839
+the the um the pragmatic choice
+except I only want one LLM call and no
+
+00:11:50.000 --> 00:11:57.200
+streaming
+because cerebrass
+
+00:11:54.480 --> 00:12:00.200
+is so fast that streaming isn't
+necessary.
+
+00:12:01.440 --> 00:12:11.760
+One LLM call with structured outputs,
+including the response is cleaner.
+
+00:12:10.560 --> 00:12:16.480
+There we go. That's what we're going
+with. So, it's a conversation. Let's see
+
+00:12:14.480 --> 00:12:21.440
+what it's thinking. It's thinking about
+that. Let's see uh see what it likes
+
+00:12:19.600 --> 00:12:25.040
+about that. And hopefully, it will build
+this. But this is the kind of thing uh
+
+00:12:23.600 --> 00:12:30.639
+that makes sense. Serus is extremely
+fast and single structure apps both the
+
+00:12:26.959 --> 00:12:35.120
+response text and the uh extra fields is
+cleaner. Let me update the approach.
+
+00:12:32.399 --> 00:12:40.000
+Great. So I like that interaction. I
+like the fact that it made me think uh
+
+00:12:37.600 --> 00:12:44.560
+you you could see my my my my cog wheels
+were were turning there. Uh and uh I it
+
+00:12:42.959 --> 00:12:47.200
+was a decent question. It was a good
+debate. I could see why it would think
+
+00:12:46.079 --> 00:12:51.040
+that streaming would be a better
+experience, but I do think from my
+
+00:12:49.200 --> 00:12:53.920
+knowledge of Cerebrass, it's so fast
+that it would just be like zipping
+
+00:12:52.240 --> 00:12:59.519
+through. It wouldn't be necessary. and
+it would be extra complexity for for
+
+00:12:56.399 --> 00:13:02.880
+little benefit. Um so I'd rather stick
+with with simpler there. Okay, it's
+
+00:13:01.600 --> 00:13:06.800
+going on to implementation. And I will
+see you in a second when implementation
+
+00:13:04.399 --> 00:13:06.800
+is complete.
+

@@ -1,0 +1,540 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.080 --> 00:00:08.240
+I've used the expression inflection
+point to describe what happened in
+
+00:00:04.480 --> 00:00:13.280
+November of 25 as as Anthropics Claude
+Opus 4.5 came out and suddenly the
+
+00:00:10.880 --> 00:00:17.680
+capabilities of models seemed to cross a
+line and become just incredibly
+
+00:00:15.440 --> 00:00:23.600
+powerful. Well, inflection point is how
+I would describe today, week two, day
+
+00:00:21.199 --> 00:00:28.080
+three, we are we are crossing a line.
+Your expertise is about to go to a
+
+00:00:26.080 --> 00:00:33.120
+different level and we're also passing
+the halfway point. Welcome to another
+
+00:00:30.160 --> 00:00:39.440
+purple day, another day of expertise.
+Welcome to week two, day three on MCP
+
+00:00:36.559 --> 00:00:44.559
+skills and plugins. Today is just a
+giant of a day. We we have a lot of
+
+00:00:41.920 --> 00:00:48.160
+material to cover. Some of it might be a
+bit much of it overwhelming, but but
+
+00:00:46.399 --> 00:00:50.800
+never fear. This is going to be material
+that we're going to come back to again
+
+00:00:49.440 --> 00:00:54.719
+and again and again until you're fed up
+of it. So enjoy it this first time round
+
+00:00:53.199 --> 00:00:59.199
+because you're going to hear it a lot.
+We're going to cover these very key
+
+00:00:56.800 --> 00:01:03.600
+building blocks of working in Claude
+code. And this really ties back to the
+
+00:01:01.199 --> 00:01:07.920
+Andre Carpathy tweet that we began the
+whole course on about the confusing
+
+00:01:06.159 --> 00:01:12.720
+array of different techniques you can
+use to get more out of Claude code. So
+
+00:01:10.640 --> 00:01:16.159
+here are the big three that we're going
+to be covering today. And then there are
+
+00:01:14.479 --> 00:01:21.680
+a few more, but they aren't as important
+as these big three. MCP. MCP is all the
+
+00:01:19.360 --> 00:01:26.560
+rage. Everyone loves to talk about MCP.
+It is of course a way to connect claude
+
+00:01:23.920 --> 00:01:32.000
+code to somebody else's tools. Tools
+which someone else has written. Then
+
+00:01:28.400 --> 00:01:36.720
+there are skills. Skills came after MCP.
+They are also a way to add expertise and
+
+00:01:34.960 --> 00:01:41.840
+capabilities. They have a lot in common
+with MCP in some ways. It's like a
+
+00:01:39.759 --> 00:01:46.479
+competing alternative approach to do
+mostly the same thing and we will
+
+00:01:43.920 --> 00:01:53.040
+compare them. And then thirdly there are
+plugins. And plugins is just a higher
+
+00:01:49.600 --> 00:01:58.479
+level idea. plugins are are packages,
+bundles of MCPs, skills, and other
+
+00:01:55.759 --> 00:02:03.119
+things packaged together conveniently in
+a much easier way to install. But these
+
+00:02:01.200 --> 00:02:08.239
+three are confusing because all three of
+them can be installed and uninstalled
+
+00:02:05.840 --> 00:02:12.080
+and activated separately. So you need to
+understand each in its own right. You
+
+00:02:09.920 --> 00:02:16.080
+need to see how the the journey has
+developed such that we have all three
+
+00:02:13.920 --> 00:02:20.640
+available to us now. and and then I will
+give you complete clarity on when you
+
+00:02:18.400 --> 00:02:26.080
+use which. And in order to give you this
+complete clarity, I first have to be be
+
+00:02:23.680 --> 00:02:30.000
+clear myself on what is the big
+innovation behind claude code that that
+
+00:02:28.720 --> 00:02:35.280
+all these different things are sort of
+dancing around. The big innovation, it
+
+00:02:33.040 --> 00:02:38.959
+comes down to those four tricks that I
+told you about last week sometime at the
+
+00:02:37.280 --> 00:02:44.319
+beginning of last week. four tricks that
+get us from from just running an LLM
+
+00:02:41.040 --> 00:02:48.959
+that that predicts tokens, a a basically
+a predictive text on steroids to
+
+00:02:46.640 --> 00:02:52.800
+something that feels like a gentic AI
+like clawed code. And out of these four
+
+00:02:50.959 --> 00:02:58.720
+tricks, the one that really stands out
+is the use of tools. This is this idea
+
+00:02:56.160 --> 00:03:03.680
+that as part of generating tokens, you
+can generate tokens which describe an
+
+00:03:01.280 --> 00:03:08.000
+action that you want the LLM to take.
+And that takes us from the world of of
+
+00:03:05.519 --> 00:03:12.239
+just generating content to a world of
+actually taking action. And so I want to
+
+00:03:10.159 --> 00:03:17.360
+really hammer home that it is that idea
+tools which is the basis of all of these
+
+00:03:15.680 --> 00:03:23.120
+other bits bells and whistles we're
+going to add in. Tools are what allows
+
+00:03:19.599 --> 00:03:26.959
+an LLM to take action not just generate
+content by virtue of the content it
+
+00:03:25.280 --> 00:03:30.799
+generates. It generates content and we
+interpret that to say all right you're
+
+00:03:28.959 --> 00:03:36.239
+making a decision. You're taking an
+action. And for example, Claw Code has
+
+00:03:33.680 --> 00:03:41.120
+baked into it some tools, some of them
+that you've seen very visually already.
+
+00:03:38.640 --> 00:03:45.360
+There's a tool to manage a to-do list,
+tools that let it add to the to-do list
+
+00:03:42.879 --> 00:03:49.440
+and mark things as complete. And it uses
+those tools a lot. And that's why you
+
+00:03:47.120 --> 00:03:53.760
+see in the output from Claude Code,
+apparently it checking things off. It's
+
+00:03:51.440 --> 00:03:58.400
+because it's using that tool and that
+guides its thinking and it and it guides
+
+00:03:55.840 --> 00:04:02.480
+the process. And the the big innovation
+with with Claude Code was was when
+
+00:04:00.239 --> 00:04:06.080
+Anthropic just added a bunch of tools
+into Claude Code. There's there's the
+
+00:04:04.480 --> 00:04:10.080
+to-do list. There's something that lets
+it manage files and edit files. There's
+
+00:04:08.720 --> 00:04:14.959
+something that lets it search the
+internet. And all of these tools give it
+
+00:04:12.640 --> 00:04:21.440
+the the abilities that you see. And all
+the way back in late 2024, Anthropic
+
+00:04:18.320 --> 00:04:26.320
+realized that this ability to stitch in
+tools into something like Claude Code,
+
+00:04:24.720 --> 00:04:30.080
+that was something that was going to be
+really game-changing if they could
+
+00:04:27.840 --> 00:04:32.880
+figure out how to do that in a seamless
+way. There were some frameworks around
+
+00:04:31.919 --> 00:04:36.880
+at the time, there things like
+Langchain, if you know that, which have
+
+00:04:34.800 --> 00:04:40.560
+libraries of tools that coders would
+write and they'd conform to some sort of
+
+00:04:38.880 --> 00:04:44.000
+a framework. And as long as you've done
+it that way, then if you're a user of
+
+00:04:42.160 --> 00:04:48.000
+that framework, you could use other
+people's tools. And Anthropic realized
+
+00:04:46.320 --> 00:04:53.600
+if you could do something like that in a
+really general way such that you could
+
+00:04:50.800 --> 00:04:57.919
+just bolt tools into Claude code and
+Claude Code would just be able to use
+
+00:04:55.280 --> 00:05:02.880
+somebody else's tools that could be
+something that would that would unlock
+
+00:05:00.080 --> 00:05:08.960
+huge amounts of of capabilities within
+Claude Code, allowing anyone to write
+
+00:05:05.440 --> 00:05:14.240
+more tools. And so in late 2024, about
+the same time that claw code was being
+
+00:05:10.720 --> 00:05:18.960
+worked on, they uh announced MCP, the
+model context protocol. And as they
+
+00:05:16.960 --> 00:05:24.479
+explained it at the time, they described
+it as the USBC port for AI applications.
+
+00:05:23.199 --> 00:05:29.360
+And they also described it as an
+open-source standard for connecting AI
+
+00:05:27.039 --> 00:05:35.680
+applications to external systems.
+Originally, it actually supported tools
+
+00:05:32.320 --> 00:05:39.680
+and also prompt templates and also what
+they called resources, just sets of
+
+00:05:37.360 --> 00:05:44.240
+information, making it easier to hook up
+any of those things into an an AI
+
+00:05:42.479 --> 00:05:47.360
+application. It's really the tools part
+that's taken off in a massive way. But
+
+00:05:45.840 --> 00:05:52.720
+but the other things are supported as
+well. But the idea is it's not about
+
+00:05:50.479 --> 00:05:57.840
+actually the tools themselves. It's
+about connecting someone else's tools to
+
+00:05:55.759 --> 00:06:01.680
+your AI application. It's the
+connectivity and it's not necessarily
+
+00:06:00.000 --> 00:06:05.840
+the the implementation. It's not the
+technology to connect them. It's just
+
+00:06:03.280 --> 00:06:09.759
+the standard. It's a protocol. It's an
+agreed way that you can write something
+
+00:06:08.240 --> 00:06:14.319
+that means that the tools that you've
+written can be shared and used by
+
+00:06:11.840 --> 00:06:19.120
+somebody else's application like Claude
+Code. So that is the key point. It's a
+
+00:06:16.240 --> 00:06:24.240
+way to connect your application like
+Claude code to tools that somebody else
+
+00:06:21.840 --> 00:06:28.080
+has written. a way to share tools so
+that you can equip your claude code with
+
+00:06:26.319 --> 00:06:32.560
+tons and tons of tools and also if you
+use claude.ai AI the the the web or chat
+
+00:06:30.319 --> 00:06:36.960
+GPT any of these these kinds of AI
+applications that are ready for MCP you
+
+00:06:34.639 --> 00:06:40.720
+can just hook in tools that somebody
+else has written and if that still
+
+00:06:39.199 --> 00:06:44.720
+sounds a bit abstract will do it for
+lots of them and the big thing to
+
+00:06:42.560 --> 00:06:49.600
+understand is that the major innovation
+is tools that's the thing to be really
+
+00:06:46.880 --> 00:06:53.440
+excited about MCP is is great but but
+it's really it's just just about it
+
+00:06:51.520 --> 00:06:57.360
+being an agreed standard that tells us
+how we can take someone else's tools and
+
+00:06:55.360 --> 00:07:01.759
+put them in our claude code and so to
+really really press the point to say
+
+00:06:59.680 --> 00:07:06.639
+what what is so great about MCP and then
+what's like what's great is it's such an
+
+00:07:04.800 --> 00:07:10.800
+easy way to stitch in somebody else's
+tools. It's also if you've written a
+
+00:07:08.960 --> 00:07:14.240
+tool and it's a great tool and you're
+thinking everyone should be able to use
+
+00:07:12.319 --> 00:07:17.680
+my tool. It's the best. Then it gives
+you a way to to make that available to
+
+00:07:16.080 --> 00:07:22.720
+other people and say hey you can use my
+tool in your Claude code or in your chat
+
+00:07:20.000 --> 00:07:28.160
+GBT. It can have this extra ability.
+I've written it you can use it. It's
+
+00:07:25.120 --> 00:07:32.240
+plugandplay and it just gives an easy
+way just to connect an LLM to a tool. If
+
+00:07:30.560 --> 00:07:38.000
+you've got an LLM and and you want to be
+able to use a tool from a library, you
+
+00:07:34.319 --> 00:07:43.039
+can easily plug it in. The gamecher, the
+thing that has made this so different is
+
+00:07:40.720 --> 00:07:47.120
+the fact that it's been so widely
+adopted. That's that's the reason it's a
+
+00:07:45.520 --> 00:07:51.599
+big deal. There are other ways that you
+can connect tools to to applications
+
+00:07:49.680 --> 00:07:55.919
+like Langchain. There are other
+libraries of tools. Uh but the the way
+
+00:07:53.919 --> 00:08:00.960
+that it's been adopted, the ecosystem
+that is built around MCP has made it
+
+00:07:58.879 --> 00:08:04.560
+such a big deal. So when people get very
+excited, there's so much hype about MCP.
+
+00:08:03.120 --> 00:08:07.919
+People want to talk about all the time,
+where are you using MCP in your
+
+00:08:06.080 --> 00:08:12.160
+business, just be sure to keep them
+grounded with clarity on why you should
+
+00:08:10.400 --> 00:08:16.160
+be excited about it and why you
+shouldn't. And so to be concrete, why
+
+00:08:14.240 --> 00:08:20.319
+you shouldn't necessarily be so so
+excited about it. First of all, MCP is
+
+00:08:18.720 --> 00:08:24.080
+about the interface between them. It's
+not the tools themselves. If people have
+
+00:08:22.240 --> 00:08:27.520
+great tools, you should be excited about
+the great tools that they've written
+
+00:08:25.599 --> 00:08:32.320
+like tools that can browse the internet
+and or or uh that can do that can look
+
+00:08:30.080 --> 00:08:36.640
+for the current market data for for
+equity prices. Those kinds of tools are
+
+00:08:34.320 --> 00:08:40.560
+great tools. MCP is just the tissue to
+connect them. It's it's a standard. I
+
+00:08:39.120 --> 00:08:45.120
+I'm repeating myself, but you get it.
+It's a standard. It's a protocol. It's
+
+00:08:42.399 --> 00:08:50.480
+not necessarily the implementation. And
+also something that is a very specific
+
+00:08:47.839 --> 00:08:54.720
+problem with MCP is that it's not a very
+efficient way to do things. If you use
+
+00:08:52.720 --> 00:08:58.720
+too many MCP servers and it can be very
+tempting to stitch in lots of MCP
+
+00:08:57.120 --> 00:09:01.360
+servers because they've all got juicy
+functionality and you might think, "Oh
+
+00:09:00.160 --> 00:09:04.720
+yeah, I could do some of that. I could
+use some of that. Yes, let me add that
+
+00:09:02.880 --> 00:09:09.760
+all in." Before you know it, you can
+start to fill up your context window.
+
+00:09:06.959 --> 00:09:14.080
+And very recent innovations in 2026 has
+has improved the situation. There's now
+
+00:09:11.839 --> 00:09:17.920
+cloud code is now quite smart about not
+overly loading in the context window.
+
+00:09:16.160 --> 00:09:22.560
+But there's still other reasons why if
+you're actively using lots of MCP
+
+00:09:20.399 --> 00:09:28.399
+servers, you can quickly fill up the
+context window with stuff very easily.
+
+00:09:25.760 --> 00:09:32.800
+So it's not particularly context
+efficient even with recent improvements.
+
+00:09:30.560 --> 00:09:35.920
+And so you can start to see degrading
+performance and you can start to see
+
+00:09:34.399 --> 00:09:41.120
+yourself filling up the window and going
+into compacting far too soon if you
+
+00:09:38.320 --> 00:09:46.399
+overuse MCP. And on that note, we're
+going to next cover skills. And skills
+
+00:09:44.560 --> 00:09:51.120
+in some ways addresses some of those
+negatives. Skills is something that is
+
+00:09:48.640 --> 00:09:54.240
+perhaps a step in a better direction.
+Although it doesn't do everything MCP
+
+00:09:52.640 --> 00:09:58.640
+does. So it's like got some pros and
+some cons, but a lot of people are
+
+00:09:56.000 --> 00:10:02.399
+thinking that really ultimately skills
+might be the thing that replaces MCP
+
+00:10:00.800 --> 00:10:04.640
+everywhere. And you'll see more about
+that
+

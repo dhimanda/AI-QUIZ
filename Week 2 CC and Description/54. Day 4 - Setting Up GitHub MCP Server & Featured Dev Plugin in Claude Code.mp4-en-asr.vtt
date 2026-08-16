@@ -1,0 +1,605 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:05.680
+Okay, now I'm going to press the open
+button. You can also get to this by
+
+00:00:03.200 --> 00:00:12.400
+going file. I go into projects. I go
+into pre-legal. I say open. And now we
+
+00:00:08.720 --> 00:00:17.600
+have our new our new open VS Code
+project. We say yes, I trust the
+
+00:00:14.719 --> 00:00:20.800
+authors. Here we go. We are in here.
+This is the beginning of our new
+
+00:00:19.119 --> 00:00:25.680
+project. Okay. So, I'm going to bring up
+a terminal again with command and then
+
+00:00:22.960 --> 00:00:30.160
+the the backslash. And now, uh, sorry,
+the back slash, the back tick. And now
+
+00:00:27.760 --> 00:00:35.760
+we're going to install another MCP
+server and this time it's for GitHub. We
+
+00:00:33.360 --> 00:00:41.760
+want to connect to GitHub using GitHub's
+famous remote MCP server using a the
+
+00:00:39.840 --> 00:00:46.480
+token that we just created and that
+you're taking great care to preserve
+
+00:00:43.920 --> 00:00:50.399
+exactly as is. Now you may wonder why
+are we using MCP servers directly like
+
+00:00:48.719 --> 00:00:54.079
+this when I just told you that the best
+place to start is with plugins. And the
+
+00:00:52.640 --> 00:00:59.039
+reason is because first of all these are
+two very famous MCP servers Jura and
+
+00:00:56.719 --> 00:01:02.640
+GitHub that are very well known very
+powerful and highly used in the
+
+00:01:00.800 --> 00:01:07.439
+community and secondly because they have
+these very particular authorization
+
+00:01:04.720 --> 00:01:11.600
+techniques and to do it that to to go
+through that proper process it is best
+
+00:01:09.439 --> 00:01:17.600
+to go directly through the MCP server
+and that's why we're doing it that way.
+
+00:01:13.920 --> 00:01:23.040
+Okay. So let's now connect to the GitHub
+MCP server using our key. Okay. So, I've
+
+00:01:20.640 --> 00:01:26.640
+pasted in here the command which is in
+the course resources. I'm going to close
+
+00:01:24.320 --> 00:01:31.200
+that so you can see it all in one line.
+It's uh hang on, let me just delete
+
+00:01:28.479 --> 00:01:35.439
+that. That's not necessary right there.
+Uh here we go. This is the line that
+
+00:01:33.200 --> 00:01:42.560
+will be in the course resources claude
+MCP ad. It's another remote MCP server,
+
+00:01:39.280 --> 00:01:45.840
+an HTTP MCP server just like the Jurro
+one was, the Alassium one. It's at
+
+00:01:44.720 --> 00:01:48.840
+api.githubcopilot.com/mcp
+githubcopilot.com/mcp
+
+00:01:49.360 --> 00:01:56.880
+and we're passing in a header and in
+that header we're putting the GitHub
+
+00:01:54.399 --> 00:02:00.079
+personal access token. But you can see
+what I've got there is some text and
+
+00:01:58.560 --> 00:02:06.240
+that's not going to work. I'm going to
+have to replace this right here with the
+
+00:02:02.799 --> 00:02:10.560
+exact key that I carefully copied uh
+with taking great care from GitHub from
+
+00:02:09.200 --> 00:02:15.120
+that screen we were on just a few
+moments ago. So, I'm now off camera
+
+00:02:13.120 --> 00:02:18.560
+going to put in my private key in there
+that we took from there with these fine
+
+00:02:16.640 --> 00:02:23.360
+grain permissions. Put it in there and
+install this MCP server by running that
+
+00:02:21.440 --> 00:02:27.280
+just like this. And you should do the
+same.
+
+00:02:24.879 --> 00:02:33.280
+Okay, I've run that command and now
+we're going to start Claude and see what
+
+00:02:30.879 --> 00:02:39.360
+happens. Do we trust this? Yes, we do.
+Number one, here we go. We're in power
+
+00:02:35.519 --> 00:02:45.120
+pre-legal uh and uh we are going to do
+slash context to see what kinds of tools
+
+00:02:42.640 --> 00:02:49.120
+it has access to. Let's take a look. And
+you can see it's got access to a whole
+
+00:02:46.800 --> 00:02:54.720
+bunch of GitHub related tools.
+Excellent. Okay, let's uh give this a
+
+00:02:52.239 --> 00:03:01.920
+whirl. Okay, we're going to say please
+write an issue to GitHub
+
+00:02:59.120 --> 00:03:08.239
+uh to GitHub
+that the readme
+
+00:03:04.879 --> 00:03:14.800
+needs to be updated. Let's see how it
+does. Um
+
+00:03:11.519 --> 00:03:19.680
+it's hopefully going to use the tools.
+It's first of all just running a local
+
+00:03:17.040 --> 00:03:25.519
+and now it is indeed trying to use the
+create or update issue. Let's say yes.
+
+00:03:24.000 --> 00:03:30.799
+We're not going to give it full approval
+to do everything. It's doing that
+
+00:03:28.560 --> 00:03:34.080
+created issue. All right, let's go and
+have a look. Well, here we are in a
+
+00:03:32.640 --> 00:03:38.319
+browser window. I'm going to go to
+GitHub to the pre-legal. And here we are
+
+00:03:36.720 --> 00:03:43.680
+looking at the repository. Looks very
+similar to me. But wait,
+
+00:03:40.959 --> 00:03:48.959
+there's an issue under issues. It says
+one. Let's go and check this out. Update
+
+00:03:46.640 --> 00:03:52.879
+readme. Let's look at it. The read me
+needs to be updated to reflect the
+
+00:03:50.480 --> 00:03:58.400
+current state of the project. There we
+go. So very nice. We've just used Claude
+
+00:03:56.080 --> 00:04:03.360
+code to connect to GitHub and raise an
+issue. Okay. Well, let's just take it
+
+00:04:00.319 --> 00:04:08.879
+one step further. Please update the
+readme
+
+00:04:04.879 --> 00:04:19.600
+to reflect that the project is in
+progress and will be completed
+
+00:04:13.439 --> 00:04:22.400
+in one week. then raise a PR for this to
+be merged. I don't know if we have
+
+00:04:20.959 --> 00:04:26.720
+enough permissions for this. Let's see
+what happens. Let's see what happens.
+
+00:04:24.960 --> 00:04:30.560
+Give it a try. And we can get into some
+problem solving. If it doesn't work,
+
+00:04:28.560 --> 00:04:35.520
+it's reading a file. It wants to make a
+change to the read me. That sounds fine.
+
+00:04:32.880 --> 00:04:42.160
+Go for it. I pressed number two. It
+should have updated that.
+
+00:04:38.080 --> 00:04:45.759
+And now it's going to uh check out and
+make a commit. That's all great. I'm
+
+00:04:44.240 --> 00:04:50.080
+fine with that. This is not this is not
+using tools yet. This is just running
+
+00:04:48.240 --> 00:04:55.040
+git commands. We'll accept that. So,
+it's just running that locally to make
+
+00:04:51.680 --> 00:05:00.600
+the commit. And now it wants to do a
+push. Uh let's say yes.
+
+00:05:01.280 --> 00:05:08.720
+Okay. And now it is looking to open a
+new pull request. Open a new pull
+
+00:05:06.479 --> 00:05:14.240
+request. This is using the tool tool
+use. Yes.
+
+00:05:11.440 --> 00:05:19.919
+Let's see if it's working.
+Done. Created PR number two. There it
+
+00:05:17.039 --> 00:05:23.759
+is. Okay, let's go check this out. All
+right, I'm going to click on this link
+
+00:05:21.919 --> 00:05:28.800
+right here to a pull request on this
+repo. Click up it comes. And here we go.
+
+00:05:26.880 --> 00:05:33.280
+We do indeed have a pull request. I
+don't know why it's called number two,
+
+00:05:29.919 --> 00:05:37.039
+but get experts will probably tell me um
+why why it's not number one. I mean uh
+
+00:05:35.039 --> 00:05:40.720
+but here we go. It's it's got the
+summary add status section to read me
+
+00:05:38.960 --> 00:05:43.919
+indicating the project is in progress
+generated with claude code. It's put in
+
+00:05:42.479 --> 00:05:48.720
+here which is really nice that it adds
+in that attribution. And then if we go
+
+00:05:46.320 --> 00:05:54.000
+to commits we'll see that this PR
+includes the single commit to update
+
+00:05:51.039 --> 00:05:58.160
+readme with project status. There it is
+and it's here. So that we could check
+
+00:05:56.080 --> 00:06:03.039
+this out and should we wish we could
+press merge pull request which will have
+
+00:06:00.320 --> 00:06:07.759
+the effect of updating this. So hang on.
+If I if I go and look into the code
+
+00:06:05.600 --> 00:06:11.520
+right now you should see that this is
+the the the code that we've got. We now
+
+00:06:09.919 --> 00:06:16.720
+go into pull request. This is just
+standard git GitHub stuff. We go into
+
+00:06:14.240 --> 00:06:21.600
+this pull request. We press merge pull
+request. Confirm the merge. This has now
+
+00:06:19.759 --> 00:06:26.880
+been merged. We go back to the code
+again. And now you can see the status is
+
+00:06:24.479 --> 00:06:31.199
+updated. That's cool. Now, if some of
+that git stuff went over your head, then
+
+00:06:29.360 --> 00:06:35.520
+honestly, it doesn't matter. It's
+standard sort of git stuff. I'll try and
+
+00:06:33.039 --> 00:06:40.319
+put some good resources for you or or
+let me know if you'd like more about it.
+
+00:06:37.280 --> 00:06:43.600
+If you're a seasoned git GitHub person,
+then you knew what was going on and you
+
+00:06:41.840 --> 00:06:47.919
+understand that's part of the typical
+workflow with a larger team and it's
+
+00:06:45.680 --> 00:06:50.880
+something that claude code can do for
+you. There's one little bit of
+
+00:06:49.280 --> 00:06:55.440
+housekeeping that we have to do now and
+then we can push on. If you bring up a
+
+00:06:52.560 --> 00:06:59.599
+terminal and you do a git status, you'll
+see that we are in a branch
+
+00:06:57.919 --> 00:07:05.360
+origin/update
+readme and I'm just going to say get
+
+00:07:02.240 --> 00:07:09.759
+checkout main. And that just switches us
+back to the main branch. We were on a
+
+00:07:07.759 --> 00:07:14.479
+special branch for our PR. We're now
+back to main again. If you don't know
+
+00:07:12.400 --> 00:07:18.639
+about this kind of git workflow stuff,
+then I'll put extra resources for you.
+
+00:07:16.960 --> 00:07:25.360
+But that's where we are right now. We
+got git status. Here we are. We are now
+
+00:07:21.599 --> 00:07:31.360
+on origin main and we have our directory
+set up with our license and our readme
+
+00:07:28.000 --> 00:07:35.360
+ready for the next step. Okay, so we're
+back in claude code again. and type
+
+00:07:33.520 --> 00:07:41.120
+claude to bring it up. We have so far
+installed two MCP servers, a Alassen
+
+00:07:38.880 --> 00:07:45.280
+Jirro one and a GitHub one. And we've
+done them by going to the MCP server
+
+00:07:43.039 --> 00:07:51.280
+configuration directly. We are now going
+to install a plugin. So do /plugin to
+
+00:07:48.960 --> 00:07:54.639
+bring up the plugins and have a look at
+them. And you can see there is in fact a
+
+00:07:53.120 --> 00:07:58.720
+GitHub official plugin that you could
+also use. It's a slightly different orth
+
+00:07:57.199 --> 00:08:01.599
+uh uh approach where you have to put it
+as an environment variable, but
+
+00:08:00.240 --> 00:08:04.160
+otherwise it would work in much the same
+way. That's not what we're going to
+
+00:08:02.879 --> 00:08:10.560
+install. We are going to install a
+plugin called feature dev. Featured dev
+
+00:08:07.360 --> 00:08:16.160
+is an official plugin from Anthropic to
+guide Claude Code through a disciplined
+
+00:08:13.440 --> 00:08:20.080
+sevenstage process to build a new
+feature for your product. In some ways,
+
+00:08:18.319 --> 00:08:25.680
+I think of this as like the polar
+opposite of Ralph Loops. Ralph Loops are
+
+00:08:23.039 --> 00:08:31.680
+all about chaos and just total autonomy
+and just go for it 10 times. See what
+
+00:08:28.400 --> 00:08:36.560
+happens. The feature dev is a rigorous
+disciplined keep you on rails take you
+
+00:08:34.240 --> 00:08:40.320
+through a process. That's what feature
+dev is all about. That's what we're
+
+00:08:38.800 --> 00:08:45.120
+going to use. It's something which
+Anthropic themselves use internally for
+
+00:08:43.200 --> 00:08:47.839
+their own software development. So it
+must be good. It sounds like I was
+
+00:08:46.240 --> 00:08:52.320
+saying that as a joke like so it must be
+good but no it really must be good if
+
+00:08:49.600 --> 00:08:56.800
+Anthropic uses it themselves. So uh we
+select it. I then press enter to look at
+
+00:08:54.640 --> 00:09:02.160
+it. comprehensive feature development
+workflow with specialized agents for
+
+00:08:59.600 --> 00:09:05.200
+codebase exploration, architecture
+design, and quality review. I know we
+
+00:09:04.240 --> 00:09:08.640
+haven't yet talked about having
+specialized agents, but I think you
+
+00:09:06.640 --> 00:09:13.200
+probably guess what it's all about. And
+now, if you look down below, we can
+
+00:09:10.399 --> 00:09:18.800
+choose to install just for you have the
+scope just for this user for all
+
+00:09:15.680 --> 00:09:24.959
+collaborators on this repo have project
+scope. And that is what we want. We want
+
+00:09:21.360 --> 00:09:29.120
+project scope. And so we select this uh
+and I press enter. And now it has been
+
+00:09:27.519 --> 00:09:35.920
+installed. And you can see it just
+created a claude file right there. We
+
+00:09:32.480 --> 00:09:40.480
+have everything here. Uh we are ready to
+uh to be using a disciplined development
+
+00:09:38.240 --> 00:09:44.480
+process. But just before we get started,
+just some final housekeeping. We've now
+
+00:09:42.560 --> 00:09:48.560
+created this claude folder that got
+created for us which has turned in
+
+00:09:46.640 --> 00:09:51.760
+turned on this plugin for all people in
+this repo. So we've got something to
+
+00:09:50.080 --> 00:09:55.920
+check in and we might as well take this
+opportunity to create some other useful
+
+00:09:53.760 --> 00:10:00.000
+and another useful file for our repo
+which would be agit ignore file which is
+
+00:09:58.399 --> 00:10:05.600
+an important one to have. So we'll get
+Claude to do all that for us. I'm going
+
+00:10:01.760 --> 00:10:13.120
+to say uh please create a
+boilerplate.get
+
+00:10:07.839 --> 00:10:21.440
+Git ignore for this new project
+for uh typical Python
+
+00:10:16.880 --> 00:10:32.000
+fast API uh nextJS
+uh web app development
+
+00:10:25.600 --> 00:10:36.800
+and then uh commit and push to GitHub.
+All of that all of that will let it do
+
+00:10:34.480 --> 00:10:41.519
+its thing. It shouldn't need to use any
+plugins for that. This is just about uh
+
+00:10:39.760 --> 00:10:46.079
+just about doing some files. There we
+go. We can see it's made a git ignore
+
+00:10:43.920 --> 00:10:51.760
+file. We will let it make its edits and
+do more edits.
+
+00:10:48.079 --> 00:10:55.640
+And hopefully it is now going to run. It
+is doing a get status.
+
+00:10:56.079 --> 00:10:59.399
+It's committing
+
+00:11:02.240 --> 00:11:06.160
+and it's doing a get push.
+
+00:11:08.640 --> 00:11:14.160
+And it's doing a git pull because we
+merged the PR that needs to be uh done.
+
+00:11:12.480 --> 00:11:20.480
+It's doing all that for us. It's
+handling all the git stuff for us. And
+
+00:11:16.880 --> 00:11:24.320
+it's all been done. Okay, that sounds
+exciting. Let's let's see if this
+
+00:11:22.240 --> 00:11:28.640
+actually worked. We'll go over to GitHub
+now. And we can see here we are in
+
+00:11:26.240 --> 00:11:34.160
+GitHub. Sure enough, we've got ourselves
+set up with the full the the new um uh
+
+00:11:32.959 --> 00:11:38.880
+read me that says we're going to
+complete it in a week. Well, let's hope
+
+00:11:35.839 --> 00:11:43.760
+we do it in a in a day. Uh and we've got
+a git ignore and that getit ignore. If
+
+00:11:41.839 --> 00:11:47.760
+we click into it, it looks like it's got
+all sorts of sensible things, including
+
+00:11:45.279 --> 00:11:55.279
+AEMV. You should check that your version
+has that MV and very standard stuff for
+
+00:11:51.440 --> 00:11:58.959
+a JavaScript and Python project that has
+been successfully created. It's
+
+00:11:57.120 --> 00:12:04.800
+obviously on our local disk. It's also
+now been committed to GitHub as well.
+
+00:12:01.519 --> 00:12:09.440
+And so we are ready for prime time. We
+are ready to build a feature using a
+
+00:12:07.200 --> 00:12:14.480
+proper disciplined workflow taking
+advantage of our integrations with both
+
+00:12:11.519 --> 00:12:20.000
+Atlassian Jira for issues for for work
+for tasks and also GitHub for managing
+
+00:12:17.680 --> 00:12:20.000
+PRs.
+

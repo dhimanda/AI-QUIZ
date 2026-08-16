@@ -1,0 +1,654 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:06.160
+Okay, we're ready for a completely
+different kind of orchestration. Now, I
+
+00:00:04.400 --> 00:00:09.920
+will just mention that front end, even
+though we've done a checkout main front
+
+00:00:08.480 --> 00:00:13.759
+end still has lots of stuff in it
+because this is git ignored stuff. So,
+
+00:00:12.080 --> 00:00:18.960
+I'm just going to delete this whole
+folder like that and create a new front
+
+00:00:17.039 --> 00:00:24.240
+end folder so that we're definitely
+starting from scratch and not giving any
+
+00:00:21.279 --> 00:00:28.160
+hints away. I'm also going to come into
+claude and make sure that our
+
+00:00:25.840 --> 00:00:34.000
+settings.json, JSON. If we look at this,
+hang on. Move down. The Yes, it has some
+
+00:00:31.199 --> 00:00:38.879
+of these plugins, but it does not have
+the setting, the experimental setting.
+
+00:00:36.079 --> 00:00:43.680
+Let's clear the screen and start again.
+And also, we'll we will stop Claude code
+
+00:00:41.120 --> 00:00:48.640
+from running right here. That is a wrap
+on that previous version. Clear the
+
+00:00:45.920 --> 00:00:52.800
+screen. Okay. Now, let me introduce you
+to the second way that we are going to
+
+00:00:50.879 --> 00:00:56.559
+try and go crazy along our journey
+together. I've mentioned a few times
+
+00:00:54.160 --> 00:01:04.080
+there's a technique called STDD specd
+driven design and STD is is about having
+
+00:01:01.199 --> 00:01:08.880
+plugins or tools or processes which
+walks through the process of putting
+
+00:01:06.320 --> 00:01:13.200
+together a spec and then executing on
+that spec. And in some ways the feature
+
+00:01:10.880 --> 00:01:16.960
+dev plugin that we used is a nod to
+that. There are some more formal ones
+
+00:01:14.960 --> 00:01:20.240
+that go through a more rigorous process.
+And there was a time when that was a big
+
+00:01:18.560 --> 00:01:24.159
+deal with claude code and it seems to be
+less so now because it feels like it's a
+
+00:01:22.000 --> 00:01:28.640
+slightly laborious approach and you can
+give up a little bit more and just let
+
+00:01:26.000 --> 00:01:32.400
+it run with it more. And there is now a
+new thing that's come up not that new
+
+00:01:30.479 --> 00:01:37.759
+anymore but but pretty new which is seen
+as a sort of natural evolution of
+
+00:01:34.720 --> 00:01:42.880
+specdriven design which is spec driven
+design coupled with this more radical
+
+00:01:40.000 --> 00:01:47.040
+kind of orchestration framework. And
+there is this approach that isn't just
+
+00:01:44.479 --> 00:01:52.720
+for CL code. It's for any of these CLIs.
+And it's one that goes by the name GSD.
+
+00:01:49.920 --> 00:01:56.560
+And uh GSD stands for something which I
+will bring up. And you can see it
+
+00:01:54.560 --> 00:02:03.920
+visually here, but I but I'm not going
+to say it. Uh and and here it is. So GSD
+
+00:02:00.159 --> 00:02:10.319
+stands for get done as it says right
+there in the repo. This is where it is.
+
+00:02:07.360 --> 00:02:13.920
+And uh it is as it says lightweight.
+It's what they call meta prompting which
+
+00:02:12.319 --> 00:02:18.720
+is like a sort of something that you can
+prompt that then is then controlling a
+
+00:02:16.480 --> 00:02:24.959
+set of pre-built prompts context
+engineering and specd driven development
+
+00:02:21.920 --> 00:02:29.280
+stdd for clude code open code and Gemini
+CLI so any of those three and it's
+
+00:02:27.520 --> 00:02:33.200
+particularly it's it's looking to solve
+context rot that was its initial premise
+
+00:02:31.760 --> 00:02:37.760
+it's about trying to make sure that you
+manage context really well and that you
+
+00:02:35.920 --> 00:02:41.760
+don't get this kind of quality
+degradation that we've all felt as the
+
+00:02:40.160 --> 00:02:48.239
+context window starts to fill up. So
+that was a big part of the problem it
+
+00:02:43.280 --> 00:02:52.000
+set out to solve. Um and uh yeah it's um
+luckily it works on all platforms and
+
+00:02:50.000 --> 00:02:56.720
+this is the way to set it up and when
+you do that when we run this command uh
+
+00:02:54.800 --> 00:03:02.239
+we will get this this screen and it's
+where we can choose to install it and
+
+00:02:59.840 --> 00:03:07.360
+this is where we will be able to uh to
+to drive this process. Um if you know
+
+00:03:05.280 --> 00:03:14.400
+clearly what you want this will build it
+for you. No BS, uh, says someone
+
+00:03:11.840 --> 00:03:18.319
+unnamed. Um, I've done spec kit, opensp
+spec, and taskmaster. This has produced
+
+00:03:16.560 --> 00:03:22.080
+the best results for me. These three are
+the more traditional specd driven design
+
+00:03:20.640 --> 00:03:26.640
+approaches. If you want to look them up
+and and have a shot at them, too, then
+
+00:03:23.760 --> 00:03:32.159
+then you should do so. By far my most
+powerful addition to claw code, says
+
+00:03:28.480 --> 00:03:38.080
+somebody. Uh, literally just gets done.
+Okay. uh and uh then uh you can you can
+
+00:03:35.120 --> 00:03:40.720
+read more about the backstory behind it
+before we dig in and we'll just read a
+
+00:03:39.760 --> 00:03:44.159
+little bit more about it. I would
+encourage you to go to this GitHub link
+
+00:03:42.959 --> 00:03:48.159
+which I will of course put in the
+resources. Vibe coding is a bad
+
+00:03:46.159 --> 00:03:53.599
+reputation. You describe what you want.
+AI generates code. You get inconsistent
+
+00:03:50.080 --> 00:03:59.200
+garbage that falls apart at scale. Uh I
+think that that is predates the November
+
+00:03:56.799 --> 00:04:02.319
+inflection point. uh but still you get
+you get that for big enough projects
+
+00:04:00.640 --> 00:04:07.200
+still perhaps if you don't manage things
+carefully with documents and so on but
+
+00:04:04.640 --> 00:04:12.560
+GSE is designed to fix that it's the
+context engineering layer that makes
+
+00:04:09.439 --> 00:04:15.760
+cloud code reliable um it's for people
+who can describe what they want and have
+
+00:04:14.159 --> 00:04:20.880
+it built correctly without pretending
+they're running a 50 person engineering
+
+00:04:18.479 --> 00:04:27.360
+org
+uh so we will now do this and they
+
+00:04:24.000 --> 00:04:32.479
+recommend skip permissions mode running
+claude with this. It's how it's intended
+
+00:04:30.080 --> 00:04:36.960
+to be used. Stopping to approve date and
+get commit 50 times defeats the purpose.
+
+00:04:35.199 --> 00:04:43.360
+The alternative is to add granular
+permissions. Uh so um all right. Uh we
+
+00:04:41.600 --> 00:04:48.720
+are there's also it's got a set of
+different commands you can do like /gs
+
+00:04:45.840 --> 00:04:53.120
+GSD map codebase and so on. But but uh
+uh and it goes through the the different
+
+00:04:50.639 --> 00:04:57.840
+steps right here which we will carry out
+in a sec. Okay. So without further ado,
+
+00:04:55.199 --> 00:05:04.040
+let's make ourselves a new branch. a get
+checkout minus B uh GSD
+
+00:05:04.160 --> 00:05:14.720
+uh with sorry we'll call it finally GSD
+just to avoid any confusion finally GSD
+
+00:05:10.560 --> 00:05:19.960
+okay and now we will uh we will we will
+execute that command to install this
+
+00:05:20.720 --> 00:05:28.960
+okay yes
+and there we go which runtime we like to
+
+00:05:24.960 --> 00:05:33.759
+install it for for clawed code one.
+Where would you like to install it?
+
+00:05:30.479 --> 00:05:41.199
+Global V local this claude this project
+only two. Done. Okay. So you can see a
+
+00:05:38.639 --> 00:05:46.479
+bunch of stuff has been created here.
+It's created. It's basically added in
+
+00:05:43.520 --> 00:05:50.960
+agents commands the this folder that
+we'll learn more about in a second and
+
+00:05:48.400 --> 00:05:54.479
+and hooks. So, it's like a sort of in a
+way this installer has done something
+
+00:05:52.560 --> 00:05:59.039
+similar to installing a plug-in in that
+it's just put all of this stuff right
+
+00:05:56.560 --> 00:06:06.240
+here for us and we're ready to go.
+Launchcloud code and run /gsd colon
+
+00:06:02.479 --> 00:06:10.880
+help. Uh so, uh exciting, huh? Uh but
+first, let's look at the docs one more
+
+00:06:07.919 --> 00:06:15.680
+time. So, I would describe GSD as being
+similar to the agent teams concept that
+
+00:06:13.919 --> 00:06:20.560
+we've just worked with, but more
+opinionated. It's something where it's
+
+00:06:17.759 --> 00:06:24.560
+got more more constructs around it
+designed to sort of put put you into a
+
+00:06:22.800 --> 00:06:28.319
+particular way of doing it. I'm not
+going to run it on dangerously skip
+
+00:06:26.000 --> 00:06:32.720
+permissions mode. Uh if if I were to do
+that, I would do it on the sandbox as we
+
+00:06:30.960 --> 00:06:36.960
+had established before, but I'm happy to
+be approving as we go. So, the way
+
+00:06:35.199 --> 00:06:42.240
+you're meant to do it is by by going
+through a number of different commands.
+
+00:06:39.120 --> 00:06:48.479
+GSD new project is where you start
+things going and uh uh it's going to to
+
+00:06:45.280 --> 00:06:52.639
+uh to to uh initialize it will spawn
+parallel agents to analyze the stack
+
+00:06:51.039 --> 00:06:58.319
+conventions and then it knows the
+codebase. So that's who we'll start then
+
+00:06:55.199 --> 00:07:04.000
+GSD discuss is where you shape the
+implementation as it says then GSD plan
+
+00:07:01.919 --> 00:07:10.400
+is where you you go through and you you
+plan a phase then GSD execute. then GSD
+
+00:07:07.280 --> 00:07:14.800
+verify and then you do it for the next
+milestone. We only have one milestone
+
+00:07:12.960 --> 00:07:18.160
+and there is also a quick mode that that
+does that does all of this if you don't
+
+00:07:16.240 --> 00:07:22.560
+need the planning but we will go through
+doing it this way. Then it's got a quick
+
+00:07:20.080 --> 00:07:26.479
+sort of why it works. And the the main
+point that this this stresses is that
+
+00:07:24.880 --> 00:07:31.680
+first of all they've really focused on
+the prompts on getting good strong
+
+00:07:29.039 --> 00:07:37.199
+prompts. And secondly that they they
+they preset the agents as well for this
+
+00:07:34.160 --> 00:07:40.639
+but also importantly they they have got
+um documentation
+
+00:07:39.199 --> 00:07:43.919
+um that um hang on I'm just looking
+through these these are the commands
+
+00:07:42.000 --> 00:07:48.000
+again that it's explaining. You've got
+the new project discuss phase plan phase
+
+00:07:45.919 --> 00:07:51.039
+execute verify. You've got an audit
+milestone, complete milestone, new
+
+00:07:49.520 --> 00:07:55.280
+milestone.
+Uh and uh this is some of the uh the the
+
+00:07:53.840 --> 00:08:01.120
+other commands that you would get used
+to managing phases and sessions. The
+
+00:07:58.080 --> 00:08:08.560
+important thing to know is that it
+produces a bunch of different um files
+
+00:08:05.039 --> 00:08:13.360
+and these files are all um managed uh
+for for us and that it's the files is
+
+00:08:11.199 --> 00:08:17.280
+where it maintains the state of
+everything that's going on. It's got a
+
+00:08:15.120 --> 00:08:21.199
+fixed structure of markdown files that
+it uses in order to track progress
+
+00:08:19.199 --> 00:08:26.000
+through these different steps. So it is,
+as I say, a sort of opinionated
+
+00:08:23.360 --> 00:08:29.919
+structure around having multiple agents
+work on your project. And here is the
+
+00:08:28.080 --> 00:08:34.560
+file structure that it uses. It has
+these files project MD, research,
+
+00:08:32.399 --> 00:08:40.159
+requirements, road map, state, plan,
+summary, to-dos. So it does all of this
+
+00:08:37.279 --> 00:08:44.000
+for you. Um, and uh it's then got this
+multi- aent orchestration uh at each
+
+00:08:42.479 --> 00:08:48.560
+stage. These are the different agents
+and and how they work. So have a read
+
+00:08:46.480 --> 00:08:52.000
+through this, learn more about how this
+is going to work. We will keep track of
+
+00:08:50.560 --> 00:08:56.399
+the different commands that we're going
+to run and then we're going to go
+
+00:08:54.000 --> 00:09:00.480
+through and do this right now. And it's
+worth mentioning that the the uh this
+
+00:08:58.640 --> 00:09:06.480
+the author of this project is something
+of a of a celebrity. It is a uh EDM an
+
+00:09:03.839 --> 00:09:11.680
+electronic dance musician Kotashi is
+based in LA uh who is behind this and
+
+00:09:09.680 --> 00:09:16.720
+who's obviously made it into something
+with a big following uh as is clear from
+
+00:09:14.080 --> 00:09:22.959
+from its GitHub stars. Uh but let's get
+into it. Let's uh let's start Claude. Um
+
+00:09:19.920 --> 00:09:28.959
+up comes Claude and Claude has lots of
+stuff. If we do SLC context we will see
+
+00:09:26.000 --> 00:09:34.399
+uh presumably yes lots of GSD stuff in
+there. Very nice. Uh, and uh, I wonder
+
+00:09:32.240 --> 00:09:37.760
+whether we should remove context. And I
+think we leave it. We leave everything
+
+00:09:35.519 --> 00:09:42.160
+else exactly as is. We'll leave the rest
+of the setup. Let's see what this has
+
+00:09:39.360 --> 00:09:47.440
+done to the context. Looks fine. Um,
+okay. And, uh, let's also do slash usage
+
+00:09:45.279 --> 00:09:52.959
+just to see where I was. Remember last
+time I was at 0, 8, and two. And now
+
+00:09:50.560 --> 00:09:59.600
+let's write this down. After that first
+experiment, we're at 8% used, 9% of the
+
+00:09:56.640 --> 00:10:05.440
+current week, and 2% uh of the current
+week still for Sonnet because I've been
+
+00:10:01.120 --> 00:10:09.920
+using Opus. All right. Um I think that
+we may be ready to start our GSD
+
+00:10:08.240 --> 00:10:14.880
+process. Just in case we have to get
+back to this point, let me just do a
+
+00:10:11.519 --> 00:10:23.360
+quick uh get add dot just get that in
+there. Get commit minus m start of GSD
+
+00:10:20.079 --> 00:10:28.480
+process. So we'll have that all in now.
+Then let's go back to here again and
+
+00:10:26.000 --> 00:10:37.360
+let's run the first command which is
+going to be slashgsd
+
+00:10:31.519 --> 00:10:42.880
+colon new dash project. Here we go. And
+we're running that. And it's doing some
+
+00:10:40.160 --> 00:10:47.320
+stuff. It's reading the workflows
+questioning UI brand projects.
+
+00:10:48.000 --> 00:10:54.480
+Okay. Okay, I can see that it's got the
+uh different models. It looks like it's
+
+00:10:51.440 --> 00:11:00.240
+using Sonnet in a few places. Um I
+detected. Would you like to map the code
+
+00:10:56.399 --> 00:11:06.000
+first? Yes. One. We will say yes. We
+will let it do the mapping.
+
+00:11:03.279 --> 00:11:10.480
+Use skill. Yes. I should probably press
+two. Then I press one. Um this is where
+
+00:11:09.120 --> 00:11:13.760
+it would tell you that that we should
+have done dangerously skip permissions.
+
+00:11:12.160 --> 00:11:18.640
+We should have been in yolo mode. Uh but
+it seems to be doing fine.
+
+00:11:16.480 --> 00:11:23.519
+We will let it do its thing. Spawning
+four mapper agents in parallel. See
+
+00:11:21.920 --> 00:11:28.240
+everything that's going on. And this is
+using of course sub agents. Um it is
+
+00:11:26.240 --> 00:11:32.000
+using uh the sub agent functionality
+rather than the new claude teams
+
+00:11:30.480 --> 00:11:38.959
+functionality which makes sense. We'd be
+doing uh we this is an alternative to
+
+00:11:35.120 --> 00:11:42.480
+using claude's agent teams. Uh so it's
+now running those agent the mapper
+
+00:11:40.560 --> 00:11:45.600
+agents in parallel while they map out
+the existing codebase. There's not much
+
+00:11:44.240 --> 00:11:49.200
+to it. That's just the market data part,
+but hopefully it's also reading the
+
+00:11:46.959 --> 00:11:54.160
+documentation, which is super important.
+And I will see you back when we are
+
+00:11:51.200 --> 00:11:59.519
+ready to discuss the phase and begin.
+Okay, so it's done the codebase mapping.
+
+00:11:56.880 --> 00:12:03.040
+It's built a bunch of markdown files.
+Hopefully, it was re reviewing the
+
+00:12:01.519 --> 00:12:07.200
+planning documents we already have. I
+imagine it was. It's in its memory for
+
+00:12:04.720 --> 00:12:12.160
+sure. And now it's continuing with GSD
+new project. And now it's got some
+
+00:12:08.800 --> 00:12:16.720
+questions. What do you want to build? So
+um before we do that I just want to make
+
+00:12:13.839 --> 00:12:21.440
+sure that we we're on a level playing
+field. I think by default it uses sonnet
+
+00:12:19.760 --> 00:12:26.000
+for the development and I want it to use
+opus otherwise we be be off to a
+
+00:12:23.839 --> 00:12:32.800
+disadvantage and I believe the way I do
+that is with /gsd colon settings. So let
+
+00:12:29.920 --> 00:12:39.320
+me just quickly run this now and just
+see uh how this works.
+
+00:12:36.320 --> 00:12:39.320
+Uh
+
+00:12:39.760 --> 00:12:46.560
+and so that then I can set it so that it
+uses the right quality model. Here we
+
+00:12:43.519 --> 00:12:50.240
+go. Which which uh model do we want? Um
+we want to be number one. It says
+
+00:12:48.320 --> 00:12:53.600
+balance is recommended but we want to
+use number one quality. At least I want
+
+00:12:51.920 --> 00:12:58.800
+to use that. You can use balance or
+budget. I want to be on quality because
+
+00:12:55.519 --> 00:13:07.839
+I want to be uh be fair about it. one
+spawn plan researcher. Uh, that's um,
+
+00:13:03.360 --> 00:13:12.480
+yes. Spawn plan checker. Yes. Execution
+verifier. Yes. Excellent. Submit
+
+00:13:09.760 --> 00:13:17.440
+answers. Done. Okay. So, that was nice.
+An interactive way of setting the
+
+00:13:14.079 --> 00:13:23.519
+settings. Yes. Okay.
+Excellent. All right. I think it's time
+
+00:13:20.000 --> 00:13:23.519
+for us to actually kick off our
+

@@ -1,0 +1,215 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:08.880
+All right, let's try this. Okay, it
+looks
+
+00:00:04.240 --> 00:00:17.760
+good, but create add uh creating a new
+card isn't great.
+
+00:00:13.040 --> 00:00:25.279
+There's a uh simplistic
+JavaScript
+
+00:00:19.439 --> 00:00:30.880
+popup for the name and no way to add a
+description.
+
+00:00:27.119 --> 00:00:37.360
+This does not look professional.
+not look professional.
+
+00:00:33.760 --> 00:00:41.280
+Can it be improved?
+All right, we give it its marching
+
+00:00:39.040 --> 00:00:45.600
+orders. We'll see how it does with this.
+And it's a good example of working
+
+00:00:43.520 --> 00:00:50.079
+iteratively. And it says, "I've been
+wrestling with a better UI for card
+
+00:00:47.920 --> 00:00:53.440
+completion." Uh, Clark card creation.
+So, so obviously it was already thinking
+
+00:00:51.600 --> 00:00:57.760
+about this somewhere in the trace that
+went by that I didn't read. We'll let it
+
+00:00:55.440 --> 00:01:01.680
+do its thing and uh I'll see you back in
+a second. Okay. It claims it has done
+
+00:01:00.000 --> 00:01:06.960
+that. It says you can now click the
+dashed adcard button in any column to
+
+00:01:04.080 --> 00:01:10.720
+see the professional modal and you can
+do mpm rundev. But it is already
+
+00:01:09.040 --> 00:01:14.799
+running. So I don't need to do that. I
+can I can see here in the terminal that
+
+00:01:12.320 --> 00:01:19.439
+it's that it's doing fine. Um close that
+terminal. Uh and I'm now going I'm going
+
+00:01:17.439 --> 00:01:24.799
+to say accept all. And I'm going to
+bring back up the camb board. Here it
+
+00:01:21.759 --> 00:01:33.520
+is. And I'm going to try pressing add
+card. Oh. Oh. This is better.
+
+00:01:30.159 --> 00:01:40.159
+Okay, I like this.
+Add card. There it is. It worked. Very
+
+00:01:37.119 --> 00:01:44.240
+nice. Okay, I think we'll we'll uh we'll
+let Gemini off at this point. I think
+
+00:01:42.240 --> 00:01:47.360
+this is pretty good. I I sort of prefer
+to edit it, but but still, I think it's
+
+00:01:45.920 --> 00:01:51.840
+great. Oh, we haven't checked the delete
+works. Let's try that. Yes, delete does
+
+00:01:49.040 --> 00:01:57.600
+work. All right, I think that is a wrap
+for Google Anti-gravity for Gemini. Uh
+
+00:01:55.360 --> 00:02:01.920
+it seems that uh that it's done a fine
+job. I like this a lot. I think it's
+
+00:01:59.600 --> 00:02:07.280
+very nice. I don't know. What do you
+think? For for me, I got to be honest.
+
+00:02:03.920 --> 00:02:13.040
+For today, I'm giving Codeex the top
+position, but it is clearly between uh
+
+00:02:09.840 --> 00:02:20.080
+Codeex and really I mean GPT 5.2 Codeex
+the model running in the Codeex IDE and
+
+00:02:17.120 --> 00:02:25.200
+that versus Gemini 3 Pro running in
+anti-gravity. They both did well. I I
+
+00:02:22.800 --> 00:02:28.879
+give codeex the win. But it's really
+it's your choice. Maybe you've had
+
+00:02:27.280 --> 00:02:32.160
+completely different answers to me.
+Maybe you've got very different results.
+
+00:02:30.640 --> 00:02:36.000
+You may have used different models. In
+which case, please do share them. Share
+
+00:02:33.920 --> 00:02:40.080
+them in Udemy or email them to me. I'd
+love to see them. I would love to see
+
+00:02:37.680 --> 00:02:45.440
+what you've got. Well, we seem to get
+through a lot today, but it was just a
+
+00:02:42.879 --> 00:02:50.080
+teaser. I wanted to give you the flyby
+of cursor, copilot, codeex, and
+
+00:02:47.680 --> 00:02:55.440
+anti-gravity with the overall takeaway
+being that look, they're all quite
+
+00:02:51.920 --> 00:02:58.640
+similar when the IDE based agents. You
+can see that that they often they have a
+
+00:02:57.280 --> 00:03:03.440
+sidebar on the left or the right that
+you can make larger. They often come
+
+00:03:00.879 --> 00:03:08.080
+with plan mode and and execute mode,
+although not all of them. They're mostly
+
+00:03:05.680 --> 00:03:12.879
+agents.mmd as the way to drive them, but
+in the case of anti-gravity, it's the
+
+00:03:10.080 --> 00:03:16.800
+aagent rules. and and generally you can
+see a lot of the same stuff in each of
+
+00:03:14.720 --> 00:03:20.959
+them and you get very familiar with this
+and and really which one you pick
+
+00:03:18.959 --> 00:03:24.800
+depends on which plan you've paid for or
+which one you like or what the rest of
+
+00:03:22.640 --> 00:03:29.360
+your team are using. Some people are in
+for GitHub copilot, some like cursor
+
+00:03:27.440 --> 00:03:34.959
+which was one of the first that that I
+used and uh you know it's really the one
+
+00:03:32.080 --> 00:03:39.440
+that suits you and your needs the most.
+You can do similar things in all of them
+
+00:03:37.840 --> 00:03:43.360
+and we're going to pick a couple of them
+for the next two days for the for the
+
+00:03:41.200 --> 00:03:47.840
+projects. But really for you, you can
+pick whichever one you like. You can do
+
+00:03:45.360 --> 00:03:52.640
+much the same things and it's more about
+now the the focus turns to developing
+
+00:03:50.239 --> 00:03:56.400
+the right techniques to use these in the
+most effective way. And on that note,
+
+00:03:54.879 --> 00:04:01.599
+tomorrow we will be doing our first
+project, the yolo project. I hope you
+
+00:03:58.640 --> 00:04:06.480
+feel brave as we go into yolo mode. And
+uh at this point you should congratulate
+
+00:04:03.760 --> 00:04:09.840
+yourself cuz somehow already you are 20%
+of the way through. You're a fifth of
+
+00:04:08.159 --> 00:04:14.480
+the way through the program. But don't
+worry, that means there's still four
+
+00:04:11.280 --> 00:04:14.480
+fifths to go.
+

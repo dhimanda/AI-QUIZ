@@ -1,0 +1,479 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:05.759
+Maybe you've been thinking, "This
+journey has been interesting. It's been
+
+00:00:03.280 --> 00:00:11.200
+useful. I'm picking up new skills, but I
+wish it could go deeper, get more pro,
+
+00:00:08.480 --> 00:00:16.320
+get more hardcore." Well, good news.
+That's what we're doing. Welcome to week
+
+00:00:13.280 --> 00:00:21.279
+two. Welcome to Pro week. And today is a
+yellow day, which means it's a platform
+
+00:00:18.560 --> 00:00:25.119
+day, a product day. And of all the
+product days, this is the one. This is
+
+00:00:23.519 --> 00:00:29.039
+the one that's near and dear to my
+heart. This is Claude Code day. I'm
+
+00:00:27.439 --> 00:00:33.360
+introducing claude code which is going
+to be the the main point of focus for
+
+00:00:31.679 --> 00:00:38.480
+the whole rest of the next two weeks but
+we'll also look at open code and maybe
+
+00:00:35.920 --> 00:00:41.680
+some others as well. So much to do
+today. At the beginning of the course
+
+00:00:40.079 --> 00:00:47.200
+last week I taken you through Steve
+Yaggi's eight stages in the evolution of
+
+00:00:45.040 --> 00:00:52.239
+AI coding starting with just using
+chatbt and ending up all the way with
+
+00:00:49.280 --> 00:00:56.879
+orchestration platforms like his own Gas
+Town. And we talked about the that that
+
+00:00:55.280 --> 00:01:00.559
+sort of evolution as the first four
+being what we would do in week one.
+
+00:00:58.640 --> 00:01:06.000
+Stage five is what we would really
+hammer in week two now. And then six,
+
+00:01:03.600 --> 00:01:12.240
+seven, and eight, the super fancy stuff
+perhaps mostly in week three. And we
+
+00:01:09.840 --> 00:01:17.920
+also went through the kinds of of the
+three stages, the three types of coding
+
+00:01:14.880 --> 00:01:22.400
+that were prevalent last year. uh which
+was mostly what we did at the end of
+
+00:01:19.840 --> 00:01:27.119
+last week about planning, executing,
+reviewing and test, writing out your
+
+00:01:24.560 --> 00:01:31.520
+spec, driving the process, and the trust
+but verify mindset, which I think you'll
+
+00:01:29.600 --> 00:01:34.880
+agree is very much what we had in our
+project on day five of last week. And
+
+00:01:33.600 --> 00:01:39.360
+these are the techniques that are
+typically used for missionritical
+
+00:01:36.799 --> 00:01:44.159
+software, for big code bases, and for
+highly innovative code, which are using
+
+00:01:42.000 --> 00:01:48.960
+sort of latest greatest libraries where
+you have to work more carefully. But for
+
+00:01:46.640 --> 00:01:52.799
+MVPs for new build where you have risk
+appetite where you're just creating a
+
+00:01:50.880 --> 00:01:57.439
+lot of boilerplate front-end codes say
+which is which is ripe for automation
+
+00:01:55.040 --> 00:02:01.520
+then you can be more bold you can go
+with yolo you can have what's called
+
+00:01:59.520 --> 00:02:07.439
+Ralph loops which we will explore this
+week and you can even go to this kind of
+
+00:02:03.759 --> 00:02:11.680
+multi- aent swarms orchestration stuff
+that we'll focus on next week. So this
+
+00:02:09.679 --> 00:02:15.200
+just gives you again the kind of lay of
+the land and I need to press home on the
+
+00:02:13.680 --> 00:02:20.480
+point that was emphasized in the
+jellyfin post if you remember that that
+
+00:02:17.599 --> 00:02:25.520
+it is your job and my job to deliver
+code that that we are accountable for
+
+00:02:22.959 --> 00:02:30.720
+that we have proven to ourselves that it
+works and it's good. We can use LLMs to
+
+00:02:28.480 --> 00:02:36.400
+help us. We can use them to expand our
+capabilities to use Andre's word. But
+
+00:02:34.080 --> 00:02:39.680
+the the key is that we are responsible
+for the quality of the code we deliver
+
+00:02:37.840 --> 00:02:44.959
+and for making sure that it works. Now,
+if last week was about vibe coding, vibe
+
+00:02:42.319 --> 00:02:49.440
+coding for fun and profit. This week is
+changing the conversation to be about
+
+00:02:46.879 --> 00:02:53.519
+something called vibe engineering. And
+that's not necessarily a proper phrase.
+
+00:02:51.519 --> 00:02:59.200
+It was a it was a term that was coined
+by Simon Willis, amazing AI engineer and
+
+00:02:57.040 --> 00:03:04.000
+writer who I will often often show you
+his stuff. uh but he made this this uh
+
+00:03:01.920 --> 00:03:08.159
+blog post which I will show you uh and
+he says I feel like vibe coding pretty
+
+00:03:06.000 --> 00:03:13.200
+well established as covering the fast
+loose irresponsible way of building with
+
+00:03:10.159 --> 00:03:17.599
+AI prompt driven no attention to how the
+code actually works and so this leaves
+
+00:03:15.840 --> 00:03:22.480
+us with with what he calls a terminology
+gap a missing word what do we call the
+
+00:03:20.159 --> 00:03:27.280
+other end of the spectrum where seasoned
+professionals accelerate their work with
+
+00:03:24.640 --> 00:03:32.159
+LLMs whilst proudly and confidently
+staying accountable for the software
+
+00:03:29.599 --> 00:03:36.319
+they produce and he proposes we call it
+vibe engineering and your tongue
+
+00:03:34.720 --> 00:03:40.560
+slightly and cheek but not really. He
+really really wants this term and and I
+
+00:03:38.239 --> 00:03:44.879
+see why and it is taking off somewhat
+and certainly it's in the spirit of this
+
+00:03:42.959 --> 00:03:48.000
+exact write up here that we're going to
+go through our material this week. It's
+
+00:03:46.480 --> 00:03:52.239
+somewhat consistent with day five of
+last week but just taking it further.
+
+00:03:49.840 --> 00:03:57.280
+It's about being highly productive,
+highly effective and impactful, uh, but
+
+00:03:55.200 --> 00:04:00.959
+whilst keeping accountability for the
+code you build, doing it in a
+
+00:03:58.959 --> 00:04:04.640
+bulletproof way. That is vibe
+engineering. And so, in fact, we will
+
+00:04:02.400 --> 00:04:07.120
+take a second to go through his post
+just so I can show you some of the
+
+00:04:05.920 --> 00:04:10.799
+points he makes because it's so well
+done. This is this is his blog and it's
+
+00:04:09.040 --> 00:04:15.280
+an amazing blog. We've already gone
+through the first section. Let me keep
+
+00:04:12.319 --> 00:04:19.440
+going. One of the lesser spoken truths
+of working with LM is that it's
+
+00:04:17.359 --> 00:04:23.600
+difficult. There's a lot of depth to
+understanding the tools. There are traps
+
+00:04:21.680 --> 00:04:29.680
+and the pace at which they can turn out
+code. It it's uh it can be crazy. The
+
+00:04:27.040 --> 00:04:35.520
+rise of coding agents like Claude code
+first released in February. Uh Codeex
+
+00:04:32.639 --> 00:04:39.919
+CLI, the CLI version, and Gemini CLI,
+the CLI version. We've been using the
+
+00:04:37.440 --> 00:04:45.199
+IDE versions of these can iterate on
+code, test and modify until it achieves
+
+00:04:42.400 --> 00:04:49.919
+a goal. It's dramatically increased the
+usefulness of LLMs as we will see when
+
+00:04:47.280 --> 00:04:54.560
+we use the CLI tools this week. And then
+he says, I'm increasingly hearing from
+
+00:04:51.840 --> 00:04:59.520
+experienced, credible engineers who are
+running multiple agents at once,
+
+00:04:56.960 --> 00:05:03.759
+tackling several projects in problems in
+parallel and expanding the scope of what
+
+00:05:01.680 --> 00:05:09.199
+they can do. He was skeptical to start
+with, but now he's doing it himself, and
+
+00:05:06.000 --> 00:05:13.120
+it's effective, if mentally exhausting.
+And that's more what we'll be doing next
+
+00:05:10.800 --> 00:05:17.440
+week. It feels different from classic
+vibe coding. Most uh he built lots of
+
+00:05:16.160 --> 00:05:21.680
+tools that way and his tools are
+amazing. Uh but iterating with with
+
+00:05:19.919 --> 00:05:27.039
+coding agents to produce production
+quality code feels like a different
+
+00:05:23.840 --> 00:05:32.160
+process entirely. And it's also clear
+that they reward top processes.
+
+00:05:29.600 --> 00:05:35.919
+Automated testing. Building a testing
+process in planning in advance. We've
+
+00:05:34.400 --> 00:05:40.240
+done a fair amount of that with like the
+plan that we did on day five and then
+
+00:05:38.000 --> 00:05:43.520
+executing it step by step. comprehensive
+documentation. We've been doing that.
+
+00:05:41.600 --> 00:05:47.600
+We've been seeing how that works. Good
+version control habits. We've been
+
+00:05:45.520 --> 00:05:52.000
+taking git checkpoints, but we'll be
+doing more this week with checkpointing
+
+00:05:49.680 --> 00:05:56.240
+built into Claude Code and highly
+effective automation. So, we'll
+
+00:05:54.080 --> 00:06:00.240
+certainly be doing plenty of that this
+week. And now, Simon makes some real pro
+
+00:05:58.479 --> 00:06:06.319
+points. I just love to share with you.
+Uh, a culture of code review, making
+
+00:06:03.120 --> 00:06:11.120
+sure that your LLM reviews its own work.
+We've done that already a couple of
+
+00:06:07.600 --> 00:06:14.400
+times. so powerful. A very weird form of
+management. Getting good results feels
+
+00:06:13.120 --> 00:06:18.160
+uncomfortably close to getting good
+results out of a human collaborator, but
+
+00:06:16.240 --> 00:06:23.360
+with some differences that he points
+out. Really good manual QA, being able
+
+00:06:21.440 --> 00:06:27.440
+to do that, as well as the automated
+sort. Strong research skills,
+
+00:06:26.240 --> 00:06:31.360
+understanding there's many different
+ways that you can ask for a problem, and
+
+00:06:29.280 --> 00:06:34.639
+sometimes you hit a blocker, it's good
+just to step back and just try again
+
+00:06:32.720 --> 00:06:37.600
+with a different way of doing it. and
+having that mindset, which is hard
+
+00:06:36.240 --> 00:06:41.039
+because you want to solve the problem
+you've got and knowing when to just try
+
+00:06:39.360 --> 00:06:46.080
+something different. It's it's a real
+skill. The ability to to ship a preview
+
+00:06:43.520 --> 00:06:51.600
+is a very interesting point. Um, an
+instinct for what you can outsource to
+
+00:06:48.319 --> 00:06:55.199
+an AI and what you cannot. This I I just
+couldn't agree more with Simon. It's
+
+00:06:53.199 --> 00:06:59.360
+such a key point. I've developed over
+time this good sense of the fact that,
+
+00:06:57.759 --> 00:07:03.280
+for example, front end is something that
+I can absolutely just delegate to the
+
+00:07:01.680 --> 00:07:07.280
+LLM. It will build a front end. and I
+can give it some feedback, it's going to
+
+00:07:04.880 --> 00:07:12.400
+be great. When it comes to backend and
+particularly say working actually with
+
+00:07:09.280 --> 00:07:17.280
+LLMs, it's often struggling. And for
+example, in week one, day five, we I
+
+00:07:15.440 --> 00:07:21.440
+came back and looked at that main Python
+module and whilst it was working, it was
+
+00:07:19.360 --> 00:07:25.680
+a mess and it had a bunch of things in
+it which were were needed to be
+
+00:07:22.880 --> 00:07:30.319
+refactored. and and that's why you need
+to have a really good instinct for what
+
+00:07:28.000 --> 00:07:34.479
+are the LLMs reliable at doing and what
+are they not and being able to jump in
+
+00:07:32.479 --> 00:07:40.240
+and help there. And an interesting point
+is that the way we estimate projects has
+
+00:07:37.919 --> 00:07:44.560
+changed. It's always been hard for a
+software engineer and now in some ways
+
+00:07:42.720 --> 00:07:48.639
+it's easier, in some ways it's harder.
+Often these tools like Claude Code will
+
+00:07:46.960 --> 00:07:52.400
+be able to rattle out code really,
+really quickly and you get this false
+
+00:07:50.319 --> 00:07:56.879
+sense that you can accomplish incredible
+things in minutes, but then you hit a
+
+00:07:54.960 --> 00:08:00.479
+wall and then you could be stuck for
+several hours bashing your head against
+
+00:07:58.960 --> 00:08:04.479
+a wall on something that feels like it
+should be really easy. Uh, and so you
+
+00:08:02.720 --> 00:08:08.080
+need to factor that into your estimates.
+As I say, you know, don't don't get
+
+00:08:06.000 --> 00:08:12.400
+caught up in the hype of the 10X.
+There's a huge efficiency improvement
+
+00:08:10.240 --> 00:08:16.080
+here. And and to Andre's point, you can
+expand your capabilities, but there are
+
+00:08:14.479 --> 00:08:21.360
+definitely drawbacks and you need to
+factor them in. And and all of this is
+
+00:08:19.120 --> 00:08:24.560
+kind of summarized here by Simon. He
+says if you're going to really exploit
+
+00:08:22.879 --> 00:08:29.440
+these capabilities, you need to be at
+the top of your game. Uh the designing
+
+00:08:27.520 --> 00:08:35.120
+success criteria, remember that we've
+done that many times. designing agentic
+
+00:08:31.840 --> 00:08:40.640
+loops, planning QA, managing a growing
+army of weird digital interns who will
+
+00:08:38.800 --> 00:08:46.880
+absolutely cheat if you give them a
+chance, and spending so much time on
+
+00:08:43.680 --> 00:08:52.959
+code review. Very wise words. Read this
+whole blog post, link in the resources.
+
+00:08:49.600 --> 00:08:52.959
+This is gold.
+

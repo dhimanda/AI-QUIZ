@@ -1,0 +1,671 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.080 --> 00:00:06.160
+So just as with MCP servers, there are
+marketplaces for skills as well, but
+
+00:00:04.799 --> 00:00:10.480
+they're a bit more simplistic because
+skills are just a sort of bunch of files
+
+00:00:08.080 --> 00:00:14.400
+and folders. Uh but the uh to start
+with, the first place you might go would
+
+00:00:11.759 --> 00:00:18.800
+be to Anthropic GitHub repo where they
+have a repo called skills. It contains
+
+00:00:17.199 --> 00:00:23.199
+the specification. It contains a
+template if you want to make your own,
+
+00:00:20.720 --> 00:00:27.039
+which we will do at some point. And it
+also has a folder of skills that they
+
+00:00:25.199 --> 00:00:31.439
+have written. and it has one of the
+first ones they they produced was one
+
+00:00:28.720 --> 00:00:35.600
+that is allows you to uh to to create
+PDFs. Um they've got was it the
+
+00:00:34.160 --> 00:00:39.760
+PowerPoint one was one of the first ones
+they did but they've got some some other
+
+00:00:37.520 --> 00:00:44.559
+useful ones here that you could look at.
+There's one that actually is a skill to
+
+00:00:42.160 --> 00:00:47.360
+create skills. Uh so they've got these
+various things in them and you can come
+
+00:00:46.000 --> 00:00:53.440
+in and you'll see that there is this
+file called skill.md which I mentioned
+
+00:00:50.640 --> 00:00:58.160
+that is the the main file with the the
+the metadata and the instructions those
+
+00:00:56.320 --> 00:01:01.120
+first two levels of hierarchy. While
+we're here we can just click in on one
+
+00:00:59.440 --> 00:01:04.640
+of them. This is the metadata at the
+top. This is the name and the
+
+00:01:02.320 --> 00:01:09.760
+description. And then this is the
+instructions. You can see it's just free
+
+00:01:06.960 --> 00:01:14.720
+form text with some stuff. And then it's
+got some information about how it can
+
+00:01:11.840 --> 00:01:19.600
+look to more detail like scripts,
+executable code for tasks that blah blah
+
+00:01:17.439 --> 00:01:24.960
+blah blah blah. And this is informing
+Claude code about the other the other
+
+00:01:22.240 --> 00:01:29.200
+things in this skill creator folder like
+in this in this script folder that tell
+
+00:01:27.040 --> 00:01:33.280
+it how how things that it can that it
+can actually action. So that's an
+
+00:01:31.680 --> 00:01:36.799
+example. It's a skill that is called
+skill creator. Let's look at another
+
+00:01:34.880 --> 00:01:43.520
+one. Let's get a skill that is called
+PPTX for PowerPoint. Let's open the
+
+00:01:39.920 --> 00:01:47.920
+skill do um MD. This is about
+presentation creation, editing and
+
+00:01:45.520 --> 00:01:53.360
+analysis when Claude needs to work with
+presentations. So this this is telling
+
+00:01:50.560 --> 00:01:58.240
+it exactly when it should trigger this
+skill. And when Claude code finds that
+
+00:01:55.840 --> 00:02:02.640
+this is is being asked for, it will read
+in this entire document. It will read in
+
+00:01:59.920 --> 00:02:06.560
+the instructions, the rest of this. And
+you can see that there's there's lots of
+
+00:02:04.560 --> 00:02:10.399
+information here about what it needs to
+do. Uh lots and lots. Look at that. It's
+
+00:02:08.560 --> 00:02:15.840
+a long document that would only get read
+in if this applies. And if we come back
+
+00:02:13.680 --> 00:02:19.520
+here, you'll see that there is also a
+scripts folder. And these are the
+
+00:02:18.000 --> 00:02:24.239
+different scripts it can run. There's a
+JavaScript thing that can convert HTML
+
+00:02:21.920 --> 00:02:28.480
+to PowerPoint. There's there's various
+things. There's a rearrange Python
+
+00:02:26.160 --> 00:02:33.760
+script. So these are all things. So,
+this is a Python script that Claude Code
+
+00:02:30.720 --> 00:02:39.280
+could run in order to uh and it's got
+some some usage here in order to
+
+00:02:35.200 --> 00:02:42.879
+rearrange uh some some PowerPoint uh the
+contents within a PowerPoint. That's
+
+00:02:41.200 --> 00:02:47.840
+that's what this script would allow it
+to do similar to a tool but at a higher
+
+00:02:45.599 --> 00:02:50.720
+level of granularity. If if this still
+isn't completely feeling real to you,
+
+00:02:49.200 --> 00:02:55.040
+then I would suggest coming to
+Anthropic's uh GitHub repo and I'll put
+
+00:02:53.200 --> 00:02:59.040
+a link in the resources and browse
+around and try and get that firsthand
+
+00:02:56.959 --> 00:03:02.560
+sense of what do these skills look like
+and what functionality do they contain.
+
+00:03:01.120 --> 00:03:08.239
+Okay. And the other website is called
+skills.sh and it's a great one. It's
+
+00:03:04.959 --> 00:03:13.599
+made by Versel, uh the people that are
+behind Nex.js and that have the Versel
+
+00:03:11.040 --> 00:03:18.319
+deployment. Uh great company and great
+product, great great marketplace.
+
+00:03:14.879 --> 00:03:23.680
+Skills.sh SH is where you can come in to
+um uh to to see a bunch of different
+
+00:03:20.879 --> 00:03:26.640
+skills out there and install them. And
+there are some really interesting ones.
+
+00:03:25.120 --> 00:03:30.640
+There's one front-end design that it's
+taking from the Anthropics website. We
+
+00:03:29.040 --> 00:03:35.519
+were just looking at a bunch of
+different skills that you can look at
+
+00:03:32.640 --> 00:03:42.000
+here. the somewhat um in a a sort of
+meta way that the top skill is a skill
+
+00:03:39.120 --> 00:03:46.799
+designed to allow Claude code to find
+other skills called find skills which is
+
+00:03:44.640 --> 00:03:49.680
+kind of confusing. Uh and there's
+there's lots of other things here. It's
+
+00:03:48.319 --> 00:03:54.319
+a bit like we were just looking at the
+create skill skill. Um but uh yeah,
+
+00:03:52.799 --> 00:03:58.239
+there it is. There is the create skill
+skill that we were just looking at.
+
+00:03:55.519 --> 00:04:02.640
+Skill creator. Uh a skill to allow
+Claude code to create skills. Uh but uh
+
+00:04:01.519 --> 00:04:05.760
+yeah, hopefully I'm not completely
+confusing you. There are some there are
+
+00:04:04.000 --> 00:04:11.519
+some there's back to some ordinary
+skills like a skill to to to create and
+
+00:04:08.799 --> 00:04:16.239
+edit PDFs, a skill to know how to do
+brainstorming. Uh that's uh that sounds
+
+00:04:14.319 --> 00:04:22.000
+like an interesting one. So all of these
+are different skills that you can look
+
+00:04:18.400 --> 00:04:26.320
+into and equip your model to use. And
+look, this is a really powerful one.
+
+00:04:23.759 --> 00:04:32.080
+Agent browser. If you come into this, if
+we're now looking at the skill.md
+
+00:04:28.720 --> 00:04:38.000
+here, this this is a a really uh uh
+important one that allows allows you to
+
+00:04:35.040 --> 00:04:41.840
+equip Claude code so that it can run a
+browser like launch a browser on your
+
+00:04:40.639 --> 00:04:45.040
+computer doing it what they call
+headless, which means you don't actually
+
+00:04:43.120 --> 00:04:48.800
+see the browser. It launches and then
+navigate around. So rather than having
+
+00:04:46.880 --> 00:04:52.960
+to go off onto the cloud to do to do
+searches, it can actually navigate and
+
+00:04:50.800 --> 00:04:59.199
+do things. Claude Co can have that
+ability. So that's kind of cool. And uh
+
+00:04:56.000 --> 00:05:04.560
+yeah, it's being it's uh being given the
+ability to control it through another uh
+
+00:05:02.400 --> 00:05:10.479
+product called agent browser. So what
+we're going to do now is install this
+
+00:05:07.120 --> 00:05:16.320
+skill and and uh Vel has made a utility
+called MPX skills that you can just run
+
+00:05:12.960 --> 00:05:20.960
+MPX skills add and then give it a a link
+to GitHub like this and it will install
+
+00:05:18.720 --> 00:05:24.160
+that skill. And we are going to do that
+right now. So, I'm going to copy that to
+
+00:05:22.560 --> 00:05:29.199
+the clipboard. We're going to do that,
+and that's going to be the way that we
+
+00:05:26.080 --> 00:05:33.520
+add a skill to Claude Code. Okay. So,
+first up, I'm going to come out of
+
+00:05:30.400 --> 00:05:36.720
+Claude Code. Clear my screen there. Uh,
+and I'm just going to run a couple of
+
+00:05:34.960 --> 00:05:41.680
+commands that are going to install this
+product called agent browser, which is
+
+00:05:39.039 --> 00:05:45.280
+like a headless browser. And I'll put
+these in the resources, but this is
+
+00:05:43.919 --> 00:05:48.320
+since we've already got node installed,
+you shouldn't need to install anything
+
+00:05:46.479 --> 00:05:55.120
+else. This has installed this thing
+called agent browser. And then uh if uh
+
+00:05:52.080 --> 00:06:01.039
+you need to install uh Chromium, the
+open- source Chrome version that this
+
+00:05:57.919 --> 00:06:04.800
+runs, then you run this command here. I
+say yes, and it's installing Chromium
+
+00:06:03.360 --> 00:06:09.600
+along this thing called Playrights,
+which you may know is Microsoft's
+
+00:06:06.560 --> 00:06:13.840
+product that allows a code to drive a
+browser running on your computer. So,
+
+00:06:11.600 --> 00:06:18.639
+that's all been installed successfully.
+And the next thing I'm going to do is
+
+00:06:15.520 --> 00:06:23.280
+I'm going to press paste to paste in the
+thing that we just copied from that
+
+00:06:20.319 --> 00:06:26.800
+other screen from uh Vel's skills list.
+So here we go. I'm pasting in that
+
+00:06:24.960 --> 00:06:31.440
+command. You recognize it there. Taken
+straight from that that uh that site
+
+00:06:28.720 --> 00:06:34.800
+using Vel skills utility. It's thinking
+it needs to install the following
+
+00:06:32.720 --> 00:06:42.080
+packages. Okay, to proceed. I'll say
+yes, that's fine. Okay, skills is
+
+00:06:37.600 --> 00:06:48.240
+installed. Okay. Now, it's saying to me,
+uh, uh, selected skill agent browser.
+
+00:06:45.759 --> 00:06:52.880
+Which agents do you want to install it
+to? So, what it's saying is that that
+
+00:06:50.639 --> 00:06:56.160
+it's recognized that that it could be
+installed to be used by something like
+
+00:06:54.479 --> 00:07:01.919
+AMP, remember AMP that we used,
+anti-gravity, it could be used by Claude
+
+00:06:58.720 --> 00:07:06.720
+Code, OpenClaw, which is big right now.
+Uh, maybe we'll talk about later. uh
+
+00:07:03.840 --> 00:07:09.680
+Klein, CodeBuddy, Codeex, and lots more,
+including Open Code, I believe. So, if
+
+00:07:08.479 --> 00:07:13.120
+you've decided to stick with that, you
+can use that as well. And all we want is
+
+00:07:11.680 --> 00:07:17.840
+Claude Code. And the way you do that is
+you press the down button, and you press
+
+00:07:14.880 --> 00:07:21.759
+the space bar to select it like that.
+And you press enter. And now we can
+
+00:07:20.240 --> 00:07:26.560
+choose, do you want it installed for
+this project or globally? And all that
+
+00:07:25.039 --> 00:07:31.280
+means is, do you want me to create these
+folders and files in in your docu file
+
+00:07:29.440 --> 00:07:34.080
+right here or in your home directory?
+And I'm going to say project. It's
+
+00:07:32.800 --> 00:07:39.520
+already highlighted there. I can just
+press enter. And installation method. Uh
+
+00:07:37.199 --> 00:07:44.560
+this is you if you I I if in doubt say
+copy to all agents if you don't know
+
+00:07:41.280 --> 00:07:50.080
+about sim links like aliases. Uh let's
+do that. Proceed with installation. Yes.
+
+00:07:46.800 --> 00:07:53.759
+Done. And uh it seems very high tech
+especially as it was all in the command
+
+00:07:51.520 --> 00:07:58.479
+line like that. But all it did is if I
+open up doclord it has created this
+
+00:07:56.400 --> 00:08:02.160
+folder here skills that just got
+created. That's why it's green. If I
+
+00:08:00.160 --> 00:08:06.639
+open that up, you could see that there
+is it's sorry within skills there's only
+
+00:08:04.000 --> 00:08:10.560
+one folder and it's called agent browser
+which is the name of the skill that we
+
+00:08:08.400 --> 00:08:15.599
+just created and that has this single
+file called skill.md. And if I open that
+
+00:08:13.759 --> 00:08:19.759
+up in a preview mode so we can look at
+it you can see that it is basically
+
+00:08:17.919 --> 00:08:22.800
+exactly what we were just looking at.
+Hang on and maybe I shouldn't show it in
+
+00:08:21.280 --> 00:08:26.960
+preview mode. If I show you the the uh
+the original version here, you can see
+
+00:08:24.960 --> 00:08:31.520
+that it's got this kind of header at the
+top with this particular format, three
+
+00:08:29.520 --> 00:08:37.360
+hyphens, and then this description right
+here uh is the metadata. Uh YAML people
+
+00:08:35.200 --> 00:08:41.200
+will recognize this. Uh so it's got this
+particular format here with with name
+
+00:08:39.440 --> 00:08:47.600
+and description. And then this is
+optionally which tools are allowed. Um
+
+00:08:43.919 --> 00:08:53.600
+and then um yeah, we've got uh uh the
+just the rest of this is the information
+
+00:08:50.399 --> 00:08:59.279
+that is only read into context if Claude
+code decides that this is met. So just
+
+00:08:56.720 --> 00:09:03.360
+by virtue of having these folders and
+files, we have effectively equipped
+
+00:09:01.519 --> 00:09:08.240
+Claude with the skill. There's nothing
+more to it than that. It's just about
+
+00:09:05.279 --> 00:09:13.519
+the files in this.Claude directory. And
+so finally I can launch Claude. Up comes
+
+00:09:11.120 --> 00:09:17.920
+Claude. Here it is. I can look at the
+context.
+
+00:09:15.839 --> 00:09:25.200
+If we look at the context, we can see uh
+that we have under skills agent browser.
+
+00:09:21.440 --> 00:09:32.000
+It's using up just a tiny 68 tokens, but
+agent browser is there. And so now I can
+
+00:09:28.959 --> 00:09:37.680
+actually use agent browser. And now this
+is a definite an example of how uh you
+
+00:09:35.200 --> 00:09:41.920
+need to be it's difficult to make it use
+this because generally claude does have
+
+00:09:40.000 --> 00:09:50.000
+the ability to search the web from its
+tools. So we'll we'll see how this goes.
+
+00:09:44.320 --> 00:09:57.600
+We'll say um um please uh interact with
+the browser to look for
+
+00:09:54.800 --> 00:10:01.120
+um ex uh
+restaurant
+
+00:09:59.440 --> 00:10:07.040
+experiences
+in NYC
+
+00:10:03.440 --> 00:10:15.200
+uh next week
+perhaps on resi or open table.
+
+00:10:13.200 --> 00:10:18.880
+So, we're giving it a sort of broad
+task. Again, it's not to do with coding,
+
+00:10:17.200 --> 00:10:22.320
+but we're just seeing whether or not
+it's got this, but it look it is trying
+
+00:10:20.640 --> 00:10:25.680
+to use the skill agent browser. The
+first time I I tested this before, it
+
+00:10:23.839 --> 00:10:29.360
+didn't. So, you have to be uh you have
+to be careful that I'm using you notice
+
+00:10:27.440 --> 00:10:35.120
+the exact words from here. So, I'm going
+to say yes. And it is now going to be
+
+00:10:32.640 --> 00:10:39.040
+behind the scenes launching agent
+browser. It's looking at resi. It's
+
+00:10:37.519 --> 00:10:42.560
+running. It's looking at resi. Oh, and
+the browser window has actually come up.
+
+00:10:41.120 --> 00:10:45.680
+Uh there's I think some controls
+somewhere where you set whether it
+
+00:10:43.839 --> 00:10:48.240
+should be uh headless or not. And
+obviously it's set. So I I thought it
+
+00:10:47.120 --> 00:10:53.120
+would be headless, but it's cool that
+you get to see it. So we see it running.
+
+00:10:50.560 --> 00:10:56.720
+It's doing stuff. Uh that's a nice
+surprise. Look, it's searching. I'm not
+
+00:10:55.279 --> 00:11:00.800
+My hands aren't on the keyboard. I'm not
+doing anything. This is Claude Code
+
+00:10:58.640 --> 00:11:05.040
+driving this browser on my computer
+because of the skill that we equipped it
+
+00:11:02.720 --> 00:11:10.079
+with. You got to admit it's pretty cool.
+Uh it's continuing to search. Uh, and I
+
+00:11:08.399 --> 00:11:14.160
+could see, but you could probably see in
+the window behind that that claw code is
+
+00:11:11.839 --> 00:11:17.120
+doing stuff. Things are all happening.
+All right, I'm going to let it do its
+
+00:11:15.600 --> 00:11:20.640
+thing. I'll see you in a second when
+it's finished. Okay, that was pretty
+
+00:11:18.720 --> 00:11:25.279
+cool. It just searched around resi and
+then it searched around open table. It
+
+00:11:22.560 --> 00:11:30.720
+took screenshots. It then read in the
+screenshots asking me for permission and
+
+00:11:27.600 --> 00:11:36.720
+then summarized with some some uh some
+experiences that are available. Uh, and
+
+00:11:34.000 --> 00:11:39.600
+so we there's no question I I say I'm
+not sure which setting it is that
+
+00:11:37.920 --> 00:11:44.079
+controls whether it's headless or not,
+but you definitely get that real sense
+
+00:11:41.440 --> 00:11:47.040
+that Claude code is in the driving seat
+using its new skill when you see that.
+
+00:11:45.920 --> 00:11:50.399
+So I think it's a really cool example
+for you. It's not of course got much to
+
+00:11:48.480 --> 00:11:52.880
+do with coding like you wouldn't you
+wouldn't need to look for a restaurant
+
+00:11:51.519 --> 00:11:56.079
+for as part of coding but you can
+imagine things you might need to do that
+
+00:11:54.320 --> 00:12:02.000
+would need it to bring up a browser and
+do some searching and that is the new
+
+00:11:58.640 --> 00:12:08.560
+skill that we've equipped Claude with so
+easily literally just by having this
+
+00:12:05.120 --> 00:12:12.800
+bunch of files stored in the Claude
+directory in this repo and as I say of
+
+00:12:11.120 --> 00:12:16.959
+course the magic thing about having it
+be so simple is that I can now check
+
+00:12:15.120 --> 00:12:21.519
+this in and push it to a repo like push
+it to GitHub and any of my team members
+
+00:12:18.959 --> 00:12:27.040
+that pull it down will then do a git
+pull will also have this skill equipped
+
+00:12:24.079 --> 00:12:30.560
+in their clawed code immediately. Um
+although they would they would also have
+
+00:12:28.399 --> 00:12:33.680
+to do that that mpm command to install
+the agent browser if they didn't have it
+
+00:12:32.079 --> 00:12:40.399
+but but you get the idea. These skills
+can be equipped that simply. Uh, and
+
+00:12:36.079 --> 00:12:40.399
+that that is is really why they're so
+

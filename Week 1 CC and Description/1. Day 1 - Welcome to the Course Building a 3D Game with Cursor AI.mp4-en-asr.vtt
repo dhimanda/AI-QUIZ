@@ -1,0 +1,567 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:08.800
+Well, let me give you a massive welcome
+to the definitive AI coder course. This
+
+00:00:06.319 --> 00:00:12.800
+is the missing manual. Over the course
+of three weeks, I'm going to take you on
+
+00:00:10.400 --> 00:00:18.800
+this extraordinary journey that will end
+up with you being an expert at agentic
+
+00:00:16.160 --> 00:00:24.720
+engineering. But first, a word of
+caution. You need to buckle up. You need
+
+00:00:21.359 --> 00:00:29.279
+to strap in because I have a wild ride
+in store for you. This is going to be a
+
+00:00:26.800 --> 00:00:33.120
+roller coaster. I have so much to show
+you. Let me tell you all about it. It is
+
+00:00:31.519 --> 00:00:37.120
+standard fair with these kinds of
+courses. A good way to go about doing it
+
+00:00:34.880 --> 00:00:41.200
+is to begin with the objectives,
+introduce myself, give you the
+
+00:00:38.399 --> 00:00:44.239
+curriculum and the logistics. Except I
+don't do that. If you've been on any of
+
+00:00:42.559 --> 00:00:48.800
+my courses before, you know perfectly
+well that I always like to start with
+
+00:00:46.480 --> 00:00:52.559
+instant gratification. Let's roll up
+sleeves. Let's build something together.
+
+00:00:51.039 --> 00:00:55.520
+There'll be plenty of time to come back
+later and do all of that stuff. In the
+
+00:00:54.399 --> 00:00:59.520
+next three weeks, we're going to be
+working with a number of different AI
+
+00:00:57.680 --> 00:01:04.640
+products that generate code. But for
+today, we're going to start with Cursor.
+
+00:01:02.000 --> 00:01:07.840
+Super popular, very easy to use, and it
+has a free trial if you haven't used it
+
+00:01:06.320 --> 00:01:11.439
+before. So, that's what we're going to
+use. If you've used Cursor before and
+
+00:01:09.920 --> 00:01:14.000
+you've you've spent all of the free
+trial and you don't want to use it
+
+00:01:12.400 --> 00:01:17.360
+anymore, you don't need to. You can just
+watch what I do right now or you could
+
+00:01:15.840 --> 00:01:20.799
+follow along with another product if you
+like. We're just going to do something
+
+00:01:18.560 --> 00:01:25.280
+super simple because we want to use an
+AI to generate code right away. and then
+
+00:01:23.840 --> 00:01:28.640
+we'll get on with the course. Let's go
+do it. And so the first thing to do is
+
+00:01:26.560 --> 00:01:35.360
+to bring up a browser. I'm in Chrome
+right here. And I'm going to cursor.com.
+
+00:01:31.360 --> 00:01:39.520
+Cursor cur ss o r.com. Press enter. And
+here we are. We are in cursor's website.
+
+00:01:38.240 --> 00:01:45.119
+It says it's built to make you
+extraordinarily productive. Cursor is
+
+00:01:42.159 --> 00:01:48.320
+the best way to code with AI. Well,
+we'll be the judge of that. We'll be
+
+00:01:46.479 --> 00:01:53.280
+using a few of these and we can decide
+ourselves. But for now, we are going to
+
+00:01:50.399 --> 00:01:57.840
+use cursor. So the first thing to do is
+to download it and install it locally
+
+00:01:56.079 --> 00:02:02.079
+which we will do now. And it's worth
+keeping an eye on the course resources
+
+00:02:00.000 --> 00:02:05.600
+which will be linked in the platform to
+make sure that nothing's changed.
+
+00:02:03.439 --> 00:02:09.119
+There's no extra instructions as you go.
+But it should be pretty simple. You
+
+00:02:06.960 --> 00:02:13.440
+start by going to download and you can
+download the right version for your
+
+00:02:10.879 --> 00:02:18.160
+platform. For me that I'm on a Mac, an
+ARM Mac, an M1 Mac. Uh but you might
+
+00:02:15.760 --> 00:02:21.920
+pick Mac, Windows or Linux. And actually
+on the landing page probably the button
+
+00:02:19.920 --> 00:02:25.920
+right here is allowing you immediately
+to download the versions for your
+
+00:02:23.599 --> 00:02:29.360
+platform. So download that file. I'll
+press it now to download for Mac and
+
+00:02:27.599 --> 00:02:33.840
+then you will launch it on your computer
+once it's downloaded. And just for the
+
+00:02:31.120 --> 00:02:38.239
+PC people to show you here I am in a
+Microsoft Edge browser. I've gone to
+
+00:02:36.000 --> 00:02:42.319
+cursor.com and download for Windows is
+the default button which I'm pressing
+
+00:02:40.480 --> 00:02:46.400
+right now too. And that's now
+downloading for the PC as well. And so
+
+00:02:44.480 --> 00:02:51.840
+then on Windows once it's downloaded you
+open the file the usual stuff. You say
+
+00:02:48.879 --> 00:02:56.400
+you accept the agreement. You press next
+and then you just pick the normal
+
+00:02:53.920 --> 00:02:59.840
+defaults. Uh including that that last
+one in particular add to path is
+
+00:02:57.760 --> 00:03:05.040
+important. And then next and then
+install and cursor will be installed on
+
+00:03:02.560 --> 00:03:09.120
+your PC. On a Mac you just drag the box
+over to applications and you're done.
+
+00:03:07.120 --> 00:03:12.400
+And when that's done we will then get
+started with cursor. And the first time
+
+00:03:11.040 --> 00:03:16.080
+you come into Cursor, you should be
+prompted to sign in or sign up. And of
+
+00:03:14.959 --> 00:03:19.200
+course, you're going to want to sign up
+if you don't already have a Cursor
+
+00:03:17.680 --> 00:03:23.680
+account, which should be free for the
+first few weeks, which is all that we
+
+00:03:20.640 --> 00:03:27.040
+need it for. And what if you get this
+screen, you can just press the signin
+
+00:03:25.120 --> 00:03:30.560
+button there. Or if you don't see this
+screen, you should be able to go to the
+
+00:03:28.080 --> 00:03:34.319
+file menu and say new menu, new window,
+and then you will see this screen. And
+
+00:03:32.159 --> 00:03:39.680
+then you press the signin button. It
+brings up a cursor window in the browser
+
+00:03:36.959 --> 00:03:45.360
+like this. Sign into cursor. continue to
+sign in and then you can say don't have
+
+00:03:42.560 --> 00:03:50.319
+an account sign up and this is the
+screen where you then enter your details
+
+00:03:47.760 --> 00:03:54.879
+answer a few questions and then you will
+have an account with cursor that you can
+
+00:03:52.959 --> 00:03:58.480
+sign into as I say it should be there
+have a trial period should be free for a
+
+00:03:56.879 --> 00:04:02.159
+couple of weeks which is all that we
+need to give it a good test run if you
+
+00:04:00.640 --> 00:04:05.360
+already have a cursor account so much
+the better okay I will see you over in
+
+00:04:04.319 --> 00:04:09.120
+cursor if you have any problems with
+this do look at the course resources or
+
+00:04:07.200 --> 00:04:14.480
+shoot me a question so I and help you
+out. Okay. So then when you launch
+
+00:04:11.599 --> 00:04:18.560
+cursor, this is what you see. You see
+the cursor screen. If you don't see
+
+00:04:16.400 --> 00:04:23.280
+exactly this screen, go to the file menu
+and choose new window. And then this is
+
+00:04:20.959 --> 00:04:26.800
+what you'll get. It may not say pro here
+if you don't have a pro account if
+
+00:04:24.639 --> 00:04:31.759
+you're on the free trial account. And if
+you see login here, you press that
+
+00:04:28.320 --> 00:04:35.520
+login. Again, any problems, message me.
+All right. The first thing we're going
+
+00:04:32.800 --> 00:04:39.919
+to do is open a project. And I'm going
+to show you what it looks like on a Mac
+
+00:04:36.880 --> 00:04:43.680
+and then on a PC. So cursor is based on
+VS Code. And you may be very familiar
+
+00:04:42.240 --> 00:04:48.720
+with this already if you use VS Code,
+but open a project really means I want
+
+00:04:46.080 --> 00:04:52.720
+to select a directory on my computer.
+That directory will be used to house
+
+00:04:50.639 --> 00:04:57.040
+everything related to this project. And
+it's typical for people to to start in
+
+00:04:54.800 --> 00:05:01.120
+their home directory. Mine is called ED.
+And then to go to a a folder called
+
+00:04:59.600 --> 00:05:04.639
+projects where you have your own
+projects. And if you don't have such a
+
+00:05:02.800 --> 00:05:08.400
+folder, you press new folder to create
+projects. But I do have such a folder.
+
+00:05:06.880 --> 00:05:12.720
+Here it is. And here I've got lots of
+projects. Here are all my projects. And
+
+00:05:10.160 --> 00:05:17.600
+what I can do now is press new folder.
+And I can type out instant uh for the
+
+00:05:15.440 --> 00:05:22.880
+name of this instant project. And press
+create. And here I am inside instant.
+
+00:05:20.240 --> 00:05:26.960
+And then I press open. And it opens the
+project called instant. And you'll tell
+
+00:05:25.280 --> 00:05:31.360
+that because it says instant in block
+capitals right there. Okay. Now, let me
+
+00:05:29.120 --> 00:05:35.360
+show you the same thing on a PC. So here
+I am on cursor on the PC. If it says
+
+00:05:33.840 --> 00:05:40.080
+sign in right there, I can click there
+to go through and sign into cursor. Uh
+
+00:05:38.160 --> 00:05:44.960
+otherwise I can press open project, it
+comes up. This is the kind of browser on
+
+00:05:41.680 --> 00:05:49.680
+a PC. I'm in my home folder again. Ed, I
+can create a new folder or I can go into
+
+00:05:47.600 --> 00:05:53.840
+projects that already exists. That's how
+you create a new folder. I'll go into
+
+00:05:51.199 --> 00:05:58.639
+projects and I can create a new folder.
+I can call it instant. And there is
+
+00:05:56.160 --> 00:06:03.919
+instant. I can go into instant and then
+say select folder. And here we are. We
+
+00:06:01.600 --> 00:06:08.080
+are now inside instant. You can see it
+says instant on the top left. That means
+
+00:06:05.440 --> 00:06:13.039
+we've got it right. And uh this is the
+beginning of cursor on a PC. Okay. So
+
+00:06:10.720 --> 00:06:17.759
+just to orient you on cursor, we're
+seeing like three panes here. On the
+
+00:06:15.600 --> 00:06:21.600
+left, this is showing the whole file
+system of our project of instant and
+
+00:06:19.680 --> 00:06:26.080
+it's very empty. We don't have many
+files here right now. Uh we will do very
+
+00:06:24.000 --> 00:06:30.400
+soon. In the middle here is the main
+place where we'll see code. And on the
+
+00:06:28.000 --> 00:06:34.800
+right, this is where we chat with an
+agent. And if you're not seeing these
+
+00:06:32.720 --> 00:06:38.479
+three panes, then there's various, if
+you go to the view menu, there's an
+
+00:06:36.319 --> 00:06:42.080
+appearance submen, and you can toggle
+around different things until you do see
+
+00:06:40.080 --> 00:06:46.479
+these two panes. Uh, I'm sure you'll
+figure it out. Otherwise, message me.
+
+00:06:44.240 --> 00:06:52.479
+Okay. What we're now going to do is
+explore using the thing on the right,
+
+00:06:49.600 --> 00:06:55.440
+the agent, to actually do some work for
+us for the first time. Now look,
+
+00:06:54.160 --> 00:06:59.440
+something that I feel very strongly
+about which which I have on all of my
+
+00:06:57.280 --> 00:07:03.759
+courses is that when we build projects
+together and I like building projects
+
+00:07:01.440 --> 00:07:08.720
+together when we do it, I like them to
+have real world commercial impact. I
+
+00:07:07.039 --> 00:07:12.720
+like to build things which are actually
+valuable which perhaps you could think
+
+00:07:10.479 --> 00:07:16.720
+of monetizing at some point or use as
+like a springboard for something else
+
+00:07:14.240 --> 00:07:22.720
+that you want to build. So for me being
+business relevant, business first is
+
+00:07:19.599 --> 00:07:29.199
+super important and invariably I like my
+projects to have business impact. But
+
+00:07:25.840 --> 00:07:33.919
+but not today. Today is going to be an
+exception. The only exception. Every one
+
+00:07:32.240 --> 00:07:38.479
+of the projects we do on this course are
+going to have important business impact
+
+00:07:36.000 --> 00:07:42.960
+except for this one. Today we're just
+going to have some fun because what
+
+00:07:40.880 --> 00:07:47.840
+better way to start than with something
+a bit entertaining. So, we're going to
+
+00:07:45.520 --> 00:07:51.440
+start with a fun project. But don't
+worry if you're more all business. It's
+
+00:07:49.919 --> 00:07:56.319
+going to be all business after this
+point. Okay, let me show this to you.
+
+00:07:53.919 --> 00:08:02.400
+When we click in on the right over here,
+we can talk to an LLM. We can talk to a
+
+00:07:59.759 --> 00:08:05.599
+language model, to an agent, and have it
+do some work for us. And if you're
+
+00:08:04.160 --> 00:08:10.160
+wondering what what all of these things
+are, don't worry. Tomorrow I'm going to
+
+00:08:07.919 --> 00:08:13.280
+go through a lot of the the constructs,
+agents, how they work, what they do, and
+
+00:08:11.840 --> 00:08:16.479
+so on. And if you know all this already,
+well then you've seen this before, but
+
+00:08:15.120 --> 00:08:20.800
+we're just going to have some fun. It's
+going to build from here. Okay. So, what
+
+00:08:19.039 --> 00:08:24.960
+we put in here is going to be a message
+to our coding uh agent, like our
+
+00:08:23.120 --> 00:08:30.800
+sidekick that's going to work with us on
+this. And just below here, we can choose
+
+00:08:27.840 --> 00:08:34.159
+what model are we going to use, what AI
+is going to sit behind this and work on
+
+00:08:32.479 --> 00:08:37.839
+it for us. And depending on your plan,
+you might not be allowed to choose. It
+
+00:08:35.599 --> 00:08:42.320
+might be set to auto, which means cursor
+gets to choose. uh but um on the plan
+
+00:08:40.479 --> 00:08:48.720
+that I'm on, I can actually choose and I
+have chosen GPT 5.2 codecs, one of the
+
+00:08:46.800 --> 00:08:52.880
+strongest models that there are as of
+today. So that's the one that we will
+
+00:08:50.399 --> 00:08:58.080
+use for now. And in here, I'm going to
+put the request that I have for this AI
+
+00:08:55.920 --> 00:09:04.640
+to work with me. Okay. And this is the
+request. Please build a website for a 3D
+
+00:09:01.519 --> 00:09:10.480
+firstperson shooter game in an arena
+against one computer opponent controlled
+
+00:09:07.040 --> 00:09:16.320
+by arrow keys and spacebar to shoot. All
+right, I'm sending that off and so
+
+00:09:12.560 --> 00:09:20.240
+should you. And off it goes doing stuff.
+It's it's you can see the actions it's
+
+00:09:18.480 --> 00:09:25.680
+taken written here. It's planning the
+next moves. It's it's uh listed. It's
+
+00:09:22.800 --> 00:09:30.560
+exploring and off it goes doing stuff.
+And it's writing a file. a file just got
+
+00:09:28.480 --> 00:09:33.680
+written called index.html or it's in the
+middle of writing it. Now, it's possible
+
+00:09:32.320 --> 00:09:37.040
+that it's going to ask you for
+permission to do various things in which
+
+00:09:35.760 --> 00:09:40.560
+case, as long as you're happy with it,
+you should say yes. Um, but it may well
+
+00:09:39.040 --> 00:09:43.760
+not like mine. It depends on your on
+your settings, but I think I believe the
+
+00:09:42.320 --> 00:09:49.040
+default will be the same as me and it
+would just go off and do this stuff,
+
+00:09:46.080 --> 00:09:54.080
+creating files, writing stuff. And I am
+using GPT 5.2 codecs and you might be
+
+00:09:51.440 --> 00:09:57.600
+using a different model. And the thing
+is and something that you'll get
+
+00:09:55.360 --> 00:10:02.640
+familiar with on this course is that
+every one of us will have a different
+
+00:09:59.519 --> 00:10:07.200
+experience. There is some uncertainty
+here that it is not necessarily
+
+00:10:04.640 --> 00:10:13.959
+predictable what happens next. But this
+agent is off. It's doing stuff and it's
+
+00:10:10.399 --> 00:10:13.959
+working on index.html.
+

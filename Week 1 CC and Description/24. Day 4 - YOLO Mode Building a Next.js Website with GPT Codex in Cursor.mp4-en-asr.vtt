@@ -1,0 +1,527 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:06.240
+Okay, so I'm here in Cursor and it's
+ready for yolo time. You don't need to
+
+00:00:04.799 --> 00:00:10.480
+be in cursor. You can be in whichever
+one of the idees that you liked. But if
+
+00:00:08.559 --> 00:00:15.120
+you want to stick with me, then stay in
+cursor. We'll do this together. And you
+
+00:00:13.280 --> 00:00:19.439
+I've gone to file and gone to new window
+and I'm going to press open project and
+
+00:00:17.199 --> 00:00:25.840
+I'm going to go into my projects and I'm
+going to create a new folder. I'm
+
+00:00:21.760 --> 00:00:31.199
+calling it site sit for website. I go
+into it. Here we are inside site. I
+
+00:00:28.240 --> 00:00:35.520
+press open. And now we're in project
+site. You know it because site is in
+
+00:00:33.120 --> 00:00:39.840
+block capitals. There we are ready to
+build this. Okay. Next up I'm going to
+
+00:00:37.680 --> 00:00:42.640
+do something very carefully and you are
+too. You're going to be very careful
+
+00:00:41.040 --> 00:00:48.239
+here. Here in site you're going to
+rightclick and say new file. And I'm
+
+00:00:45.440 --> 00:00:53.840
+going to call this file exactly dot the
+dot and then env.
+
+00:00:51.760 --> 00:00:58.000
+And it needs to be called exactly that
+or things won't work for you. So it has
+
+00:00:55.680 --> 00:01:05.559
+to be right. And what you put in here
+has to be also exactly correct. Open
+
+00:01:01.039 --> 00:01:05.559
+router one word open routter_appi_key
+
+00:01:06.799 --> 00:01:14.320
+equals and then something to be pasted
+in here. What do we paste in here? What
+
+00:01:12.159 --> 00:01:20.000
+we paste in here is something that we
+take from here that the API key that
+
+00:01:16.960 --> 00:01:23.119
+we've got right here in open router. You
+remember this? You copied it to the
+
+00:01:21.200 --> 00:01:26.960
+clipboard before. If in doubt, create a
+new key and copy it to the clipboard.
+
+00:01:24.880 --> 00:01:31.680
+So, you've definitely got a key copied
+to your clipboard. And then you come
+
+00:01:29.040 --> 00:01:38.320
+back here and you do paste. And the key
+appears there. And now you have an open
+
+00:01:34.880 --> 00:01:43.200
+router API key that is in here. And this
+white blob up here means that this file
+
+00:01:40.960 --> 00:01:48.560
+hasn't yet been saved. So, this isn't
+yet stored to disk. I'm going to save it
+
+00:01:45.759 --> 00:01:53.759
+with command S on a Mac, control S on a
+PC, or file save. And then the blob goes
+
+00:01:51.280 --> 00:01:57.640
+away. And this is now saved. It's
+spelled open router_appi_key
+
+00:01:57.920 --> 00:02:06.320
+equals and then the key is in there. If
+you're using an open AI key direct, it's
+
+00:02:02.799 --> 00:02:11.039
+open AAI API key. You have to get this
+right, otherwise it won't work. So very
+
+00:02:08.640 --> 00:02:15.280
+important to get this right. Okay, next
+up, right click here, new file. We're
+
+00:02:13.599 --> 00:02:19.680
+going to create another file. So I'm
+going to do that again. Right click, new
+
+00:02:16.400 --> 00:02:25.200
+file, and then I'm going to do
+ignore. All one word like that. Git
+
+00:02:22.239 --> 00:02:30.640
+ignore. Uh, and this is where you list
+the names of files that should never get
+
+00:02:28.080 --> 00:02:35.040
+put into git. Uh, and we're going to
+list one file, and it's the file that is
+
+00:02:32.720 --> 00:02:38.800
+called.EMV.
+And I now save that. And this just means
+
+00:02:37.440 --> 00:02:43.120
+even though this isn't actually, we
+haven't made a git repository for this.
+
+00:02:41.200 --> 00:02:47.840
+If we ever do in the future, it will
+make sure that this file is never added
+
+00:02:45.760 --> 00:02:53.120
+to the repository, which is always good,
+best practice, good thing to do. Make
+
+00:02:50.160 --> 00:02:58.480
+sure that yourv file is mentioned in
+your.git ignore. Okay, that's just some
+
+00:02:55.680 --> 00:03:02.319
+some setup. We've got our key here.
+Let's let's move forwards. All right,
+
+00:03:00.160 --> 00:03:08.400
+next up, I have gone to my LinkedIn
+page. Here it is. This is my LinkedIn
+
+00:03:04.800 --> 00:03:14.000
+page. And I am now going to go here to
+resources and go to save to PDF so that
+
+00:03:11.440 --> 00:03:18.159
+I can save my profile. This is on my
+profile page as a PDF. Now, this feature
+
+00:03:16.800 --> 00:03:21.120
+might not be available to everyone
+because LinkedIn is is funny and changes
+
+00:03:19.920 --> 00:03:25.200
+things from time to time, and it might
+only be available to a subset. If you
+
+00:03:23.280 --> 00:03:29.599
+can't save your PDF of your profile,
+just copy and paste the text of it into
+
+00:03:27.280 --> 00:03:34.159
+a text file. Or if you've got a PDF of
+your resume, your CV, use that instead.
+
+00:03:32.319 --> 00:03:39.760
+Whatever you've got. I've done that.
+I've saved it to PDF. And then I'm going
+
+00:03:36.400 --> 00:03:44.080
+to move that file into this this uh this
+project directory as well. Okay. Next
+
+00:03:41.840 --> 00:03:49.120
+up, bring up the cursor settings. You
+can do it from the menus or you can do
+
+00:03:46.239 --> 00:03:54.239
+uh control shiftJ on a PC, command
+shiftJ on a Mac. Up they come. Here we
+
+00:03:52.720 --> 00:04:00.080
+have it. We're going to start by going
+to the agents area. A few things to
+
+00:03:56.720 --> 00:04:05.280
+check for the usage summary. Change this
+if it's on auto to always. And then it
+
+00:04:02.879 --> 00:04:10.319
+tells you at the bottom how much of your
+plan you've used in terms of of the
+
+00:04:07.360 --> 00:04:16.079
+models. uh scroll down here and get to
+the section that is called auto run
+
+00:04:13.680 --> 00:04:21.759
+which is the yolo section and if that's
+set to ask every time or to auto run in
+
+00:04:18.320 --> 00:04:26.800
+sandbox change it to run everything
+unsandboxed assuming you're comfortable
+
+00:04:24.320 --> 00:04:30.800
+with this if you're not of course keep
+it on approving it step by step if in
+
+00:04:29.199 --> 00:04:36.639
+doubt have it on a mode where you get to
+agree to everything as you see it but
+
+00:04:33.040 --> 00:04:40.560
+today I at least am going to be yoloing
+so I leave that on run everything.
+
+00:04:38.880 --> 00:04:48.000
+Finally, I'm going to the models tab
+myself. I am going to turn on GPT 5.2
+
+00:04:44.720 --> 00:04:53.919
+codeex high. I want to use the really
+strong version of codecs. Uh so that's
+
+00:04:51.440 --> 00:04:58.240
+what I'm choosing. You can pick what you
+want. Pick the one that you like. Um but
+
+00:04:56.320 --> 00:05:02.080
+that is what I am going with for this
+myself. It's as I say this is more
+
+00:05:00.560 --> 00:05:06.240
+expensive, but it means we should get
+higher quality. Okay, those are our
+
+00:05:04.320 --> 00:05:11.039
+decisions. All right, now I'm closing
+this. I'm going to drag this across so
+
+00:05:08.080 --> 00:05:17.600
+we've got nice and big agent screen over
+here. I'm going to change auto. Turn
+
+00:05:13.120 --> 00:05:20.880
+that off. I'm going to say I want GPT52
+codeex high. That's what we want. And
+
+00:05:19.759 --> 00:05:25.600
+I'm going to paste in here my
+instruction. Now, of course, the right
+
+00:05:22.479 --> 00:05:30.160
+approach is to write an agents.md
+and and then to to work hard on giving
+
+00:05:27.919 --> 00:05:34.960
+it all of the right information. But we
+are on complete yolo mode where we're
+
+00:05:33.360 --> 00:05:38.880
+just going to fire off an instruction
+and let the agent do its thing. Tomorrow
+
+00:05:37.520 --> 00:05:43.360
+we're going to be more disciplined and
+follow the proper proper procedures, but
+
+00:05:41.199 --> 00:05:48.400
+for now we're just going to go for it.
+So, I'm pasting in here, please build me
+
+00:05:45.600 --> 00:05:54.160
+a professional website running locally.
+My LinkedIn profile is in linkedin. PDF.
+
+00:05:51.199 --> 00:05:59.680
+Make the website stunning. Enterprise
+meets edgy. It should include about me,
+
+00:05:57.360 --> 00:06:04.880
+my career journey, links to a portfolio
+for future. Iterate to make it as slick
+
+00:06:02.320 --> 00:06:10.319
+and professional as possible and let me
+know when complete. Use nextJS. That's
+
+00:06:07.840 --> 00:06:17.759
+it. That's the instruction. That is what
+we are giving GPT 5.2 codeex high. All
+
+00:06:14.080 --> 00:06:25.039
+right. I kick this off and off goes our
+agent. It's planning its moves. Uh so
+
+00:06:22.319 --> 00:06:28.800
+it's going to uh now start doing its
+thing. I think we'll see what happens.
+
+00:06:27.199 --> 00:06:33.919
+It's going to have problems running that
+in the root directory. We'll see how it
+
+00:06:31.520 --> 00:06:37.840
+navigates its way through various
+problems. And yeah, it's created a
+
+00:06:36.000 --> 00:06:43.520
+subdirectory for me called web, which is
+great. Good for it. Uh we will let it do
+
+00:06:40.160 --> 00:06:46.960
+its thing. And I will see you in a few
+minutes. It may take a while. It may
+
+00:06:45.360 --> 00:06:51.360
+mean need to go and get another coffee.
+Uh I will see you when it's wrapped up
+
+00:06:49.360 --> 00:06:54.880
+and we will see what kind of website we
+have at the end of it. Okay. So it
+
+00:06:52.960 --> 00:07:00.639
+believes it is finished. It says it's
+built a polished enterprise meets edgy
+
+00:06:57.440 --> 00:07:04.720
+next.js site in web using your LinkedIn
+content. All right. You ready to try
+
+00:07:03.120 --> 00:07:09.360
+this out? I'm going to open up the
+terminal. You can go to to view terminal
+
+00:07:07.520 --> 00:07:13.440
+in cursor. I'm going to do it with
+control back tick. Here it is. I'll give
+
+00:07:11.680 --> 00:07:21.039
+myself a little bit more room. It tells
+me to cd into web and it tells me to do
+
+00:07:17.120 --> 00:07:26.720
+mpm rundev. Is this going to work? Let's
+find out. Here we go. Well, it appears
+
+00:07:24.560 --> 00:07:31.520
+to have come up there. Now I will bring
+up a browser window. You're getting like
+
+00:07:28.639 --> 00:07:37.039
+realtime reaction here. Local host 3000.
+Let's see what we get.
+
+00:07:34.400 --> 00:07:47.759
+That's not much good. All right. Back we
+go. Back we go here. Uh that um um I
+
+00:07:42.400 --> 00:07:51.599
+will I will stop this over here. Um that
+uh hang on.
+
+00:07:49.840 --> 00:07:55.360
+We can just copy all of this like this.
+I can just take all of this. I can copy
+
+00:07:53.759 --> 00:08:00.319
+it. I don't even need to give an
+explanation. I can just paste that in
+
+00:07:57.759 --> 00:08:05.199
+there and just press enter. We are
+vibing. We are yoloing. We're not going
+
+00:08:03.199 --> 00:08:10.160
+to even bother explaining ourselves. We
+just send it the error and we say, "Come
+
+00:08:07.520 --> 00:08:13.280
+on, make it work." All right, I'll see
+you in a next sec. Well, the next sec
+
+00:08:11.919 --> 00:08:17.759
+literally was a sack. It just sort of
+finished, made a tiny change. You'll
+
+00:08:15.360 --> 00:08:22.000
+notice again a clear sign. It didn't
+prove that was the problem. It hasn't
+
+00:08:19.759 --> 00:08:27.039
+proved it's fixed it. It says the page
+should render. Of course, what we should
+
+00:08:23.759 --> 00:08:30.240
+do is have an agents.md that insists do
+not say you fixed something unless
+
+00:08:28.560 --> 00:08:34.560
+you've proven it. But, nonetheless,
+we're just going to keep going here. I'm
+
+00:08:32.159 --> 00:08:39.200
+just going to do an mpm rundev again.
+Let that thing come up. I'm going to
+
+00:08:36.560 --> 00:08:45.760
+come over here. I'm going to try running
+my website. Let's see what we get. Okay.
+
+00:08:42.880 --> 00:08:49.920
+Okay. First impression positive. I like
+this. I like it a lot. I like the way it
+
+00:08:47.680 --> 00:08:52.959
+looks. I like this this branding. I
+didn't tell it anything about the colors
+
+00:08:51.360 --> 00:08:57.040
+or anything, but I got to tell you, I
+think it does look quite enterprise
+
+00:08:54.720 --> 00:09:00.880
+meets edgy. All right, let's take a look
+at this. I'm making it fill up all of
+
+00:08:59.519 --> 00:09:07.040
+here. Here. Let me make this nice and
+big so you see it the way I see it. Very
+
+00:09:04.160 --> 00:09:11.519
+nice. Okay. So, we've got uh we've got
+like this this nice little title here
+
+00:09:08.880 --> 00:09:16.800
+which looks very nicely done. There's
+about me. This is nice summary for my
+
+00:09:14.000 --> 00:09:22.160
+LinkedIn profile. There we go. Career
+journey. It's all Oh, look. It gets
+
+00:09:18.560 --> 00:09:26.959
+darker. That's kind of cool. Portfolio
+coming soon. And there's uh there's
+
+00:09:24.399 --> 00:09:30.720
+stuff in here. Uh let's build the
+future. Book a conversation. connect on
+
+00:09:29.040 --> 00:09:35.920
+LinkedIn. I wonder where these things
+go. I that just sends an an email uh to
+
+00:09:33.600 --> 00:09:40.080
+me uh to my it's got my real email
+address in there from my LinkedIn
+
+00:09:37.600 --> 00:09:44.959
+profile. And this uh is just a link to
+my LinkedIn. So So first at first blush,
+
+00:09:42.800 --> 00:09:49.120
+this is pretty impressive. It's a nice
+functioning website being served on
+
+00:09:46.880 --> 00:09:52.080
+local host. We'll we'll give uh we'll
+try out some more things. All right,
+
+00:09:50.480 --> 00:09:56.080
+let's check what these things do. What
+happens if I press career? Oh, it comes
+
+00:09:54.160 --> 00:10:00.399
+all the way down to my career journey in
+this nice dark black. That's nice.
+
+00:09:57.680 --> 00:10:05.920
+portfolio. Wee takes you to the uh to
+the portfolio. Okay, got it. Portfolio
+
+00:10:03.440 --> 00:10:09.760
+hub. What is that? Uh that just takes me
+over to my personal web page. How about
+
+00:10:07.839 --> 00:10:14.880
+that? That's clever of it. That links to
+my uh to to my own uh website. There it
+
+00:10:12.560 --> 00:10:18.800
+comes up on a separate page. Nice. Very
+nice. Uh let's talk. I can see that's
+
+00:10:17.040 --> 00:10:22.959
+going to open my email program and email
+to my email address that is on my
+
+00:10:21.040 --> 00:10:28.959
+LinkedIn profile. So, it grabbed that.
+It's really nice. signature work,
+
+00:10:26.240 --> 00:10:33.600
+current focus. I'd say this is a great
+website. The only thing it's missing is
+
+00:10:31.360 --> 00:10:36.000
+some functionality. Let's give it some
+functionality.
+

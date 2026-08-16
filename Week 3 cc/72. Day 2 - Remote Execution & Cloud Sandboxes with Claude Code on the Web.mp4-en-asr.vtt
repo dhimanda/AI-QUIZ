@@ -1,0 +1,551 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.240 --> 00:00:07.279
+Okay, the juicy part. What's coming in
+this blue box is what's known it's it
+
+00:00:05.759 --> 00:00:11.759
+goes by lots of names. It's confusing.
+It's sometimes called remote execution.
+
+00:00:09.840 --> 00:00:16.400
+It's with claw code. It's called claude
+code on the web. I think codeex also
+
+00:00:14.000 --> 00:00:22.400
+calls it codeex on the web. But the idea
+is this is about not running the claude
+
+00:00:20.480 --> 00:00:27.920
+code instance on your computer but it
+running somewhere else also typically uh
+
+00:00:25.519 --> 00:00:32.160
+in a sandbox. So it allows you to do
+more work like to be able to kind of not
+
+00:00:30.560 --> 00:00:36.559
+delegate something to a different agent
+but delegate it to a different execution
+
+00:00:34.320 --> 00:00:40.239
+engine. Delegate the work to happen
+somewhere else and it can happen in
+
+00:00:38.480 --> 00:00:45.120
+multiple places. You can you can have it
+going off and doing 10 different things
+
+00:00:42.079 --> 00:00:48.960
+remotely. It's also already sandboxed.
+When you do this you do it typically
+
+00:00:47.120 --> 00:00:53.520
+through kind of GitHub. You check
+everything into GitHub. You send off a
+
+00:00:50.719 --> 00:00:58.640
+task. It happens in a sandbox world,
+which is why it's kind of all related to
+
+00:00:55.680 --> 00:01:04.559
+sandboxing. And it allows you also in
+this crazy way to do work on the move.
+
+00:01:02.480 --> 00:01:08.159
+And when I say that, what I mean is you
+could be like on your mobile phone, on
+
+00:01:06.640 --> 00:01:12.560
+your cell phone. You could be like
+punching in an instruction to Claude and
+
+00:01:10.640 --> 00:01:16.240
+it's going off and doing it on the
+internet in the cloud in some way and
+
+00:01:15.040 --> 00:01:19.040
+it's coming back and telling you
+something and you're continuing your
+
+00:01:17.600 --> 00:01:22.400
+conversation. And when you get back
+home, you're sort of picking up where
+
+00:01:20.400 --> 00:01:27.360
+you left off on your computer, which is
+crazy. But all of that is possible. And
+
+00:01:25.040 --> 00:01:31.759
+that's what I mean by juicy. It really
+is. It's really cool. And it's worth
+
+00:01:29.520 --> 00:01:36.000
+mentioning that this is a hugely
+evolving space. There are multiple
+
+00:01:34.000 --> 00:01:40.640
+different kinds of offerings and
+flavors. And so it's somewhat confusing.
+
+00:01:39.119 --> 00:01:44.720
+I will try and keep the course resources
+up to date. You may have different set
+
+00:01:42.560 --> 00:01:47.920
+of offerings than I have. That's one of
+the challenges of being in this space
+
+00:01:46.000 --> 00:01:52.399
+that's moving so fast. But but I'll do
+my best to take you through the the
+
+00:01:49.520 --> 00:01:57.280
+latest stuff that's there. Um it's also
+Claude Code was the the first to do
+
+00:01:54.320 --> 00:02:02.000
+this, I think, but but Codeex now offers
+all of this, too. I think some of the
+
+00:01:59.600 --> 00:02:04.799
+others do. Uh but and if they don't for
+me, they probably will for you. So
+
+00:02:03.759 --> 00:02:08.319
+you'll see that there's kind of
+analogous offerings from the from the
+
+00:02:06.719 --> 00:02:11.920
+different people, and you can pick the
+one that works for you. Um, but the
+
+00:02:10.399 --> 00:02:15.840
+general principles is what I'll go
+through and I'll give you as before the
+
+00:02:13.520 --> 00:02:19.280
+the examples specifically for claw code,
+but you can probably apply this to
+
+00:02:17.599 --> 00:02:24.319
+whichever platform that you're most
+comfortable with. Okay. So, with this,
+
+00:02:21.920 --> 00:02:28.720
+I'm going to talk you through three
+different approaches, three different
+
+00:02:26.879 --> 00:02:34.160
+things we're going to do that some blend
+of those those two techniques. And that
+
+00:02:31.360 --> 00:02:37.040
+is what we will then go and do. And it's
+a bit confusing as I say because there
+
+00:02:35.599 --> 00:02:41.519
+are so many different ways to slice
+this. But I just want you to be crystal
+
+00:02:38.560 --> 00:02:44.239
+clear on these three different ways. And
+I'm going to start by saying what's one
+
+00:02:43.120 --> 00:02:48.160
+of the things that we're not going to
+do. I'm not going to show you what would
+
+00:02:45.920 --> 00:02:52.720
+be the kind of original way this used to
+be done, which is using Docker or for
+
+00:02:51.120 --> 00:02:57.760
+people familiar with VS Code. It's what
+they call dev containers.dev containers,
+
+00:02:55.280 --> 00:03:01.519
+which is a way that you can use Docker,
+which itself gives you this box within a
+
+00:02:59.920 --> 00:03:04.879
+box. Remember that's how I explained it
+two weeks ago. And some of you probably
+
+00:03:03.120 --> 00:03:08.959
+know Docker very well. It gives you an
+environment in which to do it. That's a
+
+00:03:06.720 --> 00:03:12.560
+kind of simplistic way of doing this.
+Everything we're going to do is sort of
+
+00:03:10.720 --> 00:03:16.560
+saying, "Okay, yeah, that's a given that
+you could do that, but we can do
+
+00:03:14.480 --> 00:03:20.159
+something better that's that's more
+powerful in some way." So, you've always
+
+00:03:18.400 --> 00:03:26.000
+got Docker and Devont Containers if you
+want it, but this is all taking it a
+
+00:03:22.720 --> 00:03:31.840
+step further. Okay. Approach one is
+something that that maybe you'd call a
+
+00:03:28.000 --> 00:03:36.560
+native sandbox. Just sandboxing. This is
+functionality that is built into Claude
+
+00:03:34.400 --> 00:03:41.200
+code. I don't think as of now that
+Codeex is yet doing this or Gemini CLI,
+
+00:03:39.280 --> 00:03:44.400
+but I might be wrong and if I and even
+if they're not now, they might well be
+
+00:03:42.400 --> 00:03:49.280
+by the time you're seeing this, but this
+is built into Claude code. It's
+
+00:03:46.720 --> 00:03:55.120
+triggered by doing a command slash
+sandbox and then you can set up clawed
+
+00:03:52.239 --> 00:03:59.040
+code so that it runs in a sandbox,
+meaning that things get auto approved
+
+00:03:57.040 --> 00:04:01.840
+within that sandbox. I'm pretty sure.
+Yeah. Yeah. Cursor has this
+
+00:04:00.480 --> 00:04:05.519
+functionality, right? We saw it
+ourselves. They have a like a built-in
+
+00:04:03.599 --> 00:04:10.640
+sandbox auto approves a bunch of things
+within their sandbox. So cursor through
+
+00:04:07.840 --> 00:04:15.120
+through the user interface has this claw
+code has this sandbox built in. And this
+
+00:04:13.280 --> 00:04:18.560
+is something that's it's like it's as if
+you're running your own docker but it's
+
+00:04:17.199 --> 00:04:21.359
+more efficient than that. It's better
+than that. It has it has lots of
+
+00:04:20.160 --> 00:04:25.280
+characteristics that make it very
+desirable as we will see. And of course
+
+00:04:23.600 --> 00:04:28.800
+it's running on your machine. So we're
+not doing anything remote at this point.
+
+00:04:27.280 --> 00:04:31.759
+It's local. And the main way that it's
+it's better than running a Docker
+
+00:04:30.400 --> 00:04:35.440
+container is just that it's much more
+lightweight. It's it's implemented at
+
+00:04:33.360 --> 00:04:40.479
+the OS level, so it's very easy and
+quick and lightweight and runs well.
+
+00:04:37.840 --> 00:04:43.919
+There is a catch though. There's a catch
+which you're not going to like. The
+
+00:04:42.160 --> 00:04:49.600
+catch is that if you're a Mac person
+like me, this is super easy. If you're
+
+00:04:46.800 --> 00:04:54.720
+on a Windows PC, then to use this, at
+least as of now, you have to be set up
+
+00:04:51.759 --> 00:04:58.400
+to use something called WSL. And if you
+already know about WSL and maybe you
+
+00:04:56.400 --> 00:05:02.320
+already use WSL, then that's all good.
+You know exactly what you're doing. If
+
+00:05:00.160 --> 00:05:08.080
+you don't know it and that's it's it's
+it's about running a Linux machine on
+
+00:05:05.840 --> 00:05:12.320
+your PC and developing within that Linux
+machine. It's not worth you taking that
+
+00:05:10.080 --> 00:05:16.479
+on right now. So you you should focus on
+on the other two approaches if you're
+
+00:05:14.400 --> 00:05:20.000
+not familiar with WSL. But if you are,
+then you can use it with that. And if
+
+00:05:18.320 --> 00:05:23.600
+you're if you have a Mac, then you're in
+great shape. And Linux is also great
+
+00:05:21.600 --> 00:05:28.080
+shape. Okay, so that's the first
+approach. The second approach is the
+
+00:05:25.360 --> 00:05:33.520
+absolutely crazy one. This is it goes by
+lots of names. The product name is
+
+00:05:30.320 --> 00:05:38.080
+Claude Code on the web and Codeex calls
+it codeex on the web. So this on the web
+
+00:05:35.919 --> 00:05:43.280
+is obviously like a thing. The perhaps
+the technical way of describing it would
+
+00:05:39.759 --> 00:05:48.160
+be like a managed cloud sandbox. It's
+managed in that anthropic are taking
+
+00:05:45.919 --> 00:05:54.240
+care of it. They're running Claude code
+for you and it's a cloud sandbox. It's
+
+00:05:51.440 --> 00:05:58.400
+on the cloud and it's in a sandbox. So
+that's what this is. It's basically
+
+00:05:57.039 --> 00:06:02.560
+you're you're you're connecting with
+clawed code from your CLI from on your
+
+00:06:01.120 --> 00:06:06.400
+computer, but when you run something,
+it's not running on your computer. It's
+
+00:06:04.400 --> 00:06:12.639
+contacting Anthropic. They're spinning
+up clawed code remotely on like their
+
+00:06:09.440 --> 00:06:17.680
+boxes and running it there in a sandbox.
+And that sounds like a whole lot of
+
+00:06:14.319 --> 00:06:22.160
+plumbing and configuration. And crazily
+you can do it just by putting a little
+
+00:06:19.919 --> 00:06:25.440
+amperand at the beginning of your clawed
+code instruction and then just typing
+
+00:06:23.840 --> 00:06:29.840
+out a com anything that you would have
+said to claw code and it doesn't happen
+
+00:06:27.520 --> 00:06:33.520
+on your box it happens out on the cloud
+and that sounds too good to be true but
+
+00:06:31.360 --> 00:06:37.919
+we'll see it. You can also make a
+command and not not within clawed code
+
+00:06:35.680 --> 00:06:42.880
+but just on your normal PowerShell of
+instead of claude you type claude-
+
+00:06:40.720 --> 00:06:47.919
+remote and then your command and the
+same thing happens and off it goes. It's
+
+00:06:45.039 --> 00:06:51.520
+crazy. So, so, uh, so that's that's one
+thing. And then there's another thing
+
+00:06:49.520 --> 00:06:57.840
+you can do, which is also crazy, which
+is you can go to your GitHub repo and
+
+00:06:55.039 --> 00:07:03.440
+you could raise like a GitHub issue and
+tag it to Claude. You put at Claude, uh,
+
+00:07:00.880 --> 00:07:09.039
+you like address it to Claude and
+insanely anthropic will spin up a Claude
+
+00:07:06.400 --> 00:07:14.319
+code in the cloud, connect to your
+GitHub repo, do the work, and then say
+
+00:07:11.759 --> 00:07:19.599
+when it's done. It's like, what? that
+really happens uh as we will see. Uh and
+
+00:07:17.199 --> 00:07:24.400
+this this needs you to install a GitHub
+app called the Claude GitHub app that we
+
+00:07:21.840 --> 00:07:29.360
+will do. It's tightly linked to GitHub.
+So you do need to have all of your code
+
+00:07:26.880 --> 00:07:33.599
+checked in. Everything is organized by
+the the the Claude code in the on the
+
+00:07:31.199 --> 00:07:37.360
+web will clone the repo, pull down the
+code and operate on it that way. So
+
+00:07:35.360 --> 00:07:40.479
+everything has to be checked in. And and
+then there's there's the one more
+
+00:07:38.639 --> 00:07:47.919
+feature that is like what? The other
+feature is called teleport. And teleport
+
+00:07:44.960 --> 00:07:53.120
+allows you to sort of grab one of the
+clawed code things that's running out
+
+00:07:50.400 --> 00:07:58.479
+there and and have that become your your
+active session. It's like you're jumping
+
+00:07:55.120 --> 00:08:02.639
+into it. It's it's it's it sounds very
+sci-fi and it takes a while to get
+
+00:08:00.800 --> 00:08:06.479
+familiar with this with this idea, but
+it's really cool. uh and slashtasks as a
+
+00:08:05.440 --> 00:08:09.759
+way of just seeing all the different
+tasks that are running. So, one way to
+
+00:08:08.319 --> 00:08:14.000
+think about this, I was saying yesterday
+that of course a simple way to have
+
+00:08:11.840 --> 00:08:19.680
+multiple agents working on your on your
+work is just to press that plus button
+
+00:08:16.319 --> 00:08:24.400
+and run lots of clawed CLIs. This is
+effectively doing that except the clawed
+
+00:08:22.080 --> 00:08:27.520
+CLI are not running on your computer.
+They're running on anthropobics
+
+00:08:25.599 --> 00:08:32.159
+computers instead. Uh but otherwise,
+it's quite similar and you can sort of
+
+00:08:29.360 --> 00:08:35.919
+attach to any of those conversations.
+So, that's how it works. sort of has to
+
+00:08:34.080 --> 00:08:39.360
+be seen to be believed which is what we
+will do in a minute. And then the final
+
+00:08:37.440 --> 00:08:45.920
+one is really interesting and this is a
+new emerging idea which is I'm calling
+
+00:08:42.399 --> 00:08:49.200
+it third party cloud sandbox. I I don't
+know if that to what extent that is like
+
+00:08:47.440 --> 00:08:53.440
+the the the most official way of calling
+it but but I think that's probably the
+
+00:08:50.959 --> 00:08:58.240
+most accurate. This is when you're not
+using Anthropic, but you're using
+
+00:08:55.200 --> 00:09:03.920
+another company who has an offering that
+allows you to run uh something like a
+
+00:09:01.200 --> 00:09:07.600
+container in the cloud that is sandboxed
+and usually in this case is designed for
+
+00:09:06.240 --> 00:09:11.680
+coding agents. So, it's sort of
+optimized for that use case. And one
+
+00:09:09.839 --> 00:09:16.880
+that's that's recently for me has really
+taken off is called Sprites.dev made by
+
+00:09:14.480 --> 00:09:20.959
+the people at Fly.io. That is a really
+great hosting platform. And this is
+
+00:09:19.360 --> 00:09:26.080
+particularly notable because it's very
+fast, very simple, very flexible, and
+
+00:09:24.160 --> 00:09:30.880
+it's just it's it's it's designed for a
+few things, but one of them is very much
+
+00:09:27.600 --> 00:09:35.680
+like a clawed code on the web in a in a
+managed sandbox. So, it's it's really
+
+00:09:33.360 --> 00:09:38.800
+really convenient for that use case. And
+and one of the other points to make
+
+00:09:37.279 --> 00:09:43.040
+about this is that this one is of course
+applicable to any coding agent. So, this
+
+00:09:41.120 --> 00:09:48.160
+is something that that you can use no
+matter what you've chosen as your your
+
+00:09:45.360 --> 00:09:52.240
+coding agent of choice. All right. So,
+these are the three. It is a bit
+
+00:09:50.160 --> 00:09:56.720
+confusing, but I think it's going to to
+become much more clear when we actually
+
+00:09:55.200 --> 00:10:01.279
+put them to the test, when we try them
+out. And of course, that's what we're
+
+00:09:58.880 --> 00:10:01.279
+going to do right
+

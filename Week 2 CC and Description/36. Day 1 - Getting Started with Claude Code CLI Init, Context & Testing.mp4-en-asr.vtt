@@ -1,0 +1,551 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:06.960
+Okay, I'm now going to do a file, new
+window, and I'm going to open up a
+
+00:00:04.400 --> 00:00:11.840
+project, open. I'm going to go into
+projects and I'm going to choose PM, the
+
+00:00:09.760 --> 00:00:17.760
+project that we did last week. Here it
+is. Let me make this a bit bigger and
+
+00:00:14.719 --> 00:00:21.439
+make this cover all this screen. And I
+think this is pretty much where I left
+
+00:00:18.960 --> 00:00:26.720
+it. I'm going to close close the chat,
+the GitHub Copilot chat. We're done with
+
+00:00:24.000 --> 00:00:30.240
+you. You are dead to us. I see I've got
+some lint errors here, some red
+
+00:00:28.640 --> 00:00:33.280
+squiggies, underlined. I don't remember
+that. I'm not sure whether I just did
+
+00:00:31.920 --> 00:00:36.960
+something wrong when I tried to accept
+the changes, but uh anyway, that that's
+
+00:00:35.600 --> 00:00:40.960
+a that's a good problem for us to have
+right now as you will see. Let's open up
+
+00:00:38.480 --> 00:00:46.160
+a new terminal. This is uh control back
+tick again. And it is time now within PM
+
+00:00:44.320 --> 00:00:49.440
+for us to launch claude code. But
+actually, first let me just do a git
+
+00:00:47.440 --> 00:00:54.000
+status to see what this looks like. I
+haven't yet checked in all the latest
+
+00:00:50.879 --> 00:01:03.920
+changes. So, let's do that. get add dot
+getit commit minus m step 10 complete.
+
+00:01:00.719 --> 00:01:06.960
+Okay, so here we are. We're now ready to
+see what Claude can make of all of this.
+
+00:01:05.920 --> 00:01:11.920
+So the first thing I'm going to ask you
+to do is actually exit the terminal by
+
+00:01:09.200 --> 00:01:14.400
+typing exit uh and then open a new
+terminal just to make sure it's
+
+00:01:13.040 --> 00:01:18.320
+absolutely new. You can also do this by
+pressing the plus button over here to
+
+00:01:16.479 --> 00:01:26.400
+have a completely new terminal and then
+type the word claude. C L A U D E and up
+
+00:01:22.720 --> 00:01:30.880
+comes the interface for clawed code CLI
+and it is very much what they call a CLI
+
+00:01:28.960 --> 00:01:35.360
+interface which means you're seeing
+things printed as like characters and
+
+00:01:33.040 --> 00:01:40.560
+lines in this in this very old school
+way like we're in a previous decade of
+
+00:01:38.320 --> 00:01:45.280
+working with computers and it is a bit
+of a throwback experience which is
+
+00:01:42.640 --> 00:01:49.759
+intentional. If this feels old school
+that's that's the vibe of of this whole
+
+00:01:47.840 --> 00:01:54.079
+platform. uh if I can if I could use
+that word. Uh it's it's meant to be
+
+00:01:51.920 --> 00:01:58.399
+feeling like you've got this very raw
+native interaction with the LLM. And so
+
+00:01:56.960 --> 00:02:03.840
+you just kind of go with it. It is
+intentionally retro. Okay. And so the
+
+00:02:01.920 --> 00:02:07.119
+first thing to do when if you want to to
+talk to Claude, you could just type if
+
+00:02:05.439 --> 00:02:10.800
+you want to give it a command, then you
+do a slash and then the command you want
+
+00:02:09.200 --> 00:02:14.959
+to do. And the first command you want to
+do is the command login if you haven't
+
+00:02:13.120 --> 00:02:20.560
+used claw code before, which is your way
+of signing in to your anthropic account
+
+00:02:18.319 --> 00:02:24.640
+that we just set up a moment ago. When
+you do that, it's going to bring up a
+
+00:02:22.480 --> 00:02:28.400
+web interface for you to then log in
+using your credentials and then it will
+
+00:02:26.400 --> 00:02:33.120
+come back and you will be logged in to
+Anthropic. So you should try that first.
+
+00:02:31.200 --> 00:02:37.120
+And if you want to be using free models,
+then just hang on in there till we get
+
+00:02:34.560 --> 00:02:41.840
+to that later. Okay. The next command to
+know about is a command that sets Claude
+
+00:02:39.599 --> 00:02:45.920
+up the uh which which is only needed if
+you if you're coming new into a project
+
+00:02:43.599 --> 00:02:49.760
+like this. Claude does not use the
+agents.m MD file that we've got very
+
+00:02:48.319 --> 00:02:53.599
+comfortable with. It just has its own
+variation that's called claude.md. Now
+
+00:02:52.480 --> 00:02:58.879
+what we could do is just rename
+agents.mmd to claude.md. But another
+
+00:02:56.319 --> 00:03:03.360
+thing to do perhaps is to type slash a
+command and then init. And that means
+
+00:03:01.280 --> 00:03:07.599
+Claude, I want you to set yourself up
+for this for this whole uh this whole
+
+00:03:05.599 --> 00:03:12.159
+platform. Please please get get yourself
+organized. So we'll give that a try now.
+
+00:03:09.680 --> 00:03:15.680
+We're going to run slashinit. Now what
+you'll see is that Claude puts here
+
+00:03:13.840 --> 00:03:19.120
+first of all it puts a sort of humorous
+kind of processing thing like in this
+
+00:03:17.200 --> 00:03:23.440
+case it's newspapering. It puts
+different silly things here and you'll
+
+00:03:21.120 --> 00:03:26.480
+see that it starts doing stuff and
+you'll see this sort of flashing white
+
+00:03:24.959 --> 00:03:31.120
+dot and you'll see that it's doing
+searching. It's analyzing. It's
+
+00:03:28.879 --> 00:03:36.159
+exploring and it's going to use this as
+its way of understanding what on earth
+
+00:03:33.200 --> 00:03:40.560
+is going on in this directory structure.
+We will let it do its thing and I'll
+
+00:03:38.080 --> 00:03:45.120
+come right back. Okay. Well, it's done
+its thing. It's read lots of things.
+
+00:03:42.159 --> 00:03:50.480
+It's read the existing agents.md file as
+well. You can see there it's telling me
+
+00:03:47.440 --> 00:03:55.360
+and it now has ready to write a
+claude.md file. It's created one itself.
+
+00:03:53.840 --> 00:04:01.040
+And what you'll see is that at the top
+here we can see the diffs that it's got.
+
+00:03:58.400 --> 00:04:04.560
+It's showing that in VS Code. And as I
+say, so even though we're not using the
+
+00:04:02.560 --> 00:04:09.920
+the extension, the sidebar, it's still
+able to drive that in VS Code. And now
+
+00:04:07.760 --> 00:04:13.519
+this famous thing that Claude Code has
+that it says, would you like to make
+
+00:04:11.599 --> 00:04:17.280
+this edit? And you press one, two, or
+three. And you get so used to this. Your
+
+00:04:15.760 --> 00:04:23.280
+finger when you're using clawed code is
+usually over that that area. One means
+
+00:04:20.239 --> 00:04:27.520
+yes in this occasion. Two means yes and
+allow all edits during the session. It's
+
+00:04:26.000 --> 00:04:31.520
+telling you that shift tab is the
+shortcut for that. And three is no. And
+
+00:04:30.320 --> 00:04:35.759
+the other thing you can do with any of
+these is you can press tab and then add
+
+00:04:33.759 --> 00:04:38.880
+some more comments. If if it's yes, but
+I want you to think about blah blah
+
+00:04:37.040 --> 00:04:43.280
+blah, you can do that too. But we're
+just going to press in this case one.
+
+00:04:40.960 --> 00:04:49.440
+And off it goes. And it's writing it.
+It's written claude.md and it's thinking
+
+00:04:46.400 --> 00:04:53.280
+some more. And we will uh and there we
+go. It's it's finished. Let's read what
+
+00:04:50.880 --> 00:04:56.960
+it says. I've created the claw.md file.
+Here's a summary of what it contains.
+
+00:04:55.280 --> 00:05:01.120
+It's got a project overview, color
+scheme, development guidelines. It's
+
+00:04:58.479 --> 00:05:06.400
+concise and focuses on actionable
+information. Okay. Uh let's let's go and
+
+00:05:04.160 --> 00:05:11.840
+take a look at it. Okay. Here we are.
+Claw.md is right here. We can rightclick
+
+00:05:09.280 --> 00:05:17.039
+open preview. And this is what it looks
+like.
+
+00:05:13.039 --> 00:05:21.680
+uh project overview commands.
+It's got that it seems like it is a
+
+00:05:19.039 --> 00:05:25.199
+pretty uh nicely structured. It's better
+than the one that we've got and then
+
+00:05:23.600 --> 00:05:32.400
+some development guidelines at the end
+of it. Fair enough. Okay. Um I I like
+
+00:05:29.199 --> 00:05:37.919
+this. Um I will say that I do not
+recommend as a general principle letting
+
+00:05:35.360 --> 00:05:43.520
+Claude write its own claude. MD like
+this doing a slashinit. I would always
+
+00:05:40.400 --> 00:05:47.280
+recommend writing a claude.mmd yourself
+just as we did for agents.mmd. We're
+
+00:05:46.080 --> 00:05:51.680
+going to do it in this case. We're gonna
+let it do its thing because we also have
+
+00:05:48.639 --> 00:05:57.759
+an agents.mmd. But this does seem like
+like this this is the most crucial thing
+
+00:05:55.120 --> 00:06:01.680
+for the human supervisor to get right.
+So you should invest your time in
+
+00:05:59.520 --> 00:06:05.360
+claw.md rather than doing it this way.
+Or you can have it do the first draft
+
+00:06:03.199 --> 00:06:09.600
+and then go through it and improve it.
+But anyway, for now we're going to push
+
+00:06:07.199 --> 00:06:14.160
+ahead. And for a second command to show
+you, a command that you will get to know
+
+00:06:11.520 --> 00:06:18.080
+and love that I run this all the time.
+It is slashcontext.
+
+00:06:16.560 --> 00:06:22.400
+When you type a slash, it prompts you
+with the kinds of things you might be
+
+00:06:19.360 --> 00:06:28.720
+wanting to do. Slash context gives us,
+let me make this a bit bigger, a quick
+
+00:06:24.800 --> 00:06:33.120
+visual on how much of the context window
+is currently being used up by different
+
+00:06:30.800 --> 00:06:37.280
+things. Remember the context window, the
+limited amount of space we've got to
+
+00:06:35.360 --> 00:06:42.240
+interact with Claude. and cloud doesn't
+have a big context window. It's got
+
+00:06:39.120 --> 00:06:45.520
+200,000 tokens. That's how long it is.
+And you know, in some ways, I think this
+
+00:06:43.759 --> 00:06:50.000
+is intentional by Enthropic. They want
+to focus on having a really smart
+
+00:06:47.919 --> 00:06:56.240
+powerful model and have you manage that
+context carefully. You can see that that
+
+00:06:52.800 --> 00:07:01.120
+memory uh which includes our the the
+thing that that we've just built, it
+
+00:06:57.840 --> 00:07:05.360
+includes the the uh claw.md uh that that
+is using up a bit of space. This purple
+
+00:07:03.440 --> 00:07:10.080
+is messages which is our interactions
+with it so far already just these basic
+
+00:07:07.919 --> 00:07:15.840
+interactions of setting it up has used
+up a fair amount. Uh and we've got this
+
+00:07:12.639 --> 00:07:21.520
+much free here and this buffer at the
+end is the extra space that it keeps so
+
+00:07:18.639 --> 00:07:26.080
+that it has room to maneuver to then
+compress everything the when it needs
+
+00:07:23.759 --> 00:07:30.560
+to. This is what we call compaction
+compacting the memory down to something
+
+00:07:27.919 --> 00:07:36.319
+smaller. This is its its extra buffer so
+it's got some wiggle room when it gets
+
+00:07:32.160 --> 00:07:41.280
+to that point. Okay, so next command and
+I mean by next command I mean next
+
+00:07:38.000 --> 00:07:48.880
+instruction. I'm going to say uh please
+uh read plan MD in the docs folder to
+
+00:07:47.120 --> 00:07:54.319
+understand
+everything
+
+00:07:51.120 --> 00:08:02.240
+that's been built
+far and any supporting docs. Okay, we'll
+
+00:08:00.080 --> 00:08:06.479
+let it do its thing. It's uh reading
+that file. We'll let it make sure that
+
+00:08:04.560 --> 00:08:09.759
+it has a very good understanding. It
+probably already read it after reading
+
+00:08:08.240 --> 00:08:13.759
+ages 74. In fact, it must have done
+because it knew about the the model and
+
+00:08:11.599 --> 00:08:17.440
+so on. But still, it's good to be to be
+thorough about this. We're making
+
+00:08:15.120 --> 00:08:22.560
+absolutely sure that it has read this
+and understands it and it will then have
+
+00:08:19.520 --> 00:08:30.720
+that in uh in its memory. It's done
+that. Okay, great. All right. Next.
+
+00:08:25.280 --> 00:08:40.080
+Please uh bring up the uh please run
+please run all tests to confirm that
+
+00:08:34.959 --> 00:08:46.480
+everything is working. Bringing up the
+server as needed and bringing down the
+
+00:08:44.399 --> 00:08:51.200
+server
+at the end.
+
+00:08:48.399 --> 00:08:54.800
+Okay, we'll give it that command. And
+you're familiar with this this approach
+
+00:08:52.959 --> 00:08:59.920
+of instructing the LM from everything we
+did last week. And now we're back to
+
+00:08:56.880 --> 00:09:04.640
+this uh uh do we want to allow it to to
+run this docker build command? Do you
+
+00:09:02.480 --> 00:09:08.480
+want to proceed? Uh and I'm going to now
+press the button two. I'm going to say
+
+00:09:06.640 --> 00:09:14.160
+yes. And you don't need to ask me again
+if you're doing Docker build commands.
+
+00:09:12.080 --> 00:09:17.680
+And uh it's saying that Docker isn't
+running because I I've restarted my
+
+00:09:16.320 --> 00:09:22.480
+computer. And it's actually going to
+open Docker for me. Isn't that amazing?
+
+00:09:20.240 --> 00:09:25.680
+Amazing. Uh, so I forgot to start
+Docker, so it can't run Docker because
+
+00:09:24.160 --> 00:09:30.080
+I'm not running Docker Desktop, but it
+knows how to run it automatically on my
+
+00:09:28.080 --> 00:09:33.120
+Mac. So I'm pressing one for that, not
+two. I don't want it to be able to
+
+00:09:31.440 --> 00:09:38.399
+launch applications of the future. Up
+comes Docker Desktop. Launched by
+
+00:09:35.120 --> 00:09:42.560
+Claude. Uh, and uh, this is an example.
+I feel like Claude Sonnet wasn't able to
+
+00:09:40.480 --> 00:09:47.040
+do things like that. Claude Opus is that
+good. All right, back we go. Uh, and now
+
+00:09:45.200 --> 00:09:50.560
+it's it's continuing. I'm going to press
+two for that. Let it do its thing. I'll
+
+00:09:49.200 --> 00:09:53.839
+see you back in a moment when it's run
+its testing. All right. And it did
+
+00:09:52.160 --> 00:09:57.279
+indeed run all of the backend tests and
+all of the front end tests. It reported
+
+00:09:55.279 --> 00:10:01.519
+back that all the tests passed. And here
+we go. We got this lovely little table
+
+00:09:58.880 --> 00:10:05.920
+appearing here in again in the command
+line. It says there are two deprecation
+
+00:10:03.680 --> 00:10:11.519
+warnings, but they they don't matter.
+And it it it says here sautayed for 60
+
+00:10:08.480 --> 00:10:16.000
+seconds. That seems that seems like a a
+good progress to have been made. Let's
+
+00:10:13.760 --> 00:10:20.399
+just do a quick slashcontext to see
+where we stand. You can see now that
+
+00:10:18.320 --> 00:10:25.360
+that we've got the same amount of memory
+used up, but the messages has now taken
+
+00:10:22.720 --> 00:10:30.320
+up a whole line. And it gives you a
+sense of how quickly you do tend to move
+
+00:10:27.680 --> 00:10:36.160
+through this. I'm always got a a healthy
+eye at the context usage. But so far so
+
+00:10:33.839 --> 00:10:36.160
+good.
+

@@ -1,0 +1,655 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.080 --> 00:00:08.639
+So yesterday we used Cursor to build out
+our project. Today we are going to use
+
+00:00:05.600 --> 00:00:12.080
+GitHub Copilot or at least I am. You can
+use whichever one you want. Of course
+
+00:00:10.320 --> 00:00:15.679
+you're probably a dab hand with Cursor
+now. So you can stick with that if you
+
+00:00:13.519 --> 00:00:20.240
+like it. Uh depending on on how far
+through your your quote you are. But
+
+00:00:17.920 --> 00:00:23.760
+here I am in GitHub and I've gone to my
+my GitHub page. This is just my my
+
+00:00:22.400 --> 00:00:29.039
+profile page. I'm going to go up here to
+my avatar menu and select co-pilot
+
+00:00:26.400 --> 00:00:34.000
+settings to look into this. Now I am on
+the co-pilot pro plan and you might be
+
+00:00:32.320 --> 00:00:38.160
+on just the free plan that you remember
+just has a certain quot of requests that
+
+00:00:36.160 --> 00:00:41.840
+you can make. This has a larger quotota
+and I could I could have a uh I could
+
+00:00:40.239 --> 00:00:47.840
+pay more and have an even bigger quotota
+but as I am right now I have used 1.4%
+
+00:00:43.920 --> 00:00:53.280
+4% of my premium requests and it resets
+monthly and uh yeah so so that's going
+
+00:00:50.399 --> 00:00:59.039
+to be uh what what I can consume and it
+tells me here that it's enabled to be
+
+00:00:54.960 --> 00:01:03.600
+used in in github.com in a CLI or in the
+IDE which is where we have been using it
+
+00:01:01.280 --> 00:01:08.159
+and where we will again today and
+there's also here options to select to
+
+00:01:06.159 --> 00:01:11.840
+turn on and off different models and so
+on. So it's worth worth looking at the
+
+00:01:09.920 --> 00:01:16.560
+different different uh settings that
+you've got here. Um, and uh, most
+
+00:01:14.560 --> 00:01:21.200
+importantly, keep an eye on usage. This
+is where you can see what you're using
+
+00:01:18.320 --> 00:01:23.680
+according to your plan. So, that's one
+thing I wanted to show you. I also
+
+00:01:22.560 --> 00:01:28.080
+wanted to show you something that will
+be linked in the resources, which is the
+
+00:01:25.840 --> 00:01:31.759
+repo that we'll be using. It's a repo
+called PM. It's private for me right
+
+00:01:29.840 --> 00:01:35.119
+now, but it'll be public by the time you
+see it, I hope. And it's the usual
+
+00:01:33.680 --> 00:01:40.880
+story. I'm going to ask you to come to
+this green code button and just uh on
+
+00:01:38.640 --> 00:01:43.520
+usually select https and copy that to
+the clipboard. You don't need to do this
+
+00:01:42.400 --> 00:01:48.640
+because it will also be in the
+resources. But this this uh address here
+
+00:01:46.399 --> 00:01:53.920
+which is the address of this repo that's
+what we will clone to get started with
+
+00:01:51.040 --> 00:01:58.799
+this project. And so here I am in VS
+Code. Remember this similar to cursor.
+
+00:01:56.560 --> 00:02:03.600
+This is the welcome screen. And I'm
+going to bring up a terminal by pressing
+
+00:02:00.880 --> 00:02:07.280
+controll back tick and up it comes.
+There is a terminal also of course on
+
+00:02:05.280 --> 00:02:11.760
+the view menu. You know this now. And
+I'm going to go into my projects
+
+00:02:09.039 --> 00:02:15.680
+directory, cd projects. Look at where I
+am. pwd is where I am. I'm in user z
+
+00:02:14.000 --> 00:02:21.200
+projects. Yours might look different,
+but that kind of idea. And I'm now going
+
+00:02:18.000 --> 00:02:26.720
+to type git clone and then the link to
+that uh that repo that's called pm.git.
+
+00:02:24.800 --> 00:02:30.319
+Or you can just take this entire command
+from the course resources. That's what
+
+00:02:29.040 --> 00:02:34.000
+you do next. I'm not going to run that
+because I've already done it. I've
+
+00:02:31.760 --> 00:02:39.360
+already got a PM directory. Look, if I
+do cdpm, I'm in it right now. And that
+
+00:02:37.120 --> 00:02:44.080
+is where you will hopefully uh be able
+to go into as well. Now, let's open that
+
+00:02:41.840 --> 00:02:48.239
+project. And so to open the new project,
+you can go to the file menu, new window,
+
+00:02:46.000 --> 00:02:52.640
+or you can just press open right here.
+And then just uh find your way to your
+
+00:02:50.160 --> 00:02:57.920
+projects folder, and then find your way
+to PM, which should have been cloned. Go
+
+00:02:55.120 --> 00:03:02.080
+into it. Press open. That's the way to
+do it. You know you're in the right
+
+00:02:59.280 --> 00:03:06.720
+place cuz PM appears here. Do you trust
+the order? Yes, I trust the authors.
+
+00:03:03.760 --> 00:03:12.159
+Yes. If it says uh it's if you get that
+then then yes, you trust me, right? Uh
+
+00:03:08.800 --> 00:03:17.280
+and now we are in PM. Here we are. We've
+got ourselves uh everything set up. Now,
+
+00:03:15.120 --> 00:03:21.120
+you may have on your mind that that you
+don't like the fact that I brought you
+
+00:03:19.040 --> 00:03:24.800
+into an existing repo. You might be
+thinking, I'd rather build everything
+
+00:03:22.640 --> 00:03:28.000
+from scratch. But I have a reason for
+this. Uh sometimes we'll build
+
+00:03:26.640 --> 00:03:32.159
+everything from scratch, but sometimes
+we won't. And here's why. The thing is
+
+00:03:30.159 --> 00:03:37.120
+that building things from scratch is
+actually much easier with vibe coding,
+
+00:03:35.360 --> 00:03:40.640
+with aentic coding, because agents are
+great at building things from absolute
+
+00:03:39.040 --> 00:03:44.000
+nothing. They're able to build all the
+scaffolding themselves. They're able to
+
+00:03:42.480 --> 00:03:48.000
+set up all the right files. They're able
+to take it through step by step. It's
+
+00:03:45.840 --> 00:03:51.120
+actually harder when you're starting
+with something. And one of the the
+
+00:03:49.440 --> 00:03:55.200
+hardest is when you're starting with a
+large legacy project, which we will
+
+00:03:53.040 --> 00:03:57.840
+cover at some point in our journey. But
+but for now, what I want to do is a
+
+00:03:56.560 --> 00:04:02.239
+little mix up in that there's going to
+be some code that we're inheriting as
+
+00:04:00.159 --> 00:04:05.120
+part of building this project and then
+something new that we're going to be
+
+00:04:03.439 --> 00:04:08.080
+building. Most of it will be new, but
+there'll be something here already. And
+
+00:04:06.720 --> 00:04:12.720
+what is that thing already, you're
+wondering? Well, you're going to love
+
+00:04:09.439 --> 00:04:18.720
+this. What we've got already is the
+Cananban front end that Codeex made
+
+00:04:16.560 --> 00:04:23.040
+earlier this week. The really cool
+canban view. I'm going to I'm going to
+
+00:04:21.120 --> 00:04:26.639
+pretend that that wasn't vibe coded.
+Just that we've got that here. that
+
+00:04:24.800 --> 00:04:31.520
+that's been built by somebody else, by
+another team. That MVP is already being
+
+00:04:29.680 --> 00:04:35.280
+built as a front end. We know it was
+vibe coded, but but but we're just going
+
+00:04:33.120 --> 00:04:40.639
+to pretend we've inherited it. We've got
+that. And our mission is to turn this
+
+00:04:37.919 --> 00:04:45.680
+into an application with a proper front
+end, backend, database, API, with
+
+00:04:44.080 --> 00:04:50.240
+everything together. So, this could
+actually be a project management tool
+
+00:04:47.919 --> 00:04:54.000
+that would be persistent. That's what
+we're going to build. We're going to
+
+00:04:52.080 --> 00:04:57.199
+going to turn this into the real deal.
+and we're gonna do it with LLMs. And
+
+00:04:56.160 --> 00:05:00.639
+actually, when I say we're going to do
+it with LLMs, I mean that in two ways.
+
+00:04:59.040 --> 00:05:05.199
+We're going to use, of course, a coding
+agent to write this, but also we're
+
+00:05:03.520 --> 00:05:08.800
+going to build a project management app
+that has an AI feature because doesn't
+
+00:05:07.520 --> 00:05:13.120
+everything have an AI feature these
+days? It's going to have a chat with my
+
+00:05:10.880 --> 00:05:17.600
+project ability that you'll be able to
+to ask questions about the project
+
+00:05:15.039 --> 00:05:21.919
+setup. You'll also be able to to ask for
+things to be done to the project through
+
+00:05:19.600 --> 00:05:27.039
+an AI chat interface. We're going to
+build an AI application as well. Well, I
+
+00:05:24.400 --> 00:05:31.840
+hope you're excited. I certainly am.
+Okay, so let me just take you through
+
+00:05:29.680 --> 00:05:37.039
+the file system here on the left. But I
+do also want to remind you a few things
+
+00:05:33.759 --> 00:05:40.960
+about actually using GitHub Copilot here
+on the right. If you've forgotten, we've
+
+00:05:38.880 --> 00:05:45.280
+got this agent drop down here that lets
+us choose the mode we're working on.
+
+00:05:42.880 --> 00:05:49.199
+We've got the model selector where we
+can choose which models we want to have
+
+00:05:47.120 --> 00:05:53.680
+with a manage models button that will
+bring up this this whole section with
+
+00:05:51.280 --> 00:05:57.120
+all of the details of the the models.
+This is also where you could choose if
+
+00:05:55.440 --> 00:06:02.320
+you want to be be working with free
+models to be using OAMA locally and
+
+00:05:59.840 --> 00:06:05.840
+running a model on your local machine if
+you've got strong enough local machine
+
+00:06:03.840 --> 00:06:09.759
+and you can run it for free. And
+remember to look in the course resources
+
+00:06:07.600 --> 00:06:15.120
+for more on that. But if you're looking
+at at using Copilot properly, then then
+
+00:06:12.960 --> 00:06:19.919
+also down here, remember this thing here
+gives us a sense of of how much room
+
+00:06:17.759 --> 00:06:25.520
+we've got. And you can see that the
+premium requests I've I've not uh not
+
+00:06:22.479 --> 00:06:30.240
+used up many of them and they reset
+quite soon for me. And you can press
+
+00:06:27.280 --> 00:06:34.720
+this manage paid premium requests and it
+will open you up in GitHub. And this is
+
+00:06:32.800 --> 00:06:39.360
+where you can set your kind of budget
+limits and things like that should you
+
+00:06:36.639 --> 00:06:43.440
+wish to go over the allotted the free
+portion that you get automatically.
+
+00:06:41.440 --> 00:06:47.759
+Okay. So that's just oriented you over
+it there on the right. Now I want to
+
+00:06:45.360 --> 00:06:52.479
+orient you on the files on the left.
+What is set up for you right away. Now
+
+00:06:50.639 --> 00:06:57.919
+what I've got here is first of all a
+directory structure. Front end is where
+
+00:06:54.479 --> 00:07:03.440
+we've got the existing camban MVP. back
+end is empty except for an agents.mmd
+
+00:07:00.800 --> 00:07:08.000
+that is empty. It says this will
+something will go here. Front uh scripts
+
+00:07:06.240 --> 00:07:13.440
+is also empty except for something that
+that says things will go here. I've got
+
+00:07:10.479 --> 00:07:17.120
+thev file which is the same one as
+before. I just copied it across. You
+
+00:07:15.840 --> 00:07:22.639
+should be able to do that too. Or if you
+want you can create a new one. Remember
+
+00:07:19.280 --> 00:07:25.599
+open routter API key in block capitals.
+Paste in the key if you're going to
+
+00:07:23.759 --> 00:07:29.919
+create it from scratch. No mistakes
+allowed. Uh, but you could also just
+
+00:07:27.280 --> 00:07:34.240
+copy it from where it is somewhere else.
+Be careful with that MV file. TheGit
+
+00:07:32.800 --> 00:07:37.840
+ignore file is actually one of the
+defaults. It's got all the sorts of
+
+00:07:36.000 --> 00:07:43.759
+stuff you typically want to ignore,
+including the EMV file that you never
+
+00:07:40.639 --> 00:07:47.919
+want to check into Git. And then last,
+but very much not least, I have prepared
+
+00:07:46.000 --> 00:07:52.800
+an agents.md
+file to walk you through right now. That
+
+00:07:50.240 --> 00:07:55.759
+is that is positioning us for success.
+That is where we begin. And you
+
+00:07:54.319 --> 00:07:59.360
+shouldn't feel like you have to use what
+I've got right here. I'm doing right
+
+00:07:57.360 --> 00:08:03.280
+click and open preview to bring it up
+looking fancy. Don't feel like you have
+
+00:08:01.520 --> 00:08:07.440
+to do this. You can take this in
+whatever direction you want. I just
+
+00:08:05.120 --> 00:08:10.720
+wrote this right now. So, so, uh, this
+isn't isn't like I I sort of spent ages
+
+00:08:09.440 --> 00:08:13.840
+preparing it, but rather than you
+sitting there, well, I type it, I just
+
+00:08:12.160 --> 00:08:18.240
+did it quickly. And this is what I've
+gone. I've tried to be reasonably
+
+00:08:15.520 --> 00:08:22.639
+scrappy because we want the the agent to
+to go with us on this. So, we're
+
+00:08:20.319 --> 00:08:26.639
+building a project management MVP web
+app. It is uh a user should be able to
+
+00:08:24.960 --> 00:08:30.560
+sign in. When they're signed in, they
+will see a cananban board representing
+
+00:08:28.319 --> 00:08:35.279
+their project. It has fixed columns that
+can be renamed. The cards can be moved.
+
+00:08:32.959 --> 00:08:41.680
+There is an AI chat feature in the
+sidebar. The AI is able to create, edit,
+
+00:08:38.159 --> 00:08:46.959
+or move one or more cards. Limitations
+for the MVP. There'll only be a single
+
+00:08:44.240 --> 00:08:50.480
+user sign in hardcoded user and
+password, but the database should
+
+00:08:48.560 --> 00:08:54.560
+support having many users for the
+future. There will only be one can board
+
+00:08:53.040 --> 00:08:58.480
+per signed in user. We're not going to
+have lots of different boards and it's
+
+00:08:56.560 --> 00:09:02.560
+going to run locally in a Docker
+container for the MVP. We're not going
+
+00:09:00.240 --> 00:09:08.560
+to deploy it out somewhere. That's not
+to say that you can't easily do that.
+
+00:09:05.200 --> 00:09:15.600
+Technical decisions. So this part I have
+written based on my my opinion, my
+
+00:09:12.240 --> 00:09:20.399
+technical opinion. And you would be in
+absolutely fair to say okay but how are
+
+00:09:18.800 --> 00:09:24.320
+we to know what to put here? And the
+answer is you don't need to know what to
+
+00:09:22.560 --> 00:09:28.640
+put there because you could just ask an
+AI. You could just ask the the the agent
+
+00:09:26.800 --> 00:09:34.640
+I was going to say the cursor agent, the
+GitHub co-pilot over here to do it for
+
+00:09:32.080 --> 00:09:38.320
+you. Now I have a viewpoint. I want an
+Nex.js front end because I want to show
+
+00:09:36.880 --> 00:09:42.880
+that to you and because that's what
+we've already got. I want the Python
+
+00:09:40.560 --> 00:09:46.560
+backend to be fast API. Python is what I
+do. So I know that stuff well. So I have
+
+00:09:44.480 --> 00:09:50.160
+opinions on this. Uh I want everything
+packaged into a Docker container. that
+
+00:09:48.240 --> 00:09:54.800
+makes most sense for us right now. I
+want to use UV as the package manager.
+
+00:09:53.040 --> 00:09:59.279
+And honestly, these these agents don't
+like to do that. They like to use
+
+00:09:56.240 --> 00:10:03.600
+simpler things, the usual pip. I like UV
+because I love UV and so I I want to use
+
+00:10:02.240 --> 00:10:07.440
+it. You don't need to if you don't want
+to. Um I want to use open router for the
+
+00:10:05.920 --> 00:10:11.839
+AI calls because that makes most sense
+for us. I'm telling it the open router
+
+00:10:09.519 --> 00:10:16.320
+API key is in the MV file in the project
+routt. I'm telling it the model I'd like
+
+00:10:13.920 --> 00:10:20.160
+to use. You can use the free variant.
+you remember it's just got the word free
+
+00:10:17.680 --> 00:10:23.600
+after it colon free I think colon free
+if you want to use the free variant um
+
+00:10:22.399 --> 00:10:26.959
+with which you'll find in the open
+router website or you can use whatever
+
+00:10:25.120 --> 00:10:31.040
+model you want and I'm saying I want to
+use a SQL light local database for the
+
+00:10:29.200 --> 00:10:35.440
+database of course there are many other
+ways of doing it if you for example have
+
+00:10:33.120 --> 00:10:39.040
+a superbase account where you've got
+already data the ability to have
+
+00:10:37.120 --> 00:10:44.320
+databases running on the cloud you could
+instead just put your superbase keys in
+
+00:10:41.440 --> 00:10:48.720
+the MV it will all work great that works
+too but we're going to keep it Super
+
+00:10:46.079 --> 00:10:53.040
+simple for this. And then current state
+a working MVP of the front end has been
+
+00:10:50.800 --> 00:10:58.800
+built and is already in front end. This
+is not yet designed for the Docker
+
+00:10:54.880 --> 00:11:01.600
+setup. It's a pure front end only demo.
+Current state's a bit awkward there,
+
+00:11:00.160 --> 00:11:05.680
+isn't it? Why don't we why don't we call
+that starting point? That seems more
+
+00:11:04.000 --> 00:11:08.959
+clear. Otherwise, it's it's only going
+to get confusing when it sees that
+
+00:11:07.200 --> 00:11:14.079
+that's not the current state later on.
+So, let's say starting point. Um, okay.
+
+00:11:12.560 --> 00:11:17.120
+And then I've got the same color scheme
+as before. the coding standards. I think
+
+00:11:15.760 --> 00:11:21.279
+this is basically the same as before. I
+might I maybe added uh added the the
+
+00:11:19.519 --> 00:11:25.120
+fourth one here. When hitting issues,
+always identify root cause. Do not
+
+00:11:22.880 --> 00:11:29.360
+guess. Prove with evidence, then fix the
+root cause. All just standard stuff I
+
+00:11:27.440 --> 00:11:32.720
+like to use, but increasingly it's not
+needed. And then finally, working
+
+00:11:31.200 --> 00:11:36.640
+documentation. All documents for
+planning. Oh, typo. All documents for
+
+00:11:35.040 --> 00:11:41.760
+planning and executing this project will
+be in the docs directory. Please review
+
+00:11:38.959 --> 00:11:47.120
+docs plan. MD document before
+proceeding. What is this document, you
+
+00:11:43.760 --> 00:11:47.120
+ask? Let's go look at that next.
+

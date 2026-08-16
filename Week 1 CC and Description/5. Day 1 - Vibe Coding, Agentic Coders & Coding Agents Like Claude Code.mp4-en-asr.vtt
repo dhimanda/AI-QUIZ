@@ -1,0 +1,444 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.240 --> 00:00:09.120
+Okay, so for the final part of day one
+of week one, I want to take you through
+
+00:00:06.080 --> 00:00:14.799
+the scene, the the what what is this all
+about anyway? And it begins with this
+
+00:00:12.320 --> 00:00:19.600
+tweet that is again from Andre. I
+mentioned that he's the guy that coined
+
+00:00:16.960 --> 00:00:24.480
+the term vibe coding and this is his
+seinal tweet from some time ago from
+
+00:00:22.240 --> 00:00:30.400
+from like more than a year ago
+announcing this idea that he calls vibe
+
+00:00:28.000 --> 00:00:37.360
+coding where you fully give in to the
+vibes. Embrace the exponentials and
+
+00:00:33.520 --> 00:00:43.440
+forget that code even exists. And he
+describes LLM's getting too good. So he
+
+00:00:41.120 --> 00:00:48.160
+goes through this idea that you sort of
+give up looking at all of the code. You
+
+00:00:46.079 --> 00:00:54.000
+ask an NLM to generate something and you
+let it be and come back and see it doing
+
+00:00:51.280 --> 00:00:59.760
+what it does. And this really gave rise
+to the to the term VIP coding and to
+
+00:00:56.640 --> 00:01:05.040
+everything that transpired in 2025. And
+the year ahead was then something of an
+
+00:01:02.960 --> 00:01:08.720
+emotional roller coaster. I feel like
+initially people were quite surprised by
+
+00:01:07.119 --> 00:01:12.720
+what these things could do. And then
+there was a period of of sort of denial
+
+00:01:10.799 --> 00:01:16.880
+when everyone pushed back a bit. And
+then astonishment we all went through
+
+00:01:15.040 --> 00:01:21.759
+and we tried it ourselves and saw what
+could really happen. But then that was
+
+00:01:19.280 --> 00:01:26.560
+replaced by a sense of of frustration
+that some things weren't working out.
+
+00:01:23.520 --> 00:01:29.920
+And to be honest, then real anger like I
+I I said on one of my courses before
+
+00:01:28.400 --> 00:01:33.759
+that there was a point when I found
+myself getting so frustrated with Claude
+
+00:01:32.159 --> 00:01:38.000
+code that that I was I was starting to
+to yell at it and and ask it to write
+
+00:01:36.400 --> 00:01:42.320
+performance reports. I would have it
+read in about the repeated mistakes it
+
+00:01:40.320 --> 00:01:46.000
+was making. It was some strange thing
+where you would have such an identity
+
+00:01:44.159 --> 00:01:51.759
+with the AI you were working with that
+it it could become extremely
+
+00:01:48.320 --> 00:01:55.680
+frustrating. Um, and then there was a a
+period of acceptance when with the
+
+00:01:54.240 --> 00:02:00.719
+people that were using this every day
+like myself started to get familiar with
+
+00:01:58.479 --> 00:02:05.360
+where is it good and where is it weak
+and how do we make the most out of the
+
+00:02:02.560 --> 00:02:11.760
+strengths without getting frustrated by
+some of some of the the downsides of
+
+00:02:08.000 --> 00:02:17.599
+working with AI code generators. But
+then there was something of an
+
+00:02:13.360 --> 00:02:22.239
+inflection point late 2025 with I guess
+Claude Sonnet 4.5 or Claude Opus 4.5
+
+00:02:20.720 --> 00:02:29.760
+more like that. I think that was the the
+real inflection point followed by Gemini
+
+00:02:24.959 --> 00:02:35.599
+3 and GBC 5.2 when suddenly these AI
+agents got a lot better and a lot of the
+
+00:02:33.519 --> 00:02:40.000
+of the anger and frustration. It's it's
+still times when I get impatient and
+
+00:02:37.519 --> 00:02:45.360
+when I get irritated, but there's much
+less of the super frustrating repeated
+
+00:02:43.200 --> 00:02:50.080
+mistakes that we used to see earlier
+last year. And a lot of us have seen
+
+00:02:47.680 --> 00:02:55.840
+this inflection point and that really
+caused in in sort of December and
+
+00:02:52.080 --> 00:03:02.480
+January this huge new wave of progress
+and this ability to do so much with AI
+
+00:02:58.959 --> 00:03:06.480
+agents and the the terminology around
+this space is still something that's up
+
+00:03:04.400 --> 00:03:09.840
+in the air. You hear people using
+different expressions for to mean
+
+00:03:08.239 --> 00:03:14.480
+different things. As I say, the first
+one was vibe coder, which was Andre's
+
+00:03:12.400 --> 00:03:18.560
+term. And sometimes people just mean
+that is a sort of quite amateur-ish
+
+00:03:16.879 --> 00:03:21.760
+approach of just sort of letting
+something go and then throwing it away
+
+00:03:20.080 --> 00:03:25.760
+if it doesn't work or trying it again.
+For some people, vibe coding is just
+
+00:03:23.440 --> 00:03:30.000
+just the name of this whole field. Um,
+then vibe engineer was this term that
+
+00:03:28.080 --> 00:03:34.000
+Simon Willis, I'll show you some of his
+posts later, he came up with this term
+
+00:03:32.159 --> 00:03:40.319
+to represent the more professional side
+of it of actually building software uh
+
+00:03:37.200 --> 00:03:45.760
+as a professional but using AI agents.
+And then a new term that sort of emerged
+
+00:03:42.640 --> 00:03:51.040
+for people using this as experts is an
+agentic coder. that is someone that is
+
+00:03:48.560 --> 00:03:55.920
+using things like the cursor agent that
+we just saw as a sort of sidekick to
+
+00:03:53.840 --> 00:04:00.159
+collaborate with to build a product
+together or potentially multiple agents
+
+00:03:58.560 --> 00:04:05.280
+as we will. All right, I don't want to
+confuse you horribly. I just want to
+
+00:04:01.920 --> 00:04:09.920
+mention though that these words can mean
+different things depending on their
+
+00:04:07.040 --> 00:04:14.560
+context and it's a bit of a muddle. When
+I say agentic coder on this course, us
+
+00:04:12.720 --> 00:04:19.840
+together for the next three weeks, I'm
+referring to using agents to help you
+
+00:04:17.280 --> 00:04:25.280
+code. But you may also hear someone
+saying agentic coder, referring to a
+
+00:04:22.639 --> 00:04:31.520
+coder, someone like you or me as well,
+who's building AI agents. That could be
+
+00:04:28.320 --> 00:04:36.080
+an agentic coder. Now, that's confusing.
+And also when you hear people talking
+
+00:04:33.520 --> 00:04:42.639
+about platforms like clawed code and
+cursor, you can sometimes call those
+
+00:04:38.560 --> 00:04:47.120
+platforms coding agents. They are agents
+that write code. So depending on which
+
+00:04:45.440 --> 00:04:51.120
+way around these words are and the
+context they use, they could mean
+
+00:04:48.960 --> 00:04:55.759
+different things. So the the key point
+here is that if in doubt, ask the person
+
+00:04:53.759 --> 00:05:00.000
+you're talking to to clarify what
+exactly are you talking about? When you
+
+00:04:57.840 --> 00:05:05.199
+say agentic coder, are you talking about
+someone that codes with the assistance
+
+00:05:02.320 --> 00:05:07.840
+of AI agents? Because if so, that's what
+you and I are going to be doing
+
+00:05:06.479 --> 00:05:13.039
+together. All right. Well, if that
+hasn't completely confused you, what I
+
+00:05:09.600 --> 00:05:17.520
+now want to do is go through some coding
+agents with you, some of the platforms
+
+00:05:15.440 --> 00:05:22.240
+where we can work with agents. There are
+three different surfaces, three
+
+00:05:20.560 --> 00:05:27.680
+different ways that we can interact with
+these coding agents. One of them is
+
+00:05:24.880 --> 00:05:33.520
+using an IDE, an integrated development
+environment, a product like cursor which
+
+00:05:30.479 --> 00:05:38.720
+has windows and menus and panes. One of
+them is using a plug-in, an extension.
+
+00:05:36.880 --> 00:05:44.320
+Typically, it's something which which is
+bolted on to VS Code, a super popular
+
+00:05:41.840 --> 00:05:49.520
+open-source IDE, and you can get
+extensions to it which allow you to work
+
+00:05:46.720 --> 00:05:55.360
+within VS Code, but be using an AI
+agent. And then famously the third way
+
+00:05:53.280 --> 00:06:00.960
+which which was sort of invented by
+Claude code is using what's called a CLI
+
+00:05:58.400 --> 00:06:04.160
+a command line interface. And this is
+where you're sort of working within a
+
+00:06:02.639 --> 00:06:07.199
+terminal. You're working within
+something that looks like it's it's come
+
+00:06:05.440 --> 00:06:11.759
+from the 80s. you're working in
+something like a black screen with
+
+00:06:08.960 --> 00:06:16.240
+characters and it's a bit retro, but
+it's turned out to be such an
+
+00:06:13.919 --> 00:06:20.720
+interesting interactive way to work with
+agents that it kind of it was almost
+
+00:06:18.639 --> 00:06:25.919
+came up as an accident through Claude
+Code that was a side project for a while
+
+00:06:23.199 --> 00:06:30.080
+that then just blew up and now everyone
+is doing it. And so this idea of sort of
+
+00:06:28.319 --> 00:06:35.039
+stepping back to the way things used to
+work in this retro style interface has
+
+00:06:32.400 --> 00:06:39.759
+turned out to be super productive and
+just a really powerful way to work and
+
+00:06:37.039 --> 00:06:44.880
+and uh as as you will see yourself and
+so to give some examples of these for
+
+00:06:41.919 --> 00:06:52.319
+idees there's cursor there is codeex
+from openai anti-gravity from Google and
+
+00:06:48.639 --> 00:06:57.360
+windsurf is another popular one when it
+comes to plugins the one that comes to
+
+00:06:54.639 --> 00:07:03.520
+mind the most is github cop Copilot
+incredibly popular and that is also
+
+00:06:59.919 --> 00:07:07.680
+available as an extension inside VS code
+and that's a very common way to use it
+
+00:07:05.919 --> 00:07:11.840
+and when it comes to CLI there is of
+course claude code and because of the
+
+00:07:09.680 --> 00:07:18.160
+success of claude code a lot of the
+others built CLI versions kind of taking
+
+00:07:15.440 --> 00:07:24.000
+taking a leaf out of Claude Code's book
+there's cursor CLI codec
+
+00:07:21.759 --> 00:07:28.240
+Gemini CLI and then there are also a
+couple of others we'll look at open code
+
+00:07:26.160 --> 00:07:33.039
+and AMP and there are a bunch of others
+too. A lot of people have jumped on the
+
+00:07:30.319 --> 00:07:37.199
+CLI bandwagon because it's been super
+popular and I want to make the point
+
+00:07:34.560 --> 00:07:42.800
+that this is a space that is moving so
+fast and there's plenty of of ambiguity
+
+00:07:40.319 --> 00:07:49.199
+in terms of the terms for things. Give
+you an example. Uh Claude Code itself
+
+00:07:45.759 --> 00:07:53.360
+has an extension a plug-in to VS Code
+and Cursor. So that way you could
+
+00:07:51.360 --> 00:07:57.520
+perhaps say that Claude Code isn't just
+a CLI, it's also a plug-in. But that's
+
+00:07:56.000 --> 00:08:02.319
+just a bit confusing. That's that's more
+of a footnote. The main point is that
+
+00:07:59.440 --> 00:08:07.919
+Claude Code is primarily a CLI
+interface. I will keep the resources
+
+00:08:05.120 --> 00:08:11.840
+updated. So if in doubt, check out the
+resources or ask me a question if you
+
+00:08:09.919 --> 00:08:15.280
+want me to clarify a new tool or
+something that's happening. Look that
+
+00:08:13.280 --> 00:08:19.280
+there is there are new tools coming up
+all the time. But one of the hardest
+
+00:08:17.360 --> 00:08:24.319
+things in this space is being able to
+separate the signal from the noise.
+
+00:08:21.759 --> 00:08:29.360
+There is this tsunami of information
+that's coming pounding at us every
+
+00:08:26.560 --> 00:08:32.880
+single day. My my social media feeds are
+just filled with new announcements and
+
+00:08:31.199 --> 00:08:37.919
+new excitement. And being able to
+distinguish between the true excitement
+
+00:08:36.000 --> 00:08:42.240
+like when Claude Code was released last
+year uh separate from the sort of the
+
+00:08:40.640 --> 00:08:46.480
+talk of the town this week that will
+fizzle in a few weeks. There's a real
+
+00:08:44.240 --> 00:08:51.760
+skill to that. And if in doubt, then of
+course ask me. That's what I'm here for.
+
+00:08:48.800 --> 00:08:56.880
+But try to develop that skill to not get
+distracted by all of the noise in the
+
+00:08:53.839 --> 00:08:59.519
+space. Focus on the true value on things
+like claude
+

@@ -1,0 +1,712 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.320 --> 00:00:07.040
+Okay, so hopefully MCP is now super
+clear in your mind. It's at least as
+
+00:00:05.520 --> 00:00:12.400
+clear as it needs to be. You've got
+enough of the gist of this. So what are
+
+00:00:10.000 --> 00:00:17.840
+skills? Skills came after MCP. Skills
+was like a a newer innovation. And the
+
+00:00:16.400 --> 00:00:23.279
+idea of skills, there's going to be some
+green and some red, some pros and some
+
+00:00:19.520 --> 00:00:29.119
+cons. Skills, they are focused on
+instructions that you can give Claude
+
+00:00:26.320 --> 00:00:34.719
+code or now lots of others. it started
+as just a clawed code thing. Uh
+
+00:00:31.359 --> 00:00:38.559
+instructions as markdown files. Uh so
+that it's not so much about connecting
+
+00:00:36.160 --> 00:00:42.879
+in tools although as you'll see it it
+can be used to achieve that. Uh but it's
+
+00:00:40.559 --> 00:00:48.480
+more just having some instructions, some
+text very much like claude.md. We're
+
+00:00:46.559 --> 00:00:51.680
+familiar with claude.mmd already. It's
+just a way to have instructions in
+
+00:00:49.840 --> 00:00:56.000
+markdown that goes to an agent. So
+what's the difference with skills? Well,
+
+00:00:54.239 --> 00:01:01.280
+first up, you can have many of them. So
+it's like lots of clawends.
+
+00:00:58.640 --> 00:01:08.000
+Uh so okay, doesn't sound very
+innovative yet. But first of all, they
+
+00:01:04.159 --> 00:01:12.880
+are they're very simple to construct. So
+anyone can make these things. They have
+
+00:01:11.360 --> 00:01:18.159
+built into them this thing called
+progressive disclosure, which sounds
+
+00:01:15.360 --> 00:01:22.720
+very fancy. And what it's saying is very
+simple. It's just that it doesn't all
+
+00:01:20.479 --> 00:01:27.119
+get loaded into context. It doesn't all
+come in and fill up the context. just
+
+00:01:24.720 --> 00:01:31.840
+the very first part of it does which has
+some information about when is the rest
+
+00:01:29.119 --> 00:01:35.759
+of it relevant and the LLM just gets to
+decide does it want to load in the rest
+
+00:01:33.759 --> 00:01:39.840
+or not otherwise it only loads in the
+very top part of it and when it loads in
+
+00:01:38.079 --> 00:01:44.720
+the rest it loads in the rest of the
+document but also there are other
+
+00:01:42.479 --> 00:01:49.680
+documents that it could even more
+optionally load in should it wish to so
+
+00:01:47.280 --> 00:01:53.920
+it can go to many levels of depth in
+terms of how much information it loads
+
+00:01:51.520 --> 00:01:57.439
+in and that idea is called prog
+progressive disclosure and it means it's
+
+00:01:55.680 --> 00:02:03.119
+super efficient when it comes to the
+context window.
+
+00:01:59.520 --> 00:02:10.080
+And in addition to being able to load in
+markdown files, it's also possible to
+
+00:02:06.719 --> 00:02:14.000
+give it some scripts that it can run. So
+as part of this progressive disclosure,
+
+00:02:12.480 --> 00:02:17.680
+you can say, "Hey, here are a few
+documents you could read. Oh, and by the
+
+00:02:15.920 --> 00:02:21.200
+way, here's a couple of scripts that you
+can kick off. They're things that you
+
+00:02:19.360 --> 00:02:26.879
+can just run as shell scripts and get
+back results." And that is is really
+
+00:02:24.480 --> 00:02:31.280
+very similar to giving it tools. It's
+not tools in the same way that that
+
+00:02:28.800 --> 00:02:35.120
+LLM's call tools at the currently that
+we've we've worked on. It's a different
+
+00:02:32.879 --> 00:02:39.120
+idea. It's an idea of saying you have
+the ability to kick off a shell script.
+
+00:02:37.519 --> 00:02:43.519
+Give me the name of the script. I will
+run it and I will give you back the
+
+00:02:41.040 --> 00:02:47.680
+result. But it achieves much the same
+thing as a tool at a sort of higher
+
+00:02:45.360 --> 00:02:53.519
+level of of granularity.
+And it's very easy to make these things
+
+00:02:50.879 --> 00:02:57.519
+and share them. They're it's just a a
+folder full of of markdown files and
+
+00:02:55.680 --> 00:03:00.879
+some scripts and that's it. It's sort of
+there's a convention about how you put
+
+00:02:59.440 --> 00:03:05.200
+them all together and what you name them
+and then you're done. That's it. MCP
+
+00:03:03.040 --> 00:03:08.000
+servers are hard to build and share. In
+some of my other courses, we do it and
+
+00:03:06.720 --> 00:03:12.879
+it's, you know, you need to code them
+and things. With skills, it's just a
+
+00:03:09.840 --> 00:03:20.080
+bunch of files. That's it. So that makes
+skills this very simple uh accessible
+
+00:03:17.840 --> 00:03:24.400
+way to be building and sharing this kind
+of extra information to to load in to an
+
+00:03:22.640 --> 00:03:28.480
+LLM and it's loaded in in this very
+efficient way. So it ticks lots of the
+
+00:03:26.319 --> 00:03:32.879
+boxes that were sort of problems with
+MCP servers. And I'll also say there's
+
+00:03:30.560 --> 00:03:38.720
+like an intangible that a lot of us that
+that were working with MCP felt uh
+
+00:03:36.159 --> 00:03:43.920
+awkward about MCP that something felt
+too complicated about the MCP setup for
+
+00:03:41.599 --> 00:03:47.920
+many use cases. The way for for if you
+if you understand how MCP works, the way
+
+00:03:45.519 --> 00:03:52.560
+that it like spawns a separate process
+and and connects to it. There's a lot of
+
+00:03:50.560 --> 00:03:58.400
+sort of infrastructure plumbing that
+comes with the MCP story. Uh and and
+
+00:03:55.920 --> 00:04:01.280
+that's a lot in for many simple use
+cases. If you just want to do something
+
+00:03:59.680 --> 00:04:05.360
+simple, it feels like you got a lot of
+overheads, a lot of technical
+
+00:04:02.720 --> 00:04:10.400
+complexity. Well, skills feels very
+clean by comparison. It feels very
+
+00:04:07.760 --> 00:04:15.280
+simple and and elegant and for typical
+simple use cases, it really fits the
+
+00:04:12.799 --> 00:04:19.440
+bill. And so that's why a lot of us when
+when skills first came out had a sort of
+
+00:04:17.280 --> 00:04:22.960
+collective sigh of relief of this sort
+of feels right. But of course, there are
+
+00:04:21.280 --> 00:04:26.880
+some downsides and here they are. The
+obvious one is that by being more
+
+00:04:25.199 --> 00:04:30.880
+simplistic, we're giving up some of the
+power and flexibility of the sort of
+
+00:04:29.040 --> 00:04:35.040
+traditional tools. So when you're
+building tools, you're you're able to
+
+00:04:32.720 --> 00:04:38.479
+have like a function signature like the
+name of a function and then the
+
+00:04:36.800 --> 00:04:44.160
+parameters that get passed in with
+complete JSON structure. So you can be
+
+00:04:41.120 --> 00:04:48.639
+very detailed about how an LLM is to
+sort of call a function and get back
+
+00:04:45.919 --> 00:04:52.639
+results. In this case, the equivalent
+under skills is just running a shell
+
+00:04:51.040 --> 00:04:56.240
+script and you can have a few different
+scripts to do different things and you
+
+00:04:54.400 --> 00:05:00.080
+can specify that they have inputs, but
+it's a more simplistic approach. And
+
+00:04:58.800 --> 00:05:02.960
+maybe that's a good thing, you know,
+maybe that's the right level of
+
+00:05:01.199 --> 00:05:07.039
+granularity. We've we've gotten too
+detailed with with function calling, but
+
+00:05:05.280 --> 00:05:10.880
+but still that's a that's a downside
+worth being aware of. And then the other
+
+00:05:09.360 --> 00:05:15.600
+thing is about what we call discovery,
+which is basically how do you find the
+
+00:05:13.039 --> 00:05:20.560
+skills? Uh, it's it's sort of similar to
+to MCP, but it doesn't yet have the same
+
+00:05:18.560 --> 00:05:25.680
+level of traction as MCP. So, I would
+say if you thought that MCP was a bit of
+
+00:05:22.720 --> 00:05:30.080
+a wild west looking at MCP.So and
+looking at Glamour, well, skills are
+
+00:05:27.680 --> 00:05:33.440
+even worse. Uh, it's really unclear
+where you go and and and how you
+
+00:05:31.600 --> 00:05:37.120
+navigate them. But there's good news
+here, which is that the typical way
+
+00:05:35.039 --> 00:05:41.199
+people actually install skills is what
+we'll come to next with plugins. That is
+
+00:05:39.120 --> 00:05:45.840
+the the most common way of doing it. And
+there are some evolving places to go. So
+
+00:05:44.320 --> 00:05:50.160
+we and we'll look at look at a couple of
+them ourselves. And then the final point
+
+00:05:47.759 --> 00:05:55.199
+is quite similar to MCP servers which is
+the way that you actually tell claude
+
+00:05:52.479 --> 00:05:59.600
+code to use a skill is a little bit ad
+hoc. It's a little bit handwavy. Uh
+
+00:05:57.600 --> 00:06:04.639
+basically it relies on you using
+terminology that kind of matches that
+
+00:06:01.840 --> 00:06:08.880
+top section of the skill where it tells
+it the most important information for it
+
+00:06:06.800 --> 00:06:12.800
+to decide whether to load the next part.
+And so you sort of have to hit the
+
+00:06:10.400 --> 00:06:17.360
+bullseye in terms of asking it to do
+something that's going to match this top
+
+00:06:14.400 --> 00:06:22.479
+section. Now you can also use that use
+approach to force Claude code to
+
+00:06:19.840 --> 00:06:25.919
+definitely use a skill. Uh but that can
+be a bit brittle if you don't know the
+
+00:06:23.840 --> 00:06:31.120
+name of the skill or whatever. So it's
+just a little a little bit handwavy. Uh
+
+00:06:28.800 --> 00:06:35.199
+you have to get the knack for making
+sure that Claude code is going to be
+
+00:06:32.720 --> 00:06:38.800
+using the skill that you want to do the
+job you want it to do. And so in
+
+00:06:36.800 --> 00:06:44.160
+summary, I think a lot of us feel that
+skills seem like the more compelling
+
+00:06:41.680 --> 00:06:48.960
+approach for equipping Claude code with
+new abilities and expertise and
+
+00:06:46.639 --> 00:06:54.000
+information and that it might replace
+MCP altogether, at least for things like
+
+00:06:51.840 --> 00:06:58.800
+Claude Code, but it's still an evolving
+story. We will see where this leads. Uh
+
+00:06:56.800 --> 00:07:04.639
+but in the meantime I I tend to favor
+skills over MCP except in cases where
+
+00:07:02.240 --> 00:07:08.800
+MCP is the the only thing available like
+like massive polygon is a great example
+
+00:07:07.039 --> 00:07:13.280
+of where that's something very granular
+and needs to be done that way. Um
+
+00:07:11.199 --> 00:07:17.440
+context 7 is something which has some
+skills but they they also need you to
+
+00:07:15.520 --> 00:07:22.000
+install the MCP server as well. It needs
+both. Okay. So there are these three
+
+00:07:19.199 --> 00:07:26.800
+levels of what they call progressive
+disclosure. this kind of hierarchy of
+
+00:07:24.560 --> 00:07:32.720
+top level granularity, a bit more detail
+and a lot more detail. The first top top
+
+00:07:30.080 --> 00:07:37.599
+level detail, it's known as the metadata
+and it's just the name and description
+
+00:07:35.360 --> 00:07:41.759
+of your skill. If you're building a
+skill for for how to juggle, the name
+
+00:07:39.599 --> 00:07:46.240
+would be juggling and the description
+would be this this skill teaches you how
+
+00:07:43.759 --> 00:07:50.800
+you do blah blah blah blah blah. And
+that's the metadata. And claw code reads
+
+00:07:49.039 --> 00:07:55.280
+in all the metadatas for all of its
+skills. And then based on what you ask
+
+00:07:52.960 --> 00:07:59.039
+it to do, it decides does it need to
+read the rest? And so if you say, "Hey,
+
+00:07:57.360 --> 00:08:03.120
+clo, can you juggle for me?" It'll be
+like, "Oh, I need to read this skill."
+
+00:08:00.960 --> 00:08:07.440
+And that next level is called the
+instructions. And this is tons of stuff
+
+00:08:06.000 --> 00:08:10.960
+or or little stuff, whatever you think
+you need to put in there about your
+
+00:08:09.120 --> 00:08:14.160
+guidance, your workflows, maybe some
+code snippets if you want cloud code to
+
+00:08:12.800 --> 00:08:17.919
+be able to write some code to do this
+and this and this. Uh it might be
+
+00:08:16.080 --> 00:08:21.919
+instructions for how to juggle uh which
+I imagine clo would have a difficult
+
+00:08:19.840 --> 00:08:27.599
+time with but those would all be in the
+instructions and in these instructions
+
+00:08:24.560 --> 00:08:34.479
+you could also reference different files
+with further resources or even uh even
+
+00:08:31.280 --> 00:08:39.519
+separate programs that could be run. And
+those things are all considered like the
+
+00:08:36.640 --> 00:08:45.120
+third level of disclosure resources and
+code to accompany the instructions. and
+
+00:08:42.159 --> 00:08:49.600
+they are only triggered if Claude code
+decides it needs to. Otherwise, it's
+
+00:08:47.680 --> 00:08:54.000
+it's not even those files aren't even
+read. And that's the third level of of
+
+00:08:51.839 --> 00:08:58.480
+disclosure. So, those are the three
+levels. And here's the thing, as with
+
+00:08:55.920 --> 00:09:03.600
+many things with LLMs, uh the way that
+this is actually implemented is like
+
+00:09:00.959 --> 00:09:08.240
+quite janky, quite quite simplistic.
+they like to call it it's implemented
+
+00:09:05.040 --> 00:09:12.880
+with a file system architecture which
+sounds super fancy which just basically
+
+00:09:10.320 --> 00:09:18.240
+means it's like based on the directories
+the folders and files that kind of sets
+
+00:09:15.279 --> 00:09:22.320
+all of this up. So there's a directory
+that's called claude and that actually
+
+00:09:20.480 --> 00:09:26.959
+appears in two places. There's a doc
+claude in your home directory in your
+
+00:09:25.040 --> 00:09:31.440
+home directory for your computer and
+there's also a doclaude for each repo.
+
+00:09:29.920 --> 00:09:35.040
+you. We've already seen the dot claw
+that's been created in our repo. Every
+
+00:09:33.279 --> 00:09:39.360
+repo, every project that you use claw
+code with gets a dot claude folder and
+
+00:09:37.200 --> 00:09:42.720
+you can put it in either place. You put
+put things in in either place and if you
+
+00:09:41.360 --> 00:09:47.120
+put it in your home directory, it
+applies to every project you've got. And
+
+00:09:44.880 --> 00:09:52.160
+if you put it in your project one, it
+only applies to that that repo. So
+
+00:09:49.279 --> 00:09:57.440
+there's a docu folder and in that docu
+folder, you put a folder called skills.
+
+00:09:55.120 --> 00:10:00.640
+You create a folder called skills. It's
+just about the name. The name of the
+
+00:09:58.959 --> 00:10:06.560
+folder has to be exactly the word skills
+or this doesn't work. And inside skills,
+
+00:10:03.519 --> 00:10:11.040
+you you put subfolders, subdirectories
+for each of the skills that you want
+
+00:10:09.360 --> 00:10:16.240
+Claude code to know about. Each
+subdirectory is a different skill. And
+
+00:10:14.320 --> 00:10:21.519
+inside that subdirectory is all the
+information that pertains to that skill.
+
+00:10:18.480 --> 00:10:25.360
+And that includes a file called
+skill.md.
+
+00:10:23.519 --> 00:10:30.800
+And that file needs to have a particular
+structure that tells Claude uh Claude
+
+00:10:28.560 --> 00:10:35.360
+code how to apply that that that that
+skill. In fact, it has both the metadata
+
+00:10:32.800 --> 00:10:40.320
+and the instructions. They both go in
+that file skill.md.
+
+00:10:37.600 --> 00:10:44.240
+And then you can have other files and
+those other files will be referenced in
+
+00:10:41.920 --> 00:10:48.640
+skill.md. And those other files are
+things that would just load in as that
+
+00:10:45.600 --> 00:10:52.079
+third level only if it needs to. And
+more stuff, another file that gets
+
+00:10:50.160 --> 00:10:55.519
+loaded in only if it needs to. And you
+can also have directories in there as
+
+00:10:54.000 --> 00:11:00.079
+well. You can have files and
+directories, subfolders. And in that
+
+00:10:58.079 --> 00:11:04.240
+directory, you could have some scripts.
+You could have a Python script like
+
+00:11:01.600 --> 00:11:09.839
+this, which which it can then run should
+it need to. So this this structure, that
+
+00:11:07.680 --> 00:11:14.480
+whole folder structure that has made a
+skill called migrate skill. And if you
+
+00:11:12.880 --> 00:11:18.399
+copy that folder and put it in somebody
+else's repo, they will have that skill
+
+00:11:16.560 --> 00:11:21.440
+when they run Claude code there. that
+installing a skill is about just taking
+
+00:11:19.920 --> 00:11:25.360
+that folder structure and putting it
+somewhere. That's all it is. Which is
+
+00:11:23.440 --> 00:11:29.839
+also I mean that that kind of jankiness
+of it is also the beauty the elegance of
+
+00:11:28.160 --> 00:11:34.320
+it too because it means if you just
+check this into your repo suddenly all
+
+00:11:32.160 --> 00:11:39.120
+of your teammates have the same skill as
+you. And as one other small thing to
+
+00:11:36.480 --> 00:11:45.040
+note which is kind of clever. If if
+claude code runs a script, it runs it
+
+00:11:42.880 --> 00:11:49.600
+just by making a sort of command line
+shell command to run a script. the
+
+00:11:47.839 --> 00:11:54.000
+contents of that script and anything
+that it does, any processing it does is
+
+00:11:52.240 --> 00:11:58.880
+kept out of the context. The only thing
+that comes back is the result of running
+
+00:11:56.000 --> 00:12:01.680
+it. And so it's very efficient from a
+context point of view. And if that
+
+00:12:00.399 --> 00:12:05.040
+didn't didn't completely connect with
+you, I think you sort of see it when you
+
+00:12:03.040 --> 00:12:08.240
+actually use it. It's very efficient in
+terms of not filling up the
+
+00:12:06.240 --> 00:12:13.120
+conversation. It sort of offboards all
+of that processing to the script itself.
+
+00:12:11.040 --> 00:12:17.120
+And I I already made this point, but
+this this whole structure that you see
+
+00:12:14.720 --> 00:12:22.399
+here, this this whole folder hierarchy,
+if you have it in your in your project,
+
+00:12:19.360 --> 00:12:26.160
+in your repo uh under doclude there,
+then it applies to this repo. If you
+
+00:12:24.480 --> 00:12:30.560
+have it in your home directory, it
+applies to all of your repos. It's a
+
+00:12:28.079 --> 00:12:34.639
+general global skill that your claude
+code is equipped with across the board.
+
+00:12:32.800 --> 00:12:38.399
+And that just gives you such an easy way
+to share skills. And then the final
+
+00:12:37.120 --> 00:12:42.880
+point I'll make on skills and then we'll
+go and try them out is that I I
+
+00:12:40.720 --> 00:12:48.880
+mentioned it again briefly before that
+skill.md file that contains the metadata
+
+00:12:46.560 --> 00:12:53.040
+and the instructions metadata at the
+very top and then the instructions in a
+
+00:12:50.560 --> 00:12:57.120
+particular format that is prescribed and
+then all of the other files form the
+
+00:12:55.360 --> 00:13:01.360
+resources and code and you just have to
+refer to them in the instructions for it
+
+00:12:59.600 --> 00:13:05.120
+to work and it's just a kind of
+convention that you do it this way and
+
+00:13:03.360 --> 00:13:08.800
+when you follow this convention it just
+all works.
+
+00:13:06.079 --> 00:13:12.959
+It's it's just just built around the
+file system architecture or just the way
+
+00:13:10.959 --> 00:13:15.279
+the way you name and structure the files
+and folders.
+

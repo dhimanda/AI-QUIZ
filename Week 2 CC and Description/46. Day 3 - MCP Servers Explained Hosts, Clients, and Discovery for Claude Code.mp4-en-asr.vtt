@@ -1,0 +1,720 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:07.200
+Okay, I've got a few minutes to do some
+technical stuff on MCP that is like
+
+00:00:05.040 --> 00:00:12.000
+optional. Uh, many of you may know this
+already. Some of you may not know and
+
+00:00:09.360 --> 00:00:16.560
+may not care because it's not necessary
+to get through the the using it. But for
+
+00:00:14.799 --> 00:00:21.920
+those that do care, the next couple of
+minutes are for you. Some technicalities
+
+00:00:18.880 --> 00:00:25.680
+about MCP. The terminology isn't that
+important for using it in claude code.
+
+00:00:23.920 --> 00:00:29.279
+You're not we're not going to build MCP.
+We're going to just use it. Um, but you
+
+00:00:27.760 --> 00:00:32.399
+might as well know. These are terms you
+probably already heard. There are these
+
+00:00:30.800 --> 00:00:38.160
+three things that people talk about with
+MCP. The MCP host, the MCP client, the
+
+00:00:35.200 --> 00:00:43.280
+MCP server. The MCP host is the name of
+the overall AI application which is
+
+00:00:41.040 --> 00:00:48.320
+running which needs to call tools. And
+so claude code is an example of an MCP
+
+00:00:45.520 --> 00:00:53.840
+host. Chat GBT is an MCP host. If you're
+writing your own agentic app like we do
+
+00:00:50.559 --> 00:00:59.280
+in my agentic track of my AI engineer
+course, we use open AAI agents SDK and
+
+00:00:56.719 --> 00:01:05.439
+that as an application the software is
+an MCP host. That's the MCP host. The
+
+00:01:02.160 --> 00:01:10.080
+MCP client is a bit of code that runs
+within the MCP host where there's one of
+
+00:01:08.159 --> 00:01:14.720
+them for each of the sets of tools that
+you're using and that is again that is
+
+00:01:12.000 --> 00:01:20.880
+something that's part baked into claude
+code or openAI agents SDK or chatgpt and
+
+00:01:18.479 --> 00:01:26.560
+so on and then finally the thing that
+you actually really care about is called
+
+00:01:22.960 --> 00:01:31.920
+the MCP server and that is the thing
+that manages the set of tools written by
+
+00:01:29.439 --> 00:01:37.439
+somebody else. So what they give you is
+an MCP server, an MCP server for
+
+00:01:35.040 --> 00:01:41.439
+browsing the internet, an MCP server for
+looking up stock prices. These are each
+
+00:01:39.759 --> 00:01:45.280
+MCP servers and they give you a little
+description of it and that's what you
+
+00:01:43.119 --> 00:01:49.040
+take and you give it to your MCP host
+like Claude code and it takes that
+
+00:01:47.200 --> 00:01:52.799
+description of an MCP server and it
+knows what to do. It knows how to set up
+
+00:01:51.200 --> 00:01:57.439
+a client. It knows how to launch that
+server. It knows how to run it. That's
+
+00:01:54.960 --> 00:02:01.680
+what's going on when you use MCP. And
+then the other technicality is that they
+
+00:01:59.280 --> 00:02:04.880
+can run in two different two different
+modes perhaps two two different
+
+00:02:03.360 --> 00:02:10.160
+techniques. It's they're known as the
+different transports. Uh it can run
+
+00:02:07.680 --> 00:02:14.640
+locally in which case it's it's running
+on your computer. The MCP server this
+
+00:02:13.040 --> 00:02:19.599
+thing which is going to look up market
+data or whatever is running on your
+
+00:02:16.800 --> 00:02:23.920
+computer or it can run remotely which
+means it's running up on the cloud. So
+
+00:02:21.599 --> 00:02:28.560
+if it's a Jira related one maybe
+Atlassian is running it. If it's GitHub,
+
+00:02:26.480 --> 00:02:32.879
+we'll use GitHubs, maybe Microsoft or
+GitHub are running it on their servers
+
+00:02:30.640 --> 00:02:36.319
+and you're connecting remotely to it.
+And there are even then there that sort
+
+00:02:34.400 --> 00:02:41.280
+of subdivides. There are two different
+techniques. One is called SSSE and is is
+
+00:02:38.959 --> 00:02:46.560
+now legacy has been replaced but still
+works and one of them is streamable HTTP
+
+00:02:44.480 --> 00:02:52.640
+which is the new way. SSSE is deprecated
+but you can still use it. uh and uh the
+
+00:02:49.920 --> 00:02:57.360
+thing is that there is a big source of
+confusion about this that I want to try
+
+00:02:54.720 --> 00:03:01.680
+and nyx right now. So it's a huge source
+of confusion that that some people have
+
+00:02:59.440 --> 00:03:05.920
+that when I say that this is these are
+local or remote MCP servers. I'm
+
+00:03:03.760 --> 00:03:11.360
+referring as I say to where the MCP
+servers actually run on your computer or
+
+00:03:09.120 --> 00:03:14.879
+or uh running remotely. That's that's
+where the thing that that figures out
+
+00:03:12.879 --> 00:03:18.720
+what tools you've got access to and what
+you can do with those tools. But often
+
+00:03:16.879 --> 00:03:22.319
+the implementation of those tools
+involves making a web call. So just
+
+00:03:20.800 --> 00:03:26.239
+because the tools are running on your
+computer doesn't mean that you're not
+
+00:03:23.760 --> 00:03:29.440
+accessing online services in some way.
+For example, the market data one that
+
+00:03:28.080 --> 00:03:33.599
+we're going to try in a second that
+looks up stock prices. It's a it's a
+
+00:03:31.519 --> 00:03:37.040
+local tools that runs the MCP server
+runs on my computer, but for sure it's
+
+00:03:35.360 --> 00:03:40.720
+looking up stock prices on the internet.
+The stock prices aren't on my computer.
+
+00:03:38.879 --> 00:03:45.360
+So just because it runs locally doesn't
+mean it's not connecting remotely in
+
+00:03:43.120 --> 00:03:48.640
+some way as part of its implementation.
+So that's one source of confusion. And
+
+00:03:47.360 --> 00:03:53.040
+the other confusion is that people
+sometimes think that because it's a
+
+00:03:50.799 --> 00:03:57.840
+local MCP server, and by the way, most
+MCP servers are local MCP servers. They
+
+00:03:55.920 --> 00:04:01.920
+think in some way that that's not real
+MCP, that you're not sharing. It wasn't
+
+00:04:00.239 --> 00:04:07.680
+written by somebody else. But that
+that's all a confusion. Uh a local it's
+
+00:04:05.599 --> 00:04:11.760
+still it's still completely all all the
+benefits of MCP applies. That code
+
+00:04:10.080 --> 00:04:16.959
+that's running locally will still have
+been fetched from a remote repository.
+
+00:04:14.400 --> 00:04:22.000
+It's been installed probably either with
+something like pip or with with with
+
+00:04:18.479 --> 00:04:26.960
+with UV, a modern version, or or with
+something like uh MPX if it's a node, a
+
+00:04:24.880 --> 00:04:30.720
+JavaScript program. It's been installed
+locally in your computer, but from a
+
+00:04:28.720 --> 00:04:36.400
+shared place, and then it's running on
+your computer. So, it's just about where
+
+00:04:32.800 --> 00:04:40.320
+it actually runs, but it's still shared
+code, a shared tool written by somebody
+
+00:04:38.560 --> 00:04:45.600
+else. It's just about whether you're
+accessing it on the cloud or accessing
+
+00:04:42.080 --> 00:04:50.240
+it running on your computer. So, as I
+say, not super important, but I do like
+
+00:04:47.759 --> 00:04:55.199
+to bring clarity to this and just so
+that you you understand most MCP servers
+
+00:04:53.120 --> 00:04:59.600
+actually are local, but you've still got
+all the benefits of MCP and it still
+
+00:04:57.360 --> 00:05:04.639
+might well be connecting online. And
+that's the difference between MCP host,
+
+00:05:01.520 --> 00:05:09.199
+MCP client, and MCP server. And often
+when you hear someone saying, "I'm using
+
+00:05:06.560 --> 00:05:13.680
+this MCP," that's shorthand for saying,
+"I'm using this MCP server." So, at this
+
+00:05:11.919 --> 00:05:18.080
+point, we're going to go and experiment
+with MCP servers before we move on to
+
+00:05:16.160 --> 00:05:25.520
+skills. One of the things that's kind of
+odd that's sort of funky about MCP is
+
+00:05:21.199 --> 00:05:29.440
+that it's not a super standard way to
+discover MCP servers that other people
+
+00:05:28.000 --> 00:05:34.160
+have written. It's given you this great
+way to to connect together, but it's not
+
+00:05:31.520 --> 00:05:40.160
+like there's been a kind of a sort of
+every everyone converging on one one
+
+00:05:37.199 --> 00:05:44.880
+place to find MCP servers. There are a
+bunch of different marketplace sites, a
+
+00:05:42.960 --> 00:05:49.600
+lot of them, and there are thousands,
+tens of thousands, lots of MCP servers
+
+00:05:47.199 --> 00:05:53.440
+available, including very popular ones,
+but it's a little bit of a wild west to
+
+00:05:51.919 --> 00:05:56.160
+understand how to navigate them. And of
+course, I will put links in the
+
+00:05:54.639 --> 00:05:59.600
+resources, and this stuff changes all
+the time. But let's go and look at some
+
+00:05:57.759 --> 00:06:03.840
+right now and then we'll we'll use a
+couple of them in claude code. Now this
+
+00:06:01.840 --> 00:06:06.840
+first site is called
+registry.mmodelcontextprotocol.io.
+
+00:06:06.880 --> 00:06:14.639
+That is the official MCP uh website. And
+MCP by the way I should say at this
+
+00:06:12.080 --> 00:06:18.720
+point Anthropic has donated it as they
+say to the Linux Foundation. So they
+
+00:06:17.120 --> 00:06:23.680
+they've now made sure that it's got
+complete open source governance. So this
+
+00:06:21.520 --> 00:06:28.720
+is the the the website for the official
+MCP registry. But it's a
+
+00:06:26.560 --> 00:06:33.360
+In my opinion, there's some crickets uh
+around this. It's a it's a bit quiet.
+
+00:06:30.960 --> 00:06:39.039
+It's not actually the most active of the
+places that you go to find MCP servers,
+
+00:06:36.720 --> 00:06:43.199
+perhaps because there's not enough it's
+it's kind of everything is here and it's
+
+00:06:40.800 --> 00:06:48.000
+kind of hard to navigate around. Another
+place you could go is a website that is
+
+00:06:45.680 --> 00:06:53.199
+is part of a a GitHub repo that
+Anthropic put together with reference
+
+00:06:50.720 --> 00:06:57.120
+MCP servers. It has some ones that they
+wrote in the early days that that that
+
+00:06:55.039 --> 00:07:01.440
+I've used a lot that lots of people use.
+Um, and then there are some ones that
+
+00:06:58.639 --> 00:07:06.240
+are official ones made by third parties.
+A great place to go for ones that that
+
+00:07:04.000 --> 00:07:10.720
+have kind of been been blessed by
+Anthropic here. So I often start by
+
+00:07:08.800 --> 00:07:15.520
+looking on this list and experimenting
+with some of these. But there are
+
+00:07:13.120 --> 00:07:20.160
+separate to this some websites that
+operate marketplaces place where people
+
+00:07:18.000 --> 00:07:23.759
+can post their MCP servers where people
+can write kind of reviews and there are
+
+00:07:21.919 --> 00:07:28.319
+ratings and things like that. And those
+are the most active places to go to get
+
+00:07:26.319 --> 00:07:32.800
+your MCP information. Let's look at
+three of them now. So first up is this
+
+00:07:30.560 --> 00:07:36.720
+one here, mcp.so. And again, I'll have
+links to these in the resources. Uh, and
+
+00:07:35.039 --> 00:07:40.639
+you can see that it's it's like a
+marketplace that that shows the
+
+00:07:38.720 --> 00:07:44.319
+different uh MCP servers that are
+available with like a search and
+
+00:07:42.160 --> 00:07:49.360
+keywords and tags and all the usual
+stuff. They've got 17,000 MCP servers.
+
+00:07:47.520 --> 00:07:52.720
+That's a lot. Let me bring up one that
+we'll look at in a second that's very
+
+00:07:50.800 --> 00:07:57.919
+popular for using in Clawed Code, which
+is called Context 7. Um and uh the idea
+
+00:07:56.160 --> 00:08:03.520
+is that one of the problems with claude
+code is that it doesn't have upto-date
+
+00:08:00.160 --> 00:08:09.120
+information about APIs and often assumes
+APIs are current as of the the uh it's
+
+00:08:06.800 --> 00:08:14.720
+its training cutoff and so it's useful
+to be able to equip it with a tool that
+
+00:08:11.199 --> 00:08:20.479
+will inform it about the latest APIs and
+that's what context 7 does. It allows
+
+00:08:17.680 --> 00:08:26.160
+allows the the the LLM to it allows
+Claude Opus to ask, okay, brief me on
+
+00:08:23.599 --> 00:08:29.520
+this this package, this library, and it
+will respond with the latest information
+
+00:08:27.840 --> 00:08:34.000
+about that library. So, it's a really
+useful one to know. Now, looking for
+
+00:08:31.440 --> 00:08:37.919
+this one called Context 7 immediately
+illuminates a classic problem with these
+
+00:08:36.000 --> 00:08:42.159
+these marketplaces that they're they're
+full of noise. back comes tons of
+
+00:08:40.240 --> 00:08:46.399
+different versions of Context 7,
+including one that says it's an
+
+00:08:43.519 --> 00:08:51.040
+unofficial MCP server, a Context 7
+clone, things that look dubious. And I
+
+00:08:49.519 --> 00:08:54.800
+just happen to know that the right one
+is this one cuz I recognize that logo.
+
+00:08:53.120 --> 00:08:59.040
+And if we click into it, you can see
+that the maker is Upstash. And I happen
+
+00:08:56.880 --> 00:09:03.360
+to know that they are indeed the authors
+of Context 7. But you kind of have to
+
+00:09:01.200 --> 00:09:07.440
+know that. Now, fear not. When we get to
+to plugins, you'll see that there is a
+
+00:09:05.200 --> 00:09:11.680
+way that that there can be a better
+discovery mechanism. But for MCP
+
+00:09:09.760 --> 00:09:16.640
+servers, discovery is something that
+comes from doing research, from
+
+00:09:14.240 --> 00:09:19.760
+exploring things. Um, there is here a
+comments section where you can leave
+
+00:09:17.920 --> 00:09:23.600
+comments and you could look for people's
+reviews of something, but it's it's
+
+00:09:21.440 --> 00:09:29.360
+empty. That's not much good. So, this is
+this is uh mcp.so, which is which is
+
+00:09:26.160 --> 00:09:33.440
+usually okay. And next up is Glamour.ai.
+Glamour.ai, AI which has a bunch of
+
+00:09:31.360 --> 00:09:37.360
+different things in it. Um, and we are
+looking here in the MCP directory. We
+
+00:09:35.680 --> 00:09:41.519
+can click on servers to come straight
+into their servers. And you'll see uh
+
+00:09:39.680 --> 00:09:46.640
+it's been updated very recently. For me,
+it's got 16,000 servers, so a bit less
+
+00:09:44.399 --> 00:09:51.200
+than mcp.so. And I like the way they
+have this security license and quality
+
+00:09:49.120 --> 00:09:56.160
+rating of things. You can see how much
+it's been downloaded, how much it's been
+
+00:09:53.120 --> 00:09:59.519
+favored. So, this is definitely a more
+thriving marketplace, I would say. But
+
+00:09:58.000 --> 00:10:04.560
+let's do the same test. So, let's look
+for context 7 here. Uh, and uh, here we
+
+00:10:03.040 --> 00:10:09.120
+go. Well, again, you see that there's a
+bunch of them. You sort of have to know
+
+00:10:06.560 --> 00:10:14.480
+that Upstash is the right one. And, uh,
+some of them all all have several triple
+
+00:10:12.959 --> 00:10:18.320
+uh, three of them at least have a AAA
+rating. No, four of them. Uh, but we I
+
+00:10:16.640 --> 00:10:23.360
+know that this is the right one. I can
+click into this and we can see
+
+00:10:20.480 --> 00:10:27.920
+information about this. Uh, and uh, we
+can see that there is also a link to
+
+00:10:25.360 --> 00:10:31.519
+their actual GitHub where they have it.
+Um, and you can see that they've got
+
+00:10:29.440 --> 00:10:36.000
+information about how to use it,
+including specifically how to use it in
+
+00:10:34.079 --> 00:10:40.240
+Claude Code. And you can see that the
+instructions for Claude Code have
+
+00:10:38.240 --> 00:10:44.880
+specifically one if you want to do it
+remotely and one if you want to do it
+
+00:10:42.160 --> 00:10:50.560
+locally. The two different transport
+mechanisms that both both work both have
+
+00:10:48.160 --> 00:10:56.399
+the same benefits just whether the MCP
+server runs on my box or in the cloud.
+
+00:10:53.440 --> 00:11:01.519
+Um so that that is uh this is the
+specific command line command that we
+
+00:10:58.240 --> 00:11:05.839
+will use to equip clawed code with this
+MCP server. It's as simple as that. It's
+
+00:11:03.920 --> 00:11:10.480
+just a command that will run in a
+terminal and that will bolt these tools
+
+00:11:08.160 --> 00:11:16.480
+into claude code. It's that simple. And
+I just want to double down on this point
+
+00:11:12.480 --> 00:11:21.839
+that the big deal with MCP, the big deal
+comes down to the fact that there is
+
+00:11:18.480 --> 00:11:27.200
+this one line of code, one command that
+you run in a terminal. And after running
+
+00:11:24.160 --> 00:11:31.440
+that command, now Claude code has been
+equipped with a new set of tools. In
+
+00:11:30.000 --> 00:11:35.519
+this case, it's tools to do something
+quite specific about about telling
+
+00:11:33.519 --> 00:11:39.279
+Claude about latest APIs. But there
+could be many other things like
+
+00:11:36.880 --> 00:11:43.760
+retrieving market data or other things
+different sets of tools and with a
+
+00:11:41.279 --> 00:11:48.720
+single line it's just suddenly means
+that claude code has that ability. That
+
+00:11:46.560 --> 00:11:53.360
+is the kind of eureka that that's the
+big deal about MCP and the reason people
+
+00:11:51.600 --> 00:11:57.600
+love it so much. It's not like it's a
+super ingenious thing. It's just that
+
+00:11:55.440 --> 00:12:01.200
+everyone's adopted this standard making
+it really easy. And the other point I
+
+00:11:59.519 --> 00:12:05.680
+want to make is that if you if you want
+to know whether or not an MCP server is
+
+00:12:03.600 --> 00:12:08.560
+legit, I was sort of joking about it
+earlier. It's like how do you tell? You
+
+00:12:07.040 --> 00:12:13.680
+just know the name of the of the person
+that made it. Well, the the best way is
+
+00:12:11.200 --> 00:12:17.600
+the same as any other open-source
+software, like something you might pip
+
+00:12:15.360 --> 00:12:21.040
+install anything like that. Go to the
+source, go to GitHub. If you if you
+
+00:12:19.839 --> 00:12:24.959
+scroll down here for a start, they've
+got a little uh advert for themselves in
+
+00:12:23.440 --> 00:12:29.680
+a way. They've got this little star
+history thing to show that Upstash
+
+00:12:27.360 --> 00:12:32.959
+contact 7 has got quite a few GitHub
+stars. I think I earlier I said that
+
+00:12:31.600 --> 00:12:36.079
+there was a GitHub link above which was
+wrong. The GitHub link is right over
+
+00:12:34.320 --> 00:12:40.160
+here. You can see it just here to the
+GitHub repo. And if you click there, we
+
+00:12:38.160 --> 00:12:44.560
+flip over to the GitHub repo. Here we
+are in Upst.
+
+00:12:42.480 --> 00:12:48.800
+This is the GitHub repo. You can see it
+does indeed have more than 40,000 stars.
+
+00:12:46.880 --> 00:12:52.160
+That's a good sign. You can see about
+the the GitHub issues. You could look
+
+00:12:50.720 --> 00:12:57.440
+through them if you wanted. You can see
+that it was last updated 10 hours ago or
+
+00:12:54.560 --> 00:13:01.279
+something. Uh so it's clearly got a lot
+of traction. It gives you a good sense
+
+00:12:59.200 --> 00:13:05.680
+that this is actively maintained. And
+then this is the the readme that's
+
+00:13:03.200 --> 00:13:09.600
+always worth looking at. And you can see
+in here it will tell us exactly how to
+
+00:13:08.000 --> 00:13:13.680
+install it. It's got the same advert
+again. And I'm sure it will tell us in
+
+00:13:11.519 --> 00:13:17.760
+here the uh the ways to install it. Yes,
+include code. Uh it's got the same
+
+00:13:15.920 --> 00:13:21.440
+commands right here. You could take it
+straight here from GitHub as well. So
+
+00:13:19.839 --> 00:13:25.920
+that that's the kind of authoritative
+source to make sure you're satisfied
+
+00:13:23.839 --> 00:13:28.639
+with the MCP server that you're about to
+add to claude
+

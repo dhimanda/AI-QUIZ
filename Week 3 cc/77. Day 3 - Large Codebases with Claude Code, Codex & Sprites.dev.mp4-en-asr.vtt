@@ -1,0 +1,498 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:09.200
+This is the start of the crescendo
+towards the finale of this program. This
+
+00:00:05.600 --> 00:00:15.280
+is week three, day three, another purple
+day, another core learning day of
+
+00:00:12.639 --> 00:00:20.720
+skills. And this is the day when we look
+at what it takes to build large code
+
+00:00:18.240 --> 00:00:26.880
+bases working with with big teams,
+working together with platforms like
+
+00:00:23.359 --> 00:00:32.480
+Claude Code and Codeex and Open Code and
+so on. professional coding agents in
+
+00:00:29.439 --> 00:00:36.160
+large teams. And originally
+that was going to be all I was going to
+
+00:00:34.399 --> 00:00:40.640
+cover today. I was going to have a whole
+day to talk about large team work and I
+
+00:00:39.120 --> 00:00:45.360
+had some stuff prepared and I was
+thinking we would dive in and take a big
+
+00:00:42.559 --> 00:00:49.280
+open-source repo and kind of work on it.
+But what I sort of realized is that
+
+00:00:46.960 --> 00:00:53.280
+we've already covered all of the
+foundational skills. So this is more
+
+00:00:51.200 --> 00:00:57.600
+about summarizing and packaging it all
+up and explaining the dos and don'ts.
+
+00:00:55.840 --> 00:01:01.520
+And that would be boring to be an entire
+day, especially this late in the game.
+
+00:00:59.440 --> 00:01:07.200
+We're not up for a boring day like that.
+I can cover that material quite quickly.
+
+00:01:03.840 --> 00:01:13.040
+And then and then I've got some spicy
+topics, some spicy things to throw into
+
+00:01:10.400 --> 00:01:16.640
+the mix to keep things sizzling. So
+prepare yourself. Be prepared for some
+
+00:01:14.960 --> 00:01:20.560
+spice. Let's get through the large
+codebase workflow. Some some some good
+
+00:01:18.479 --> 00:01:25.759
+stuff, some some vegetables to get
+through first and then we will bring on
+
+00:01:23.280 --> 00:01:29.119
+the fun. All right, let's get started.
+And I'm going to start with another
+
+00:01:27.439 --> 00:01:34.400
+recap. And I realize this is like the
+third day in a row of recapping the same
+
+00:01:31.280 --> 00:01:39.600
+material, but I feel like I gave you a
+lot to digest on the first day. Keep
+
+00:01:37.680 --> 00:01:44.000
+keep the food analogy going. A lot to
+digest. And before we get to the spicy
+
+00:01:42.000 --> 00:01:48.880
+stuff, if I'm not carrying this too
+much, uh, it's worth us taking one more
+
+00:01:46.479 --> 00:01:52.799
+moment to look at this slash commands.
+We know in claw code or how you you you
+
+00:01:51.200 --> 00:01:56.079
+run commands, and there is a way to
+configure your own. as I showed you,
+
+00:01:54.560 --> 00:02:00.560
+although these days it's more common
+just to use skills and skills of course
+
+00:01:58.719 --> 00:02:05.280
+consistent across claude code and
+codecs. And I think everyone is really
+
+00:02:02.560 --> 00:02:09.520
+jumping on the skills bandwagon to a
+large extent. They're kind of taking
+
+00:02:06.799 --> 00:02:15.120
+over from MCP as being the way that we
+like to build functionality into these
+
+00:02:11.760 --> 00:02:19.440
+coding agents. Then multi- aents, which
+is just this idea of running lots of
+
+00:02:17.040 --> 00:02:23.680
+cloud code at once or maybe kicking off
+codecs to run as we did, which was
+
+00:02:21.440 --> 00:02:27.840
+really cool. uh or now we know how to
+how to throw into that like running
+
+00:02:25.599 --> 00:02:31.680
+multiple clauds that might be on on the
+on the internet like out on the cloud
+
+00:02:30.160 --> 00:02:35.440
+perhaps because we just raised a bunch
+of git issues GitHub issues and we've
+
+00:02:33.840 --> 00:02:40.080
+tagged Claude in them and that means
+that Claude just goes off and does them
+
+00:02:37.440 --> 00:02:45.680
+or perhaps we're using something like
+sprites.dev dev to run on a remote
+
+00:02:43.360 --> 00:02:49.280
+container, a remote sandbox on the cloud
+running lots of clouds. All of these
+
+00:02:47.599 --> 00:02:54.319
+things are possible. Those are multi-
+aents. Sub aents is something that's a
+
+00:02:52.720 --> 00:03:00.160
+bit more contained. It's when when you
+really delegate one particular task to a
+
+00:02:57.680 --> 00:03:04.319
+sort of sub instance of Claude that just
+keeps that context, takes care of that,
+
+00:03:02.319 --> 00:03:08.959
+and then returns the results. And one of
+the built-in ones that's used a lot is
+
+00:03:06.319 --> 00:03:12.720
+the exploration sub agent that can just
+sort of go off and dig around a lot of
+
+00:03:10.560 --> 00:03:17.760
+files, read them all, summarize them,
+and return that back to the Claude code
+
+00:03:15.280 --> 00:03:21.599
+context. So that's multi- aents and sub
+aents. And of course, you can create
+
+00:03:18.959 --> 00:03:26.400
+your own sub aents and have them able to
+carry out a task. Agent teams we we
+
+00:03:25.120 --> 00:03:29.920
+talked about a bit, but we didn't
+actually use them. We're going to do
+
+00:03:27.680 --> 00:03:35.120
+them tomorrow. They are where we start
+to get a bit more kooky and have things
+
+00:03:32.400 --> 00:03:40.799
+like swarms and orchestration and stuff
+like that. Hooks is something very
+
+00:03:37.920 --> 00:03:44.000
+specific when you want to be able to tie
+something that's going on like like
+
+00:03:42.560 --> 00:03:48.640
+Claude using a tool or something like
+that and have that always triggering
+
+00:03:46.159 --> 00:03:52.959
+running a command or sending a prompt to
+Claude or kicking off a sub agent and
+
+00:03:51.200 --> 00:03:56.640
+and you can configure it that way. and
+it's, you know, used only occasionally,
+
+00:03:54.799 --> 00:04:02.239
+but they do sometimes come packaged in
+with plugins. And speaking of, you can
+
+00:03:59.920 --> 00:04:06.560
+also create your own plugins, as I
+showed you. You can package up different
+
+00:04:04.080 --> 00:04:10.879
+plugins that can contain things like
+skills and sub aents and commands, and
+
+00:04:09.040 --> 00:04:14.319
+you can package them up together. And
+you can also put them into a
+
+00:04:12.400 --> 00:04:18.959
+marketplace, and you can then publish
+that marketplace, and other people can
+
+00:04:16.160 --> 00:04:24.560
+can bring in your marketplace and then
+choose to add in your different plugins.
+
+00:04:22.000 --> 00:04:27.759
+So that is how you'd create a plug-in.
+Not something you do every day, but
+
+00:04:26.160 --> 00:04:32.560
+something you might do as part of a
+larger project as we'll get to today. So
+
+00:04:30.400 --> 00:04:38.240
+that's the quick recap on the different
+pro features that we covered on week 3,
+
+00:04:35.360 --> 00:04:42.400
+day one. And then yesterday we had such
+an interesting time looking at
+
+00:04:39.600 --> 00:04:46.960
+sandboxing. It's an very important topic
+when you're thinking about being able to
+
+00:04:44.080 --> 00:04:51.120
+do more yoloing. kickoff claude to do
+more. But there are serious security
+
+00:04:49.120 --> 00:04:55.280
+risks doing that on your computer with
+your file system, with your network
+
+00:04:52.960 --> 00:05:00.400
+access, running shell scripts on your
+computer. That's where sandboxes come
+
+00:04:57.600 --> 00:05:04.720
+in. And built into Claude is the native
+sandbox and it's also built into some
+
+00:05:02.400 --> 00:05:08.560
+other tools like we saw in cursor, but
+in claw code, it's just slash sandbox
+
+00:05:06.960 --> 00:05:14.160
+and then you're running in a lightweight
+native sandbox. But then we also found
+
+00:05:11.280 --> 00:05:17.440
+out all about using like managed Claude
+on the web and you could have like
+
+00:05:15.759 --> 00:05:21.520
+Claude on the web and just through a web
+browser kick it off. You can do it
+
+00:05:18.960 --> 00:05:26.960
+through a mobile app. You can have it so
+that it's hooked into GitHub so that a
+
+00:05:23.919 --> 00:05:30.720
+GitHub action you tag Claude and Claude
+just goes away and does the work and
+
+00:05:29.280 --> 00:05:35.039
+then you find that there's there's a
+branch that's been pushed. There's a PR
+
+00:05:32.720 --> 00:05:39.759
+ready for you with the change made just
+because you tagged Claude. It's amazing.
+
+00:05:38.000 --> 00:05:42.560
+And so yeah, I obviously I hope you
+shared in my joy with that and I hope
+
+00:05:41.360 --> 00:05:45.680
+you've been trying it out because it's
+because it's really great. The thing I
+
+00:05:44.080 --> 00:05:50.240
+didn't get to do yesterday but you
+hopefully did is just that simple trick
+
+00:05:47.919 --> 00:05:54.400
+of putting an amperand before a command
+to claude which means don't run this
+
+00:05:52.240 --> 00:06:00.479
+here. Take this whole conversation so
+far, push it out onto the internet and
+
+00:05:57.520 --> 00:06:03.680
+run it in a remote claude and then get
+back the answer. It's really amazing
+
+00:06:02.240 --> 00:06:06.720
+that you could do that. I guess you
+don't get back the answer, it runs
+
+00:06:05.120 --> 00:06:11.440
+remotely. And then you probably saw you
+could do slashtasks to come and look at
+
+00:06:09.280 --> 00:06:19.280
+them. So that that is a a really cool
+feature um of claw code on the web. And
+
+00:06:15.199 --> 00:06:23.360
+then there is third party sandboxes.
+It's a bit of an upand cominging
+
+00:06:21.039 --> 00:06:27.680
+feature. I showed you sprites.dev that
+I'm super impressed with. Just as they
+
+00:06:25.280 --> 00:06:35.919
+say, it is really, really quick and it's
+just very easy then to run on YOLO mode
+
+00:06:31.680 --> 00:06:39.440
+on the cloud on a fast box and it is so
+it is stateful in that you can just come
+
+00:06:37.919 --> 00:06:43.039
+back to it and it's exactly where you
+left it and again it comes up really
+
+00:06:41.440 --> 00:06:47.039
+really fast and it's got everything just
+as you left it. So you can use it as a
+
+00:06:45.199 --> 00:06:51.680
+little home away from home. Uh, and
+that's really amazing for developing.
+
+00:06:48.800 --> 00:06:55.600
+And the fact that Claude code runs in
+the terminal like that means that it's
+
+00:06:53.680 --> 00:07:00.240
+just so convenient. You just run it
+there in the terminal remotely and you
+
+00:06:57.919 --> 00:07:04.880
+have access to your clauds wherever you
+are. So that that is sprites.dev. I
+
+00:07:02.800 --> 00:07:09.440
+absolutely love it and I hope you are
+impressed with that too. And here I am
+
+00:07:06.880 --> 00:07:14.240
+back in VS Code again in the finally
+repo and I've got two terminal screens.
+
+00:07:12.000 --> 00:07:17.919
+One of them is just a terminal as usual,
+normal terminal in the finally
+
+00:07:15.680 --> 00:07:21.120
+directory. This one here says Sprite on
+it. This is just the same one as I had
+
+00:07:19.440 --> 00:07:24.720
+yesterday. And it's weird that it looks
+like this is just a terminal like like
+
+00:07:22.800 --> 00:07:30.400
+any other. But of course, this is
+actually connected to my remote box, my
+
+00:07:27.120 --> 00:07:34.479
+sprite box out there somewhere. And I
+actually kept going yesterday. I
+
+00:07:32.319 --> 00:07:38.560
+couldn't resist. I couldn't stop. It was
+the end of of the recording, the end of
+
+00:07:36.560 --> 00:07:42.560
+the day, but I just had to keep going. I
+asked it to do one more thing. I asked
+
+00:07:40.240 --> 00:07:46.319
+it to update all of its documentation to
+have one summary document because I
+
+00:07:44.720 --> 00:07:50.720
+thought that would be nicer. And then I
+also asked it to make a little demo
+
+00:07:48.160 --> 00:07:54.479
+called market data demo so that I could
+see for myself that was actually doing
+
+00:07:52.479 --> 00:08:00.560
+something and working. And I asked it to
+push that which of course it did. And uh
+
+00:07:57.360 --> 00:08:04.720
+I then came to my other my my local
+machine here and I already did this. I
+
+00:08:02.560 --> 00:08:10.479
+did like a git pull so that the latest
+code would come down to my computer. And
+
+00:08:07.840 --> 00:08:13.919
+then I thought, all right, now it's time
+to try out this demo. Let's see what it
+
+00:08:12.160 --> 00:08:18.879
+looks like. So I asked it for a demo
+that could run in a terminal like this,
+
+00:08:16.720 --> 00:08:23.199
+like not a fancy graphical demo that
+could prove that the market data
+
+00:08:20.800 --> 00:08:29.440
+simulator was working and able to
+generate market data. So I cd back end
+
+00:08:26.240 --> 00:08:35.560
+and then I wanted to go UV run market
+data demo. That's what I should be able
+
+00:08:30.960 --> 00:08:35.560
+to do. Let's see what happens. Whoa.
+
+00:08:36.800 --> 00:08:44.080
+Uh, wow. So, take that in for a second.
+So, you're seeing a bunch of tickers
+
+00:08:41.760 --> 00:08:48.320
+here. Prices changing here. This is the
+change appearing in red and green and
+
+00:08:46.080 --> 00:08:54.560
+things happening and these spark lines
+is like a textbased graph of the
+
+00:08:51.120 --> 00:09:01.600
+movement of these stock tickers. Uh, and
+uh, yeah, come on. This is fantastic. Uh
+
+00:08:58.399 --> 00:09:05.200
+this this is all like zeroshot stuff as
+they say which means this isn't based on
+
+00:09:03.760 --> 00:09:10.399
+it not working and then me giving
+feedback and then it working. This is
+
+00:09:07.279 --> 00:09:17.360
+just the demo that that I asked for just
+working first time pushed to GitHub just
+
+00:09:13.680 --> 00:09:21.200
+like that. Uh so I I absolutely love it.
+So I I present this to you and hopefully
+
+00:09:19.519 --> 00:09:25.839
+you'll be able to get similar kinds of
+things by asking for it for a demo just
+
+00:09:23.200 --> 00:09:25.839
+like this.
+

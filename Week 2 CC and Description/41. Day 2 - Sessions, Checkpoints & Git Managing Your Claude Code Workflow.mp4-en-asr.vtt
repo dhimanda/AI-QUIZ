@@ -1,0 +1,516 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.240 --> 00:00:08.160
+Okay, so the next set of commands we're
+going to look at are all around managing
+
+00:00:05.200 --> 00:00:11.440
+your your workflow, your journey within
+Claude Code, and it's very flexible.
+
+00:00:10.480 --> 00:00:14.240
+There are a lot of different ways of
+doing it. And it can be muddling because
+
+00:00:13.040 --> 00:00:17.359
+it's almost like there's too many
+different ways of doing something that's
+
+00:00:15.519 --> 00:00:21.119
+quite similar, which is just sort of
+taking checkpoints of how you're going
+
+00:00:19.520 --> 00:00:24.240
+or being able to get back to where you
+were before. There's a few different
+
+00:00:22.960 --> 00:00:27.359
+ways of doing it and I'm going to
+explain them and how they fit together.
+
+00:00:25.680 --> 00:00:30.880
+And then I'm going to tell you how how I
+do it myself. You could do it the way I
+
+00:00:29.199 --> 00:00:36.480
+do it or do it your own way. That's the
+whole idea of it being flexible. Okay.
+
+00:00:32.800 --> 00:00:40.320
+So, Claude has two levels of granularity
+of how you can think about the journey
+
+00:00:38.640 --> 00:00:43.840
+you're having with Claude and go back to
+different points in time. And the first
+
+00:00:42.640 --> 00:00:48.879
+of them, the highest level of
+granularity are things called sessions.
+
+00:00:46.480 --> 00:00:53.199
+And a session represents a complete
+state of your conversation with Claude,
+
+00:00:51.120 --> 00:00:57.760
+of the context with with the
+conversation's got in it and other stuff
+
+00:00:54.800 --> 00:01:02.000
+you're doing. That is the session. And
+you can name your session at any point.
+
+00:00:59.920 --> 00:01:05.519
+Give it a name and then that sort of
+records the the state of the session at
+
+00:01:03.840 --> 00:01:10.799
+that point when you named it. And then
+later you can choose to resume from any
+
+00:01:08.400 --> 00:01:15.760
+named session and it will go back to
+that state of the context at that point.
+
+00:01:13.600 --> 00:01:19.200
+And that is a session. In fact, you can
+just choose to resume Claude from
+
+00:01:17.600 --> 00:01:22.640
+wherever you were when you last quit
+Claude Claude. There's a sort of let's
+
+00:01:20.799 --> 00:01:26.799
+just resume from from where I just was.
+Uh or you can name a session and resume
+
+00:01:24.799 --> 00:01:30.400
+from that session. That's the idea
+behind a session. That sounds like the
+
+00:01:28.640 --> 00:01:34.079
+easy one. That makes total sense, right?
+Just worth noting that when you do that,
+
+00:01:32.000 --> 00:01:38.320
+you're resuming to the conversation.
+You're not resuming to the state of the
+
+00:01:36.159 --> 00:01:41.360
+code and the repo at that point. Just
+the context and conversation. All right.
+
+00:01:40.240 --> 00:01:43.680
+Hopefully, that's clear. So, you're
+thinking, what's the what's the other
+
+00:01:42.400 --> 00:01:46.799
+one then? That there can't be anything
+more than that. There is something else.
+
+00:01:44.880 --> 00:01:50.479
+There's something called checkpointing.
+And checkpointing applies to a specific
+
+00:01:49.280 --> 00:01:55.119
+session. The session that you're
+currently on, you're there using Clawed
+
+00:01:52.399 --> 00:02:00.079
+Code. Every single prompt that you send
+to Claude Code, every one of those is
+
+00:01:57.520 --> 00:02:04.240
+considered a sort of step in time. Each
+prompt, each one is considered a
+
+00:02:02.079 --> 00:02:10.000
+checkpoint. And you can do what's called
+rewinding, which is going back step by
+
+00:02:07.759 --> 00:02:13.760
+step in the conversation you're having
+to that point in time. And that process
+
+00:02:12.319 --> 00:02:17.280
+of having this sort of step-by-step
+prompt and being able to rewind is
+
+00:02:15.680 --> 00:02:21.040
+called checkpointing. And you can see
+it's a much finer granularity than
+
+00:02:19.520 --> 00:02:25.200
+sessions, which are which are big
+things. But the nice thing about these
+
+00:02:22.879 --> 00:02:28.720
+these checkpoints you can rewind is that
+you can choose, do I just want to rewind
+
+00:02:26.959 --> 00:02:33.680
+just the conversation to go back to
+where I was with Claude, or do I want to
+
+00:02:30.800 --> 00:02:38.000
+actually revert the code back to where
+it was back then? If Claude made a bunch
+
+00:02:36.000 --> 00:02:42.400
+of changes, I want it to undo those
+changes and get back to the state I was
+
+00:02:40.319 --> 00:02:47.440
+at right there. Then you can do that.
+And that's pretty cool. But there is a
+
+00:02:44.239 --> 00:02:51.280
+catch. When you go back, Claude knows
+about the changes it's just made. And
+
+00:02:49.440 --> 00:02:55.680
+those are the ones that it can revert to
+take you back to where you were. But if
+
+00:02:53.519 --> 00:03:00.560
+as part of this particular prompt,
+Claude ran a script, say, on your
+
+00:02:58.720 --> 00:03:04.480
+computer, and that script did a few
+things which included changing some
+
+00:03:02.080 --> 00:03:07.360
+files, then Claude can't revert those.
+It doesn't know about those. Or if you
+
+00:03:06.159 --> 00:03:10.879
+did something that ran a script that
+that made some changes to files, Claude
+
+00:03:09.200 --> 00:03:14.640
+isn't actually keeping like a copy of
+your disc at each of these points. So
+
+00:03:12.800 --> 00:03:18.319
+all it can do is undo the changes it
+knows about. So you have to be quite
+
+00:03:16.400 --> 00:03:22.000
+quite aware of what's going on and
+exactly how you're going backwards if
+
+00:03:20.400 --> 00:03:25.840
+you choose to go backwards in terms of
+the code as well as the conversation.
+
+00:03:24.480 --> 00:03:30.640
+But that's the difference between the
+session and the checkpointing session
+
+00:03:27.920 --> 00:03:33.040
+resuming checkpoint rewinding. It can be
+a bit confusing until you've heard it
+
+00:03:31.920 --> 00:03:36.560
+clearly like this and you thought about
+it and you got it clear in your mind.
+
+00:03:34.799 --> 00:03:39.519
+Just always always come back to this if
+you're doing one or the other to be
+
+00:03:38.000 --> 00:03:42.799
+clear on what you're doing and we will
+try out both. But there is something
+
+00:03:41.200 --> 00:03:45.519
+else as well. There is something else
+and hopefully you're already thinking
+
+00:03:43.920 --> 00:03:49.840
+about that something else. That
+something else a different level of
+
+00:03:46.959 --> 00:03:55.920
+granularity again it's sort of just
+orthogonal really is the bulletproof the
+
+00:03:53.680 --> 00:04:01.040
+proper way to manage your code. It's
+git. You've got git which is taking a
+
+00:03:59.120 --> 00:04:04.959
+snapshot of your code at each point
+that's not related to the context of
+
+00:04:02.640 --> 00:04:10.239
+your conversation with with with claw
+but it's related to your code. and git
+
+00:04:07.519 --> 00:04:14.879
+commits are the proper way to take a
+full snapshot of where you are from the
+
+00:04:12.480 --> 00:04:19.359
+code point of view and and be able to
+revert back to any one point. So you've
+
+00:04:17.440 --> 00:04:22.320
+really got these sort of three three
+toolings. You've got the sort of the
+
+00:04:20.799 --> 00:04:25.759
+management of the session in terms of
+your overall framing with Claude being
+
+00:04:24.000 --> 00:04:28.800
+able to go back to to where how we were
+talking to Claude a month ago. Uh
+
+00:04:27.440 --> 00:04:33.040
+checkpointing which is really about
+stepping forwards and backwards through
+
+00:04:30.639 --> 00:04:38.240
+the current conversation. And then git,
+of course, which is the the long-term
+
+00:04:36.080 --> 00:04:42.400
+way of managing every single possible
+point. And you could be doing a git
+
+00:04:40.000 --> 00:04:46.000
+commit many times even even during a
+conversation. So so it's not like that
+
+00:04:44.479 --> 00:04:50.320
+has to be at a higher level of
+granularity necessarily. So you might be
+
+00:04:48.000 --> 00:04:53.840
+forgiven for thinking with with all of
+these possibilities, how do I know which
+
+00:04:51.759 --> 00:04:58.080
+is the right one to do? Like which one
+do I do? And the the short answer is
+
+00:04:55.759 --> 00:05:02.400
+that that really it should depend on
+what works best for your mode of
+
+00:05:00.560 --> 00:05:06.800
+working. I can tell you the way I like
+to work and you can choose to to to do
+
+00:05:05.199 --> 00:05:10.880
+what I do or do something completely
+different. These tools are designed to
+
+00:05:08.639 --> 00:05:17.600
+work around your workflow, not the other
+way round. My personal workflow so so
+
+00:05:14.000 --> 00:05:22.720
+very much I use Git a lot and so I will
+like to commit as I go and make sure
+
+00:05:20.160 --> 00:05:27.840
+that I know what what my various commits
+are doing. I I will occasionally use
+
+00:05:25.520 --> 00:05:32.479
+checkpointing if something's gone wrong
+as a way to go back, but it's not like
+
+00:05:30.000 --> 00:05:36.160
+I'm super likely to do that. It can be
+useful, and I'm less likely to go back
+
+00:05:34.560 --> 00:05:39.039
+for for the code changes it's made,
+unless it's something really immediate
+
+00:05:37.520 --> 00:05:44.000
+that it just did did wrong that we can
+just rewind to right away. Uh but but
+
+00:05:41.520 --> 00:05:50.720
+more more likely than not, I'm I'm more
+likely to to be use Git to go back to to
+
+00:05:47.199 --> 00:05:55.600
+a previous commit. Um and I use markdown
+files as my way to track progress. It's
+
+00:05:53.520 --> 00:06:01.039
+quite boring and old school of me. It's
+very 2025 of me to use things like
+
+00:05:58.400 --> 00:06:05.199
+claude.mmd and then plan.mmd as you saw
+and various others to keep note of
+
+00:06:02.800 --> 00:06:10.240
+what's happening. And I like to to go
+back to to Claude's sort of frame of
+
+00:06:07.600 --> 00:06:14.319
+mind using these markdown files, these
+memory files as my way of tracking
+
+00:06:12.720 --> 00:06:19.199
+progress in a way that I can really
+understand. And I honestly recommend you
+
+00:06:16.400 --> 00:06:22.880
+do the same using sessions and so I can
+go back to the conversation with Claude
+
+00:06:20.960 --> 00:06:26.160
+as of a week ago. I find that very
+confusing. It's hard to keep track of
+
+00:06:24.880 --> 00:06:30.720
+what we were saying and what's in
+context. I prefer to use files for that
+
+00:06:28.639 --> 00:06:35.600
+to have a crystal clear understanding of
+where we are in this project together.
+
+00:06:33.360 --> 00:06:38.960
+Um, but many people use sessions and
+many people use them successfully. So, I
+
+00:06:37.199 --> 00:06:43.199
+don't want to discount it. You should
+get used to to whatever works for your
+
+00:06:40.880 --> 00:06:48.720
+workflow. Okay. So, here we are back in
+Claude again. And I'm going to say uh
+
+00:06:45.600 --> 00:06:57.919
+for our conversation
+today, I'd like you to be witty and
+
+00:06:54.240 --> 00:07:02.080
+snarky with me, please.
+Let's put that in there. See how it
+
+00:07:00.479 --> 00:07:08.639
+responds to that. It's thinking about
+that. Thought for a second. Ah, you want
+
+00:07:05.840 --> 00:07:14.479
+the premium claw experience wit included
+at no extra charge. Consider it done.
+
+00:07:12.400 --> 00:07:18.479
+So, what chaos are we driving into
+today?
+
+00:07:16.479 --> 00:07:23.440
+All right, that's that's fun. Uh, and
+now with this, I'm going to to name this
+
+00:07:20.960 --> 00:07:31.599
+session, which you do with the uh uh
+rename command. Rename. And we give it a
+
+00:07:26.319 --> 00:07:38.000
+name. We will call it snarky claude.
+Session renamed to snarky claude. And
+
+00:07:34.160 --> 00:07:43.840
+what we will now do is exit Claude code.
+Gone. All right. And now when we resume
+
+00:07:41.520 --> 00:07:48.720
+Claude, we can decide how we want to do
+that. So I can just type Claude and up
+
+00:07:46.479 --> 00:07:52.440
+comes Claude like this. Uh please
+summarize the project.
+
+00:07:53.039 --> 00:08:02.479
+Uh and we will get a summary from Claude
+that will not be in a snarky style. At
+
+00:07:57.520 --> 00:08:06.879
+least I hope. Uh here we go. Um very
+good. It's a very sensible business-like
+
+00:08:05.360 --> 00:08:11.599
+summary from Claude. Just what we would
+expect. Uh, we will now come out of
+
+00:08:09.199 --> 00:08:17.199
+this. Control C twice to come out. And
+we will now try and bring back the ghost
+
+00:08:14.720 --> 00:08:22.160
+of Snarky Claude. Okay. And now I'm
+going to run Claude with Claude dash
+
+00:08:19.360 --> 00:08:28.720
+dash resume. Start up Claude with
+resume. And uh it's uh it it tells me I
+
+00:08:25.840 --> 00:08:33.200
+can resume session one of eight. Uh the
+most recent one is please summarize the
+
+00:08:30.639 --> 00:08:36.719
+project. The one before that is snarky
+Claude. You can see it has a name
+
+00:08:34.560 --> 00:08:42.159
+because we named it that way. We will go
+into that. Uh we are back inside Snarky
+
+00:08:40.000 --> 00:08:48.000
+Claude and I will now say please
+summarize the project
+
+00:08:46.080 --> 00:08:52.959
+and we will see how Snarky Claude
+decides to summarize the project for us.
+
+00:08:50.640 --> 00:09:01.279
+Uh here it goes. It's thinking about
+that. Uh and um we'll let it do its
+
+00:08:56.720 --> 00:09:05.040
+thing. Uh here we go.
+Uh you might just I mean you can already
+
+00:09:03.600 --> 00:09:09.279
+see the ender. want me to dig into
+anything specific or we here to break
+
+00:09:06.959 --> 00:09:14.080
+something today.
+Uh based on the here's the gist camb
+
+00:09:12.399 --> 00:09:22.160
+board with an AI sidekick that actually
+does stuff. Uh very nice. Uh and uh
+
+00:09:19.040 --> 00:09:26.480
+yeah, the vibe keep it simple. Don't
+overengineer. Prove problems before
+
+00:09:24.080 --> 00:09:31.839
+fixing them. Basically the opposite of
+most enterprise projects I've seen. All
+
+00:09:29.440 --> 00:09:35.839
+right, that's snarky claude. Very nice.
+That is sessions working for us.
+

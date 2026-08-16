@@ -1,0 +1,590 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.480 --> 00:00:09.200
+Okay. So, here I am back in in Jira.
+Remember Jira? I'm going to create
+
+00:00:06.240 --> 00:00:12.480
+another issue, another the work item,
+whatever they call now, a task. What
+
+00:00:10.719 --> 00:00:17.119
+needs to be done? And I'm going to
+describe a more sophisticated task than
+
+00:00:14.799 --> 00:00:20.400
+that simple website thing. Let's let's
+put something in here that's some real
+
+00:00:18.480 --> 00:00:24.400
+functionality that we want to build.
+Okay. So, I'm going to create a new
+
+00:00:21.760 --> 00:00:34.880
+task. And the task is going to be uh to
+create um a data set of legal
+
+00:00:31.679 --> 00:00:44.800
+document templates
+that the system will later um be able to
+
+00:00:41.120 --> 00:00:49.039
+um modify for the user. That explains
+what we need to do. There we go. That is
+
+00:00:46.480 --> 00:00:52.719
+the item. Let's double click into it to
+bring it up and add some details. And
+
+00:00:51.360 --> 00:00:57.600
+first, just to show you, we're going to
+be tapping into this resource uh by a
+
+00:00:55.680 --> 00:01:03.280
+company called Common Paper, which is a
+fabulous resource. It is a set of repos
+
+00:01:00.559 --> 00:01:09.680
+that this company has which contains
+draft legal documents like a mutual NDA,
+
+00:01:06.880 --> 00:01:14.799
+a classic document. And in each case, in
+these in these uh repos, they've got a
+
+00:01:11.680 --> 00:01:20.320
+markdown version of it, which is exactly
+what what LLM love for these things.
+
+00:01:17.759 --> 00:01:25.439
+It's got a markdown version of it and
+it's also they're all under the creative
+
+00:01:22.880 --> 00:01:30.799
+commons license which means that you can
+use them and modify them for free which
+
+00:01:27.920 --> 00:01:35.600
+is great and so this is a good source of
+data for us for this project and that is
+
+00:01:33.200 --> 00:01:39.280
+precisely what I'm going to tell uh in
+the description of this task. The task
+
+00:01:37.759 --> 00:01:43.040
+is create a data set of legal
+documentation legal document templates
+
+00:01:41.600 --> 00:01:46.560
+that the system will later be able to
+modify for the user. And I'm going to
+
+00:01:44.799 --> 00:01:50.640
+paste in here some text that I just
+wrote so you don't have to watch me
+
+00:01:47.840 --> 00:01:54.799
+typing it. This task is a one-time data
+curation project. Uh call it data
+
+00:01:52.720 --> 00:01:59.600
+curation task just to avoid uh getting
+confusing there to prepare data for the
+
+00:01:56.880 --> 00:02:03.840
+pre-legal project. For context, the
+common paper GitHub account at and then
+
+00:02:01.520 --> 00:02:07.920
+a link to it contains a number of repos
+with legal agreement templates that can
+
+00:02:05.759 --> 00:02:12.640
+be copied and modified under a CC
+license. We will use this as the source
+
+00:02:10.160 --> 00:02:17.040
+of data. For this task, we will need to
+browse these repos. We will need to pull
+
+00:02:14.879 --> 00:02:21.120
+down the markdown files, put in a
+directory called templates.
+
+00:02:18.879 --> 00:02:25.280
+Additionally, make a JSON file to
+describe the different templates that
+
+00:02:22.640 --> 00:02:29.599
+we've got. And finally, put in a license
+file to recognize the license. Let me
+
+00:02:27.760 --> 00:02:33.040
+save that. That is the description of
+the action. And I'm trying to do this in
+
+00:02:31.360 --> 00:02:38.239
+a way that perhaps could be something
+that your product team or business
+
+00:02:35.200 --> 00:02:41.920
+sponsor has put in. It's a task to be
+done. It's something which is human
+
+00:02:40.400 --> 00:02:44.879
+understandable. It's quite high level
+and it will involve a number of
+
+00:02:43.200 --> 00:02:50.319
+different tasks. And in this case, it's
+like a one-time task to to retrieve
+
+00:02:48.239 --> 00:02:54.000
+data. This is something that we're going
+to want to give to Claude code. And we
+
+00:02:52.640 --> 00:02:58.720
+it's worth taking a look at this and
+seeing that it's called PL-2.
+
+00:02:56.239 --> 00:03:03.120
+That is the name of the issue. And now
+we need to go to Claude Code. But don't
+
+00:03:00.160 --> 00:03:05.920
+forget we also need to install this MCP
+server in Claude Code because we
+
+00:03:04.239 --> 00:03:09.280
+installed it just for the for the other
+project. And now we need to install it
+
+00:03:07.599 --> 00:03:12.560
+for this project. Let's go and do that.
+And then let's kick this whole thing
+
+00:03:10.480 --> 00:03:17.280
+off. Okay, so here we are back in Claude
+Code. I'm going to come out of Claude
+
+00:03:14.239 --> 00:03:22.480
+Code. Sorry, C twice quickly. Um, and
+then I'm going to paste in the Claude
+
+00:03:19.120 --> 00:03:28.319
+MCP add. This is to add the Atlassian
+MCP server. It is added in there. And
+
+00:03:25.200 --> 00:03:33.200
+now I go back into Claude. And now I do
+slashMCP to take a look at our MCP
+
+00:03:30.879 --> 00:03:37.200
+servers. And we can see that the
+Alassium one is there. It says that it's
+
+00:03:35.440 --> 00:03:41.280
+connected, but I don't believe it. We're
+going to reauthenticate. And so, in we
+
+00:03:38.879 --> 00:03:45.920
+go. I press enter. I am going to say
+reauthenticate.
+
+00:03:42.879 --> 00:03:50.159
+Up comes a browser window. Approve.
+And we're all It's requesting access.
+
+00:03:48.239 --> 00:03:54.640
+Accept.
+Authentication successful. You can go
+
+00:03:52.159 --> 00:03:59.840
+back to claude code. So, that is what we
+will do. Here we are. We believe that we
+
+00:03:57.120 --> 00:04:03.280
+are authenticated. Okay. Now, we're not
+yet going to use that feature that we
+
+00:04:02.000 --> 00:04:07.280
+just put in there because it'll be a bit
+much to sort of architect and build and
+
+00:04:05.439 --> 00:04:10.879
+code review this, which is going to be a
+onetime data exercise. We're going to
+
+00:04:09.200 --> 00:04:19.359
+use that next. First up, we're just
+going to try and say um please carry out
+
+00:04:16.479 --> 00:04:27.600
+um Jira
+issue PL2
+
+00:04:22.079 --> 00:04:33.600
+and raise a PR with your changes.
+Let's just leave it at that. Giving it a
+
+00:04:30.160 --> 00:04:37.280
+nice highlevel task. And uh it's going
+to uh for the time being I'm going to
+
+00:04:35.600 --> 00:04:42.880
+press two. I'm going to say you can do
+what you want. I'm going to let it go
+
+00:04:39.600 --> 00:04:47.199
+off and do things. It's getting an issue
+for PL2. You could see that. That seems
+
+00:04:44.800 --> 00:04:53.040
+good. We'll let it get PL2. We'll let it
+review what it needs to do.
+
+00:04:50.000 --> 00:04:58.479
+So, the main thing to bear in mind here,
+uh, it's it's, uh, it's trying to use,
+
+00:04:55.520 --> 00:05:04.199
+uh, the GitHub tool to to read common
+paper, which wasn't exactly the plan,
+
+00:05:00.240 --> 00:05:04.199
+but we'll see what it does.
+
+00:05:04.240 --> 00:05:10.880
+Uh, okay, that all seems fine. It's
+getting lots of of things. Let's uh,
+
+00:05:08.560 --> 00:05:15.120
+let's say don't ask again, get file.
+We'll let it let it keep going with what
+
+00:05:12.560 --> 00:05:18.160
+it's doing with this access token. It's
+uh, it's using the GitHub tool. I was
+
+00:05:17.039 --> 00:05:24.880
+thinking it would just browse the web
+because these are all public files, but
+
+00:05:19.680 --> 00:05:29.360
+it's using this and off it goes.
+So much going on. Uh, crazy. All right,
+
+00:05:27.840 --> 00:05:33.039
+it seems to be doing all the right kinds
+of things. It's It's downloading stuff.
+
+00:05:31.600 --> 00:05:37.440
+The question is, is it going to be
+writing it here? We will soon find out.
+
+00:05:35.759 --> 00:05:40.320
+I will come back in a minute when it's
+done its thing. I'm just going to show
+
+00:05:38.800 --> 00:05:43.600
+you. Actually, I'm It hasn't done its
+thing yet. It's It's like halfway
+
+00:05:41.600 --> 00:05:48.720
+through. It's got everything using the
+GitHub tools and it's now wanting to
+
+00:05:46.320 --> 00:05:52.479
+create the templates directory. And that
+sounds great. That's just what we
+
+00:05:50.080 --> 00:05:56.160
+wanted. So, I'm going to let it do that.
+Uh, it's now created the templates
+
+00:05:54.400 --> 00:06:01.600
+directory and hopefully it's now going
+to be writing a bunch of markdown files
+
+00:05:58.800 --> 00:06:05.120
+that it has downloaded from the GitHub
+repo. I was thinking it would use web
+
+00:06:03.520 --> 00:06:09.840
+searching for that. It's used the GitHub
+tool. That's what autonomy is all about.
+
+00:06:07.360 --> 00:06:16.080
+We let Claude code do what it does. Uh,
+and I will see you back here again in a
+
+00:06:12.080 --> 00:06:20.560
+second. I'm I'm continually completely
+astonished by Claude Code. So, what just
+
+00:06:18.479 --> 00:06:24.720
+happened while I watched what during
+that that uh break that was the second
+
+00:06:22.639 --> 00:06:27.360
+view that was 5 minutes for me is that
+Claude realized that the way that it was
+
+00:06:26.319 --> 00:06:31.039
+doing it, which wasn't what I was
+expecting it to do, was going to be too
+
+00:06:29.440 --> 00:06:36.560
+slow. It was going to involve bringing
+long files into its context, which
+
+00:06:33.440 --> 00:06:39.360
+wasn't a smart way to do it. And so it
+downloaded a few documents, but it's
+
+00:06:38.000 --> 00:06:42.319
+come up with a better way, which is what
+I thought it was going to do originally,
+
+00:06:40.720 --> 00:06:45.680
+which is just run some commands to
+download them directly. And now it's
+
+00:06:44.080 --> 00:06:49.680
+asking me for permission. And that's
+just incredible. It's like it hit a
+
+00:06:47.680 --> 00:06:53.919
+roadblock. It figured out what was going
+on and how to work around that properly.
+
+00:06:52.080 --> 00:06:59.039
+I think this is an example of the
+inflection point that we saw last
+
+00:06:56.160 --> 00:07:03.360
+November where where this kind of of
+intellect wasn't possible before. So
+
+00:07:01.680 --> 00:07:07.120
+yes, I'm going to say yes, absolutely,
+it can do that. And bam, all the files
+
+00:07:05.599 --> 00:07:11.840
+appear, which is what I thought was
+going to happen before. Uh, and it now
+
+00:07:09.120 --> 00:07:17.440
+has uh has has done a decent job. It's
+absolutely staggering. Uh, Claude Code
+
+00:07:14.160 --> 00:07:21.680
+then went ahead. It did a pull request.
+It first tried to use the GitHub command
+
+00:07:20.240 --> 00:07:25.599
+line tool to do it, which I don't have
+installed. That didn't work. And then it
+
+00:07:23.759 --> 00:07:29.759
+realized, oh, but I've got the tool
+through my MCP server. So, it used the
+
+00:07:27.680 --> 00:07:34.400
+tool to make a PR request. And now when
+I go into GitHub at the pre-legal, I go
+
+00:07:32.080 --> 00:07:38.479
+to pull requests. There is here add
+legal document templates data set. I
+
+00:07:36.639 --> 00:07:42.400
+click into this. It's got all of these
+details that it put. It says generated
+
+00:07:40.639 --> 00:07:45.680
+by claw code at the bottom. These are
+the templates. This is the description.
+
+00:07:44.319 --> 00:07:49.440
+Let's have a look at the code that it
+wrote. This is of course also sitting on
+
+00:07:47.440 --> 00:07:54.160
+my uh on my local box. There's one
+commit. These are the files that it
+
+00:07:51.199 --> 00:08:00.080
+changed. It built all of these uh
+different um markdown files. It also
+
+00:07:57.280 --> 00:08:06.080
+created a a license.ext text which I
+asked it to do which which describes the
+
+00:08:02.400 --> 00:08:11.199
+fact that this is a um creative common
+license and it made a catalog.json file
+
+00:08:09.360 --> 00:08:16.080
+and that is something which I asked it
+to again in the in the Jira task which
+
+00:08:14.000 --> 00:08:20.240
+lays out what has to happen. Absolutely
+amazing. Now back here in claw code
+
+00:08:18.080 --> 00:08:24.479
+though it's struggling a bit. It's
+struggling because it realized that it
+
+00:08:22.080 --> 00:08:29.199
+would be nice for it to also update the
+Jura issue status to mark it as complete
+
+00:08:27.280 --> 00:08:33.360
+and it's been sitting there waiting on
+Atlassian. And I happen to suspect cuz
+
+00:08:31.520 --> 00:08:37.200
+I've seen this before that this happens
+because you have to continually
+
+00:08:35.039 --> 00:08:39.919
+reauthenticate with Atlassian. I've seen
+a lot of complaints about this in the
+
+00:08:38.640 --> 00:08:43.839
+community. This is something that people
+know about and it just hangs clawed code
+
+00:08:42.240 --> 00:08:50.720
+like this. So, what I'll have to do now
+is do an escape like this, and I'm going
+
+00:08:47.040 --> 00:08:54.800
+to have to do uh slash uh MCP, and I'm
+going to have to come in and
+
+00:08:51.760 --> 00:08:58.720
+reauthenticate against Atlassian uh
+before this is going to work. So, here
+
+00:08:56.320 --> 00:09:03.440
+we go. I select the Atlassian one. I
+press enter. I say reauthenticate. It's
+
+00:09:01.680 --> 00:09:09.440
+then going to spin this up. I say
+approve. I scroll down. I say accept. It
+
+00:09:07.279 --> 00:09:15.279
+then says I can return to Claude Code. I
+bring back up Claude Code. And now I'm
+
+00:09:11.600 --> 00:09:20.000
+going to say please
+try marking
+
+00:09:17.680 --> 00:09:24.959
+the Jura
+issue complete again.
+
+00:09:23.200 --> 00:09:29.360
+And we'll let it have a second shot at
+that to see if it works this time now
+
+00:09:27.200 --> 00:09:32.240
+that we've reauthenticated. Uh but this
+is something I can see already. It's
+
+00:09:30.800 --> 00:09:36.240
+it's already got past where it was
+before. So that's something to watch out
+
+00:09:33.440 --> 00:09:39.839
+for. And this is a classic example. Uh
+let's see transition commands. That
+
+00:09:37.920 --> 00:09:45.200
+sounds fine to me. is a classic example
+of the slight flakiness of MCP uh which
+
+00:09:42.959 --> 00:09:49.440
+you have to have one one eye open for
+and just the sort of try it again kind
+
+00:09:47.440 --> 00:09:53.760
+of line of attack is usually the one
+that works. And check this out. You can
+
+00:09:51.519 --> 00:09:57.680
+see here it's telling us it's done. It's
+telling us about what it created and
+
+00:09:55.680 --> 00:10:01.519
+it's telling us about the catalog.json
+and the license.txt.
+
+00:09:59.600 --> 00:10:06.240
+And now with this we can just say that
+that it's it says it's marked PL2 as
+
+00:10:04.320 --> 00:10:12.480
+done. I think we can probably merge the
+PR. So I'll say please go ahead and
+
+00:10:10.959 --> 00:10:20.720
+merge
+the PR and also uh then switch
+
+00:10:18.399 --> 00:10:26.560
+uh the branch
+to main.
+
+00:10:23.839 --> 00:10:30.040
+Let's uh do that.
+Off it goes.
+
+00:10:31.600 --> 00:10:38.399
+Oh, that's interesting. I don't have
+merge permissions. Uh that's uh so it's
+
+00:10:36.399 --> 00:10:42.800
+it's got a workaround by merging locally
+and pushing to main which is another way
+
+00:10:40.320 --> 00:10:48.480
+to do it. Again ingenious absolutely
+ingenious. So my fine token doesn't give
+
+00:10:45.760 --> 00:10:53.360
+give us access to do that but because I
+I locally we could do a merge and then
+
+00:10:50.800 --> 00:10:58.160
+push to main and uh that that's that's
+how it's done it. Again it's just
+
+00:10:55.440 --> 00:11:02.160
+phenomenal how claw code is able to
+understand the the reason behind
+
+00:11:00.480 --> 00:11:06.160
+problems and then come up with a
+rational solution to it. For all the
+
+00:11:04.160 --> 00:11:09.760
+times that I moan about how sometimes it
+jumps to conclusions and puts on
+
+00:11:07.760 --> 00:11:15.519
+band-aids to work around problems,
+sometimes it problem solves really
+
+00:11:11.760 --> 00:11:15.519
+effectively. And that's what we've seen
+

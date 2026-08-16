@@ -1,0 +1,371 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:08.080
+The final point I want to make about
+this is a sobering one which is about
+
+00:00:05.200 --> 00:00:14.639
+not getting caught up in the hype of
+agent coding. Now look generally I am a
+
+00:00:12.320 --> 00:00:19.119
+huge fan very passionate about the
+impact that LLM can make to software
+
+00:00:16.560 --> 00:00:24.240
+development but there is certainly some
+hype out there that is unwarranted.
+
+00:00:21.920 --> 00:00:30.560
+There are some tasks for sure where
+using LLM can make it order of magnitude
+
+00:00:28.160 --> 00:00:34.719
+faster to deliver. If you're building a
+boilerplate React front end, which is
+
+00:00:32.960 --> 00:00:38.879
+going to involve a lot of componentry
+and you've got a very good sense of what
+
+00:00:36.320 --> 00:00:43.200
+you want the UI to look like, an LLM can
+do that in a matter of minutes when it
+
+00:00:41.520 --> 00:00:47.760
+would take a great front-end person
+maybe maybe a day and it would take me
+
+00:00:45.120 --> 00:00:53.920
+several weeks. So certainly for me,
+order of magnitude difference. But there
+
+00:00:50.640 --> 00:00:58.320
+are some tasks where LLMs are only
+incrementally faster than just doing it
+
+00:00:56.399 --> 00:01:02.559
+yourself. And indeed, I've had
+experiences where I feel like it has
+
+00:01:00.320 --> 00:01:06.320
+actually slowed me down because I'd had
+to go in and rewrite something where
+
+00:01:04.080 --> 00:01:13.119
+there was a a mistake, a very subtle
+mistake that I wasn't expecting. Netnet,
+
+00:01:09.280 --> 00:01:17.520
+there is no question that LLMs are a
+huge value ad and that I'm able to
+
+00:01:15.119 --> 00:01:23.040
+achieve a lot more as a result of using
+them. How much more depends critically
+
+00:01:20.240 --> 00:01:27.520
+on the project. more highly innovative
+projects with larger code bases and the
+
+00:01:25.600 --> 00:01:31.360
+improvement becomes more incremental.
+Starting out with something completely
+
+00:01:29.040 --> 00:01:34.640
+new where it's a complete green fields
+project and where I I'm working on
+
+00:01:33.759 --> 00:01:38.720
+something where there's plenty of
+boilerplate code in there like like a as
+
+00:01:36.880 --> 00:01:45.920
+I say a sort of boilerplate React front
+end. That's the kind of thing where LLMs
+
+00:01:42.320 --> 00:01:52.960
+can change the game. It uh days turn
+into minutes. It can be that radical. So
+
+00:01:49.520 --> 00:01:58.240
+there are both extremes there as a in in
+aggregate for me it is a multiplier but
+
+00:01:55.840 --> 00:02:03.439
+it's not a 10x and that's something
+which I think we all have to have that
+
+00:02:00.399 --> 00:02:07.840
+kind of of very reasonable grounded
+opinion and be sure to set the record
+
+00:02:05.520 --> 00:02:11.360
+straight if people uh there there's
+people that are that are too caught up
+
+00:02:09.520 --> 00:02:16.319
+in the hype and there are also now
+there's a sort of movement of people who
+
+00:02:13.440 --> 00:02:19.599
+are anti- AI perhaps because they
+they've they've got frustrated by the
+
+00:02:18.000 --> 00:02:24.720
+hype and they've had some negative
+experiences. So, it's incumbent on us to
+
+00:02:22.400 --> 00:02:29.200
+do the work, to learn about these tools,
+to use them, and then to set the record
+
+00:02:26.879 --> 00:02:32.720
+straight, both the pros and the cons, be
+able to explain where they are highly
+
+00:02:31.040 --> 00:02:37.120
+beneficial and where they still have
+some room to grow. And as the final
+
+00:02:34.560 --> 00:02:42.239
+topic for today, I have lots of courses
+which go into tons of detail about the
+
+00:02:39.760 --> 00:02:45.680
+different LLMs out there, but it's worth
+having a quick mention of it because
+
+00:02:43.920 --> 00:02:51.040
+this is this is such an important part
+of what we're going to be doing. There's
+
+00:02:47.280 --> 00:02:56.000
+a website called artificialanalysis.ai
+and I have that right up here to show
+
+00:02:53.280 --> 00:02:59.360
+you. And this is one. This is one I know
+that I know that people don't use
+
+00:02:57.040 --> 00:03:02.480
+bookmarks anymore. If I if I say you
+should you should add this to your
+
+00:03:00.400 --> 00:03:06.640
+bookmarks. I sound like I'm I still use
+Facebook, but but you should add this to
+
+00:03:05.040 --> 00:03:11.840
+your bookmarks. Only have one bookmark.
+It should be artificialis.ai.
+
+00:03:09.040 --> 00:03:15.599
+Here it is. And uh yeah, this is this is
+a website that allows you to compare the
+
+00:03:14.080 --> 00:03:19.040
+different models. And when you bring up
+artificial analysis.ai AI, you're going
+
+00:03:17.360 --> 00:03:22.720
+to see something different to me because
+models change so fast. And you're going
+
+00:03:20.959 --> 00:03:26.239
+to be lucky that you're going to see
+you're going to have even better
+
+00:03:24.000 --> 00:03:31.120
+experiences than me. But what you you
+find on this page is various different
+
+00:03:28.720 --> 00:03:37.760
+ways to compare the different LLMs out
+there in terms of intelligence and speed
+
+00:03:34.159 --> 00:03:42.959
+and price uh dimensioned in all sorts of
+different ways and we'll look at some of
+
+00:03:39.360 --> 00:03:48.080
+them now. So this is the uh intelligence
+index which is the single uh
+
+00:03:45.920 --> 00:03:52.640
+encompassing score from this these
+people artificial analysis on how smart
+
+00:03:50.159 --> 00:03:56.959
+a model is and what you'll see is that
+in top position are the models that I
+
+00:03:55.120 --> 00:04:03.840
+mentioned all sort of around November
+2025 which was a point of inflection
+
+00:04:00.239 --> 00:04:08.720
+when suddenly uh these agentic these
+these coding agents really had a step
+
+00:04:06.720 --> 00:04:12.879
+change in terms of how much you can
+trust them. And there are still still
+
+00:04:10.720 --> 00:04:17.519
+some naysayers out there who who are
+still burnt, have scar tissue from how
+
+00:04:15.280 --> 00:04:21.199
+the models used to be before November
+2025. And you have to sort of encourage
+
+00:04:19.759 --> 00:04:26.479
+them to come back and give it another
+try because so much has changed since
+
+00:04:23.759 --> 00:04:33.520
+then. And here we have like we we used
+yesterday GPT 5.2 uh from from OpenAI
+
+00:04:30.960 --> 00:04:40.240
+that is that is considered at least by
+this index to be the smartest model.
+
+00:04:36.639 --> 00:04:44.400
+Claude Opus 4.5 comes next. It is my
+model of choice, but that's partly
+
+00:04:41.840 --> 00:04:51.040
+because I use it within Claude code and
+that whole environment is so geared
+
+00:04:47.040 --> 00:04:58.000
+towards productive coding. And then uh
+GPT 5.2 codeex is just a variant of GPT
+
+00:04:54.320 --> 00:05:05.360
+5.2 that's more designed for for coding.
+And Gemini 3 Pro is of course Google's
+
+00:05:02.479 --> 00:05:10.479
+latest strongest model, at least as of
+now. And that also scores quite well.
+
+00:05:08.639 --> 00:05:15.919
+And then before that, you see where the
+models used to be and you can see it
+
+00:05:12.320 --> 00:05:21.039
+made a big jump suddenly in uh in in
+around uh uh November of last year. And
+
+00:05:19.039 --> 00:05:24.400
+I would encourage you to spend time on
+this site. I'm not going to go through
+
+00:05:22.400 --> 00:05:29.360
+it now, but you'll see so much here,
+including this amazing chart that shows
+
+00:05:27.280 --> 00:05:34.479
+front-end model intelligence over time.
+It does have this slightly spooky way of
+
+00:05:31.759 --> 00:05:38.639
+appearing to be on a curve upwards in
+terms of intelligence. I personally
+
+00:05:36.639 --> 00:05:43.280
+think that that's because there's been a
+couple of bumps. One of them came in the
+
+00:05:40.800 --> 00:05:46.960
+last year or so with this big boost
+because of these new reasoning
+
+00:05:44.880 --> 00:05:50.080
+techniques. So, so, so I don't think
+that curve is going to continue to
+
+00:05:48.320 --> 00:05:53.600
+steepen, but you'll be able to see,
+you'll be able to go and look right now
+
+00:05:51.440 --> 00:05:59.039
+and see whether my prediction is right.
+Um, I expect to see uh more improvement
+
+00:05:56.400 --> 00:06:03.759
+this year, but but not a continual
+sharpening slope. So you will have
+
+00:06:01.840 --> 00:06:07.680
+better models than me and you should see
+that in your outputs. So have a look
+
+00:06:06.160 --> 00:06:12.800
+through this site. You'll also see a
+number of these individual tests
+
+00:06:09.600 --> 00:06:17.440
+including a specific coding related test
+that you'll see here to see what comes
+
+00:06:14.639 --> 00:06:21.680
+through strongest in terms of of coding
+and here in terms of being able to use
+
+00:06:19.600 --> 00:06:25.759
+tools and what comes through most
+strongly. And you'll you'll see here
+
+00:06:23.199 --> 00:06:30.800
+that this this open source model GLM47
+from Z.AI AI uh the the Chinese AI
+
+00:06:28.479 --> 00:06:36.880
+startup is uh is really really strong
+there. So spend some time look at this
+
+00:06:34.319 --> 00:06:40.720
+uh and uh use this incredible resource
+this amazing website to learn more about
+
+00:06:39.199 --> 00:06:44.720
+the different models and the different
+providers and find out how much the
+
+00:06:42.639 --> 00:06:49.680
+world has changed since since I look at
+artificial analysis.ai right here. And
+
+00:06:47.120 --> 00:06:53.360
+with that, that wraps up day two of week
+one. We've covered the foundations you
+
+00:06:51.520 --> 00:06:56.880
+put up with me talking more than I'll
+talk in any other point in this course.
+
+00:06:54.880 --> 00:07:00.720
+So thank you. And tomorrow we're going
+to look at tools, tools, tools. We're
+
+00:06:58.560 --> 00:07:05.759
+going to look at at cursor, co-pilot,
+codeex, anti-gravity. It's going to be
+
+00:07:03.520 --> 00:07:10.319
+really fun. I can't wait to show you all
+of that. But for now, take a moment to
+
+00:07:07.599 --> 00:07:15.280
+celebrate. You're 13% way through this
+journey. And we've got lots of great
+
+00:07:12.800 --> 00:07:15.280
+things ahead.
+

@@ -1,0 +1,638 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.160 --> 00:00:07.680
+Well, it's another yellow day. Welcome
+to week two, day two, our second day of
+
+00:00:05.839 --> 00:00:11.440
+getting into Claude Code. And we're
+going to get deeper. And you know, I
+
+00:00:09.840 --> 00:00:15.360
+love Claude Code. And hopefully you're
+getting getting the Claw Code bug
+
+00:00:12.960 --> 00:00:17.920
+yourself. And maybe you also enjoyed
+some of the others we saw yesterday.
+
+00:00:16.560 --> 00:00:22.720
+Let's quickly recap. And all the way
+back in week one, day one, I'd shown you
+
+00:00:19.840 --> 00:00:27.680
+this landscape of coding agents. Showing
+it to you again. Here we've got idees,
+
+00:00:25.439 --> 00:00:32.480
+plugins, which is mostly the same, and
+CLI. And in the IDE camp, we've got
+
+00:00:30.480 --> 00:00:37.200
+cursor, anti-gravity, winds surf. We
+didn't look at. In plugins, we've got
+
+00:00:34.800 --> 00:00:40.719
+GitHub, Copilot, and Codeex. I realized
+I think when I showed you this before, I
+
+00:00:38.719 --> 00:00:45.520
+put Codex in IDE, and it not that it
+really matters, but I guess Codex is
+
+00:00:42.160 --> 00:00:51.200
+actually a plugin into VS Code. And in
+CLI land, we've looked of course at
+
+00:00:48.079 --> 00:00:56.000
+Claude Code and Cursor and Codeex also
+came out with CLI versions really,
+
+00:00:54.000 --> 00:01:00.480
+really because of Claude Code's success.
+And so did Gemini. So with Gemini,
+
+00:00:58.239 --> 00:01:05.439
+you've got like Gemini CLI and you've
+also got anti-gravity as like two
+
+00:01:02.800 --> 00:01:10.720
+different products for using Gemini's
+models for agentic coding. And then
+
+00:01:08.320 --> 00:01:14.320
+yesterday we also had some fun with Open
+Code and AMP. And if you've fallen in
+
+00:01:12.479 --> 00:01:17.600
+love with either of those two and their
+different models, then you should use
+
+00:01:15.680 --> 00:01:21.920
+them for the rest of this week for sure.
+Much of what we're going to cover is in
+
+00:01:19.600 --> 00:01:26.240
+common in them, too. And I need to say
+this is of course a massively rapidly
+
+00:01:23.840 --> 00:01:31.600
+evolving category. There's stuff coming
+up all the time and there's also plenty
+
+00:01:28.799 --> 00:01:35.840
+of ambiguity with with even with Gemini
+CLI versus anti-gravity. So keep an eye
+
+00:01:34.079 --> 00:01:40.320
+on the resources. Ask me questions if
+anything is unclear. And you know
+
+00:01:37.840 --> 00:01:44.479
+remember my my view is that Claude code
+is here to stay. There'll be lots of
+
+00:01:42.079 --> 00:01:49.360
+other things going on all around us. But
+uh this is this is the for me anyway.
+
+00:01:47.200 --> 00:01:52.880
+This is my favorite of the bunch. And on
+that note, we're now going to go back to
+
+00:01:50.799 --> 00:01:57.600
+Claude Code and experiment with some
+commands. The main topic for today is to
+
+00:01:55.840 --> 00:02:03.280
+be looking at different commands in
+claude code including as part of that
+
+00:02:00.240 --> 00:02:06.159
+things like checkpointing. Uh so as I
+said let's go over to claw code again
+
+00:02:05.119 --> 00:02:11.440
+and we'll work through some of the
+commands. Okay. And here I am back in VS
+
+00:02:08.239 --> 00:02:16.319
+Code and I'm in my very same uh PM
+project. Why not? Uh and here I am in a
+
+00:02:14.400 --> 00:02:19.280
+terminal and I'm going to type exit
+because maybe this terminal is still set
+
+00:02:18.080 --> 00:02:22.959
+up with some of those environment
+variables we were messing around with
+
+00:02:20.959 --> 00:02:28.480
+yesterday. Let's have a completely fresh
+terminal. I think uh yes, control and
+
+00:02:25.920 --> 00:02:32.400
+shift and back tick always opens a
+completely new terminal. It's a little
+
+00:02:30.400 --> 00:02:34.959
+extra trick to know. Now, if you're
+going to follow along in claude code,
+
+00:02:33.680 --> 00:02:39.599
+then you can do exactly what I do. If
+you're in one of the other IDE, then you
+
+00:02:37.200 --> 00:02:44.239
+should look up uh what their commands
+are. But I think in in most of them,
+
+00:02:42.000 --> 00:02:48.640
+maybe all of them, commands are always
+with a slash and then the name of your
+
+00:02:46.319 --> 00:02:52.400
+command once you are in your platform.
+All right, with that, I'm going to go
+
+00:02:50.000 --> 00:02:57.280
+into Claude. by typing Claude. And here
+we are. We're in Claude code. Let's work
+
+00:02:55.360 --> 00:03:01.760
+with some commands. Okay, so once you're
+in Claude, doing a slash lets you run
+
+00:03:00.000 --> 00:03:04.959
+different commands that don't get sent
+to Claude that actually just get run in
+
+00:03:03.280 --> 00:03:08.159
+the tool. And the easiest way to find
+out all the commands you can use is just
+
+00:03:06.560 --> 00:03:11.200
+to press the down button now and read
+them with a little descriptions of them.
+
+00:03:09.680 --> 00:03:15.200
+That tells you everything you need. You
+can also do /help and get a quick
+
+00:03:13.360 --> 00:03:19.280
+summary of important commands along with
+some shortcut keys. As you can see,
+
+00:03:16.879 --> 00:03:24.159
+they're useful shortcut keys to know how
+to do various different things. Um,
+
+00:03:21.920 --> 00:03:27.360
+okay. And now let's try out some of the
+really common commands. Well, I'm just
+
+00:03:25.760 --> 00:03:31.680
+going to press escape to get out of that
+screen. And then I'm going to do well,
+
+00:03:28.879 --> 00:03:37.280
+we know/init. Init sets up the project.
+The first time you come to a project, it
+
+00:03:33.200 --> 00:03:40.799
+writes a new claude.md as it says. And I
+sometimes suggest to think about doing
+
+00:03:38.959 --> 00:03:46.000
+that yourself manually rather than doing
+/init, but it is your choice. All right.
+
+00:03:43.599 --> 00:03:49.920
+other things we already know slashmodel
+that tells you the model that you're
+
+00:03:48.080 --> 00:03:54.319
+using and lets you choose a different
+one and I've got the default one which
+
+00:03:52.319 --> 00:04:00.159
+is using opus because I've got the big
+plan escape out of that you know slash
+
+00:03:57.920 --> 00:04:03.760
+status that gives you the lay of the
+land tells you what version you're on
+
+00:04:02.239 --> 00:04:08.720
+and stuff like that gives you a set of
+the different settings and it shows you
+
+00:04:05.920 --> 00:04:13.040
+your usage so far for this session and
+for the week those are some commands
+
+00:04:11.120 --> 00:04:15.680
+that you've seen already and then a
+command command that you've also seen
+
+00:04:14.000 --> 00:04:20.799
+already which you know I use all the
+time is slashcontext
+
+00:04:18.479 --> 00:04:25.919
+all the time. This gives us our
+beautiful memory print out. Let's make
+
+00:04:23.040 --> 00:04:31.440
+that nice and big and uh happy to see it
+looking so empty after we we started the
+
+00:04:28.479 --> 00:04:35.360
+session again. That looks great. Um and
+this is uh this is something that I do
+
+00:04:33.199 --> 00:04:38.720
+all the time as you know. And along with
+that, there are a couple of commands
+
+00:04:37.040 --> 00:04:43.440
+that that go hand inhand. One of them
+we've also already met, which is
+
+00:04:40.240 --> 00:04:48.479
+compact, which kicks off a compact and
+resets everything. And it's worth doing
+
+00:04:45.840 --> 00:04:52.240
+that yourself, not letting it get into
+this dangerous territory and running it
+
+00:04:50.240 --> 00:04:56.320
+for you while it's right in the middle
+of doing some work. That can cause
+
+00:04:54.320 --> 00:05:01.280
+troubles. It just it can cause a lack of
+coherence and problems to go off the
+
+00:04:58.639 --> 00:05:05.440
+rails. You can also type compact and
+then as I said before just put some some
+
+00:05:03.680 --> 00:05:10.000
+summarization instructions here about
+what information you particularly want
+
+00:05:06.800 --> 00:05:15.520
+to keep. Uh I personally I prefer to put
+those sorts of those bits of information
+
+00:05:12.080 --> 00:05:19.120
+in claude.md myself. I rather play a
+primary role in controlling its
+
+00:05:17.280 --> 00:05:23.280
+information that way. But you should
+experiment and it gets better and better
+
+00:05:21.360 --> 00:05:27.840
+at this kind of thing as well. Maybe my
+knowledge is is sort of set from from a
+
+00:05:25.680 --> 00:05:31.520
+few months ago of using it. And then the
+other one to use to know the the other
+
+00:05:30.320 --> 00:05:37.120
+the other one also begins with the
+letter C that goes along with context
+
+00:05:33.759 --> 00:05:41.120
+and compact is the one that's clear. A
+very dangerous one to use. What clear
+
+00:05:39.280 --> 00:05:46.000
+does is absolutely wipes the
+conversation history. It's the same as
+
+00:05:43.759 --> 00:05:50.560
+basically exiting and starting a fresh
+claude. You do this to reset everything
+
+00:05:49.039 --> 00:05:55.600
+so that it's back to reading the
+agents.mmd. It's as if you started up a
+
+00:05:53.120 --> 00:06:01.199
+new claude. Sometimes it's liberating to
+do this. I actually like working this
+
+00:05:58.240 --> 00:06:05.919
+way. I like to keep my claw.mds up to
+date. I tell it to write its own files.
+
+00:06:03.600 --> 00:06:10.720
+I I make sure that everything is um is
+tidy and up to date. And then I just I
+
+00:06:08.080 --> 00:06:15.600
+either just do a slashclear or I get out
+of claw by doing C twice and then launch
+
+00:06:13.280 --> 00:06:18.880
+Claude again. And I do a context to see
+that everything is nice and clean and
+
+00:06:17.120 --> 00:06:23.360
+fresh. And that's the way I like to
+work. But often the compacting works
+
+00:06:21.360 --> 00:06:28.160
+pretty well too. And of course it's much
+faster to do it that way. Okay, another
+
+00:06:25.520 --> 00:06:32.960
+one to show you is slashconfig. I do
+that, it shows me, it's actually the
+
+00:06:30.080 --> 00:06:37.280
+same as the second page of the stats
+that we were looking at before. Uh the
+
+00:06:35.280 --> 00:06:41.440
+status uh but it's it's sometimes useful
+and slash usage takes you to that third
+
+00:06:39.199 --> 00:06:46.479
+page. And then uh the other one I wanted
+to show you, yeah, is is actually a
+
+00:06:43.120 --> 00:06:51.759
+slash stats uh similar to status but
+stats. This gives you a rather pleasing
+
+00:06:48.639 --> 00:06:56.960
+diagram of your usage of Claude code. Uh
+there there you see an an overview and
+
+00:06:54.000 --> 00:07:01.039
+the models tokens per day. Uh for
+whatever reason my and look at that it
+
+00:06:59.039 --> 00:07:04.720
+shows my moonshot Kimmy K2 at the bottom
+there. Uh for whatever reason uh my my
+
+00:07:03.120 --> 00:07:08.880
+history is only as of this year. I've
+used claw code for some time. It may be
+
+00:07:06.240 --> 00:07:11.440
+that I I changed the plan. Uh but uh but
+this is what what it shows. But if
+
+00:07:10.240 --> 00:07:16.639
+you've been using cl code for a while
+you'll see a nice uh a busy screen
+
+00:07:14.400 --> 00:07:21.039
+there. And this is fun to track to see
+as you are using uh using the platform.
+
+00:07:19.840 --> 00:07:25.280
+Okay. And over time, we're going to
+learn some of the key shortcuts as you
+
+00:07:23.520 --> 00:07:28.800
+get more comfortable, familiar with it.
+But one to know perhaps that's used, it
+
+00:07:27.599 --> 00:07:35.280
+used to be used a lot more than it is
+these days is shift tab. Shift tab
+
+00:07:32.160 --> 00:07:40.560
+switches to accept edits on, which means
+that things just get accepted. And shift
+
+00:07:37.680 --> 00:07:46.400
+tab again is plan mode on. That's back
+back to this idea of a plan mode where
+
+00:07:42.800 --> 00:07:51.199
+it plans out first. Um and uh yeah, the
+plan mode is something which is um is is
+
+00:07:49.440 --> 00:07:55.360
+not used as much anymore because now it
+tends to be good at deciding itself when
+
+00:07:53.680 --> 00:07:59.599
+it's right to be planning and when it's
+right to be doing. So particular with
+
+00:07:57.199 --> 00:08:04.000
+Opus, it's less necessary to force it to
+be on a plan mode. Um and yeah, accept
+
+00:08:02.479 --> 00:08:08.879
+edits on just means that it's going to
+accept file edits. Uh it's not quite the
+
+00:08:06.639 --> 00:08:14.800
+same as yolo mode on Claude that we are
+going to do proper yolo mode at at some
+
+00:08:11.520 --> 00:08:18.400
+point. Um, okay. So, that is uh that
+that is some of the the really common I
+
+00:08:16.479 --> 00:08:21.759
+put it back to to normal. Some of the
+very common shortcut keys. Another one
+
+00:08:20.400 --> 00:08:27.919
+you might want to look out for is
+control O puts it on a detailed
+
+00:08:24.800 --> 00:08:31.280
+transcript mode. Detailed um and press
+control again to toggle that off. Um
+
+00:08:29.840 --> 00:08:34.560
+when it's on that detailed mode, you get
+a lot more information printed and that
+
+00:08:33.279 --> 00:08:38.320
+can be pretty interesting to see
+everything that's going on should you
+
+00:08:36.159 --> 00:08:42.560
+wish to get the gory detail. Okay,
+that's some of the common commands in
+
+00:08:41.039 --> 00:08:45.200
+claude code. And then just some other
+things to mention about the setup of
+
+00:08:43.839 --> 00:08:50.080
+claw code. There is at the top here,
+you'll see a directory called claude
+
+00:08:47.760 --> 00:08:54.480
+that has been creating for us as we've
+been going. And in there are some
+
+00:08:51.760 --> 00:08:58.480
+settings in a JSON file. And if I show
+you this, you know all those times when
+
+00:08:56.320 --> 00:09:02.480
+we've been pressing the button to to
+say, okay, I accept you can do this and
+
+00:09:00.959 --> 00:09:07.680
+by the way, you can do this again in the
+future. Whenever you do this, Claude
+
+00:09:04.399 --> 00:09:11.839
+Code adds a line in this JSON file with
+all of the things that it's allowed to
+
+00:09:09.600 --> 00:09:15.680
+do. And if you wish, you can come in and
+edit this permissions file directly
+
+00:09:13.600 --> 00:09:19.920
+yourself and give it the ability to do
+any of these things. That gives you this
+
+00:09:17.680 --> 00:09:23.279
+kind of uh instant ability to manage the
+permissions that it's doing. And you can
+
+00:09:21.600 --> 00:09:27.600
+also remove a permission by just taking
+out of the JSON here. There's also a
+
+00:09:25.200 --> 00:09:33.920
+command slashpermissions which you can
+use uh to um to to uh see the different
+
+00:09:32.160 --> 00:09:38.320
+permissions that it's got to add a new
+rule and to remove a rule and so on. But
+
+00:09:36.560 --> 00:09:42.080
+it's easy to edit it directly here too.
+And a final thing worth knowing is that
+
+00:09:39.839 --> 00:09:47.200
+within claude code you can use the at
+sign to represent a file path uh the
+
+00:09:45.200 --> 00:09:51.440
+contents of a file. And that's a good
+trick for for knowing about when you're
+
+00:09:48.880 --> 00:09:55.519
+building some of these uh these various
+uh u files that Claude will read. So to
+
+00:09:54.080 --> 00:10:00.880
+give you an example, I can go into
+claude.md right here. This is our
+
+00:09:57.600 --> 00:10:08.240
+claude.md. And if I want the plan to be
+in this file, then I can come here and I
+
+00:10:03.440 --> 00:10:12.399
+can just say uh plan detailed plan
+as a heading. Let's make that a uh a
+
+00:10:10.640 --> 00:10:20.600
+heading like that. And then I can just
+do at and now I can put the path to that
+
+00:10:15.600 --> 00:10:20.600
+detailed plan. So I can say docs/pl.
+
+00:10:20.800 --> 00:10:28.320
+And that plan file will now be inserted
+in there. and included in the claude.mmd
+
+00:10:25.600 --> 00:10:32.240
+file. Uh, and that is a common trick.
+Another neat trick that some people do
+
+00:10:30.800 --> 00:10:36.959
+is that if they want to be able to have
+an agents.md
+
+00:10:34.240 --> 00:10:41.040
+and also have a claude.md file and they
+want it to be the same so that you could
+
+00:10:38.800 --> 00:10:45.920
+either use clawed code or be using
+github copilot and have it access to the
+
+00:10:43.440 --> 00:10:51.839
+same information, then they don't write
+a a claw.md at all. instead of the
+
+00:10:48.720 --> 00:10:58.959
+entire claude MD they just have a single
+a single statement which is uh at
+
+00:10:55.760 --> 00:11:04.720
+agents.m MD and that basically means
+that claude MD is just the contents of
+
+00:11:02.160 --> 00:11:10.240
+agents.mmd and that way you can maintain
+one file rather than two and it refers
+
+00:11:07.440 --> 00:11:13.839
+it points to agents.mmd so that's a nice
+trick to know about and and some people
+
+00:11:12.000 --> 00:11:19.040
+use that to have one file rather than
+two and you can use that at syntax in a
+
+00:11:16.959 --> 00:11:24.320
+claw.md D file or you can use it just in
+a prompt to Claude and it brings the
+
+00:11:21.440 --> 00:11:27.600
+contents of the file into the context.
+So it's to be used with care because it
+
+00:11:25.920 --> 00:11:31.920
+will fill up your context very quickly
+if the file is a long file. Uh but it's
+
+00:11:29.839 --> 00:11:36.240
+a a powerful way to bring information
+into context whether it's in claw.md or
+
+00:11:34.079 --> 00:11:39.200
+in the prompt. And if you do a directory
+there, if you do at and then a
+
+00:11:37.440 --> 00:11:42.160
+directory, it just brings the listing of
+that directory. It doesn't bring all the
+
+00:11:40.480 --> 00:11:47.040
+files in that directory. It just brings
+like a list of the files into into the
+
+00:11:44.800 --> 00:11:47.040
+context.
+
